@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F72F67DD-A089-43EA-BD69-38BD153A1784}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPH.LabelingMachine.BCRobo</RootNamespace>
+    <AssemblyName>TPH.LabelingMachine.BCRobo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <AssemblyVersion>2019.9.12.296</AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Build\ShareLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TPH.Common">
+      <HintPath>..\..\Dependencies\TPH.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection\LisReceiverConnection.cs" />
+    <Compile Include="Connection\LisReceiverConnectionSettings.cs" />
+    <Compile Include="Connection\LoggingEndpointBehavior.cs" />
+    <Compile Include="DataAccess\Impl\SystemDataAccessImpl.cs" />
+    <Compile Include="DataAccess\ISystemDataAccess.cs" />
+    <Compile Include="Extensions\LogExtension.cs" />
+    <Compile Include="Models\BaseResponse.cs" />
+    <Compile Include="Models\CancelPatientReceiverRequest.cs" />
+    <Compile Include="Models\CancelTestReceiverRequest.cs" />
+    <Compile Include="Models\PatientInfo.cs" />
+    <Compile Include="Models\PatientInfoAdditionalInfo.cs" />
+    <Compile Include="Models\SamplingHistoryResponse.cs" />
+    <Compile Include="Models\SamplingHistoryResponseDetail.cs" />
+    <Compile Include="Models\SamplingResultResponse.cs" />
+    <Compile Include="Models\SamplingTestResponse.cs" />
+    <Compile Include="Models\SubTestResult.cs" />
+    <Compile Include="Models\TestResult.cs" />
+    <Compile Include="Models\TestResultAdditionalInfo.cs" />
+    <Compile Include="Models\UpdateStatusReceiverRequest.cs" />
+    <Compile Include="Models\UserInfoResponse.cs" />
+    <Compile Include="Models\ViSinhKhangSinhDoDetailResult.cs" />
+    <Compile Include="Models\ViSinhTestResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IClientService.cs" />
+    <Compile Include="Services\ILisReceiver.cs" />
+    <Compile Include="Services\Impl\ClientServiceImpl.cs" />
+    <Compile Include="Services\Impl\LisReceiverImpl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TPH.WriteLog\TPH.WriteLog.csproj">
+      <Project>{37482cad-d9af-4741-9cb6-16a6ba6a412e}</Project>
+      <Name>TPH.WriteLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Data\TPH.LIS.Data.csproj">
+      <Project>{493D7BFE-24BF-4612-86EB-623E23656F5D}</Project>
+      <Name>TPH.LIS.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

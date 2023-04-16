@@ -1,0 +1,143 @@
+﻿@using TPH.HIS.WebAPI.Configs
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link href="@Url.Content("~/assets/images/tph_logo.jpg")" rel="shortcut icon">
+
+    <link rel="stylesheet" type="text/css" href="~/Assets/Styles/common.css?ver=@HisApiCommonConfigs.JsVersion" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/grid/grid.css?ver=@HisApiCommonConfigs.JsVersion" />
+</head>
+
+<body class="no-skin">
+    <div id="navbar" class="navbar navbar-default ace-save-state navbar-fixed-top">
+        <div class="navbar-container ace-save-state" id="navbar-container">
+            <div class="navbar-header pull-left">
+                <a href="#" class="navbar-brand">
+                    <small>
+                        <i class=""></i>
+                        TPH Solutions
+                    </small>
+                </a>
+                <a href="#" class="navbar-brand">
+                    <small>
+                        <i class=""></i>
+                       Bệnh viện Quận Phú Nhuận
+                    </small>
+                </a>
+                <button class="pull-right navbar-toggle navbar-toggle-img collapsed" type="button" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu">
+                    <span class="sr-only">Toggle user menu</span>
+
+                    
+                </button>
+
+                <button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
+                    <span class="sr-only">Toggle sidebar</span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+                </button>
+            </div>                       
+
+            <nav role="navigation" class="navbar-menu pull-left collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="">
+                        <a href='@Url.Action("Index", "Logs")'>
+                            Xem Logs&nbsp;
+                        </a>
+                    </li>
+                    @*<li class="">
+                        <a href='@Url.Action("TestLog", "Logs")'>
+                            Test ghi Logs&nbsp;                            
+                        </a>
+                    </li>*@
+
+                    @*<li>
+                        <a href="http://localhost:8091" target="_blank">
+                            Couchbase
+                        </a>
+                    </li>*@
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="main-container ace-save-state" id="main-container">
+        <div class="main-content" style="height:100%">
+            <div class="main-content-inner">
+                <div class="breadcrumbs ace-save-state breadcrumbs-fixed hidden" id="breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="ace-icon fa fa-home home-icon"></i>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="active"></li>
+                    </ul>
+                    <!-- /.breadcrumb -->
+
+                    <div class="nav-search hidden" id="nav-search">
+                        <form class="form-search">
+                            <span class="input-icon">
+                                <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                                <i class="ace-icon fa fa-search nav-search-icon"></i>
+                            </span>
+                        </form>
+                    </div>
+                    <!-- /.nav-search -->
+                </div>
+
+                <main class="page-content" id="content">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+        <!-- /.main-content -->
+
+        <div class="footer">
+            <div class="footer-inner">
+                <div class="footer-content">
+                    <span class="bigger-120">
+                        <span class="blue bolder">TPH</span> Solutions &copy; 2019
+                    </span>
+
+                    &nbsp; &nbsp;
+                    <span class="action-buttons hidden">
+                        <a href="#">
+                            <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+    </div>
+</body>
+
+<script src="@Url.Content("~/Assets/jquery/jquery-3.2.1.js?ver="+ @HisApiCommonConfigs.JsVersion)" type="text/javascript"></script>
+<script src="@Url.Content("~/Assets/jquery/jquery-ui/jquery-ui.js?ver="+ @HisApiCommonConfigs.JsVersion)" type="text/javascript"></script>
+<script src="@Url.Content("~/Assets/jquery/linq.js?ver="+ @HisApiCommonConfigs.JsVersion)" type="text/javascript"></script>
+
+<script src="@Url.Content("~/Assets/jquery/AjaxCustom.js?ver="+ @HisApiCommonConfigs.JsVersion)" type="text/javascript"></script>
+<script src="@Url.Content("~/Assets/grid/grid.js?ver="+ @HisApiCommonConfigs.JsVersion)" type="text/javascript"></script>
+<script src="@Url.Content("~/Assets/grid/jqxtextarea.js?ver="+ @HisApiCommonConfigs.JsVersion)" type="text/javascript"></script>
+@RenderSection("scripts", required: false)
+</html>

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89C98534-93B8-4FBB-A3DC-517089097095}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPH.Lab.Middleware.HISConnect</RootNamespace>
+    <AssemblyName>TPH.Lab.Middleware.HISConnect</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <AssemblyVersion>2019.9.12.856</AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Build\ShareLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spring.Core, Version=2.0.1.40000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Spring.Core.2.0.1\lib\net40\Spring.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TPH.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\PK_DangTuyen\TPH.CIS\Dependencies\TPH.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="async.cs" />
+    <Compile Include="Constant\MessageCodeConst.cs" />
+    <Compile Include="Constant\TPH_His_ColumnMappings.cs" />
+    <Compile Include="Constant\VnptFujitsuConst.cs" />
+    <Compile Include="DataAccesses\GetHISDataAccessBase.cs" />
+    <Compile Include="DataAccesses\GetHISDataAccess_SHPT.cs" />
+    <Compile Include="DataAccesses\GetHISDataAccess_FPT_SP.cs" />
+    <Compile Include="DataAccesses\GetHISDataAccess_MSSQLTrungGian.cs" />
+    <Compile Include="DataAccesses\GetHISDataAccess_DHHospital.cs" />
+    <Compile Include="DataAccesses\GetHISDataAccess_DaiHocCanTho.cs" />
+    <Compile Include="DataAccesses\IGetHISDataAccessBase.cs" />
+    <Compile Include="DataAccesses\IGetHISDataAccess_SHPT.cs" />
+    <Compile Include="DataAccesses\IGetHISDataAccess_FPT_SP.cs" />
+    <Compile Include="DataAccesses\IGetHISDataAccess_MSSQLTrungGian.cs" />
+    <Compile Include="DataAccesses\IGetHISDataAccess_DHHospital.cs" />
+    <Compile Include="DataAccesses\IGetHISDataAccess_DaiHocCanTho.cs" />
+    <Compile Include="Extensions\ParseObjectWithDataType.cs" />
+    <Compile Include="Extensions\WebExtension.cs" />
+    <Compile Include="Models\GetHttpWebRequestInfo.cs" />
+    <Compile Include="Models\HISReturnBase.cs" />
+    <Compile Include="Models\HttpWebRequestInfo.cs" />
+    <Compile Include="Models\OrderInfo.cs" />
+    <Compile Include="Services\ErrorLibrary.cs" />
+    <Compile Include="Services\GetHISService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IGetHISService.cs" />
+    <Compile Include="Services\Impl\VnptFujitsuService.cs" />
+    <Compile Include="Services\IVnptFujitsuService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TPH.WriteLog\TPH.WriteLog.csproj">
+      <Project>{37482cad-d9af-4741-9cb6-16a6ba6a412e}</Project>
+      <Name>TPH.WriteLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.Data.HIS\TPH.Data.HIS.csproj">
+      <Project>{54e5d0a9-fc0d-4b82-93fc-1227cca9a062}</Project>
+      <Name>TPH.Data.HIS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.HIS.API\TPH.HIS.API.csproj">
+      <Project>{14EB32EF-0539-4DA0-818A-1CDD3CD6E127}</Project>
+      <Name>TPH.HIS.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.Lab.Middleware.Helper\TPH.Lab.Middleware.Helper.csproj">
+      <Project>{e435eafd-21d6-4572-9823-166c6b60636c}</Project>
+      <Name>TPH.Lab.Middleware.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Common\TPH.LIS.Common.csproj">
+      <Project>{D12AFE96-3C9E-4310-847A-A662BCEE40BE}</Project>
+      <Name>TPH.LIS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Patient\TPH.LIS.Patient.csproj">
+      <Project>{da4788f0-bfd6-45fc-9eb6-0f3d5b9cefa3}</Project>
+      <Name>TPH.LIS.Patient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

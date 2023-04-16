@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33CD5FD9-D26E-4E6A-96C0-CA7D7F41F340}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPH.LIS.BarcodePrinting</RootNamespace>
+    <AssemblyName>TPH.LIS.BarcodePrinting</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AssemblyVersion>2019.9.12.440</AssemblyVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Build\ShareLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib">
+      <HintPath>..\..\Dependencies\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Printing.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Interop.BarTender, Version=10.1.2.1, Culture=neutral, PublicKeyToken=109ff779a1b4cbc7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Dependencies\Interop.BarTender.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.BarTenderPrintClient">
+      <HintPath>..\..\Dependencies\Interop.BarTenderPrintClient.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Seagull.BarTender.Print, Version=10.1.2.1, Culture=neutral, PublicKeyToken=109ff779a1b4cbc7, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\Seagull.BarTender.Print.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TPH.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Build\ShareLibrary\TPH.Controls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarcodeHelper.cs" />
+    <Compile Include="BarcodeKeyContansts.cs" />
+    <Compile Include="BarcodePrintingSystemConstants.cs" />
+    <Compile Include="Barcode\BarcodePageSetting.cs" />
+    <Compile Include="Barcode\BarcodeProperties.cs" />
+    <Compile Include="Barcode\BarcodeBatenderService.cs" />
+    <Compile Include="Barcode\FrmBarcodeLabelProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barcode\FrmBarcodeLabelProperties.Designer.cs">
+      <DependentUpon>FrmBarcodeLabelProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Barcode\FrmQuanLyBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barcode\FrmQuanLyBarcode.Designer.cs">
+      <DependentUpon>FrmQuanLyBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Barcode\StandardBarcodeService.cs" />
+    <Compile Include="Barcode\Code128.cs" />
+    <Compile Include="Barcode\Code128Content.cs" />
+    <Compile Include="Barcode\Code128Rendering.cs" />
+    <Compile Include="Barcode\Configurations\AppSettings.cs" />
+    <Compile Include="Barcode\FontSetting.cs" />
+    <Compile Include="Barcode\FrmBarcodePageSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barcode\FrmBarcodePageSetup.designer.cs">
+      <DependentUpon>FrmBarcodePageSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Barcode\FrmPrintBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barcode\FrmPrintBarcode.designer.cs">
+      <DependentUpon>FrmPrintBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Barcode\PrintService.cs" />
+    <Compile Include="Barcode\UcFontFormat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Barcode\UcFontFormat.designer.cs">
+      <DependentUpon>UcFontFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Constants\BarcodeConstants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\IBarcodePrintingService.cs" />
+    <Compile Include="Service\IBarcodeStandardInformation.cs" />
+    <Compile Include="Service\Impl\BarcodePrintingService.cs" />
+    <Compile Include="Service\Impl\BarcodeToBCRobo_MT.cs" />
+    <Compile Include="Service\Impl\BarcodeToMiddleDatabase.cs" />
+    <Compile Include="Service\Impl\StandardBarcodeInformation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TPH.WriteLog\TPH.WriteLog.csproj">
+      <Project>{37482cad-d9af-4741-9cb6-16a6ba6a412e}</Project>
+      <Name>TPH.WriteLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LabelingMachine.BCRobo\TPH.LabelingMachine.BCRobo.csproj">
+      <Project>{f72f67dd-a089-43ea-bd69-38bd153a1784}</Project>
+      <Name>TPH.LabelingMachine.BCRobo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Common\TPH.LIS.Common.csproj">
+      <Project>{d12afe96-3c9e-4310-847a-a662bcee40be}</Project>
+      <Name>TPH.LIS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Configuration\TPH.LIS.Configuration.csproj">
+      <Project>{0ce6a166-5f71-42a6-a850-7597e93be18e}</Project>
+      <Name>TPH.LIS.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Data\TPH.LIS.Data.csproj">
+      <Project>{493D7BFE-24BF-4612-86EB-623E23656F5D}</Project>
+      <Name>TPH.LIS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Patient\TPH.LIS.Patient.csproj">
+      <Project>{DA4788F0-BFD6-45FC-9EB6-0F3D5B9CEFA3}</Project>
+      <Name>TPH.LIS.Patient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.Report\TPH.Report.csproj">
+      <Project>{CF79EB8F-0D24-4845-8EF8-67A3C8F8972B}</Project>
+      <Name>TPH.Report</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Barcode\FrmBarcodeLabelProperties.resx">
+      <DependentUpon>FrmBarcodeLabelProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barcode\FrmBarcodePageSetup.resx">
+      <DependentUpon>FrmBarcodePageSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barcode\FrmPrintBarcode.resx">
+      <DependentUpon>FrmPrintBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barcode\FrmQuanLyBarcode.resx">
+      <DependentUpon>FrmQuanLyBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barcode\UcFontFormat.resx">
+      <DependentUpon>UcFontFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

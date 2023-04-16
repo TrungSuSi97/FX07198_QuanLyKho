@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36C5D57D-4BEC-42CF-80AF-46E10E431DCC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPH.LIS.ExportResult</RootNamespace>
+    <AssemblyName>TPH.LIS.ExportResult</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AssemblyVersion>2019.9.12.559</AssemblyVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Build\ShareLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="SQLite.NET">
+      <HintPath>..\..\Dependencies\SQLite.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TPH.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\TPH.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\ExportResultConstants.cs" />
+    <Compile Include="Constants\ExportResultStoredProcedure.cs" />
+    <Compile Include="Controls\ucChiDinh_TongHop_ThuongQui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucChiDinh_TongHop_ThuongQui.Designer.cs">
+      <DependentUpon>ucChiDinh_TongHop_ThuongQui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucChiDinh_TongHop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucChiDinh_TongHop.Designer.cs">
+      <DependentUpon>ucChiDinh_TongHop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucExportAutoDelfia_PLGF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucExportAutoDelfia_PLGF.Designer.cs">
+      <DependentUpon>ucExportAutoDelfia_PLGF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucExportAutoDelfia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucExportAutoDelfia.Designer.cs">
+      <DependentUpon>ucExportAutoDelfia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucExportQsight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucExportQsight.Designer.cs">
+      <DependentUpon>ucExportQsight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucExportGSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucExportGSP.Designer.cs">
+      <DependentUpon>ucExportGSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_KetQuaViSinh_BCTH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_KetQuaViSinh_BCTH.designer.cs">
+      <DependentUpon>ucKetQua_KetQuaViSinh_BCTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_KetQuaViSinh_BYT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_KetQuaViSinh_BYT.designer.cs">
+      <DependentUpon>ucKetQua_KetQuaViSinh_BYT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_KetQuaViSinh_WHONet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_KetQuaViSinh_WHONet.designer.cs">
+      <DependentUpon>ucKetQua_KetQuaViSinh_WHONet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop4.Designer.cs">
+      <DependentUpon>ucKetQua_TongHop4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_GopKetQua_NormalGrid4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_GopKetQua_NormalGrid4.designer.cs">
+      <DependentUpon>ucKetQua_TongHop_GopKetQua_NormalGrid4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_GopKetQua_NormalGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_GopKetQua_NormalGrid.designer.cs">
+      <DependentUpon>ucKetQua_TongHop_GopKetQua_NormalGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop3_NormalGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop3_NormalGrid.designer.cs">
+      <DependentUpon>ucKetQua_TongHop3_NormalGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_ViSinh_PhieuTienTrinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_ViSinh_PhieuTienTrinh.designer.cs">
+      <DependentUpon>ucKetQua_ViSinh_PhieuTienTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_ViSinh_ThongTinMau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_ViSinh_ThongTinMau.designer.cs">
+      <DependentUpon>ucKetQua_ViSinh_ThongTinMau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucMauXetNghiem_SoGiaoNhanKQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucMauXetNghiem_SoGiaoNhanKQ.designer.cs">
+      <DependentUpon>ucMauXetNghiem_SoGiaoNhanKQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucMauXetNghiem_SoTuChoiMau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucMauXetNghiem_SoTuChoiMau.designer.cs">
+      <DependentUpon>ucMauXetNghiem_SoTuChoiMau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucMauXetNghiem_GiaoNhanMau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucMauXetNghiem_GiaoNhanMau.designer.cs">
+      <DependentUpon>ucMauXetNghiem_GiaoNhanMau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_MauXN_Thuong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_MauXN_Thuong.designer.cs">
+      <DependentUpon>ucKetQua_TongHop_MauXN_Thuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_NormalGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_NormalGrid.designer.cs">
+      <DependentUpon>ucKetQua_TongHop_NormalGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop3.Designer.cs">
+      <DependentUpon>ucKetQua_TongHop3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_HIV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_HIV.Designer.cs">
+      <DependentUpon>ucKetQua_TongHop_HIV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_GopKetQua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop_GopKetQua.Designer.cs">
+      <DependentUpon>ucKetQua_TongHop_GopKetQua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_TongHop.Designer.cs">
+      <DependentUpon>ucKetQua_TongHop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_ChiTietXetNghiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKetQua_ChiTietXetNghiem.Designer.cs">
+      <DependentUpon>ucKetQua_ChiTietXetNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucExportImmulite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucExportImmulite.Designer.cs">
+      <DependentUpon>ucExportImmulite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopBenhNhan_ChiTietXetNghiem_Export.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopBenhNhan_ChiTietXetNghiem_Export.Designer.cs">
+      <DependentUpon>ucTongHopBenhNhan_ChiTietXetNghiem_Export.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExportCondition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Respository\ExportResultRepository.cs" />
+    <Compile Include="Respository\IExportResultRepository.cs" />
+    <Compile Include="Service\ExportResultService.cs" />
+    <Compile Include="Service\IExportResultService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ucChiDinh_TongHop_ThuongQui.resx">
+      <DependentUpon>ucChiDinh_TongHop_ThuongQui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucChiDinh_TongHop.resx">
+      <DependentUpon>ucChiDinh_TongHop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucExportAutoDelfia_PLGF.resx">
+      <DependentUpon>ucExportAutoDelfia_PLGF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucExportAutoDelfia.resx">
+      <DependentUpon>ucExportAutoDelfia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucExportQsight.resx">
+      <DependentUpon>ucExportQsight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucExportGSP.resx">
+      <DependentUpon>ucExportGSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_KetQuaViSinh_BCTH.resx">
+      <DependentUpon>ucKetQua_KetQuaViSinh_BCTH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_KetQuaViSinh_BYT.resx">
+      <DependentUpon>ucKetQua_KetQuaViSinh_BYT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_KetQuaViSinh_WHONet.resx">
+      <DependentUpon>ucKetQua_KetQuaViSinh_WHONet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_TongHop4.resx">
+      <DependentUpon>ucKetQua_TongHop4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_TongHop_GopKetQua_NormalGrid4.resx">
+      <DependentUpon>ucKetQua_TongHop_GopKetQua_NormalGrid4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_TongHop_GopKetQua_NormalGrid.resx">
+      <DependentUpon>ucKetQua_TongHop_GopKetQua_NormalGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_TongHop3_NormalGrid.resx">
+      <DependentUpon>ucKetQua_TongHop3_NormalGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_ViSinh_PhieuTienTrinh.resx">
+      <DependentUpon>ucKetQua_ViSinh_PhieuTienTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_ViSinh_ThongTinMau.resx">
+      <DependentUpon>ucKetQua_ViSinh_ThongTinMau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucMauXetNghiem_SoGiaoNhanKQ.resx">
+      <DependentUpon>ucMauXetNghiem_SoGiaoNhanKQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucMauXetNghiem_SoTuChoiMau.resx">
+      <DependentUpon>ucMauXetNghiem_SoTuChoiMau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucMauXetNghiem_GiaoNhanMau.resx">
+      <DependentUpon>ucMauXetNghiem_GiaoNhanMau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_TongHop_MauXN_Thuong.resx">
+      <DependentUpon>ucKetQua_TongHop_MauXN_Thuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_TongHop_NormalGrid.resx">
+      <DependentUpon>ucKetQua_TongHop_NormalGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_TongHop3.resx">
+      <DependentUpon>ucKetQua_TongHop3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_TongHop_HIV.resx">
+      <DependentUpon>ucKetQua_TongHop_HIV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_TongHop_GopKetQua.resx">
+      <DependentUpon>ucKetQua_TongHop_GopKetQua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_TongHop.resx">
+      <DependentUpon>ucKetQua_TongHop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKetQua_ChiTietXetNghiem.resx">
+      <DependentUpon>ucKetQua_ChiTietXetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucExportImmulite.resx">
+      <DependentUpon>ucExportImmulite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopBenhNhan_ChiTietXetNghiem_Export.resx">
+      <DependentUpon>ucTongHopBenhNhan_ChiTietXetNghiem_Export.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExportToExcel\TPH.ExportToExcel.csproj">
+      <Project>{6f21ed74-9dd4-4124-b959-a4d309da8354}</Project>
+      <Name>TPH.ExportToExcel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Common\TPH.LIS.Common.csproj">
+      <Project>{d12afe96-3c9e-4310-847a-a662bcee40be}</Project>
+      <Name>TPH.LIS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Configuration\TPH.LIS.Configuration.csproj">
+      <Project>{0ce6a166-5f71-42a6-a850-7597e93be18e}</Project>
+      <Name>TPH.LIS.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Data\TPH.LIS.Data.csproj">
+      <Project>{493D7BFE-24BF-4612-86EB-623E23656F5D}</Project>
+      <Name>TPH.LIS.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_StartDate="2000/1/1" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

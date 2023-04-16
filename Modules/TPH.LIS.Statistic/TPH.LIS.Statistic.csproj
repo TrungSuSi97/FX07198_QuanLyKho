@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2ED8DA65-3071-495B-8778-384031CAFE37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPH.LIS.Statistic</RootNamespace>
+    <AssemblyName>TPH.LIS.Statistic</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AssemblyVersion>2019.9.12.520</AssemblyVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Build\ShareLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.UI, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TPH.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Build\ShareLibrary\TPH.Controls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\StatisticConstant.cs" />
+    <Compile Include="Constants\StatisticStoredProcedures.cs" />
+    <Compile Include="Controls\ucDashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDashBoard.Designer.cs">
+      <DependentUpon>ucDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDashBoard_DepartmentWithTAT_Chart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDashBoard_DepartmentWithTAT_Chart.designer.cs">
+      <DependentUpon>ucDashBoard_DepartmentWithTAT_Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDashBoard_Department_Chart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDashBoard_Department_Chart.designer.cs">
+      <DependentUpon>ucDashBoard_Department_Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDashBoard_Department.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDashBoard_Department.designer.cs">
+      <DependentUpon>ucDashBoard_Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDashBoard_DepartmentWithTAT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDashBoard_DepartmentWithTAT.designer.cs">
+      <DependentUpon>ucDashBoard_DepartmentWithTAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDashBoard_TAT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDashBoard_TAT.designer.cs">
+      <DependentUpon>ucDashBoard_TAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucThongKeTAT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucThongKeTAT.designer.cs">
+      <DependentUpon>ucThongKeTAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucThongTinNhom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucThongTinNhom.Designer.cs">
+      <DependentUpon>ucThongTinNhom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopSLSS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopSLSS.Designer.cs">
+      <DependentUpon>ucTongHopSLSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopSLSS_DonVi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopSLSS_DonVi.Designer.cs">
+      <DependentUpon>ucTongHopSLSS_DonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopSLSS_RoiLoanCH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopSLSS_RoiLoanCH.Designer.cs">
+      <DependentUpon>ucTongHopSLSS_RoiLoanCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiem_May_DoiTuong_TatCa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiem_May_DoiTuong_TatCa.Designer.cs">
+      <DependentUpon>ucTongHopXetNghiem_May_DoiTuong_TatCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiem_May_DoiTuong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiem_May_DoiTuong.Designer.cs">
+      <DependentUpon>ucTongHopXetNghiem_May_DoiTuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiem_BacSiChiDinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiem_BacSiChiDinh.Designer.cs">
+      <DependentUpon>ucTongHopXetNghiem_BacSiChiDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiemTuMay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiemTuMay.Designer.cs">
+      <DependentUpon>ucTongHopXetNghiemTuMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucXetNghiemChayLai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucXetNghiemChayLai.Designer.cs">
+      <DependentUpon>ucXetNghiemChayLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiem_TheoNgay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiem_TheoNgay.Designer.cs">
+      <DependentUpon>ucTongHopXetNghiem_TheoNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiemTheoMay_BenhNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiemTheoMay_BenhNhan.Designer.cs">
+      <DependentUpon>ucTongHopXetNghiemTheoMay_BenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopBenhNhan_ChiTietXetNghiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopBenhNhan_ChiTietXetNghiem.Designer.cs">
+      <DependentUpon>ucTongHopBenhNhan_ChiTietXetNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopXetNghiem.Designer.cs">
+      <DependentUpon>ucTongHopXetNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTongHopBenhNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTongHopBenhNhan.Designer.cs">
+      <DependentUpon>ucTongHopBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BaoCaoThuTienModel.cs" />
+    <Compile Include="Models\NormalStatisticCondit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\IStatisticRepository.cs" />
+    <Compile Include="Repository\StatisticRepository.cs" />
+    <Compile Include="Service\IStatisticService.cs" />
+    <Compile Include="Service\StatisticService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExportToExcel\TPH.Excel.csproj">
+      <Project>{6F21ED74-9DD4-4124-B959-A4D309DA8354}</Project>
+      <Name>TPH.Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.Cashier\TPH.Cashier\TPH.Cashier.csproj">
+      <Project>{9AAE5EE1-952E-4F51-9840-8D7A8C1D033A}</Project>
+      <Name>TPH.Cashier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.Language\TPH.Language.csproj">
+      <Project>{BFAC421E-E92D-4336-9FC7-4A4F59AA47F0}</Project>
+      <Name>TPH.Language</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Common\TPH.LIS.Common.csproj">
+      <Project>{D12AFE96-3C9E-4310-847A-A662BCEE40BE}</Project>
+      <Name>TPH.LIS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Configuration\TPH.LIS.Configuration.csproj">
+      <Project>{0CE6A166-5F71-42A6-A850-7597E93BE18E}</Project>
+      <Name>TPH.LIS.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Data\TPH.LIS.Data.csproj">
+      <Project>{493D7BFE-24BF-4612-86EB-623E23656F5D}</Project>
+      <Name>TPH.LIS.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ucDashBoard.resx">
+      <DependentUpon>ucDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDashBoard_DepartmentWithTAT_Chart.resx">
+      <DependentUpon>ucDashBoard_DepartmentWithTAT_Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDashBoard_Department_Chart.resx">
+      <DependentUpon>ucDashBoard_Department_Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDashBoard_Department.resx">
+      <DependentUpon>ucDashBoard_Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDashBoard_DepartmentWithTAT.resx">
+      <DependentUpon>ucDashBoard_DepartmentWithTAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDashBoard_TAT.resx">
+      <DependentUpon>ucDashBoard_TAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucThongKeTAT.resx">
+      <DependentUpon>ucThongKeTAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucThongTinNhom.resx">
+      <DependentUpon>ucThongTinNhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopSLSS.resx">
+      <DependentUpon>ucTongHopSLSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopSLSS_DonVi.resx">
+      <DependentUpon>ucTongHopSLSS_DonVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopSLSS_RoiLoanCH.resx">
+      <DependentUpon>ucTongHopSLSS_RoiLoanCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopXetNghiem_May_DoiTuong_TatCa.resx">
+      <DependentUpon>ucTongHopXetNghiem_May_DoiTuong_TatCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopXetNghiem_May_DoiTuong.resx">
+      <DependentUpon>ucTongHopXetNghiem_May_DoiTuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopXetNghiem_BacSiChiDinh.resx">
+      <DependentUpon>ucTongHopXetNghiem_BacSiChiDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopXetNghiemTuMay.resx">
+      <DependentUpon>ucTongHopXetNghiemTuMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucXetNghiemChayLai.resx">
+      <DependentUpon>ucXetNghiemChayLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopXetNghiem_TheoNgay.resx">
+      <DependentUpon>ucTongHopXetNghiem_TheoNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopXetNghiemTheoMay_BenhNhan.resx">
+      <DependentUpon>ucTongHopXetNghiemTheoMay_BenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopBenhNhan_ChiTietXetNghiem.resx">
+      <DependentUpon>ucTongHopBenhNhan_ChiTietXetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopXetNghiem.resx">
+      <DependentUpon>ucTongHopXetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTongHopBenhNhan.resx">
+      <DependentUpon>ucTongHopBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_StartDate="2000/1/1" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

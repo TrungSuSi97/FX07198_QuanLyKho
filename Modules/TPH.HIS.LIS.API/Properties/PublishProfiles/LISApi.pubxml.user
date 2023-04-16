@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\TPH Solution\Customer\BV Quan Phu Nhuan\Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>06/27/2019 18:48:45</publishTime>
+    </File>
+    <File Include="Assets/fonts/font-awesome.css">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/font-awesome/css/font-awesome.css">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/font-awesome/fonts/fontawesome-webfont.woff2">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/fonts.googleapis.com.css">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/glyphicons/glyphicons-halflings-regular.eot">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/glyphicons/glyphicons-halflings-regular.svg">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/glyphicons/glyphicons-halflings-regular.ttf">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/glyphicons/glyphicons-halflings-regular.woff">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/fonts/glyphicons/glyphicons-halflings-regular.woff2">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/grid.css">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/grid.js">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/grid.min.css">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/grid.min.js">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/jqxtextarea.js">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/backgroundTop.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/backImage.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/bg_black.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/bg_blackhover.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/bg_blackhover_horizontal.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/bg_blackpressed.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/bg_blackpressed_horizontal.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/bg_black_horizontal.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/bg_blueenergy.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/bg_darkblue.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/bg_darkbluehover.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/bg_darkbluepressed.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/blackbackground.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/black_gradient.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/check_black.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/check_blue.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/check_blue_indeterminate.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/check_disabled.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/check_indeterminate_black.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/check_indeterminate_disabled.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/check_indeterminate_white.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/check_lightblue.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/check_lightblue_indeterminate.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/check_white.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/close.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/close_black.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/close_blue.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/close_white.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/colorpicker/bar-hue.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/colorpicker/bar-saturation.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/colorpicker/map-hue.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/colorpicker/map-saturation-overlay.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/colorpicker/map-saturation.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/colorpicker/ReadMe.txt">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/common.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/crosshair-white.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/crosshair.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ReadMe.txt">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-bg_flat_30_cccccc_40x100.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-bg_flat_50_5c5c5c_40x100.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-bg_glass_20_555555_1x400.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-bg_glass_40_0078a3_1x400.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-bg_glass_40_ffc73d_1x400.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-bg_gloss-wave_25_333333_500x100.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-bg_highlight-soft_80_eeeeee_1x100.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-bg_inset-soft_25_000000_1x100.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-bg_inset-soft_30_f58400_1x100.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-icons_222222_256x240.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-icons_4b8e0b_256x240.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-icons_a83300_256x240.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-icons_cccccc_256x240.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkness/ui-icons_ffffff_256x240.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/darkred_gradient.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/drag.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/dragcancel.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/error.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/filter.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/html_editor.png">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/html_editor_white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-calendar-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-calendar.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-cancel-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-cancel.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-delete-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-delete.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-down-blue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-down-transparent.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-down-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-down.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-edit-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-edit.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-first-blue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-first-transparent.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-first-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-first.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-last-blue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-last-transparent.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-last-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-last.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-left-blue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-left-transparent.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-left-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-left.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-menu-minimized-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-menu-minimized.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-plus-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-plus.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-recurrence-exception-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-recurrence-exception.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-recurrence-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-recurrence.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-right-blue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-right-transparent.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-right-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-right.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-save-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-save.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-showpassword-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-showpassword.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-time-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-time.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-up-blue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-up-transparent.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-up-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/icon-up.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/info.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/icon-first.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/icon-last.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ReadMe.txt">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-icons_222222_256x240.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-icons_228ef1_256x240.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-icons_ef8c08_256x240.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-icons_ffd27a_256x240.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/lightness/ui-icons_ffffff_256x240.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/loader-small.gif">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/loader.gif">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/mail.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/menubutton.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-down-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-down.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-first-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-first.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-last-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-last.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-left-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-left.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-right - Copy.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-right-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-right.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-up-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/metro-icon-up.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/multi-arrow.gif">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/office-icon-down.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/office-icon-first.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/office-icon-last.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/office-icon-left.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/office-icon-right.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/office-icon-up.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pin-black.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pin-blue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pin-lightblue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pin-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pin-yellow.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pin.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pinned-black.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pinned-blue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pinned-lightblue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pinned-white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pinned-yellow.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pinned.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/plus.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/plus_white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/pointer.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/rangebar_classic.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/rangebar_darkblue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/rangebar_shinyblack.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/rangebar_summer.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/red_arrow_down.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/red_arrow_up.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/red_gradient.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/roundbg_check_black.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/roundbg_check_disabled.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/roundbg_check_indeterminate.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/roundbg_check_white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/roundbg_classic_hover.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/roundbg_classic_normal.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/roundbg_disabled.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/search.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/search_white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/sortasc.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/sortascbutton.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/sortdesc.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/sortdescbutton.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/sortremove.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/star.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/star_disabled.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/star_hover.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/stripes.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/success.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/tick.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/time.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/track_classic.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/track_darkblue.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/track_shinyblack.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/track_summer.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/warning.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/wp_check_indeterminate_white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/grid/styles/images/wp_check_white.png">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/images/tph_logo.JPG">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/jquery/aceelement.js">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/jquery/AjaxCustom.js">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/jquery/bootstrap.js">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-3.2.1.js">
+      <publishTime>06/27/2019 19:03:42</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/images/ui-icons_222222_256x240.png">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/images/ui-icons_454545_256x240.png">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/images/ui-icons_888888_256x240.png">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/jquery-ui.css">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/jquery-ui/jquery-ui.js">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/linq.js">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/jquery/wysiwyg.js">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/Lis/LisAdmin.js">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/Styles/bootstrap.css">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/Styles/common.css">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/Styles/wysiwyg.css">
+      <publishTime>06/27/2019 19:03:43</publishTime>
+    </File>
+    <File Include="Assets/ViewLogs/TestLog.js">
+      <publishTime>06/27/2019 19:03:41</publishTime>
+    </File>
+    <File Include="Assets/ViewLogs/ViewLogs.js">
+      <publishTime>06/28/2019 10:58:20</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/22/2013 08:43:40</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>06/27/2019 18:48:45</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>03/08/2017 19:26:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>12/07/2015 19:04:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>03/10/2016 14:26:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>03/10/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>03/09/2016 12:00:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>03/10/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>03/10/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>03/09/2016 11:57:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>04/03/2015 17:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>04/03/2015 17:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>04/03/2015 17:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/18/2017 13:57:10</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 04:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 04:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/TPH.Common.dll">
+      <publishTime>10/08/2017 22:57:11</publishTime>
+    </File>
+    <File Include="bin/TPH.Data.dll">
+      <publishTime>11/15/2019 11:55:09</publishTime>
+    </File>
+    <File Include="bin/TPH.HIS.API.dll">
+      <publishTime>11/14/2019 10:45:54</publishTime>
+    </File>
+    <File Include="bin/TPH.HIS.VIMES.API.dll">
+      <publishTime>11/14/2019 10:45:59</publishTime>
+    </File>
+    <File Include="bin/TPH.HIS.WebAPI.dll">
+      <publishTime>11/15/2019 11:55:09</publishTime>
+    </File>
+    <File Include="bin/TPH.LIS.API.dll">
+      <publishTime>11/15/2019 11:55:13</publishTime>
+    </File>
+    <File Include="bin/TPH.WriteLog.dll">
+      <publishTime>11/15/2019 11:55:09</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>09/10/2013 17:28:38</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>06/27/2019 18:47:57</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/15/2019 11:35:52</publishTime>
+    </File>
+    <File Include="log4net.config">
+      <publishTime>06/27/2019 18:57:38</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/12/2019 14:18:53</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>06/27/2019 18:47:57</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>06/27/2019 18:47:57</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>06/27/2019 19:05:20</publishTime>
+    </File>
+    <File Include="Views/Lis/index.cshtml">
+      <publishTime>11/12/2019 14:38:30</publishTime>
+    </File>
+    <File Include="Views/Logs/Index.cshtml">
+      <publishTime>11/12/2019 14:38:30</publishTime>
+    </File>
+    <File Include="Views/Logs/TestLog.cshtml">
+      <publishTime>11/12/2019 14:38:30</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>06/27/2019 18:48:17</publishTime>
+    </File>
+    <File Include="Views/Shared/Lockout.cshtml">
+      <publishTime>06/27/2019 18:48:18</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>11/15/2019 11:54:32</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>06/27/2019 18:48:18</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>06/27/2019 20:21:18</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>06/27/2019 18:47:57</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/15/2019 11:55:14</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D12AFE96-3C9E-4310-847A-A662BCEE40BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPH.LIS.Common</RootNamespace>
+    <AssemblyName>TPH.LIS.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <AssemblyVersion>2019.9.12.872</AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Build\ShareLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FontAwesome.Sharp.5.15.4\lib\net40\FontAwesome.Sharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.BarTender">
+      <HintPath>..\..\Dependencies\Interop.BarTender.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.BarTenderPrintClient">
+      <HintPath>..\..\Dependencies\Interop.BarTenderPrintClient.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Magick.NET-Q16-AnyCPU">
+      <HintPath>..\..\Dependencies\Magick.NET-Q16-AnyCPU.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TPH.Common">
+      <HintPath>..\..\Dependencies\TPH.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\AuthorizationConstant.cs" />
+    <Compile Include="Controls\Chart\ChartConstant.cs" />
+    <Compile Include="Constants\DateTimeFormatConstant.cs" />
+    <Compile Include="Constants\DepartementConstant.cs" />
+    <Compile Include="Constants\ErrorConstant.cs" />
+    <Compile Include="Constants\MessageConstant.cs" />
+    <Compile Include="Constants\ReportResultConstant.cs" />
+    <Compile Include="Constants\SystemStypeConstant.cs" />
+    <Compile Include="Constants\CommonConstant.cs" />
+    <Compile Include="Constants\TestingResultStatusConstant.cs" />
+    <Compile Include="Controls\Chart\CustomChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Chart\CustomChart.Designer.cs">
+      <DependentUpon>CustomChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomButton.designer.cs">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomForm.Designer.cs">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomMsgBox\FrmShowRawData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomMsgBox\FrmShowRawData.Designer.cs">
+      <DependentUpon>FrmShowRawData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomMsgBox\CustomMessageBoxConstants.cs" />
+    <Compile Include="Controls\Custom_DateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Custom_DateTimePicker.designer.cs">
+      <DependentUpon>Custom_DateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FrmLyDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FrmLyDo.Designer.cs">
+      <DependentUpon>FrmLyDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FrmZoomImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FrmZoomImage.designer.cs">
+      <DependentUpon>FrmZoomImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MultiColumnComboSuggestionBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TextBoxWithdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TextBoxWithdate.designer.cs">
+      <DependentUpon>TextBoxWithdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcAddEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcAddEditControl.Designer.cs">
+      <DependentUpon>UcAddEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomCalendarColumn.cs" />
+    <Compile Include="Controls\CustomBindingNavigator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomBindingNavigator.Designer.cs">
+      <DependentUpon>CustomBindingNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomLable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomMsgBox\CustomMessageBox.cs" />
+    <Compile Include="Controls\CustomMsgBox\FrmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomMsgBox\FrmMessageBox.Designer.cs">
+      <DependentUpon>FrmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomTextBox.designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomDownArrow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomDownArrow.designer.cs">
+      <DependentUpon>CustomDownArrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomTwoLableButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomTwoLableButton.Designer.cs">
+      <DependentUpon>CustomTwoLableButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomZoomPicturebox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomZoomPicturebox.designer.cs">
+      <DependentUpon>CustomZoomPicturebox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Custom_CheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\OutlookGrid\DataSourceManager.cs" />
+    <Compile Include="Controls\OutlookGrid\OutlookGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\OutlookGrid\OutlookGrid.Designer.cs">
+      <DependentUpon>OutlookGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OutlookGrid\OutlookGridGroup.cs" />
+    <Compile Include="Controls\OutlookGrid\OutlookGridRow.cs" />
+    <Compile Include="Controls\ucCheckListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucCheckListBox.Designer.cs">
+      <DependentUpon>ucCheckListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucGroupHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucGroupHeader.Designer.cs">
+      <DependentUpon>ucGroupHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucNumberPosOfAnalyzerPlate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucNumberPosOfAnalyzerPlate.Designer.cs">
+      <DependentUpon>ucNumberPosOfAnalyzerPlate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucPictureTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucPictureTool.Designer.cs">
+      <DependentUpon>ucPictureTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucPrinterForReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucPrinterForReport.Designer.cs">
+      <DependentUpon>ucPrinterForReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\BinaryToString.cs" />
+    <Compile Include="Controls\CustomDatagridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomDatagridView.designer.cs">
+      <DependentUpon>CustomDatagridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\CachingExtension.cs" />
+    <Compile Include="Extensions\ControlExtension.cs" />
+    <Compile Include="Extensions\ErrorService.cs" />
+    <Compile Include="Extensions\IpExtension.cs" />
+    <Compile Include="Extensions\PdfExtension.cs" />
+    <Compile Include="Extensions\Working_Helper.cs" />
+    <Compile Include="Helper\StringList.cs" />
+    <Compile Include="Model\BacSiModel.cs" />
+    <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Chart\CustomChart.resx">
+      <DependentUpon>CustomChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomButton.resx">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomComboBox.resx">
+      <DependentUpon>CustomComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomForm.resx">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomMsgBox\FrmShowRawData.resx">
+      <DependentUpon>FrmShowRawData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FrmLyDo.resx">
+      <DependentUpon>FrmLyDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FrmZoomImage.resx">
+      <DependentUpon>FrmZoomImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxWithdate.resx">
+      <DependentUpon>TextBoxWithdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcAddEditControl.resx">
+      <DependentUpon>UcAddEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomDatagridView.resx">
+      <DependentUpon>CustomDatagridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomBindingNavigator.resx">
+      <DependentUpon>CustomBindingNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomDownArrow.resx">
+      <DependentUpon>CustomDownArrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomMsgBox\FrmMessageBox.resx">
+      <DependentUpon>FrmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomTwoLableButton.resx">
+      <DependentUpon>CustomTwoLableButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OutlookGrid\OutlookGrid.resx">
+      <DependentUpon>OutlookGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucCheckListBox.resx">
+      <DependentUpon>ucCheckListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucGroupHeader.resx">
+      <DependentUpon>ucGroupHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucNumberPosOfAnalyzerPlate.resx">
+      <DependentUpon>ucNumberPosOfAnalyzerPlate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucPictureTool.resx">
+      <DependentUpon>ucPictureTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucPrinterForReport.resx">
+      <DependentUpon>ucPrinterForReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TPH.WriteLog\TPH.WriteLog.csproj">
+      <Project>{37482CAD-D9AF-4741-9CB6-16A6BA6A412E}</Project>
+      <Name>TPH.WriteLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.Controls\TPH.Controls.csproj">
+      <Project>{670302f2-82dd-4f60-949f-711fff3b8f04}</Project>
+      <Name>TPH.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.Language\TPH.Language.csproj">
+      <Project>{bfac421e-e92d-4336-9fc7-4a4f59aa47f0}</Project>
+      <Name>TPH.Language</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

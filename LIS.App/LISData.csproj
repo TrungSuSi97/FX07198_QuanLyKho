@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{747B6883-B6A0-43EB-9DFB-80B28D4B2DD2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClinicManagementSystem</RootNamespace>
+    <AssemblyName>ClinicManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>book_blue_add.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CarlosAg.ExcelXmlWriter, Version=1.0.0.6, Culture=neutral, PublicKeyToken=eac822d9c4196ba1">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\CarlosAg.ExcelXmlWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DirectShowLib-2005, Version=2.1.0.41383, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\DirectShowLib-2005.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Release\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Release\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Release\office.dll</HintPath>
+    </Reference>
+    <Reference Include="RicherTextBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\RicherTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.Ribbon35">
+      <HintPath>E:\Research\SourceCode_Ribbon\SourceCode\System.Windows.Forms.Ribbon\bin\Debug\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\BinaryToString.cs" />
+    <Compile Include="AppCode\Capture.cs" />
+    <Compile Include="AppCode\C_Config.cs" />
+    <Compile Include="AppCode\C_Data.cs" />
+    <Compile Include="AppCode\C_FormTask.cs" />
+    <Compile Include="AppCode\C_Patient.cs" />
+    <Compile Include="AppCode\C_Report.cs" />
+    <Compile Include="AppCode\C_Ultilities.cs" />
+    <Compile Include="AppCode\DataProvider.cs" />
+    <Compile Include="AppCode\EnDeCrypt.cs" />
+    <Compile Include="AppCode\Error_Codes.cs" />
+    <Compile Include="AppCode\ExportToExcel.cs" />
+    <Compile Include="AppCode\MultiColumnComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AppCode\ProcessServices.cs" />
+    <Compile Include="AppCode\RegKeys.cs" />
+    <Compile Include="AppCode\Warnings.cs" />
+    <Compile Include="Config\frmAddLISTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmAddLISTest.Designer.cs">
+      <DependentUpon>frmAddLISTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmBacSi_ChanDoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmBacSi_ChanDoan.Designer.cs">
+      <DependentUpon>frmBacSi_ChanDoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmDMCLS_SieuAm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmDMCLS_SieuAm.Designer.cs">
+      <DependentUpon>frmDMCLS_SieuAm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmEmailConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmEmailConfig.Designer.cs">
+      <DependentUpon>frmEmailConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmDMCLS_XetNghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmDMCLS_XetNghiem.Designer.cs">
+      <DependentUpon>frmDMCLS_XetNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmPrintHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmPrintHeader.Designer.cs">
+      <DependentUpon>frmPrintHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmResetPassword.Designer.cs">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmServiceCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmServiceCost.Designer.cs">
+      <DependentUpon>frmServiceCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDIParent.Designer.cs">
+      <DependentUpon>frmMDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMessageBox_Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMessageBox_Process.designer.cs">
+      <DependentUpon>FrmMessageBox_Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMessageError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMessageError.designer.cs">
+      <DependentUpon>FrmMessageError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStartup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStartup.Designer.cs">
+      <DependentUpon>FrmStartup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplate.Designer.cs">
+      <DependentUpon>frmTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\rpFirstReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpFirstReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rpKQSieuAm.cs">
+      <DependentUpon>rpKQSieuAm.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rpKQXetNghiem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpKQXetNghiem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Working\frmCLSKQSieuAm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Working\frmCLSKQSieuAm.Designer.cs">
+      <DependentUpon>frmCLSKQSieuAm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Working\frmSearchPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Working\frmSearchPatient.Designer.cs">
+      <DependentUpon>frmSearchPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Working\frmCLSKetQuaXN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Working\frmCLSKetQuaXN.Designer.cs">
+      <DependentUpon>frmCLSKetQuaXN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Working\frmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Working\frmEmail.Designer.cs">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Working\frmPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Working\frmPatient.Designer.cs">
+      <DependentUpon>frmPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Working\frmXuatCLS_XetNghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Working\frmXuatCLS_XetNghiem.Designer.cs">
+      <DependentUpon>frmXuatCLS_XetNghiem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Config\frmAddLISTest.resx">
+      <DependentUpon>frmAddLISTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmBacSi_ChanDoan.resx">
+      <DependentUpon>frmBacSi_ChanDoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmDMCLS_SieuAm.resx">
+      <DependentUpon>frmDMCLS_SieuAm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmailConfig.resx">
+      <DependentUpon>frmEmailConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmDMCLS_XetNghiem.resx">
+      <DependentUpon>frmDMCLS_XetNghiem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmPrintHeader.resx">
+      <DependentUpon>frmPrintHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmResetPassword.resx">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmServiceCost.resx">
+      <DependentUpon>frmServiceCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDIParent.resx">
+      <DependentUpon>frmMDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMessageBox_Process.resx">
+      <DependentUpon>FrmMessageBox_Process.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMessageError.resx">
+      <DependentUpon>FrmMessageError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStartup.resx">
+      <DependentUpon>FrmStartup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTemplate.resx">
+      <DependentUpon>frmTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\rpFirstReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpFirstReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpKQSieuAm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpKQSieuAm.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpKQXetNghiem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpKQXetNghiem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Working\frmCLSKQSieuAm.resx">
+      <DependentUpon>frmCLSKQSieuAm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Working\frmSearchPatient.resx">
+      <DependentUpon>frmSearchPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Working\frmCLSKetQuaXN.resx">
+      <DependentUpon>frmCLSKetQuaXN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Working\frmEmail.resx">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Working\frmPatient.resx">
+      <DependentUpon>frmPatient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Working\frmXuatCLS_XetNghiem.resx">
+      <DependentUpon>frmXuatCLS_XetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\delete 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green-check_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\add %2816x16%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\345.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\078.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\TopPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\089.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="book_blue_add.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CE6A166-5F71-42A6-A850-7597E93BE18E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPH.LIS.Configuration</RootNamespace>
+    <AssemblyName>TPH.LIS.Configuration</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <AssemblyVersion>2019.9.12.794</AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Build\ShareLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TPH.Common">
+      <HintPath>..\..\Dependencies\TPH.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\BacteriumConstant.cs" />
+    <Compile Include="Constants\CommonConfigConstant.cs" />
+    <Compile Include="Constants\ErrorMessageConstant.cs" />
+    <Compile Include="Constants\TestConfigurationConstant.cs" />
+    <Compile Include="Controls\ucDanhMucBienDichKetQuaMay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucBienDichKetQuaMay.Designer.cs">
+      <DependentUpon>ucDanhMucBienDichKetQuaMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucBoPhan_Nhom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucBoPhan_Nhom.Designer.cs">
+      <DependentUpon>ucDanhMucBoPhan_Nhom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucGhiChuTuDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucGhiChuTuDong.Designer.cs">
+      <DependentUpon>ucDanhMucGhiChuTuDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucGioiHanThamChieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucGioiHanThamChieu.Designer.cs">
+      <DependentUpon>ucDanhMucGioiHanThamChieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucBoChiDinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucBoChiDinh.Designer.cs">
+      <DependentUpon>ucDanhMucBoChiDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucQuyTrinh_PhuongPhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucQuyTrinh_PhuongPhap.Designer.cs">
+      <DependentUpon>ucDanhMucQuyTrinh_PhuongPhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucCongTy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucCongTy.Designer.cs">
+      <DependentUpon>ucDanhMucCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucSinhLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucSinhLy.Designer.cs">
+      <DependentUpon>ucDanhMucSinhLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucTinhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucTinhToan.Designer.cs">
+      <DependentUpon>ucDanhMucTinhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhSachXetNghiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhSachXetNghiem.Designer.cs">
+      <DependentUpon>ucDanhSachXetNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucLoaiMau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucLoaiMau.designer.cs">
+      <DependentUpon>ucLoaiMau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucConfig.designer.cs">
+      <DependentUpon>ucConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucXetNghiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucXetNghiem.Designer.cs">
+      <DependentUpon>ucDanhMucXetNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhMucProfile.Designer.cs">
+      <DependentUpon>ucDanhMucProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucSearchLookupEditor_DanhSachXetNghiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucSearchLookupEditor_DanhSachXetNghiem.designer.cs">
+      <DependentUpon>ucSearchLookupEditor_DanhSachXetNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BacteriumAntibioticModel.cs" />
+    <Compile Include="Models\CategoryLanguage.cs" />
+    <Compile Include="Models\Collaborator.cs" />
+    <Compile Include="Models\Config.cs" />
+    <Compile Include="Models\ConfigurationDetail.cs" />
+    <Compile Include="Models\DM_CONGTY.cs" />
+    <Compile Include="Models\DM_PROFILE.cs" />
+    <Compile Include="Models\DM_SINHLY.cs" />
+    <Compile Include="Models\DM_XETNGHIEM.cs" />
+    <Compile Include="Models\DM_XETNGHIEM_BIENDICHKETQUA.cs" />
+    <Compile Include="Models\DM_XETNGHIEM_CSBT.cs" />
+    <Compile Include="Models\DM_XETNGHIEM_GHICHUTUDONG.cs" />
+    <Compile Include="Models\DM_XETNGHIEM_NHOM.cs" />
+    <Compile Include="Models\DM_XETNGHIEM_PHUONGPHAP.cs" />
+    <Compile Include="Models\DM_XETNGHIEM_TINHTOAN.cs" />
+    <Compile Include="Models\DoiTuongBenhNhan.cs" />
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\EmailConfigDetail.cs" />
+    <Compile Include="Models\HienThiModel.cs" />
+    <Compile Include="Models\ImportConfigModel.cs" />
+    <Compile Include="Models\InputTemplates.cs" />
+    <Compile Include="Models\LicenseModel.cs" />
+    <Compile Include="Models\LocationDepartmentModel.cs" />
+    <Compile Include="Models\MayTinhVaKhuVuc.cs" />
+    <Compile Include="Models\PrintedHeader.cs" />
+    <Compile Include="Models\PrinterForReportModel.cs" />
+    <Compile Include="Models\PrintingBarcodeSystem.cs" />
+    <Compile Include="Models\ReportResultConfigModel.cs" />
+    <Compile Include="Models\ReturnResultModel.cs" />
+    <Compile Include="Models\TestingMachineModel.cs" />
+    <Compile Include="Models\TestOrderGroup.cs" />
+    <Compile Include="Models\TestSample.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\PrintedForm\IPrintedFormRepository.cs" />
+    <Compile Include="Repositories\PrintedForm\PrintedFormRepository.cs" />
+    <Compile Include="Repositories\SystemConfig\BacteriumAntibioticReposity.cs" />
+    <Compile Include="Repositories\SystemConfig\IBacteriumAntibioticReposity.cs" />
+    <Compile Include="Repositories\SystemConfig\ISystemConfigRepository.cs" />
+    <Compile Include="Repositories\SystemConfig\SystemConfigRepository.cs" />
+    <Compile Include="Services\PrintedForm\IPrintedFormService.cs" />
+    <Compile Include="Services\PrintedForm\PrintedFormService.cs" />
+    <Compile Include="Services\SystemConfig\BacteriumAntibioticService.cs" />
+    <Compile Include="Services\SystemConfig\IBacteriumAntibioticService.cs" />
+    <Compile Include="Services\SystemConfig\ISystemConfigService.cs" />
+    <Compile Include="Services\SystemConfig\SystemConfigService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TPH.Controls\TPH.Controls.csproj">
+      <Project>{670302F2-82DD-4F60-949F-711FFF3B8F04}</Project>
+      <Name>TPH.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Common\TPH.LIS.Common.csproj">
+      <Project>{d12afe96-3c9e-4310-847a-a662bcee40be}</Project>
+      <Name>TPH.LIS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Data\TPH.LIS.Data.csproj">
+      <Project>{493d7bfe-24bf-4612-86eb-623e23656f5d}</Project>
+      <Name>TPH.LIS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Log\TPH.LIS.Log.csproj">
+      <Project>{B93B48F6-C3A3-41F4-88C3-A0232FA5C615}</Project>
+      <Name>TPH.LIS.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.User\TPH.LIS.User.csproj">
+      <Project>{3CDB515A-73AF-4845-9CC0-5844D03ADFF3}</Project>
+      <Name>TPH.LIS.User</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ucDanhMucBienDichKetQuaMay.resx">
+      <DependentUpon>ucDanhMucBienDichKetQuaMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhMucBoPhan_Nhom.resx">
+      <DependentUpon>ucDanhMucBoPhan_Nhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhMucGhiChuTuDong.resx">
+      <DependentUpon>ucDanhMucGhiChuTuDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhMucGioiHanThamChieu.resx">
+      <DependentUpon>ucDanhMucGioiHanThamChieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhMucBoChiDinh.resx">
+      <DependentUpon>ucDanhMucBoChiDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhMucQuyTrinh_PhuongPhap.resx">
+      <DependentUpon>ucDanhMucQuyTrinh_PhuongPhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhMucCongTy.resx">
+      <DependentUpon>ucDanhMucCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhMucSinhLy.resx">
+      <DependentUpon>ucDanhMucSinhLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhMucTinhToan.resx">
+      <DependentUpon>ucDanhMucTinhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhSachXetNghiem.resx">
+      <DependentUpon>ucDanhSachXetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucLoaiMau.resx">
+      <DependentUpon>ucLoaiMau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucConfig.resx">
+      <DependentUpon>ucConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhMucXetNghiem.resx">
+      <DependentUpon>ucDanhMucXetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhMucProfile.resx">
+      <DependentUpon>ucDanhMucProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucSearchLookupEditor_DanhSachXetNghiem.resx">
+      <DependentUpon>ucSearchLookupEditor_DanhSachXetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

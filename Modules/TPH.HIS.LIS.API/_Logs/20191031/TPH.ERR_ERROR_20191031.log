@@ -1,0 +1,132 @@
+﻿2019-10-31 20:25:51,134	[22]	ERROR	VimesServiceImpl	Exception Source: System.Data
+StackTrace:    at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at TPH.HIS.VIMES.DataAccess.Impl.LisDataAccessImpl.GetSystemConfig(String hisKey) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\DataAccess\Impl\LisDataAccessImpl.cs:line 35
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.GetApiConfigs(Int32 HisId) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1334
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.UpdatePatientInfo(PatientParams data, String token) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1244
+Source: System.Data
+TargetSite: Void ValidateCommand(System.String, Boolean)
+Message: ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 20:25:51,203	[30]	INFO 	VimesServiceImpl	tphsolutions-UpdatePatientInfo-127.0.0.1
+31/10/2019 20:25:40 ?para=TPH.HIS.VIMES.Models.Params.PatientParams&
+31/10/2019 20:25:51 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 20:25:51,203	[22]	INFO 	VimesServiceImpl	ErrorMessage:
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+OutputMessage:
+31/10/2019 20:25:51 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+InputMessage:
+31/10/2019 20:25:40>?Para=TPH.HIS.VIMES.Models.Params.PatientParams
+2019-10-31 20:43:13,456	[18]	ERROR	VimesServiceImpl	Exception Source: System.Data
+StackTrace:    at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at TPH.HIS.VIMES.DataAccess.Impl.LisDataAccessImpl.GetSystemConfig(String hisKey) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\DataAccess\Impl\LisDataAccessImpl.cs:line 35
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.GetApiConfigs(Int32 HisId) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1334
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.UpdatePatientInfo(String data, String token) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1244
+Source: System.Data
+TargetSite: Void ValidateCommand(System.String, Boolean)
+Message: ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 20:43:13,472	[17]	INFO 	VimesServiceImpl	tphsolutions-UpdatePatientInfo-127.0.0.1
+31/10/2019 20:43:03 ?para=&
+31/10/2019 20:43:13 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 20:43:13,472	[18]	INFO 	VimesServiceImpl	ErrorMessage:
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+OutputMessage:
+31/10/2019 20:43:13 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+InputMessage:
+31/10/2019 20:43:03>?Para=
+2019-10-31 20:44:12,906	[62]	ERROR	VimesServiceImpl	Exception Source: System.Data
+StackTrace:    at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at TPH.HIS.VIMES.DataAccess.Impl.LisDataAccessImpl.GetSystemConfig(String hisKey) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\DataAccess\Impl\LisDataAccessImpl.cs:line 35
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.GetApiConfigs(Int32 HisId) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1334
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.UpdatePatientInfo(String data, String token) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1244
+Source: System.Data
+TargetSite: Void ValidateCommand(System.String, Boolean)
+Message: ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 20:44:12,908	[62]	INFO 	VimesServiceImpl	ErrorMessage:
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+OutputMessage:
+31/10/2019 20:44:12 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+InputMessage:
+31/10/2019 20:44:02>?Para=
+2019-10-31 20:44:12,908	[17]	INFO 	VimesServiceImpl	tphsolutions-UpdatePatientInfo-127.0.0.1
+31/10/2019 20:44:02 ?para=&
+31/10/2019 20:44:12 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 20:57:37,066	[83]	ERROR	VimesServiceImpl	Exception Source: System.Data
+StackTrace:    at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at TPH.HIS.VIMES.DataAccess.Impl.LisDataAccessImpl.GetSystemConfig(String hisKey) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\DataAccess\Impl\LisDataAccessImpl.cs:line 35
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.GetApiConfigs(Int32 HisId) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1334
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.UpdatePatientInfo(String data, String token) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1244
+Source: System.Data
+TargetSite: Void ValidateCommand(System.String, Boolean)
+Message: ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 20:57:37,069	[83]	INFO 	VimesServiceImpl	ErrorMessage:
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+OutputMessage:
+31/10/2019 20:57:37 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+InputMessage:
+31/10/2019 20:57:27>?Para=
+2019-10-31 20:57:37,071	[85]	INFO 	VimesServiceImpl	tphsolutions-UpdatePatientInfo-127.0.0.1
+31/10/2019 20:57:27 ?para=&
+31/10/2019 20:57:37 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 20:59:25,830	[83]	ERROR	VimesServiceImpl	Exception Source: System.Data
+StackTrace:    at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at TPH.HIS.VIMES.DataAccess.Impl.LisDataAccessImpl.GetSystemConfig(String hisKey) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\DataAccess\Impl\LisDataAccessImpl.cs:line 35
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.GetApiConfigs(Int32 HisId) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1334
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.UpdatePatientInfo(PatientParams data, String token) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1244
+Source: System.Data
+TargetSite: Void ValidateCommand(System.String, Boolean)
+Message: ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 20:59:25,888	[87]	INFO 	VimesServiceImpl	tphsolutions-UpdatePatientInfo-127.0.0.1
+31/10/2019 20:59:15 ?para=TPH.HIS.VIMES.Models.Params.PatientParams&
+31/10/2019 20:59:25 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 20:59:25,923	[83]	INFO 	VimesServiceImpl	ErrorMessage:
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+OutputMessage:
+31/10/2019 20:59:25 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+InputMessage:
+31/10/2019 20:59:15>?Para=TPH.HIS.VIMES.Models.Params.PatientParams
+2019-10-31 21:10:32,458	[11]	ERROR	VimesServiceImpl	Exception Source: System.Data
+StackTrace:    at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at TPH.HIS.VIMES.DataAccess.Impl.LisDataAccessImpl.GetSystemConfig(String hisKey) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\DataAccess\Impl\LisDataAccessImpl.cs:line 35
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.GetApiConfigs(Int32 HisId) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1351
+   at TPH.HIS.VIMES.Services.Impl.VimesServiceImpl.UpdatePatientInfo(PatientParams data, String token) in D:\Work\TPH\1.SourceCode\0.Git.SourceCode\999.Customers\32.BVQY.108\TPH.LabIMS\Modules\TPH.HIS.VIMES\Services\Impl\VimesServiceImpl.cs:line 1244
+Source: System.Data
+TargetSite: Void ValidateCommand(System.String, Boolean)
+Message: ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 21:10:32,470	[9]	INFO 	VimesServiceImpl	tphsolutions-UpdatePatientInfo-127.0.0.1
+31/10/2019 21:10:22 ?para=TPH.HIS.VIMES.Models.Params.PatientParams&
+31/10/2019 21:10:32 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+2019-10-31 21:10:32,470	[11]	INFO 	VimesServiceImpl	ErrorMessage:
+ExecuteReader requires an open and available Connection. The connection's current state is closed.
+OutputMessage:
+31/10/2019 21:10:32 > ExecuteReader requires an open and available Connection. The connection's current state is closed.
+InputMessage:
+31/10/2019 21:10:22>?Para=TPH.HIS.VIMES.Models.Params.PatientParams

@@ -1,0 +1,116 @@
+﻿<objects xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.net  http://www.springframework.net/schema/objects/spring-objects-1.1.xsd">
+  <object name="MachineHelper" type="TPH.Lab.Middleware.Helpers.MachineHelper, TPH.Lab.Middleware.Helpers">
+    <property name="MachineID" value="1"/>
+    <property name="Protocol" value="CobasInfinity"/>
+    <property name="MachineName" value="Cobas Infinity"/>
+    <property name="AutoSendOrder" value="true"/>
+    <property name="TimerScanAutoSendOrder" value="10"/>
+    <property name="TimeSend" value="5"/>
+    <property name="ScanDownloadOrder" value="true"/>
+    <property name="TimerScanDownloadOrder" value="5"/>
+    <property name="ScanReceiveOrder" value="true"/>
+    <property name="TimerScanReceiveOrder" value="2"/>
+    <property name="ScanReceiveResult" value="true"/>
+    <property name="TimerScanReceiveResult" value="2"/>
+  </object>
+  <object name="HISStoreProcedure" type="TPH.Lab.Middleware.Helpers.HISStoreProcedure, TPH.Lab.Middleware.Helpers">
+    <property name="StoreDanhMuc" value=""/> <!-- [sp_LIS_DanhMuc] @para tinyint -->
+    <property name="ParaXetNghiem" value="select cast(IDDMCHIPHI as varchar(10)) as IDDMCHIPHI, MACHIPHI,TENCHIPHI, DONVITINH,'' as  IDNHOMNOIDUNGCLS ,'THUPHI' LoaiDM
+                                          from QLBN_DM_CHIPHI
+                                          where IDNHOMCHIPHI in (
+                                          select n.IDNHOMCHIPHI from QLBN_DM_CHIPHINHOM n inner join QLBN_DM_CHIPHILOAI l
+                                          on n.IDLOAICHIPHI = l.IDLOAICHIPHI)
+                                          union all
+                                          select cast(IDNOIDUNGCLS as varchar(10)) as IDDMCHIPHI,MANOIDUNGCLS as MACHIPHI, TENNOIDUNGCLS as TENCHIPHI
+                                          ,CHISOBINHTHUONG as DONVITINH, IDNHOMNOIDUNGCLS, 'CHITIET' as LoaiDM from QLBN_DM_CLS_NOIDUNG"/> <!--l.IDLOAICHIPHI in (9,13,14,24) and -->
+    <property name="ParaBacSi" value="select Username, Fullname from [User]"/>
+    <property name="ParaKhoaPhong" value="select MaDonVi,TenDonVi  from DmDonVi"/>
+    <property name="ParaDoiTuong" value="select  '1' as MaDoiTuong, N'Thu phí' as TenDoiTuong union all select '2' as MaDoiTuong, N'BHYT' as TenDoiTuong union all select '3' as MaDoiTuong, N'Khác' as TenDoiTuong"/>
+    <property name="ParaChanDoan" value="select MaBenh, TenBenh from QLBN_DM_BENH"/>
+    <property name="StoreLISOrderList" value="sp_LIS_DSChiDinh"/>
+    <!-- [sp_LIS_DSChiDinh] @tungay, @denngay, @trangthai-->
+    <property name="StoreLISOrder" value="usp_info_XetNghiemKetQua_NgoaiTru"/>
+    <property name="StoreLISOrderNoiTru" value="usp_info_XetNghiemKetQua_NoiTru"/>
+    <!-- [sp_LIS_ChiDinh] @sophieuyeucau-->
+    <property name="StoreLISCheck" value=""/>
+    <!-- [sp_LIS_ChiDinh_TrangThai]  @sophieuyeucau,@madichvu,@iddichvuchidinh,@dalaymau,@ngaycapphat,@trangthaicapnhat-->
+    <property name="StoreLISResult" value="IF NOT EXISTS ( SELECT * FROM KetQuaXetNghiem where CLS_SOPHIEU = @CLS_SOPHIEU and CLS_CHIDINH_ID = isnull(@CLS_CHIDINH_ID,0)
+                                            and CLS_CHIDINH_CHITIET_CLS_ID = isnull(@CLS_CHIDINH_CHITIET_CLS_ID,0) and BANGKE_ID = isnull(@BANGKE_ID,0) and BANGKE_CHIPHI_ID = isnull(@BANGKE_CHIPHI_ID,0) and IDNOIDUNGCLS = @IDNOIDUNGCLS)
+				            Begin
+	 				    	insert into KetQuaXetNghiem (
+                                            	CLS_SOPHIEU,CLS_CHIDINH_ID,CLS_CHIDINH_CHITIET_CLS_ID,BANGKE_ID
+                                            	,BANGKE_CHIPHI_ID,IDBENH,IDNHOMCHUCNANGCLS,IDLOAICHUCNANGCLS,CLS_TENLOAICLS
+                                            	,CLS_KQ_NGAYLAP,IDNHOMNOIDUNGCLS,IDNOIDUNGCLS,KETQUA1,KETQUA2,KETQUA3,CreatedDate,KetQua_SoLan)
+                                            	select @CLS_SOPHIEU,@CLS_CHIDINH_ID,@CLS_CHIDINH_CHITIET_CLS_ID,@BANGKE_ID
+                                            	,@BANGKE_CHIPHI_ID,@IDBENH,@IDNHOMCHUCNANGCLS,@IDLOAICHUCNANGCLS,@CLS_TENLOAICLS
+					    	,@CLS_KQ_NGAYLAP,(select top 1 IDNHOMNOIDUNGCLS from QLBN_DM_CLS_NOIDUNG where IDNOIDUNGCLS = @IDNOIDUNGCLS) as IDNHOMNOIDUNGCLS,@IDNOIDUNGCLS,@KETQUA1,@KETQUA2,@KETQUA3,@CreatedDate
+					    	,isnull((select max(KetQua_SoLan) from KetQuaXetNghiem where CLS_SOPHIEU = @CLS_SOPHIEU and CLS_CHIDINH_ID = isnull(@CLS_CHIDINH_ID,0) 
+                                            	and CLS_CHIDINH_CHITIET_CLS_ID = isnull(@CLS_CHIDINH_CHITIET_CLS_ID,0) and BANGKE_ID = isnull(@BANGKE_ID,0) and BANGKE_CHIPHI_ID = isnull(@BANGKE_CHIPHI_ID,0) and IDNOIDUNGCLS = @IDNOIDUNGCLS),0) + 1 where @IDNOIDUNGCLS in (select IDNOIDUNGCLS from QLBN_DM_CLS_NOIDUNG)
+					    end 
+					   ELSE
+						BEGIN
+							Update KetQuaXetNghiem  set KETQUA1 = @KETQUA1 , KETQUA2 = @KETQUA2, KETQUA3 = @KETQUA3,CLS_KQ_NGAYLAP = @CLS_KQ_NGAYLAP, KetQua_SoLan = KetQua_SoLan + 1 
+							where CLS_SOPHIEU = @CLS_SOPHIEU and CLS_CHIDINH_ID = isnull(@CLS_CHIDINH_ID,0)
+                                            		and CLS_CHIDINH_CHITIET_CLS_ID = isnull(@CLS_CHIDINH_CHITIET_CLS_ID,0) and BANGKE_ID = isnull(@BANGKE_ID,0) and BANGKE_CHIPHI_ID = isnull(@BANGKE_CHIPHI_ID,0) and IDNOIDUNGCLS = @IDNOIDUNGCLS
+						END					
+"/>
+    <!-- [sp_LIS_KetQua]  @sophieuyeucau,@iddichvuchidinh,@madichvu,@ketqua,@chisobinhthuong,@batthuong,@klchung,@user,@upd,@sopkq-->
+  </object>
+  <!--<object name="HISDataColumnNames" type="TPH.Lab.Middleware.Helpers.HISDataColumnNames, TPH.Lab.Middleware.Helpers">
+   --><!-- TPH_His_ColumnMapping_DanhMucDichVu--><!--
+        <property name ="dmDichvuMadichvu" value= "IDDMCHIPHI"/>
+        <property name ="dmDichvuTendichvu" value= "TENCHIPHI"/>
+        <property name ="dmDichvuDonvitinh" value= "DONVITINH"/>
+        <property name ="dmDichvuMaCapTren" value= "MACHIPHI"/>
+        <property name ="dmDichvuLoaiDichVu" value= "LoaiDM"/>
+  --><!-- TPH_His_ColumnMapping_DanhMucKhoaPhong--><!--
+        <property name ="dmKhoaPhongMaKhoa" value= "MaDonVi"/>
+        <property name ="dmKhoaPhongTenKhoa" value= "TenDonVi"/>
+  --><!-- TPH_His_ColumnMapping_DanhMucNhanVien--><!--
+        <property name ="dmNhanVienMaNhanVien" value= "Username"/>
+        <property name ="dmNhanVienTenNhanVien" value= "Fullname"/>
+  --><!-- TPH_His_ColumnMapping_DanhMucDoiTuongDichVu--><!--
+        <property name ="dmDoiTuongDichVuMaDoiTuongDichVu" value= "MaDoiTuong"/>
+        <property name ="dmDoiTuongDichVuTenDoiTuongDichVu" value= "TenDoiTuong"/>
+  --><!-- TPH_His_ColumnMapping_DanhMucChanDoan--><!--
+        <property name ="dmChanDoanMaChanDoan" value= "MaBenh"/>
+        <property name ="dmChanDoanTenChanDoan" value= "TenBenh"/>
+  --><!-- TPH_His_ColumnMapping_ThongTinChiDinh--><!--
+  --><!-- Thông tin hành chính--><!--
+        <property name ="chidinhSophieuyeucau" value= "SoPhieuChiDinh"/>
+        <property name ="chidinhMabenhnhan" value= "MaBenhNhan"/>
+        <property name ="chidinhTenbenhnhan" value= "Hoten"/>
+        <property name ="chidinhNamsinh" value= "Namsinh"/>
+        <property name ="chidinhSinhnhat" value= ""/>
+        <property name ="chidinhGioitinh" value= "GioiTinh"/>
+        <property name ="chidinhDiachi" value= "DiaChi"/>
+        <property name ="chidinhMadoituong" value= "DIEUTRI_DOITUONG_E"/>
+        <property name ="chidinhTendoituong" value= ""/>
+        <property name ="chidinhMabacsi" value= "MaBacSi"/>
+        <property name ="chidinhTenbacsi" value= "BacSiChiDinh"/>
+        <property name ="chidinhMakhoaphong" value= "MaKhoa"/>
+        <property name ="chidinhTenkhoaphong" value= "Khoa"/>
+        <property name ="chidinhMachandoan" value= "idbenh"/>
+        <property name ="chidinhChandoan" value= "chandoan"/>
+        <property name ="chidinhNgaychidinh" value= "ngaychidinh"/>
+        <property name ="chidinhSothebhyt" value= "sobhyt"/>
+        <property name ="chidinhSophong" value= ""/>
+        <property name ="chidinhSogiuong" value= ""/>
+  --><!-- Thông tin dịch vụ--><!--
+        <property name ="chidinhMadichvu" value= "MaChiPhi"/>
+        <property name ="chidinhIddichvuchidinh" value= "ChiDinhChiTietID"/>--><!--Bảng kê chi phí ID--><!--
+        <property name ="chidinhTendv" value= "TenChiPhi"/>
+  --><!--Thông tin thêm của HIS DH Cần Thơ--><!--
+        <property name ="chidinhDotKhamID" value ="DOTKHAM_ID"/>
+        <property name ="chiDinhChuyenKhoaID" value ="CHUYENKHOA_ID"/> --><!--Chuyển khoa ID--><!--
+        <property name ="chidinhGiayToID" value ="GIAYTO_ID"/>
+        <property name ="chidinhLoaiChucNangCLSID" value ="IDLOAICHUCNANGCLS"/>
+        <property name ="chidinhNhomChucNangCLSID" value ="IDNHOMCHUCNANGCLS"/>
+        <property name ="chidinhBNID" value ="BN_ID"/>
+        <property name ="chidinhDMChiPhiID" value ="IDDMCHIPHI"/>
+        <property name ="chidinhMaNoiCapTheBhyt" value ="MaNoiCapTheBhyt"/>
+        <property name ="chidinhMaNoiDangKyTheBhyt" value ="MaNoiDangKyTheBhyt"/>      
+        <property name ="chidinhIdchidinh" value= "ChiDinhID"/>--><!--Bảng kê ID--><!--
+  </object>-->
+</objects>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B51AB14E-71B9-4C92-85F6-A318B51AA382}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPH.HIS</RootNamespace>
+    <AssemblyName>TPH.HIS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <AssemblyVersion>2019.9.12.802</AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Build\ShareLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="RicherTextBox">
+      <HintPath>..\..\LIS.App\bin\Debug\RicherTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\FrmCompareConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FrmCompareConfig.Designer.cs">
+      <DependentUpon>FrmCompareConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucFunctionConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucFunctionConfig.designer.cs">
+      <DependentUpon>ucFunctionConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucLichSuKhangSinhDo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucLichSuKhangSinhDo.designer.cs">
+      <DependentUpon>ucLichSuKhangSinhDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SeviceOrderedInformation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IOrderedRepositories.cs" />
+    <Compile Include="Repositories\IPatientFileRepositories.cs" />
+    <Compile Include="Repositories\OrderedRepositories.cs" />
+    <Compile Include="Repositories\PatientFileRepositories.cs" />
+    <Compile Include="Services\IOrderedServices.cs" />
+    <Compile Include="Services\IPatientFileServices.cs" />
+    <Compile Include="Services\OrderedServices.cs" />
+    <Compile Include="Services\PatientFileServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contansts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TPH.Data.HIS\TPH.Data.HIS.csproj">
+      <Project>{54E5D0A9-FC0D-4B82-93FC-1227CCA9A062}</Project>
+      <Name>TPH.Data.HIS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Common\TPH.LIS.Common.csproj">
+      <Project>{d12afe96-3c9e-4310-847a-a662bcee40be}</Project>
+      <Name>TPH.LIS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Configuration\TPH.LIS.Configuration.csproj">
+      <Project>{0ce6a166-5f71-42a6-a850-7597e93be18e}</Project>
+      <Name>TPH.LIS.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Data\TPH.LIS.Data.csproj">
+      <Project>{493d7bfe-24bf-4612-86eb-623e23656f5d}</Project>
+      <Name>TPH.LIS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Log\TPH.LIS.Log.csproj">
+      <Project>{b93b48f6-c3a3-41f4-88c3-a0232fa5c615}</Project>
+      <Name>TPH.LIS.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Patient\TPH.LIS.Patient.csproj">
+      <Project>{da4788f0-bfd6-45fc-9eb6-0f3d5b9cefa3}</Project>
+      <Name>TPH.LIS.Patient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.User\TPH.LIS.User.csproj">
+      <Project>{3cdb515a-73af-4845-9cc0-5844d03adff3}</Project>
+      <Name>TPH.LIS.User</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\FrmCompareConfig.resx">
+      <DependentUpon>FrmCompareConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucFunctionConfig.resx">
+      <DependentUpon>ucFunctionConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucLichSuKhangSinhDo.resx">
+      <DependentUpon>ucLichSuKhangSinhDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

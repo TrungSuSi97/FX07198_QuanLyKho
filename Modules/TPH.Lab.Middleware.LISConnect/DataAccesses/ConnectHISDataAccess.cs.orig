@@ -1,0 +1,1309 @@
+﻿namespace TPH.Lab.Middleware.LISConnect.DataAccesses
+{
+    using BusinessService.Services;
+    using System;
+    using System.Linq;
+    using System.Reflection;
+    using System.Text;
+    using System.Threading.Tasks;
+    using Data;
+    using System.Data.SqlClient;
+    using System.Data;
+    using Data.Configuration;
+    using Helpers.Enum;
+    using HISConnect.Services;
+    using HISConnect.Models;
+    using System.Collections.Generic;
+    using LIS.Patient.Services;
+    using LIS.Patient.Model;
+    using LIS.TestResult.Services;
+    using Helpers;
+    using LIS.Common.Extensions;
+    using Data.HIS.Models;
+    using Data.HIS.HISDataCommon;
+    using BusinessService.Models;
+    using WriteLog;
+    using System.Diagnostics;
+    using LIS.Configuration.Models;
+    using static LIS.Common.TestType;
+
+    public class ConnectHISDataAccess : IConnectHISDataAccess
+    {
+        private readonly IGetHISService _iGetHisService = new GetHISService();
+        private readonly IPatientInformationService _iBenhNhanInfo = new PatientInformationService();
+        private readonly ITestResultService _itestResult = new TestResultService();
+        void ThrowNewException(string message)
+        {
+            LogService.RecordLogFile(message);
+            throw new Exception(message);
+        }
+
+        private string InsertBenhNhan(BenhNhanInfoForHIS info, bool updateGet
+            , HisConnection hisConnect, List<HisFunctionConfig> hisFunction, bool useHISBarcode)
+        {
+            try
+            {
+                string mess = string.Empty;
+                //var insert = new InsertPatientFromHISBase();
+
+                var lstMappingData = HISMappingService.GetInstance().GetMappingData(HisMappingCategory.All, (int)hisConnect.HisID);
+
+                var mappingCheck = new HISMapping {HisProviderID = (int) hisConnect.HisID};
+
+                if (!string.IsNullOrEmpty(info.Bacsicd))
+                {
+                    mappingCheck.CategoryID = (int)HisMappingCategory.NhanVien;
+                    mappingCheck.HISID = info.Bacsicd;
+                    mappingCheck.ItemName = info.Tenbscd;
+
+                    info.Bacsicd = HISMappingService.GetInstance().GetAndAutoMapping(mappingCheck, lstMappingData).LISID;
+                    //NhanVienService.GetInstance().SyncNhanVien(info.Bacsicd, info.Tenbscd).MaNhanVien;
+                    //info.Bacsicd = HISMappingService.GetInstance().CheckMappingAndSync(mappingCheck, true).LISID;
+                }
+
+                if (!string.IsNullOrEmpty(info.Madonvi))
+                {
+                    mappingCheck.CategoryID = (int)HisMappingCategory.KhoaPhong;
+                    mappingCheck.HISID = info.Madonvi;
+                    mappingCheck.ItemName = info.Tendonvi;
+                    info.Madonvi = HISMappingService.GetInstance().GetAndAutoMapping(mappingCheck, lstMappingData).LISID; ; //KhoaPhongService.GetInstance().SyncKhoaPhong(info.Madonvi, info.Tendonvi).MaKhoaPhong;
+                }
+
+                if (!string.IsNullOrEmpty(info.Makhoahienthoi))
+                {
+                    mappingCheck.CategoryID = (int)HisMappingCategory.KhoaPhong;
+                    mappingCheck.HISID = info.Makhoahienthoi;
+                    mappingCheck.ItemName = info.Tenkhoahienthoi;
+                    info.Makhoahienthoi = HISMappingService.GetInstance().GetAndAutoMapping(mappingCheck, lstMappingData).LISID; ; //KhoaPhongService.GetInstance().SyncKhoaPhong(info.MaKhoaHienThoi, info.TenKhoaHienThoi).MaKhoaHienThoi;
+                }
+
+                if (!string.IsNullOrEmpty(info.Doituongdichvu))
+                {
+                    mappingCheck.CategoryID = (int)HisMappingCategory.DoiTuong;
+                    mappingCheck.HISID = info.Doituongdichvu;
+                    mappingCheck.ItemName = info.Tendoituongdichvu;
+
+                    info.Doituongdichvu = HISMappingService.GetInstance().GetAndAutoMapping(mappingCheck, lstMappingData).LISID; ;  // DoiTuongService.GetInstance().SyncDoiTuong(info.Doituongdichvu, info.Tendoituongdichvu).MaDoiTuongDichVu;
+                }
+
+                if (_iBenhNhanInfo.Insert_BenhNhan_TiepNhan(info, false))
+                {
+                    if (info.ChiDinh.Where(x => x.IDLoaiXetNghiem.Equals((int)EnumTestType.ChiDinhTruyenMau) || x.IDLoaiXetNghiem.Equals((int)EnumTestType.DichVuTruyenMau)).Any())
+                        _iBenhNhanInfo.Insert_BenhNhan_TuMau(info, false);
+                    if (info.ChiDinh.Where(x => x.IDLoaiXetNghiem.Equals((int)EnumTestType.TienSan) || x.IDLoaiXetNghiem.Equals((int)EnumTestType.SLSS)).Any())
+                    {
+                        var objSangLoc = new BENHNHAN_MAUSANGLOC() { Matiepnhan = info.Matiepnhan };
+                        objSangLoc.Tiensan = info.ChiDinh.Where(x => x.IDLoaiXetNghiem.Equals((int)EnumTestType.TienSan)).Any();
+                        objSangLoc.Sosinh = info.ChiDinh.Where(x => x.IDLoaiXetNghiem.Equals((int)EnumTestType.SLSS)).Any();
+                        if(objSangLoc.Sosinh)
+                        {
+                            var ten = info.Tenbn.Split(new string[] { "" }, StringSplitOptions.RemoveEmptyEntries);
+                            objSangLoc.Hotenme = info.Tenbn;
+                            objSangLoc.Tenme = ten[ten.Length - 1];
+                            objSangLoc.Noiguimau = info.Madonvi;
+                            objSangLoc.Diachi = info.Diachi;
+                        }
+                        _iBenhNhanInfo.Insert_ThongTinSLSoSinh(objSangLoc);
+                    }
+                    var chiDinhGPB = info.ChiDinh.Where(x => x.IDLoaiXetNghiem.Equals((int)EnumTestType.GPB));
+
+                    if (chiDinhGPB.Any())
+                    {
+                        _iBenhNhanInfo.InsUpdDelAnaPathPatient(info, "I");
+                    }
+                    if (_iBenhNhanInfo.Insert_BenhNhan_CLS_XetNghiem(info.Matiepnhan))
+                        InsertChiDinh(info, ref mess, updateGet, hisConnect, hisFunction);
+                }
+
+                if (!string.IsNullOrEmpty(mess))
+                {
+                    LogService.RecordLogFile(mess);
+                    LIS.Common.Controls.CustomMessageBox.MSG_Information_OK(mess);
+                }
+                return info.Matiepnhan;
+            }
+            catch (Exception ex)
+            {
+                ThrowNewException(string.Format("Có lỗi xảy ra khi tiếp nhận bệnh nhân từ HIS, chi tiết: {0}", ex.Message));
+                return string.Empty;
+            }
+        }
+        public int SoLuongMau(string matiepnhan, int theoNhom)
+        {
+            return _itestResult.SoLuongMau(matiepnhan, theoNhom);
+        }
+        private bool InsertChiDinh(BenhNhanInfoForHIS info, ref string mess, bool updateGet, HisConnection hisConnect, List<HisFunctionConfig> hisFunction)
+        {
+            string logStep = string.Empty;
+            var insert = 0;
+            try
+            {
+                var mappingCheck = new HISMapping();
+                mappingCheck.HisProviderID = (int)hisConnect.HisID;
+
+                /// logStep = Environment.NewLine + "get Connect db";
+                var conn = SqlDbConfigurationBase.GetConnection();
+                var sb = new StringBuilder();
+                var notmapping = string.Empty;
+                var hisInfoparaInfoList = new List<HisParaGetList>();
+
+                bool allowRefreshMapping = true;
+                var allow = false;
+
+                // logStep += Environment.NewLine + "Start loop";
+                var chidinhHisInfo = new List<ChiDinhHISInfo>();
+                var chiDinhLis = new List<XetNghiemHISInfo>();
+                var previousBSHis = string.Empty;
+                var previousBSLis = string.Empty;
+                var previousKhoaHis = string.Empty;
+                var previousKhoaLis = string.Empty;
+                foreach (var item in info.ChiDinh)
+                {
+                    // logStep += Environment.NewLine + "Get mapping";
+                    var xetnghiem = XetNghiemHISService.GetInstance().GetMapping(item.TestCode, (int)hisConnect.HisID, allowRefreshMapping);
+                    allowRefreshMapping = false;
+                    if (xetnghiem != null)
+                    {
+                        if (!string.IsNullOrEmpty(xetnghiem.maxn) || !string.IsNullOrEmpty(xetnghiem.maprofile))
+                        {
+                            if (xetnghiem.isprofile || !string.IsNullOrEmpty(xetnghiem.maprofile))
+                                allow = true;
+                            else
+                            {
+                                // logStep += Environment.NewLine + "get mapping XN";
+                                var dmxn = XetNghiemService.GetInstance().GetMappingXN(xetnghiem.maxn);
+                                //   logStep += Environment.NewLine + "check mã xn";
+                                if (dmxn != null && !string.IsNullOrEmpty(dmxn.maxn))
+                                {
+                                    allow = true;
+                                }
+                                else
+                                {
+                                    allow = false;
+                                    notmapping += string.Format("[Mã XN {0} không tồn tại] - {1}", xetnghiem.maxn, item.TestCode);
+                                }
+                            }
+                            if (allow)
+                            {
+                                if (!chiDinhLis.Contains(xetnghiem))
+                                {
+                                    if (!string.IsNullOrEmpty(item.MaBSChiDinh))
+                                    {
+                                        if (previousBSHis.Equals(item.MaBSChiDinh))
+                                        {
+                                            item.MaBSChiDinh = previousBSLis;
+                                        }
+                                        else
+                                        {
+                                            mappingCheck.CategoryID = (int)HisMappingCategory.NhanVien;
+                                            mappingCheck.HISID = item.MaBSChiDinh;
+                                            mappingCheck.ItemName = item.TenBSChiDinh;
+
+                                            previousBSHis = item.MaBSChiDinh;
+                                            previousBSLis = HISMappingService.GetInstance().CheckMappingAndSync(mappingCheck, false).LISID;
+                                            //NhanVienService.GetInstance().SyncNhanVien(item.MaBSChiDinh, item.TenBSChiDinh).MaNhanVien;
+                                            item.MaBSChiDinh = previousBSLis;
+                                        }
+                                    }
+
+                                    if (!string.IsNullOrEmpty(item.MaKhoaChiDinh))
+                                    {
+                                        if (previousKhoaHis.Equals(item.MaKhoaChiDinh))
+                                        {
+                                            item.MaKhoaChiDinh = previousKhoaLis;
+                                        }
+                                        else
+                                        {
+                                            mappingCheck.CategoryID = (int)HisMappingCategory.KhoaPhong;
+                                            mappingCheck.HISID = item.MaKhoaChiDinh;
+                                            mappingCheck.ItemName = item.TenKhoaChiDinh;
+
+                                            previousKhoaHis = item.MaKhoaChiDinh;
+                                            previousKhoaLis = HISMappingService.GetInstance().CheckMappingAndSync(mappingCheck, false).LISID;
+                                            item.MaKhoaChiDinh = previousKhoaLis;
+                                        }
+                                    }
+                                    chidinhHisInfo.Add(item);
+                                    chiDinhLis.Add(xetnghiem);
+                                    var log = string.Format("Add for insert order test: {0}-[{2}|{3}] for sampleid: {1}", item.TestCode, info.Matiepnhan, xetnghiem.maxn, xetnghiem.tendichvu);
+                                    LogService.RecordLogFile("GET_HisOrder", log, (new StackTrace()).GetFrame(0).GetMethod().Name);
+
+                                    hisInfoparaInfoList.Add(new HisParaGetList()
+                                    {
+                                        IDChiDinh = item.IdChiTiet,
+                                        IDChiDinhDichVu = item.IDDichVuChiDinh,
+                                        SoPhieuChiDinh = item.SoPhieuChiDinh,
+                                        IDBenhNhan = info.Bn_id,
+                                        MaDichVu = item.TestCode,
+                                        MaTiepNhanLIS = info.Matiepnhan,
+                                        NgayTiepNhan = info.Ngaytiepnhan,
+                                        NoiTru = info.Noitru,
+                                        TrangThai = (hisConnect.HisID == HisProvider.FPT_SP ? FPTTrangThaiChiDinh.DaCap : 1),
+                                        IDBangKe = item.Bangkeid
+                                    });
+                                }
+                                else
+                                    LogService.RecordLogFile("GET_HisOrder",
+                                        string.Format("Order test duplicate: {0}-[{2}|{3}] for sampleid: {1}", item.TestCode, info.Matiepnhan, xetnghiem.maxn, xetnghiem.tendichvu)
+                                        , (new StackTrace()).GetFrame(0).GetMethod().Name);
+                            }
+                        }
+                        else
+                        {
+                            notmapping += string.Format("{0}|", item.TestCode);
+                        }
+                    }
+                    else
+                    {
+                        notmapping += string.Format("{0} chưa được khai báo trên LIS|", item.TestCode);
+                    }
+                }
+                if (chidinhHisInfo.Count > 0 && chiDinhLis.Count > 0)
+                {
+                    logStep += Environment.NewLine + string.Format("Start insert test chidinhHisInfoCount: {0} - chiDinhLisCount: {1} item(s)", chidinhHisInfo.Count, chiDinhLis.Count);
+
+                    insert = _itestResult.InsertTestFromHis(info, chidinhHisInfo, chiDinhLis);
+
+                }
+
+                if (updateGet && insert > 0)
+                {
+                    logStep += Environment.NewLine + "Update allowdown load infinity";
+                    _itestResult.UpdateAllowDownload(info.Matiepnhan);
+                    logStep += Environment.NewLine + "Update check HIS";
+                    Task.Factory.StartNew(() =>
+                    {
+                        _iGetHisService.LISCheck(hisConnect, hisFunction, hisInfoparaInfoList);
+                    });
+                }
+
+                if (!string.IsNullOrEmpty(notmapping))
+                {
+                    mess = string.Format("Các mã xét nghiệm: {0} chưa được mapping", notmapping);
+                }
+                return insert > 0;
+            }
+            catch (Exception ex)
+            {
+                mess = string.Format("Có lỗi xảy ra khi thêm chỉ định, chi tiết {0} -- {1}", logStep, ex.Message);
+                LogService.RecordLogFile(mess);
+                return insert > 0;
+            }
+        }
+        public HISReturnBase DanhMucHIS(HISParaInfo para, HisConnection hisInfo, List<HisFunctionConfig> hisFunctionMapping)
+        {
+            var returData = new HISReturnBase();
+
+            if (para == HISParaInfo.XetNghiem)
+                returData = _iGetHisService.DanhMucXetNghiem(hisInfo, hisFunctionMapping);
+            else if (para == HISParaInfo.BacSi)
+                returData = _iGetHisService.DanhMucBacSi(hisInfo, hisFunctionMapping);
+            else if (para == HISParaInfo.KhoaPhong)
+                returData = _iGetHisService.DanhMucKhoaPhong(hisInfo, hisFunctionMapping);
+            else if (para == HISParaInfo.Doituong)
+                returData = _iGetHisService.DanhMucDoiTuong(hisInfo, hisFunctionMapping);
+            else if (para == HISParaInfo.ChanDoan)
+                returData = _iGetHisService.DanhMucChanDoan(hisInfo, hisFunctionMapping);
+            else if (para == HISParaInfo.MayXN)
+                returData = _iGetHisService.DanhMucMayXN(hisInfo, hisFunctionMapping);
+            else if (para == HISParaInfo.Phong)
+                returData = _iGetHisService.DanhMucPhong(hisInfo, hisFunctionMapping);
+            if (returData.Data != null)
+            {
+                foreach (DataColumn c in returData.Data.Columns)
+                {
+                    c.ColumnName = c.ColumnName.ToLower();
+                }
+            }
+            return returData;
+        }
+        public HISReturnBase GetPatientOrderedList(HisConnection hisInfo, List<HisFunctionConfig> hisFunctionMapping, HisParaGetList paraInfo, HISDataColumnNames hColumnName)
+        {
+            var returData = _iGetHisService.GetPatientOrderedList(hisInfo, hisFunctionMapping, paraInfo);
+            if (returData.Data != null)
+            {
+                foreach (DataColumn c in returData.Data.Columns)
+                {
+                    c.ColumnName = c.ColumnName.ToLower();
+                }
+            }
+            return returData;
+
+        }
+        public HISReturnBase GetPatientInformationDetail(HisConnection hisConnect, List<HisFunctionConfig> hisFunction, HisParaGetList paraInfoList)
+        {
+            return _iGetHisService.GetPatientInformationDetail(hisConnect, hisFunction, paraInfoList);
+        }
+        public HISReturnBase Get_BsLayMauThuThuat(HisConnection hisConnect, List<HisFunctionConfig> hisFunction, List<HisParaGetList> paraInfoList)
+        {
+            return _iGetHisService.Get_BsLayMauThuThuat(hisConnect, hisFunction, paraInfoList);
+        }
+        public HISReturnBase Get_ViTriLayMauPAP(HisConnection hisConnect, List<HisFunctionConfig> hisFunction, List<HisParaGetList> paraInfoList)
+        {
+            return _iGetHisService.Get_ViTriLayMauPAP(hisConnect, hisFunction, paraInfoList);
+        }
+        public HISReturnBase GetPatientOrderedDetail(HisConnection hisConnect, List<HisFunctionConfig> hisFunction, HisParaGetList paraInfo, List<HISDataColumnNames> hisColumns
+            , bool onlyNotGet = false, HISDataColumnNames hColumnName = null, DataTable mappingData = null)
+        {
+            var hColumnNames = _iGetHisService.GetHisColumnNameConfiguartion(hisConnect, hisColumns);
+            var returData = _iGetHisService.GetPatientOrderedDetail(hisConnect, hisFunction, paraInfo);
+            if (returData.Data != null)
+            {
+                var xetnghiem = XetNghiemHISService.GetInstance().GetData_HisMapping_All(true);
+                if (paraInfo.IDNhomXN != TestGroup.ALL)
+                {
+                    if (returData.Data.Rows.Count > 0)
+                    {
+                        var data = (from order in returData.Data.AsEnumerable()
+                                    join dmxn in xetnghiem.AsEnumerable() on order.Field<string>(hColumnNames.chidinhMadichvu) equals dmxn.Field<string>("madichvu")
+                                    where dmxn.Field<string>("nhomxn") == paraInfo.MaNhom
+                                    select order);
+                        if (data != null)
+                        {
+                            if (data.Count() > 0)
+                            {
+                                returData.Data = data.CopyToDataTable();
+                            }
+                            else
+                            {
+                                returData.Data = returData.Data.Clone();
+                            }
+                        }
+                        else
+                        {
+                            returData.Data = returData.Data.Clone();
+                        }
+                    }
+                }
+
+                if (returData.Data.Rows.Count > 0)
+                {
+                    if (onlyNotGet)
+                    {
+                        var conn = SqlDbConfigurationBase.GetConnection();
+                        var tb = SqlDb.ExecuteDataset(conn, CommandType.StoredProcedure, "selChinhDinh_DaLayTu_HIS", new SqlParameter[]
+                        {
+                        new SqlParameter("@ngaydk", paraInfo.NgayChiDinh.Value.Date),
+                        new SqlParameter("@SoPhieuYeuCau", paraInfo.SoPhieuChiDinh),
+                        }).Tables[0];
+                        if (tb.Rows.Count > 0)
+                        {
+                            List<string> s = tb.AsEnumerable().Select(x => x["maxn_his"].ToString()).ToList();
+                            //var d = from c in tb.AsEnumerable() select c.Field<string>("maxn_his");
+                            var tbn = returData.Data.AsEnumerable().Where(r => !s.Contains(r.Field<string>(hColumnNames.chidinhMadichvu)));
+                            if (tbn != null)
+                            {
+                                if (tbn.Count() > 0)
+                                {
+                                    returData.Data = tbn.CopyToDataTable();
+                                }
+                                else
+                                {
+                                    returData.Data = returData.Data.Clone();
+                                }
+                            }
+                        }
+                    }
+                }
+                returData.Data = MergeMappingLIS(returData.Data, hColumnName, (int)hisConnect.HisID, mappingData);
+                foreach (DataColumn c in returData.Data.Columns)
+                {
+                    c.ColumnName = c.ColumnName.ToLower();
+                }
+            }
+            return returData;
+        }
+        public DataTable MergeMappingLIS(DataTable dataSource, HISDataColumnNames hColumnName, int hisproviderID, DataTable mappingData = null)
+        {
+            if (dataSource.Columns.Contains(hColumnName.chidinhMadichvu))
+            {
+                dataSource.Columns.Add("madichvulis", typeof(string));
+                dataSource.Columns.Add("maprofilelis", typeof(string));
+                dataSource.Columns.Add("loaidichvulis", typeof(string));
+                dataSource.Columns.Add("loaixetnghiemlis", typeof(string));
+                dataSource.Columns.Add("tennhomcls", typeof(string));
+                dataSource.Columns.Add("thutuin", typeof(int));
+                dataSource.Columns.Add("sapxep", typeof(int));
+                dataSource.Columns.Add("trangthaichidinh", typeof(string));
+                dataSource.Columns.Add("liscode", typeof(string));
+
+                if (dataSource.Rows.Count > 0)
+                {
+                    var dataMapping = new DataTable();
+                    if (mappingData == null)
+                        dataMapping = DataMapping(hisproviderID);
+                    else
+                        dataMapping = mappingData;
+
+                    foreach (DataRow drH in dataSource.Rows)
+                    {
+                        string filter = string.Format("{0} = '{1}'", hColumnName.chidinhMadichvu, drH[hColumnName.chidinhMadichvu].ToString());
+
+                        var dataFind = WorkingServices.SearchResult_OnDatatable_NoneSort(dataMapping, filter);
+                        if (dataFind.Rows.Count > 0)
+                        {
+                            var maXNLis = dataFind.Rows[0]["MaXN"].ToString();
+                            var maProfileLis = dataFind.Rows[0]["ProfileID"].ToString();
+                            if (!string.IsNullOrEmpty(hColumnName.chidinhBarcodexn))
+                            {
+                                drH["liscode"] = drH[hColumnName.chidinhBarcodexn];
+                            }
+                            if (string.IsNullOrEmpty(maXNLis) && string.IsNullOrEmpty(maProfileLis))
+                            {
+                                drH["tennhomcls"] = "[A] - MÃ XN MAPPING SAI HOẶC BỊ THAY ĐỔI";
+                                drH["thutuin"] = 0;
+                                drH["sapxep"] = 0;
+                                drH["madichvulis"] = dataFind.Rows[0]["lis_id"];
+                                drH["maprofilelis"] = dataFind.Rows[0]["lis_profileid"];
+                                drH["loaidichvulis"] = dataFind.Rows[0]["loaixn"];
+                                drH["loaixetnghiemlis"] = 0;
+                            }
+                            else
+                            {
+                                drH["madichvulis"] = dataFind.Rows[0]["lis_id"];
+                                drH["maprofilelis"] = dataFind.Rows[0]["lis_profileid"];
+                                drH["loaidichvulis"] = dataFind.Rows[0]["loaixn"];
+
+                                drH["tennhomcls"] = dataFind.Rows[0]["TenNhomCLS"];
+                                drH["thutuin"] = int.Parse(dataFind.Rows[0]["ThuTuIn"].ToString()) + 2;
+                                drH["sapxep"] = dataFind.Rows[0]["SapXep"];
+                                drH["loaixetnghiemlis"] = dataFind.Rows[0]["loaixetnghiem"];
+                            }
+                        }
+                        else
+                        {
+                            drH["tennhomcls"] = "[A] - CHƯA MAPPING MÃ";
+                            drH["thutuin"] = 1;
+                            drH["sapxep"] = 0;
+                            drH["loaixetnghiemlis"] = 0;
+                        }
+                    }
+
+                    dataSource.AcceptChanges();
+                    dataSource.DefaultView.Sort = "thutuin,tennhomcls,sapxep asc";
+                    dataSource = dataSource.DefaultView.ToTable();
+                }
+                foreach (DataColumn c in dataSource.Columns)
+                {
+                    c.ColumnName = c.ColumnName.ToLower();
+                }
+            }
+            return dataSource;
+        }
+        public DataTable DataMapping(int hisproviderID)
+        {
+            var conn = SqlDbConfigurationBase.GetConnection();
+            return SqlDb.ExecuteDataset(conn, CommandType.StoredProcedure, "selDanhMucXn_MappingHis", new SqlParameter[]
+                    {
+                        new SqlParameter("@hisProviderID", hisproviderID)
+                    }).Tables[0];
+        }
+        public string InsertPatientFromHIS(BenhNhanInfoForHIS lisInfo, bool updateGet, HisConnection hisConnect
+            , List<HisFunctionConfig> hisFunction, bool useHISBarcode)
+        {
+            return InsertBenhNhan(lisInfo, updateGet, hisConnect, hisFunction, useHISBarcode);
+        }
+        public int LISCheckOrder(HisConnection hisConnect, List<HisFunctionConfig> hisFunction, BenhNhanInfoForHIS info)
+        {
+            var hisInfo = new List<HisParaGetList>();
+            foreach (var item in info.ChiDinh)
+            {
+                hisInfo.Add(new HisParaGetList
+                {
+                    IDChiDinh = item.IdChiTiet,
+                    IDChiDinhDichVu = item.IDDichVuChiDinh,
+                    SoPhieuChiDinh = item.SoPhieuChiDinh,
+                    IDBenhNhan = info.Bn_id,
+                    MaDichVu = item.TestCode,
+                    MaTiepNhanLIS = info.Matiepnhan,
+                    NgayTiepNhan = info.Ngaytiepnhan,
+                    ThoiGianNhapBN = info.Thoigiannhap,
+                    NoiTru = info.Noitru,
+                    TrangThai = (hisConnect.HisID == HisProvider.FPT_SP ? (item.DaLayMau == 0 ? FPTTrangThaiChiDinh.ChuaCap : FPTTrangThaiChiDinh.DaCap) : item.DaLayMau),
+                });
+            }
+            return _iGetHisService.LISCheck(hisConnect, hisFunction, hisInfo);
+        }
+        public int LISTransferResult(HisConnection hisConnect, List<HisFunctionConfig> hisFunction, BenhNhanInfoForHIS info)
+        {
+            var excute = 0;
+            try
+            {
+                string log = "";
+                var hisInfo = new DaiHocCanTho_OrderInfo {SoPhieuYeuCau = info.Sophieuyeucau};
+                //Kiểm tra nếu nội trú thì trả theo BANGKE_ID, BANGKE_CHIPHI_ID 
+                //Ngoại trú trả theo CLS_CHIDINH_ID, CLS_CHIDINH_CHITIET_CLS_ID
+                //Nội trú mã bắt đầu là số 2
+                //Nội trú mã bắt đầu là số 1
+                var resultReturn = new List<HisResultBase>();
+                if (hisConnect.HisID == HisProvider.DHCanTho)
+                {
+                    foreach (var i in info.ChiDinh)
+                    {
+                        //  Logger.DebugFormat("Bangkeid {0}", i.Bangkeid);
+                        //  Logger.DebugFormat("IDDichVuChiDinh {0}", i.IDDichVuChiDinh);
+                        var returnObj = new DaiHocCanTho_ResultInfo();
+                        returnObj.CLS_SOPHIEU = i.SoPhieuChiDinh;
+                        if (returnObj.CLS_SOPHIEU.Trim()[0] == '1')
+                        {
+                            returnObj.CLS_CHIDINH_ID = int.Parse(i.Bangkeid);
+
+                            returnObj.CLS_CHIDINH_CHITIET_CLS_ID = int.Parse(i.IDDichVuChiDinh);
+                        }
+                        else
+                        {
+                            returnObj.BANGKE_ID = int.Parse(i.Bangkeid);
+                            returnObj.BANGKE_CHIPHI_ID = int.Parse(i.IDDichVuChiDinh);
+                        }
+                        // Logger.DebugFormat("IDBenh {0}", i.IDBenh);
+                        if (WorkingServices.IsNumeric(i.IDBenh))
+                            returnObj.IDBENH = int.Parse(i.IDBenh);
+                        // Logger.DebugFormat("Idnhomchucnangcls {0}", i.Idnhomchucnangcls);
+                        returnObj.IDNHOMCHUCNANGCLS = int.Parse(i.Idnhomchucnangcls);
+                        // Logger.DebugFormat("Idloaichucnangcls {0}", i.Idloaichucnangcls);
+                        returnObj.IDLOAICHUCNANGCLS = int.Parse(i.Idloaichucnangcls);
+                        // Logger.DebugFormat("TestName {0}", i.TestName);
+                        returnObj.CLS_TENLOAICLS = i.TestName;
+                        returnObj.CLS_KQ_NGAYLAP = i.DateTimeResult;
+                        returnObj.IDNHOMNOIDUNGCLS = -1;// cái này select từ danh mục nó ra luôn
+                                                        // Logger.DebugFormat("TestCode {0}", i.TestCode);
+                        returnObj.IDNOIDUNGCLS = int.Parse(i.TestCode);
+                        returnObj.KETQUA1 = WorkingServices.IsNumeric(i.Result) ? double.Parse(i.Result).ToString("0.###").Replace(".", ",") : "";
+                        returnObj.KETQUA2 = "";
+                        returnObj.KETQUA3 = WorkingServices.IsNumeric(i.Result) ? "" : i.Result;
+                        returnObj.CreatedDate = DateTime.Now;
+                        // Logger.DebugFormat("Log: {0} - Số phiếu: {1}", log, info.Sophieuyeucau);
+                        hisInfo.resultInfo.Add(returnObj);
+                    }
+                }
+                else
+                {
+                    var masophieuCurrent = string.Empty;
+                    var dataCheck = new DataTable();
+                    foreach (var i in info.ChiDinh)
+                    {
+                        if (hisConnect.HisID == HisProvider.DH_DHG || hisConnect.HisID == HisProvider.DH_API)
+                        {
+                            if (!masophieuCurrent.Equals(i.SoPhieuChiDinh))
+                            {
+                                masophieuCurrent = i.SoPhieuChiDinh;
+                                if (hisConnect.HisID == HisProvider.DH_API)
+                                {
+                                    var obj = _iGetHisService.GetPatientOrderedDetail(hisConnect, hisFunction,
+                                        new HisParaGetList { SoPhieuChiDinh = i.MaBN, NgayChiDinh = i.Thoigiangui});
+                                    if (obj.Code == 100)
+                                        dataCheck = null;
+                                    else
+                                        dataCheck = obj.Data;
+                                }
+                                else
+                                {
+                                    dataCheck = _iGetHisService.GetPatientOrderedDetail(hisConnect, hisFunction,
+                                        new HisParaGetList { SoPhieuChiDinh = i.SoPhieuChiDinh }).Data;
+                                }
+                            }
+                            if (dataCheck != null)
+                            {
+                                if (dataCheck.Rows.Count > 0)
+                                {
+                                    var findR = WorkingServices.SearchResult_OnDatatable_NoneSort(dataCheck, string.Format("{0} = '{1}' and {2} = '{3}'", "MaDichVu", i.MaXN_His, "sophieuyeucau" , masophieuCurrent));
+                                    if (findR.Rows.Count > 0)
+                                    {
+                                        var giochiDinh = DateTime.Parse(findR.Rows[0]["ngaychidinh"].ToString());
+                                        if (giochiDinh != i.Thoigiangui.Value)
+                                        {
+                                            LogService.RecordLogFile(string.Format("UploadFinishStatus_{0}_", hisConnect.HisID.ToString()), string.Format("-->Thời gian chỉ định [{2}] không khớp: Dữ liệu {0} - His {1}", i.Thoigiangui.Value.ToString("yyyy-MM-dd HH:mm:ss"), giochiDinh.ToString("yyyy-MM-dd HH:mm:ss"), i.TestName));
+                                            if (UpdateThoiGianChiDinh(i.MaTiepNhanLis, i.MaXN, giochiDinh) > -1)
+                                            {
+                                                i.Thoigiangui = giochiDinh;
+                                                LogService.RecordLogFile(string.Format("UploadFinishStatus_{0}_", hisConnect.HisID.ToString()), string.Format("-->Cập nhật thời gian chỉ định: {0}", giochiDinh.ToString("yyyy-MM-dd HH:mm:ss")));
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        var objreturn = new HisResultBase
+                        {
+                            NgayTiepNhan = info.Ngaytiepnhan,
+                            Barcode = i.Barcode,
+                            BatThuong = i.Abnormal ? 1 : 0,
+                            ChiSoBinhThuong = (hisConnect.HisID == HisProvider.HangMinh
+                                ? Utilities.ConvertStringText(i.NormalRange, 1, 2)
+                                : i.NormalRange),
+                            CanTren = i.CanTren,
+                            CanDuoi = i.CanDuoi,
+                            CanDuoiCanhBao = i.CanDuoiWarning,
+                            CanTrenCanhBao = i.CanTrenWarning,
+                            BatThuongCanhBao = i.AbnormalWarning ? 1 : 0,
+                            IDDichVuHIS = i.IDDichVuChiDinh,
+                            IdTraKetQua = null,
+                            KetLuan = i.KetLuan ?? "",
+                            KetQua = (hisConnect.HisID == HisProvider.HangMinh
+                                ? Utilities.ConvertStringText(i.Result, 1, 2)
+                                : i.Result),
+                            DonViTinh = (hisConnect.HisID == HisProvider.HangMinh
+                                ? Utilities.ConvertStringText(i.Unit, 1, 2)
+                                : i.Unit),
+                            KetQuaDinhLuong = i.ResultQualitative,
+                            KetQuaDinTinh = i.ResultQualitative,
+                            MaBacSiKetLuan = i.BSKetLuan,
+                            MaBN = i.MaBN,
+                            MaDichVuChaHIS = i.MaXNCha_His,
+                            MaDichVuHIS = i.MaXN_His,
+                            MaLoaiDichVu = i.MaLoaiXN_His,
+                            MaNhanVienChiDinh = i.MaNhanVienChiDinh,
+                            MaNhanVienThucHien = i.MaNhanVienThucHien
+                        };
+
+                        objreturn.MaBacSiKetLuan = i.BSKetLuan;
+                        objreturn.MaNhomXetNghiem = i.MaNhomXN;
+                        objreturn.MaSoXetNghiem = i.SoPKQ;
+                        objreturn.MaXetNghiemChaLIS = i.MaXNCha_His;
+                        objreturn.MaXetNghiemLIS = i.MaXN;
+                        objreturn.NamKeToan = i.Namkt;
+                        objreturn.ThangKeToan = i.Thangkt;
+                        objreturn.NgayChiDinh = i.Thoigiangui;
+                        objreturn.NgayCoKetQua = i.DateTimeResult;
+                        objreturn.SoPhieuYeuCau = i.SoPhieuChiDinh;
+                        objreturn.TenNhomXetNghiem = null;
+                        objreturn.TenXetNghiem_Lis = (hisConnect.HisID == HisProvider.HangMinh ? Utilities.ConvertStringText(i.TestName, 1, 2) : i.TestName);
+                        objreturn.IDMayXN = int.Parse(i.IDMayXn);
+                        objreturn.MaBA = string.Empty;
+                        objreturn.MaKhoaCLS = string.Empty;
+                        objreturn.UserUpload = i.User;
+                        objreturn.IDMayXnBHYT = i.IDMayXnBHYT;
+                        objreturn.IDMayXNHIS = i.IDMayXnHIS;
+                        objreturn.ThoiGianTiepNhan = i.Thoigiantiepnhan;
+                        objreturn.NgayInKetQualanDau = i.Thoigianinlandau;
+                        objreturn.NgayXacNhanKetQua = i.Thoigianxacnhan;
+                        objreturn.SoTTHIS = (i.STT == null ? string.Empty : (i.STT.Value.ToString() == "0" ? string.Empty : i.STT.Value.ToString()));
+                        objreturn.QuyTrinhPPXN = i.QuyTrinhPPXN;
+                        objreturn.TenMayXn = i.TenMayXN;
+                        objreturn.KetQuaMaXnMay = i.MaXNMay;
+                        objreturn.LowHighAlarm = i.LowHighAlarm;
+                        objreturn.LoaiXetNghiem = i.LoaiXetNghiem;
+                        objreturn.IdChiTiet_HIS = i.IdChiTiet;
+                        objreturn.SapXepNhom = i.SapXepNhom;
+                        objreturn.SapXepXetNghiem = i.SapXepXetNghiem;
+
+                        objreturn.ThoiGianLayMau = i.ThoiGianLayMau;
+                        objreturn.ThoiGianNhanMau = i.ThoiGianNhanMau;
+                        objreturn.LIS_NguoiLayMau = i.NguoiLayMau;
+                        objreturn.LIS_NguoiNhanMau = i.NguoiNhanMau;
+                        objreturn.HIS_NguoiLayMau = i.NguoiLayMauHIS;
+                        objreturn.HIS_NguoiNhanMau = i.NguoiNhanMauHIS;
+                        objreturn.LIS_LanInKQ = i.LanInCuaXN;
+                        objreturn.LIS_TinhTrangMau = i.TinhTrangMau;
+                      
+                        var objThongTinXacNhan = new HISResultValid
+                        {
+                            TrangThaiXacNhanKhoa = true,
+                            LyDoBoXacNhanKhoa = i.LyDoBoXacNhanKhoa,
+                            IDKhoaXetNghiem = i.IDKhoaXetNghiem,
+                            ThoiGianXacNhanKhoa = i.Thoigianxacnhan,
+                            NguoiXacNhanKhoa = i.MaNhanVienThucHien,
+                            SoHoSo = i.SoHoSo,
+                            SoPhieuChiDinh = i.SoPhieuChiDinh
+                        };
+
+                        //Add vào toàn bộ thông tin sau đó loại bỏ trùng để update về his
+                        objreturn.ThongTinXacNhanKhoa = objThongTinXacNhan;
+
+                        resultReturn.Add(objreturn);
+                        if (i.LoaiXetNghiem.Trim().Equals("ClsXNViSinh", StringComparison.OrdinalIgnoreCase))
+                            AddDataAntibiotic(ref objreturn, hisConnect.HisID);
+                    }
+                }
+                var lstNotFinishList = new List<string>();
+                var iE = _iGetHisService.TransferResultToHIS(hisConnect, hisFunction, resultReturn, ref lstNotFinishList);
+                excute += (hisConnect.DbType == DBConnectType.POSTGRE ? 1 : iE);
+                LogService.RecordLogFile(string.Format("UploadFinishStatus_{0}_", hisConnect.HisID), string.Format("Excute count: {0}", excute));
+                if (excute > -1)
+                {
+                    if (lstNotFinishList.Count > 0)
+                    {
+                        LogService.RecordLogFile(string.Format("UploadFinishStatus_{0}_", hisConnect.HisID), string.Format(" DS upload lỗi: {0}", lstNotFinishList.Count));
+                        foreach (var itmMaXN in lstNotFinishList)
+                        {
+                            for (int item = info.ChiDinh.Count - 1; item >= 0; item--)
+                            {
+                                if (info.ChiDinh[item].MaXN.Trim().Equals(itmMaXN.Trim(), StringComparison.OrdinalIgnoreCase))
+                                {
+                                    LogService.RecordLogFile(string.Format("UploadFinishStatus_{0}_", hisConnect.HisID), string.Format(" Loại trừ DS upload lỗi: {0}", itmMaXN));
+                                    info.ChiDinh.RemoveAt(item);
+                                    break;
+                                }
+                            }
+                        }
+                        LogService.RecordLogFile(string.Format("UploadFinishStatus_{0}_", hisConnect.HisID.ToString()), string.Format(" Insert trở lại danh sách upload: {0}", info.Matiepnhan));
+                        ReInsertUploadList(info.Matiepnhan);
+                    }
+                    if (info.ChiDinh.Count > 0)
+                    {
+                        LogService.RecordLogFile(string.Format("UploadFinishStatus_{0}_", hisConnect.HisID.ToString()), string.Format("Update trạng thái\n - SID: {0} -Số phiếu: {1}", info.Matiepnhan, info.Sophieuyeucau));
+                        int count = 0;
+                        count += UpdateLISTransferResult(info);
+                        LogService.RecordLogFile(string.Format("UploadFinishStatus_{0}_", hisConnect.HisID.ToString()), string.Format(" - Tổng số record update: {0}", count));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogService.RecordLogError("HISUploader", "UploadHIS", ex, 0, ex.Message,
+                    "LISTransferResult");
+            }
+
+            return excute;
+        }
+        public int UploadValidResult(HisConnection hisConnect, List<HisFunctionConfig> hisFunction, List<HISResultValid> paraInfoList)
+        {
+            return _iGetHisService.UploadValidResult(hisConnect, hisFunction, paraInfoList);
+        }
+        public void AddDataAntibiotic(ref HisResultBase mainResult, HisProvider HisID)
+        {
+            LogService.RecordLogFile(string.Format("UploadFinishStatus_{0}_", HisID.ToString()),string.Format("Lấy thông tin kết quả kháng sinh đồ: {0}", mainResult.MaSoXetNghiem));
+            var conn = SqlDbConfigurationBase.GetConnection();
+            var data = SqlDb.ExecuteDataset(conn, "selResult_AntiBiotic_UploadHis",
+                  new SqlParameter[]
+                  {
+                        new SqlParameter("@MaTiepNhan", mainResult.MaSoXetNghiem),
+                        new SqlParameter("@MaYeuCau", mainResult.MaXetNghiemLIS)
+                  }
+              ).Tables[0];
+            var lstResturn = new List<HisResultBase>();
+            var item = new HisResultBase();
+
+            if (data.Rows.Count > 0)
+            {
+                //kết quả kháng sinh đồ
+                //MaViKhuan
+                //TenViKhuan 
+                //MaKhangSinh 
+                //TenKhangSinh 
+                //KetQuaSRI 
+                //TenKhangKhangSinh 
+                //KetQuaKhangKhangSinh 
+                //TenVaKetQuaKhangKhangSinh 
+
+                foreach (DataRow dr in data.Rows)
+                {
+                    item = new HisResultBase();
+                    item = mainResult.Copy();
+                    item.MaViKhuan = dr["MaPhanLoai"].ToString();
+                    item.TenViKhuan = dr["TenPhanLoai"].ToString();
+                    item.MaKhangSinh = dr["MaKhangSinh"].ToString();
+                    item.TenKhangSinh = dr["TenKhangSinh"].ToString();
+                    item.KyThuatKSD = dr["KyThuat"].ToString();
+                    item.BenhPham = dr["BenhPham"].ToString();
+                    item.KetQuaSRI = dr["KetQuaSRI"].ToString().Trim();
+                    item.KetQuaDinhLuong = dr["KetQuaDinhLuong"].ToString();
+                    item.TenVaKetQuaKhangKhangSinh = dr["KetQuaKhangKS"].ToString();
+                    item.NgayCoKetQua = (string.IsNullOrEmpty(dr["GioNhap"].ToString()) ? item.NgayCoKetQua : DateTime.Parse(dr["GioNhap"].ToString()));// thoigiancokq
+                    lstResturn.Add(item);
+                }
+                mainResult.lstKetQuaKhangSinh = lstResturn;
+            }
+        }
+        public int UpdateThoiGianChiDinh(string matiepnhan, string maxn, DateTime thoigianchidinh)
+        {
+            var conn = SqlDbConfigurationBase.GetConnection();
+            var sql = string.Format("update ketqua_cls_xetnghiem set thoigianchidinhhis = '{0}' where matiepnhan = '{1}' and maxn = '{2}'", thoigianchidinh.ToString("yyyy-MM-dd HH:mm:ss"), matiepnhan, maxn);
+            return SqlDb.ExecuteNonQuery(conn, CommandType.Text, sql);
+        }
+        public int UpdateLISTransferResult(BenhNhanInfoForHIS info)
+        {
+            var i = 0;
+            var conn = SqlDbConfigurationBase.GetConnection();
+            if (info.ChiDinh.Count <= 0) return i;
+            var maxXnList = Utilities.ConvertStrinArryToInClauseSQLForSplitString(info.ChiDinh.Select(x => x.MaXN).ToList<string>(), "|");
+            i += SqlDb.ExecuteNonQuery(conn, CommandType.StoredProcedure, "updUploadResultToHIS",
+                new SqlParameter[]
+                {
+                        new SqlParameter("@maTiepNhan", info.Matiepnhan),
+                        new SqlParameter("@maxn", maxXnList),
+                        new SqlParameter("@usertransfer", info.userTransfer)
+                }
+            );
+
+            return i;
+        }
+        public DataTable DataUploadToHisList(string matiepnhan, bool daxacnhan, bool dain)
+        {
+            var conn = SqlDbConfigurationBase.GetConnection();
+            return SqlDb.ExecuteDataset(conn, CommandType.StoredProcedure, "selDataUploadHIS_PatientList",
+                  new SqlParameter[]
+                  {
+                        new SqlParameter("@daxacnhan", daxacnhan),
+                        new SqlParameter("@dain", dain),
+                        new SqlParameter("@maTiepNhan", matiepnhan)
+                  }
+              ).Tables[0];
+        }
+        public bool ReInsertUploadList(string maTiepNhan)
+        {
+            var conn = SqlDbConfigurationBase.GetConnection();
+            return SqlDb.ExecuteNonQuery(conn, CommandType.StoredProcedure, "insInsert_UploadList",
+                new SqlParameter[]
+                {
+                   new SqlParameter("@maTiepNhan", maTiepNhan)
+                }
+            ) > -1;
+        }
+        public BenhNhanInfoForHIS GetDataUploadToHIS(string userID, string matiepnhan, bool onlyValid, bool onlyPrinted
+              , string[] arrCatePrint, string[] arrtestCodePrint, string[] arrTestTypeID, bool frombackup, bool manualUpload)
+        {
+            var conn = SqlDbConfigurationBase.GetConnection();
+          
+            DataTable dtData = SqlDb.ExecuteDataset(conn, "selDataUploadHIS_Result",
+                new SqlParameter[]
+                {
+                        new SqlParameter("@maTiepNhan", matiepnhan),
+                        new SqlParameter("@daxacnhan", onlyValid),
+                        new SqlParameter("@dain", onlyPrinted),
+                        new SqlParameter("@manhomclsList", Utilities.ConvertStrinArryToInClauseSQL(arrCatePrint, true)),
+                        new SqlParameter("@maxnList", Utilities.ConvertStrinArryToInClauseSQL(arrtestCodePrint, true) ),
+                        new SqlParameter("@maLoaiXN",Utilities.ConvertStrinArryToInClauseSQL(arrTestTypeID, true)),
+                        new SqlParameter("@FromBackup", frombackup),
+                        new SqlParameter("@ManualUpload", manualUpload)
+                }
+            ).Tables[0];
+
+            var bnInfo = new BenhNhanInfoForHIS();
+            // string log = "";
+            if (dtData.Rows.Count > 0)
+            {
+                // log += "get mayiepnhan";
+                var maTiepNhan = dtData.Rows[0]["Matiepnhan"].ToString().Trim();
+                // log += string.Format("mayiepnhan {0}", maTiepNhan);
+
+                bnInfo.Matiepnhan = maTiepNhan;
+                bnInfo.userTransfer = userID;
+                for (int i = 0; i < dtData.Rows.Count; i++)
+                {
+                    DataRow drUpload = dtData.Rows[i];
+                    var daxacnhan = bool.Parse(drUpload["xacnhankq"].ToString());
+                    var maxn = drUpload["maxn"].ToString().Trim();
+                    //  log += string.Format("maxn {0} - xac nhận", maxn, daxacnhan.ToString());
+                    if (!string.IsNullOrEmpty(maxn) && daxacnhan)
+                    {
+                        if (string.IsNullOrEmpty(bnInfo.Sophieuyeucau))
+                            bnInfo.Sophieuyeucau = drUpload["RSoPhieuYeuCau"].ToString().Trim();
+                        //  log += string.Format("Sophieuyeucau {0}", bnInfo.Sophieuyeucau);
+                        bnInfo.Hisproviderid = int.Parse(drUpload["HisProviderID"].ToString());
+                        bnInfo.KetLuan = drUpload["KetLuanXN"].ToString().Trim();
+                        bnInfo.Ngaytiepnhan = DateTime.Parse(drUpload["NgayTiepNhan"].ToString());
+                        var maxn_his = drUpload["maxn_his"].ToString().Trim();
+                        //   log += string.Format("maxn_his {0}", maxn_his);
+                        var ketqua = drUpload["ketqua"].ToString();
+                        // log += string.Format("ketqua {0}", ketqua);
+                        var xncha = (bool)drUpload["XNChinh"];
+                        //  log += string.Format("xncha {0}", xncha ? "true" : "false");
+                        if (!string.IsNullOrEmpty(bnInfo.Sophieuyeucau) &&
+                            !string.IsNullOrEmpty(maxn_his) &&
+                            (!string.IsNullOrEmpty(ketqua) || xncha)
+                            )
+                        {
+                            var transferCount = int.Parse(drUpload["transferresultothis"].ToString().Trim());
+                            //  log += string.Format("transferCount {0}", transferCount);
+                            var flag = int.Parse(drUpload["Flat"].ToString());
+                            //  log += string.Format("Flat {0}", flag);
+                            var mabn = drUpload["MaBN"].ToString().Trim();
+                            //  log += string.Format("Mabn {0}", mabn);
+                            var stt = int.Parse(drUpload["STT2"].ToString().Trim());
+                            // log += string.Format("stt {0}", stt);
+                            var tenxn = drUpload["TenXn"].ToString().Trim();
+                            //   log += string.Format("tenxn {0}", tenxn);
+                            var csbt = drUpload["CSBT"].ToString().Trim();
+                            // log += string.Format("csbt {0}", csbt);
+                            var donvi = drUpload["DonVi"].ToString().Trim();
+                            // log += string.Format("donvi {0}", donvi);
+                            var iddichvuchidinh = drUpload["IdChiDinhHis"].ToString().Trim();
+                            // log += string.Format("ghichu {0}", donvi);
+                            var ghiChu = drUpload["GhiChu"].ToString().Trim();
+                            //  log += string.Format("iddichvuchidinh {0}", iddichvuchidinh);
+                            var dateTimeResult = (string.IsNullOrEmpty(drUpload["ThoiGianNhapKQ"].ToString()) ? DateTime.Now : DateTime.Parse(drUpload["ThoiGianNhapKQ"].ToString()));
+                            //   log += string.Format("dateTimeResult {0}", dateTimeResult.ToString());
+                            bnInfo.ChiDinh.Add(new ChiDinhHISInfo
+                            {
+                                SoPhieuChiDinh = drUpload["RSoPhieuYeuCau"].ToString().Trim(),
+                                MaBN = mabn,
+                                MaXN_His = maxn_his,
+                                MaXNCha_His = drUpload["macaptren"].ToString().Trim(),
+                                Abnormal = (flag > 1 ? true : false),
+                                LowHighAlarm = (flag == 1 ? "" : (flag == 2 ? "L" : "H")) + (string.IsNullOrEmpty(ghiChu) ? "" : string.Format("\n{0}", ghiChu)),
+                                NormalRange = csbt,
+                                CanTren = drUpload["NguongTren"].ToString().Trim(),
+                                CanDuoi = drUpload["NguongDuoi"].ToString().Trim(),
+                                Result = ketqua,
+                                Barcode = (stt == 0 ? drUpload["SEQ"].ToString() : stt.ToString()),
+                                STT = stt,
+                                SoPKQ = maTiepNhan,
+                                TestCode = maxn_his,
+                                MaXN = maxn,
+                                TestName = tenxn,
+                                Unit = donvi,
+                                User = userID,
+                                UPD = (transferCount > 0 ? true : false),
+                                LanUpload = transferCount,
+                                IDDichVuChiDinh = iddichvuchidinh,
+                                Idloaichucnangcls = drUpload["Idloaichucnangcls"].ToString().Trim(),
+                                Idnhomchucnangcls = drUpload["Idnhomchucnangcls"].ToString().Trim(),
+                                Iddmchiphi = drUpload["Iddmchiphi"].ToString().Trim(),
+                                Bangkeid = drUpload["bangkeid"].ToString().Trim(),
+                                IDBenh = drUpload["IdBenh"].ToString().Trim(),
+                                Thangkt = drUpload["thangkt"].ToString().Trim(),
+                                Namkt = drUpload["namkt"].ToString().Trim(),
+                                MaLoaiXN_His = drUpload["maloai"].ToString().Trim(),
+                                MaNhanVienChiDinh = drUpload["manvchidinh"].ToString().Trim(),
+                                MaNhanVienThucHien = drUpload["manvthuchien"].ToString().Trim(),
+                                BSKetLuan = drUpload["BSKyten"].ToString().Trim(),
+                                Thoigiangui = string.IsNullOrEmpty(drUpload["thoigianchidinhhis"].ToString()) ? DateTime.Now : DateTime.Parse(drUpload["thoigianchidinhhis"].ToString().Trim()),
+                                DateTimeResult = dateTimeResult,
+                                DaXacNhan = bool.Parse(drUpload["XacNhanKQ"].ToString()),
+                                Thoigianxacnhan = string.IsNullOrEmpty(drUpload["thoigianxacnhankq"].ToString()) ? (DateTime?)null : DateTime.Parse(drUpload["thoigianxacnhankq"].ToString().Trim()),
+                                Thoigianinlandau = string.IsNullOrEmpty(drUpload["TGInXNLanDau"].ToString()) ? (DateTime?)null : DateTime.Parse(drUpload["TGInXNLanDau"].ToString().Trim()),
+                                Thoigiannhan = string.IsNullOrEmpty(drUpload["thoigiannhanmau"].ToString()) ? DateTime.Parse(drUpload["ThoiGianTiepNhan"].ToString()) : DateTime.Parse(drUpload["thoigiannhanmau"].ToString()),
+                                IDMayXnHIS = drUpload["IDMayXNHis"].ToString().Trim(),
+                                IDMayXnBHYT = drUpload["IDMayXnBHYT"].ToString().Trim(),
+                                IDMayXn = drUpload["IDMayXetNghiem"].ToString().Trim(),
+                                DaInKQ = bool.Parse(drUpload["DaInKQXN"].ToString().Trim()),
+                                MaTiepNhanLis = drUpload["MaTiepNhan"].ToString().Trim(),
+                                Thoigiantiepnhan = DateTime.Parse(drUpload["ThoiGianTiepNhan"].ToString().Trim()),
+                                MaXNMay = drUpload["MaXNMay"].ToString().Trim(),
+                                TenMayXN = drUpload["TenMayXN"].ToString().Trim(),
+                                QuyTrinhPPXN = drUpload["QuiTrinh"].ToString().Trim(),
+                                LoaiXetNghiem = drUpload["MaPhanLoai"].ToString(),
+                                TrangThaiXacNhanKhoa = bool.Parse(drUpload["DaInKQXN"].ToString().Trim()),
+                                LyDoBoXacNhanKhoa = drUpload["LyDoBoDuyet"].ToString(),
+                                IDKhoaXetNghiem = drUpload["MaKhoaHIS"].ToString(),
+                                ThoiGianXacNhanKhoa = string.IsNullOrEmpty(drUpload["TGXacNhanKhoa"].ToString()) ? (DateTime?)null : DateTime.Parse(drUpload["TGXacNhanKhoa"].ToString().Trim()),
+                                NguoiXacNhanKhoa = drUpload["NguoiXacNhanKhoa"].ToString(),
+                                SoHoSo = drUpload["SoHoSo"].ToString(),
+                                KetLuan = drUpload["GhiChuBoPhan"].ToString(),
+                                ThoiGianLayMau = string.IsNullOrEmpty(drUpload["thoigianlaymau"].ToString()) ? (DateTime?)null : DateTime.Parse(drUpload["thoigianlaymau"].ToString().Trim()),
+                                ThoiGianNhanMau = string.IsNullOrEmpty(drUpload["thoigiannhanmau"].ToString()) ? (DateTime?)null : DateTime.Parse(drUpload["thoigiannhanmau"].ToString().Trim()),
+                                TinhTrangMau = drUpload["TinhTrangMau"].ToString(),
+                                NguoiLayMau = drUpload["NguoilaymauLIS"].ToString(),
+                                NguoiNhanMau = drUpload["NguoiNhanMauLIS"].ToString(),
+                                NguoiLayMauHIS = drUpload["NguoilaymauHIS"].ToString(),
+                                NguoiNhanMauHIS = drUpload["NguoiNhanMauHIS"].ToString(),
+                                LanInCuaXN = int.Parse(drUpload["LanInCuaXN"].ToString()),
+                                SapXepNhom = drUpload["SapXepNhom"].ToString().Trim(),
+                                SapXepXetNghiem = drUpload["SapXepXetNghiem"].ToString().Trim(),
+                                IdChiTiet = drUpload["IdChitietHis"].ToString().Trim()
+                            });
+                        }
+                    }
+                }
+            }
+            return bnInfo;
+        }
+        public bool ExistsMaBenhNhan(string mabenhnhan)
+        {
+            var sqlQuery = string.Format("select MaTiepNhan from benhnhan_tiepnhan(nolock) where MaBN= '{0}'", mabenhnhan);
+            var conn = SqlDbConfigurationBase.GetConnection();
+            return SqlDb.ExecuteDataset(conn, CommandType.Text, sqlQuery).Tables[0].Rows.Count > 0;
+        }
+        public bool ExistsMaBenhNhanVaBarcode(string mabenhnhan, string barcode)
+        {
+            var sqlQuery = string.Format("select MaTiepNhan from benhnhan_tiepnhan(nolock) where MaBN= '{0}' and Seq = '{1}'", mabenhnhan, barcode);
+            var conn = SqlDbConfigurationBase.GetConnection();
+            return SqlDb.ExecuteDataset(conn, CommandType.Text, sqlQuery).Tables[0].Rows.Count > 0;
+        }
+        public bool ExistsMaBenhNhanVaMaTiepNhan(string mabenhnhan, string matiepnhan)
+        {
+            var sqlQuery = string.Format("select MaTiepNhan from benhnhan_tiepnhan(nolock) where MaBN= '{0}' and MaTiepNhan = '{1}'", mabenhnhan, matiepnhan);
+            var conn = SqlDbConfigurationBase.GetConnection();
+            return SqlDb.ExecuteDataset(conn, CommandType.Text, sqlQuery).Tables[0].Rows.Count > 0;
+        }
+        public bool ExistsMaTiepNhan(string matiepnhan)
+        {
+            var sqlQuery = string.Format("select MaTiepNhan from benhnhan_cls_xetnghiem(nolock) where MaTiepNhan= '{0}'", matiepnhan);
+            var conn = SqlDbConfigurationBase.GetConnection();
+            return SqlDb.ExecuteDataset(conn, CommandType.Text, sqlQuery).Tables[0].Rows.Count > 0;
+        }
+        public bool ExistsBarcode(string barcode)
+        {
+            var sqlQuery = string.Format("select MaTiepNhan from benhnhan_cls_xetnghiem(nolock) where MaTiepNhan like '______.{0}'", barcode);
+            var conn = SqlDbConfigurationBase.GetConnection();
+            return SqlDb.ExecuteDataset(conn, CommandType.Text, sqlQuery).Tables[0].Rows.Count > 0;
+        }
+        public bool ExistsBarcodeWithday(string barcode, int limitDay)
+        {
+            var sqlQuery = string.Format("select t.MaTiepNhan from benhnhan_tiepnhan t where t.MaTiepNhan like '______.{0}' and t.NgayTiepNhan between CONVERT(date, getdate() - ({1} -1)) and CONVERT(date, getdate())", barcode, limitDay);
+            var conn = SqlDbConfigurationBase.GetConnection();
+            return SqlDb.ExecuteDataset(conn, CommandType.Text, sqlQuery).Tables[0].Rows.Count > 0;
+        }
+        public bool CapNhat_ChuaUpload(string maTiepNhan, string maXN)
+        {
+            var conn = SqlDbConfigurationBase.GetConnection();
+            var sqlPara = new SqlParameter[]
+                {
+                        new SqlParameter("@MaTiepNhan", maTiepNhan),
+                        new SqlParameter("@MaXn", maXN.Replace("'",""))
+                };
+            return SqlDb.ExecuteNonQuery(conn, CommandType.StoredProcedure, "udptrangThai_ChuaUpload_ThuongQuy", sqlPara) > -1;
+        }
+        public bool CapNhat_ChuaUploadVS(string maTiepNhan, string maXN)
+        {
+            var conn = SqlDbConfigurationBase.GetConnection();
+            var sqlPara = new SqlParameter[]
+                {
+                        new SqlParameter("@MaTiepNhan", maTiepNhan),
+                        new SqlParameter("@MaXn", maXN.Replace("'",""))
+                };
+            return SqlDb.ExecuteNonQuery(conn, CommandType.StoredProcedure, "udptrangThai_ChuaUpload_ViSinh", sqlPara) > -1;
+        }
+        public DataTable DataTableHisThongTin(string HisID = "")
+        {
+            string sqlQuery = "select * from TPH_PSCT_System.dbo.cauhinh_thongtin_his";
+            if (!string.IsNullOrEmpty(HisID))
+            {
+                sqlQuery += string.Format(" where HisID = {0}", HisID);
+            }
+            return SqlDb.ExecuteDataset(SqlDbConfigurationBase.GetConnection(), CommandType.Text, sqlQuery).Tables[0];
+        }
+        public List<HisConnection> DataHisThongTin()
+        {
+            var data = DataTableHisThongTin();
+            var returnList = new List<HisConnection>();
+            foreach (DataRow row in data.Rows)
+            {
+                returnList.Add(new HisConnection()
+                {
+                    HisID = (HisProvider)Enum.Parse(typeof(HisProvider), row["HisID"].ToString()),
+                    HisName = string.IsNullOrEmpty("HisName") ? string.Empty : row["HisName"].ToString(),
+                    DbType = (DBConnectType)Enum.Parse(typeof(DBConnectType), row["DBConnectType"].ToString()),
+                    ServerName = string.IsNullOrEmpty("Servername") ? string.Empty : row["Servername"].ToString(),
+                    DatabaseName = string.IsNullOrEmpty("Databasename") ? string.Empty : row["Databasename"].ToString(),
+                    UserName = string.IsNullOrEmpty("UserName") ? string.Empty : row["UserName"].ToString(),
+                    PassWord = string.IsNullOrEmpty("Password") ? string.Empty : row["Password"].ToString(),
+                    PortNumber = string.IsNullOrEmpty("PortNumber") ? string.Empty : row["PortNumber"].ToString(),
+
+                    Internalcolumn = string.IsNullOrEmpty("Internalcolumn") ? string.Empty : row["Internalcolumn"].ToString(),
+                    InteralByCharIndex = string.IsNullOrEmpty("InteralByCharIndex") ? false : bool.Parse(row["InteralByCharIndex"].ToString()),
+                    InternalContaint = string.IsNullOrEmpty("InternalContaint") ? false : bool.Parse(row["InternalContaint"].ToString()),
+                    InternalBitValue = string.IsNullOrEmpty("InternalBitValue") ? false : bool.Parse(row["InternalBitValue"].ToString()),
+                    InternalCharValue = string.IsNullOrEmpty("InternalCharValue") ? string.Empty : row["InternalCharValue"].ToString(),
+                    InternalCharStartIndex = string.IsNullOrEmpty("InternalCharStartIndex") ? string.Empty : row["InternalCharStartIndex"].ToString(),
+                    IsActive = string.IsNullOrEmpty("IsActive") ? false : bool.Parse(row["IsActive"].ToString()),
+                    DifferenceInOut = string.IsNullOrEmpty("DifferenceInOut") ? false : bool.Parse(row["DifferenceInOut"].ToString()),
+
+                    LISServerName = string.IsNullOrEmpty("LISServername") ? string.Empty : row["LISServername"].ToString(),
+                    LISDatabasename = string.IsNullOrEmpty("LISDatabasename") ? string.Empty : row["LISDatabasename"].ToString(),
+                    LISUserName = string.IsNullOrEmpty("LISUserName") ? string.Empty : row["LISUserName"].ToString(),
+                    LISPassword = string.IsNullOrEmpty("LISPassword") ? string.Empty : row["LISPassword"].ToString(),
+                    LISCallADTName = string.IsNullOrEmpty("LISCallADTName") ? string.Empty : row["LISCallADTName"].ToString()
+
+                });
+            }
+            return returnList;
+        }
+        public DataTable DataTableHisThongTinHamn(string HisID = "")
+        {
+            string sqlQuery = "select * from TPH_PSCT_System.dbo.cauhinh_thongtin_his_thutuc";
+            if (!string.IsNullOrEmpty(HisID))
+            {
+                sqlQuery += string.Format(" where HisID = {0}", HisID);
+            }
+            return SqlDb.ExecuteDataset(SqlDbConfigurationBase.GetConnection(), CommandType.Text, sqlQuery).Tables[0];
+        }
+        public List<HisFunctionConfig> DataHisThongTinHam()
+        {
+            var data = DataTableHisThongTinHamn();
+            var returnList = new List<HisFunctionConfig>();
+            foreach (DataRow row in data.Rows)
+            {
+                returnList.Add(new HisFunctionConfig()
+                {
+                    FunctionTypeID = (FunctionType)Enum.Parse(typeof(FunctionType), row["FunctionTypeID"].ToString()),
+                    HisID = (HisProvider)Enum.Parse(typeof(HisProvider), row["HisID"].ToString()),
+                    FunctionID = string.IsNullOrEmpty("FunctionID") ? string.Empty : row["FunctionID"].ToString(),
+                    FunctionName = string.IsNullOrEmpty("FunctionName") ? string.Empty : row["FunctionName"].ToString(),
+                    FunctionParaValues = string.IsNullOrEmpty("FunctionParaValues") ? string.Empty : row["FunctionParaValues"].ToString(),
+                    FunctionParaNames = string.IsNullOrEmpty("FunctionParaNames") ? string.Empty : row["FunctionParaNames"].ToString(),
+                    FunctionValuesType = string.IsNullOrEmpty("FunctionValuesType") ? string.Empty : row["FunctionValuesType"].ToString(),
+                    LISColumns = string.IsNullOrEmpty("HisLISColumnsID") ? string.Empty : row["LISColumns"].ToString()
+                });
+            }
+            return returnList;
+        }
+        public DataTable DataTableHisThongTinMappingCot(string HisID = "")
+        {
+            string sqlQuery = "select * from TPH_PSCT_System.dbo.cauhinh_thongtin_his_tentruongtrave";
+            if (!string.IsNullOrEmpty(HisID))
+            {
+                sqlQuery += string.Format(" where HisID = {0}", HisID);
+            }
+            return SqlDb.ExecuteDataset(SqlDbConfigurationBase.GetConnection(), CommandType.Text, sqlQuery).Tables[0];
+        }
+        public List<HISDataColumnNames> DataHisThongTinMappingCot()
+        {
+            string sqlQuery = "DECLARE @cols AS NVARCHAR(MAX),";
+            sqlQuery += "\n @query AS NVARCHAR(MAX)";
+            sqlQuery += "\nselect @cols = STUFF((SELECT ',' + QUOTENAME(HisColumnsName)";
+            sqlQuery += "\nfrom TPH_PSCT_System.dbo.cauhinh_thongtin_his_tentruongtrave where HisID = 0";
+            sqlQuery += "\ngroup by HisColumnsName, HisID";
+            sqlQuery += "\norder by HisID";
+            sqlQuery += "\nFOR XML PATH(''), TYPE";
+            sqlQuery += "\n).value('.', 'NVARCHAR(MAX)')";
+            sqlQuery += "\n,1,1,'')";
+            sqlQuery += "\nset @query = N'SELECT HisID,' + @cols + N' from ";
+            sqlQuery += "\n(";
+            sqlQuery += "\nselect HisColumnValue, HisColumnsName, HisID";
+            sqlQuery += "\nfrom TPH_PSCT_System.dbo.cauhinh_thongtin_his_tentruongtrave";
+            sqlQuery += "\n) x";
+            sqlQuery += "\n pivot";
+            sqlQuery += "\n (";
+            sqlQuery += "\n max(HisColumnValue)";
+            sqlQuery += "\n for HisColumnsName in (' + @cols + N')";
+            sqlQuery += "\n) p '";
+            sqlQuery += "\nexec sp_executesql @query; ";
+
+            var data = SqlDb.ExecuteDataset(SqlDbConfigurationBase.GetConnection(), CommandType.Text, sqlQuery).Tables[0];
+            var returnList = new List<HISDataColumnNames>();
+            var objhisColumn = new HISDataColumnNames();
+            foreach (DataRow row in data.Rows)
+            {
+                objhisColumn = new HISDataColumnNames();
+                PropertyInfo[] fiCheck = objhisColumn.GetType().GetProperties();
+                foreach (var item in fiCheck)
+                {
+                    for (int i = 0; i < data.Columns.Count; i++)
+                    {
+                        if (data.Columns[i].ColumnName.Equals(item.Name, StringComparison.OrdinalIgnoreCase))
+                        {
+                            var obj = row[item.Name];
+                            if (obj != DBNull.Value)
+                            {
+                                if (item.Name.Equals("HisID"))
+                                    obj = (HisProvider)Enum.Parse(typeof(HisProvider), obj.ToString());
+
+                                objhisColumn.GetType().GetProperty(item.Name).SetValue(objhisColumn, row[item.Name], null);
+                            }
+                        }
+                    }
+                }
+                returnList.Add(objhisColumn);
+            }
+            return returnList;
+        }
+        public HISDataColumnNames GetHisThongTinMappingCot(HisConnection hisInfo, List<HISDataColumnNames> columnsList)
+        {
+            if (hisInfo != null)
+            {
+                if (columnsList != null)
+                {
+                    var resultObj = from items in columnsList where items.HisID.Equals(hisInfo.HisID) select items;
+                    if (resultObj != null)
+                        return resultObj.FirstOrDefault();
+                }
+            }
+            return new HISDataColumnNames();
+        }
+        public HisFunctionConfig GetHisThongTinMappingHam(HisConnection hisInfo, List<HisFunctionConfig> columnsList)
+        {
+            if (hisInfo != null)
+            {
+                if (columnsList != null)
+                {
+                    var resultObj = from items in columnsList where items.HisID.Equals(hisInfo.HisID) select items;
+                    if (resultObj != null)
+                        return resultObj.FirstOrDefault();
+                }
+            }
+            return new HisFunctionConfig();
+        }
+        public HisConnection GetHisThongTinMappingHis(string hisID, List<HisConnection> columnsList)
+        {
+            if (columnsList != null)
+            {
+                var resultObj = from items in columnsList where items.HisID.Equals(hisID) select items;
+                if (resultObj != null)
+                    return resultObj.FirstOrDefault();
+            }
+
+            return new HisConnection();
+        }
+        public void HisNhapCauHinhChuan()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("insert TPH_PSCT_System.dbo.cauhinh_thongtin_his (HisID, DBConnectType, HisName)");
+            sb.Append("\nselect 0 as HisID, 1 as DBConnectType, N'Thông tin HIS chuẩn' as HisName from TPH_PSCT_System.dbo.cauhinh_thongtin_his where HisID not in (0)");
+            SqlDb.ExecuteNonQuery(SqlDbConfigurationBase.GetConnection(), CommandType.Text, sb.ToString());
+            sb = new StringBuilder();
+            //thêm các tên trường chuẩn theo class khai báo
+        }
+        public void HisNhapCauHinhTheoChuan(int HisID, string HisName)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("insert TPH_PSCT_System.dbo.cauhinh_thongtin_his (HisID, DBConnectType, HisName)");
+            sb.AppendFormat("\nselect {0} as HisID, DBConnectType, N'{1}' as HisName  from TPH_PSCT_System.dbo.cauhinh_thongtin_his where HISID = 0 and not exists (select HisID from TPH_PSCT_System.dbo.cauhinh_thongtin_his where HisID = {0})", HisID, HisName);
+            SqlDb.ExecuteNonQuery(SqlDbConfigurationBase.GetConnection(), CommandType.Text, sb.ToString());
+
+            sb = new StringBuilder();
+            sb.Append("insert into TPH_PSCT_System.dbo.cauhinh_thongtin_his_tentruongtrave(HisID, HisColumnsName, HisColumnValue)");
+            sb.AppendFormat("\nselect {0} as HisID, HisColumnsName, HisColumnValue from TPH_PSCT_System.dbo.cauhinh_thongtin_his_tentruongtrave t where HisID = 0", HisID);
+            sb.AppendFormat("\nand not exists (select a.* from TPH_PSCT_System.dbo.cauhinh_thongtin_his_tentruongtrave a where hisid = {0} and t.HisColumnsName = a.HisColumnsName)", HisID);
+            SqlDb.ExecuteNonQuery(SqlDbConfigurationBase.GetConnection(), CommandType.Text, sb.ToString());
+
+            sb = new StringBuilder();
+            sb.Append("insert into TPH_PSCT_System.dbo.cauhinh_thongtin_his_thutuc(HisID, FunctionID, FunctionTypeID)");
+            sb.AppendFormat("\nselect {0} as HisID, FunctionID, 1 as FunctionTypeID from TPH_PSCT_System.dbo.cauhinh_thongtin_his_thutuc t where HisID = 0", HisID);
+            sb.AppendFormat("\nand not exists (select a.* from TPH_PSCT_System.dbo.cauhinh_thongtin_his_thutuc a where hisid = {0} and t.FunctionID = a.FunctionID)", HisID);
+            SqlDb.ExecuteNonQuery(SqlDbConfigurationBase.GetConnection(), CommandType.Text, sb.ToString());
+        }
+        public int Update_HisConnection(HisConnection objInfo)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Update TPH_PSCT_System.dbo.cauhinh_thongtin_his set");
+            sb.AppendFormat("\n Dbconnecttype = {0}", ((int)objInfo.DbType).ToString());
+            sb.AppendFormat("\n, Hisname = {0}", (objInfo.HisName == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.HisName.ToString()) + "'"));
+            sb.AppendFormat("\n, Servername = {0}", (objInfo.ServerName == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.ServerName.ToString()) + "'"));
+            sb.AppendFormat("\n, Username = {0}", (objInfo.UserName == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.UserName.ToString()) + "'"));
+            sb.AppendFormat("\n, Password = {0}", (objInfo.PassWord == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.PassWord.ToString()) + "'"));
+            sb.AppendFormat("\n, Portnumber = {0}", (objInfo.PortNumber == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.PortNumber.ToString()) + "'"));
+            sb.AppendFormat("\n, Databasename = {0}", (objInfo.DatabaseName == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.DatabaseName.ToString()) + "'"));
+            sb.AppendFormat("\n, Internalcolumn = {0}", (objInfo.Internalcolumn == null ? "NULL" : "'" + Utilities.ConvertSqlString(objInfo.Internalcolumn.ToString()) + "'"));
+            sb.AppendFormat("\n, Interalbycharindex = {0}", (bool.Parse(objInfo.InteralByCharIndex.ToString()) ? "1" : "0"));
+            sb.AppendFormat("\n, Internalcontaint = {0}", (bool.Parse(objInfo.InternalContaint.ToString()) ? "1" : "0"));
+            sb.AppendFormat("\n, Internalbitvalue = {0}", (bool.Parse(objInfo.InternalBitValue.ToString()) ? "1" : "0"));
+            sb.AppendFormat("\n, Internalcharvalue = {0}", (objInfo.InternalCharValue == null ? "NULL" : "'" + Utilities.ConvertSqlString(objInfo.InternalCharValue.ToString()) + "'"));
+            sb.AppendFormat("\n, Internalcharstartindex = {0}", string.IsNullOrEmpty(objInfo.InternalCharStartIndex) ? "0" : objInfo.InternalCharStartIndex.ToString());
+            sb.AppendFormat("\n, Isactive = {0}", (bool.Parse(objInfo.IsActive.ToString()) ? "1" : "0"));
+            sb.AppendFormat("\n, Differenceinout = {0}", (bool.Parse(objInfo.DifferenceInOut.ToString()) ? "1" : "0"));
+
+            sb.AppendFormat("\n, LISServername = {0}", (objInfo.LISServerName == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.LISServerName.ToString()) + "'"));
+            sb.AppendFormat("\n, LISUsername = {0}", (objInfo.LISUserName == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.LISUserName.ToString()) + "'"));
+            sb.AppendFormat("\n, LISPassword = {0}", (objInfo.LISPassword == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.LISPassword.ToString()) + "'"));
+            sb.AppendFormat("\n, LISCallADTName = {0}", (objInfo.LISCallADTName == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.LISCallADTName.ToString()) + "'"));
+            sb.AppendFormat("\n, LISDatabasename = {0}", (objInfo.LISDatabasename == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.LISDatabasename.ToString()) + "'"));
+
+            sb.Append("\nwhere Hisid =  " + ((int)objInfo.HisID).ToString());
+            return SqlDb.ExecuteNonQuery(SqlDbConfigurationBase.GetConnection(), CommandType.Text, sb.ToString());
+        }
+        public int Update_ThongTinHam(HisFunctionConfig objInfo)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Update TPH_PSCT_System.dbo.cauhinh_thongtin_his_THUTUC set");
+            sb.AppendFormat("\n Functiontypeid = {0}", ((int)objInfo.FunctionTypeID).ToString());
+            sb.AppendFormat("\n, Functionname = {0}", (objInfo.FunctionName == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.FunctionName.ToString()) + "'"));
+            sb.AppendFormat("\n, Functionparanames = {0}", (objInfo.FunctionParaNames == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.FunctionParaNames.ToString()) + "'"));
+            sb.AppendFormat("\n, Functionparavalues = {0}", (objInfo.FunctionParaValues == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.FunctionParaValues.ToString()) + "'"));
+            sb.AppendFormat("\n, Functionvaluestype = {0}", (objInfo.FunctionValuesType == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.FunctionValuesType.ToString()) + "'"));
+            sb.AppendFormat("\n, Liscolumns = {0}", (objInfo.LISColumns == null ? "NULL" : "N'" + Utilities.ConvertSqlString(objInfo.LISColumns.ToString()) + "'"));
+            sb.Append("\nwhere  Hisid =  " + ((int)objInfo.HisID).ToString() + " and Functionid =  " + "'" + Utilities.ConvertSqlString(objInfo.FunctionID.ToString()).ToString() + "'");
+            return SqlDb.ExecuteNonQuery(SqlDbConfigurationBase.GetConnection(), CommandType.Text, sb.ToString());
+        }
+        public int Update_ThongTinMappingCot(string HisID, string Hiscolumnsname, string Hiscolumnvalue)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Update TPH_PSCT_System.dbo.cauhinh_thongtin_his_TENTRUONGTRAVE set");
+            sb.AppendFormat("\n Hiscolumnvalue = {0}", (string.IsNullOrEmpty(Hiscolumnvalue) ? "NULL" : "'" + Utilities.ConvertSqlString(Hiscolumnvalue) + "'"));
+            sb.AppendFormat("\n where HisID = {0} and Hiscolumnsname = '{1}'", HisID, Hiscolumnsname);
+            return SqlDb.ExecuteNonQuery(SqlDbConfigurationBase.GetConnection(), CommandType.Text, sb.ToString());
+        }
+    }
+}

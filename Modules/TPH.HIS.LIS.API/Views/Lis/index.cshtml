@@ -1,0 +1,72 @@
+﻿@using TPH.HIS.WebAPI.Configs
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <div class="input-group col-xs-8 col-sm-5">
+        Lis - Admin
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="widget-box">
+            <div class="widget-header">
+                <h4 class="widget-title">Order</h4>
+            </div>
+
+            <div class="widget-body">
+                <div class="widget-main">
+                    <form class="form-inline">@*class="col-xs-8 col-sm-11"*@
+                        <input type="text" class="col-xs-4" id="txtBarcode" placeholder="Barcode or PatientCode" />
+                        <button type="button" class="btn btn-info btn-sm" id="btnGetOrder">
+                            <i class="ace-icon fa fa-key bigger-110"></i>Submit
+                        </button>
+                    </form>
+
+                </div>
+
+                <div class="widget-main no-padding width-100">
+                    <textarea id="txtGetOrderResponse" placeholder="" class="width-100" style="height:200px"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="space-6"></div>
+    <div class="col-sm-8">
+        <div class="widget-box">
+            <div class="widget-header">
+                <h4 class="widget-title">Result</h4>
+            </div>
+
+            <div class="widget-body">
+                <div class="widget-main">
+                    <form class="form-inline">
+                    @*<input type="text" class="col-xs-7" id="txtResultFile" value="D:\\1306540_PhanThiTam.pdf" placeholder="Result File Path" />*@
+                     <input type="text" class="col-xs-7" id="txtResultFile" value="" placeholder="Result File Path [on server or lan pc]" />
+
+                    <button type="button" class="btn btn-info btn-sm" id="btnUploadFile">
+                        <i class="ace-icon fa fa-key bigger-110"></i>Upload File
+                    </button>
+                    <button type="button" class="btn btn-info btn-sm" id="btnUpdateResults">
+                        <i class="ace-icon fa fa-key bigger-110"></i>Update Result To HIS
+                    </button>
+                </form>
+
+            </div>
+
+            <div class="widget-main no-padding width-100">
+                <textarea id="txtResultResponse" placeholder="" class="width-100" style="height:200px"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+@section scripts{
+
+@*<script src="@Url.Content("~/Assets/jquery/acelement.js?ver="+ @HisApiCommonConfigs.JsVersion)" type="text/javascript"></script>*@
+    <script src="@Url.Content("~/Assets/Lis/LisAdmin.js?ver="+ @HisApiCommonConfigs.JsVersion)" type="text/javascript"></script>
+}

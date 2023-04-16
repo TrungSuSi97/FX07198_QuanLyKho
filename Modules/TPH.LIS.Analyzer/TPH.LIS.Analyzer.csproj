@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E316F618-CB53-4AF9-B589-D27B8D5AD6FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPH.LIS.Analyzer</RootNamespace>
+    <AssemblyName>TPH.LIS.Analyzer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <AssemblyVersion>2019.9.12.1072</AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Build\ShareLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TPH.Common">
+      <HintPath>..\..\..\..\TT Medic Can Tho\TPH.LabIMS\Dependencies\TPH.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\GridColumnIndex.cs" />
+    <Compile Include="Controls\AnalyzerResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AnalyzerResult.Designer.cs">
+      <DependentUpon>AnalyzerResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FrmChonDSMayXn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FrmChonDSMayXn.designer.cs">
+      <DependentUpon>FrmChonDSMayXn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FrmDoiBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FrmDoiBarcode.Designer.cs">
+      <DependentUpon>FrmDoiBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FrmDoiTrangThaiKetQua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FrmDoiTrangThaiKetQua.Designer.cs">
+      <DependentUpon>FrmDoiTrangThaiKetQua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucAnalyzerAlarmList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucAnalyzerAlarmList.Designer.cs">
+      <DependentUpon>ucAnalyzerAlarmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucCoCanhBaoTheoMay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucCoCanhBaoTheoMay.Designer.cs">
+      <DependentUpon>ucCoCanhBaoTheoMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucCoCanhBaoTuMayTheoSeq.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucCoCanhBaoTuMayTheoSeq.Designer.cs">
+      <DependentUpon>ucCoCanhBaoTuMayTheoSeq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhSachMayXetNghiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhSachMayXetNghiem.Designer.cs">
+      <DependentUpon>ucDanhSachMayXetNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucGhepBarcode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucGhepBarcode.Designer.cs">
+      <DependentUpon>ucGhepBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKiemSoatDownloadMayXn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucKiemSoatDownloadMayXn.designer.cs">
+      <DependentUpon>ucKiemSoatDownloadMayXn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucLayKetQuaMayTuDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucLayKetQuaMayTuDong.designer.cs">
+      <DependentUpon>ucLayKetQuaMayTuDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucLuoiKetQuaMay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucLuoiKetQuaMay.Designer.cs">
+      <DependentUpon>ucLuoiKetQuaMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucMappingMaMay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucMappingMaMay.Designer.cs">
+      <DependentUpon>ucMappingMaMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucMappingViKhuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucMappingViKhuan.Designer.cs">
+      <DependentUpon>ucMappingViKhuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucPCUpdateResultConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucPCUpdateResultConfig.designer.cs">
+      <DependentUpon>ucPCUpdateResultConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucSamplePosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucSamplePosition.Designer.cs">
+      <DependentUpon>ucSamplePosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AnalyzerConfigModel.cs" />
+    <Compile Include="Model\AnalyzerOrganismAndAntibiotic.cs" />
+    <Compile Include="Model\CHAYMAU_VITRIMAU.cs" />
+    <Compile Include="Model\PCGetAnalyzerResult.cs" />
+    <Compile Include="Model\TrangThaiKetQua.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\AnalyzerConfigRepository.cs" />
+    <Compile Include="Repositories\AnalyzerResultRepository.cs" />
+    <Compile Include="Repositories\IAnalyzerConfigRepository.cs" />
+    <Compile Include="Repositories\IAnalyzerResultRepository.cs" />
+    <Compile Include="Services\AnalyzerConfigService.cs" />
+    <Compile Include="Services\AnalyzerResultService.cs" />
+    <Compile Include="Services\IAnalyzerConfigService.cs" />
+    <Compile Include="Services\IAnalyzerResultService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TPH.WriteLog\TPH.WriteLog.csproj">
+      <Project>{37482CAD-D9AF-4741-9CB6-16A6BA6A412E}</Project>
+      <Name>TPH.WriteLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.AnalyzerChart\TPH.AnalyzerChart.csproj">
+      <Project>{5050B1F8-7EFC-4719-8BF9-B8A5450BB37D}</Project>
+      <Name>TPH.AnalyzerChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.Controls\TPH.Controls.csproj">
+      <Project>{670302F2-82DD-4F60-949F-711FFF3B8F04}</Project>
+      <Name>TPH.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.Lab.BusinessService\TPH.Lab.BusinessService.csproj">
+      <Project>{40337536-DFE9-4AFC-BDBE-958C1DB8B862}</Project>
+      <Name>TPH.Lab.BusinessService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.Language\TPH.Language.csproj">
+      <Project>{BFAC421E-E92D-4336-9FC7-4A4F59AA47F0}</Project>
+      <Name>TPH.Language</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Common\TPH.LIS.Common.csproj">
+      <Project>{D12AFE96-3C9E-4310-847A-A662BCEE40BE}</Project>
+      <Name>TPH.LIS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Configuration\TPH.LIS.Configuration.csproj">
+      <Project>{0ce6a166-5f71-42a6-a850-7597e93be18e}</Project>
+      <Name>TPH.LIS.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Data\TPH.LIS.Data.csproj">
+      <Project>{493D7BFE-24BF-4612-86EB-623E23656F5D}</Project>
+      <Name>TPH.LIS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Log\TPH.LIS.Log.csproj">
+      <Project>{B93B48F6-C3A3-41F4-88C3-A0232FA5C615}</Project>
+      <Name>TPH.LIS.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.Patient\TPH.LIS.Patient.csproj">
+      <Project>{DA4788F0-BFD6-45FC-9EB6-0F3D5B9CEFA3}</Project>
+      <Name>TPH.LIS.Patient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.ResultConvert\TPH.LIS.ResultConvert.csproj">
+      <Project>{BEC8C5D7-5946-42F7-BEE3-93F46EFD8922}</Project>
+      <Name>TPH.LIS.ResultConvert</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.TestResult\TPH.LIS.TestResult.csproj">
+      <Project>{850CDA2A-81C7-4B64-8D3B-256877BF777C}</Project>
+      <Name>TPH.LIS.TestResult</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.LIS.User\TPH.LIS.User.csproj">
+      <Project>{3cdb515a-73af-4845-9cc0-5844d03adff3}</Project>
+      <Name>TPH.LIS.User</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\AnalyzerResult.resx">
+      <DependentUpon>AnalyzerResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FrmChonDSMayXn.resx">
+      <DependentUpon>FrmChonDSMayXn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FrmDoiBarcode.resx">
+      <DependentUpon>FrmDoiBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FrmDoiTrangThaiKetQua.resx">
+      <DependentUpon>FrmDoiTrangThaiKetQua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucAnalyzerAlarmList.resx">
+      <DependentUpon>ucAnalyzerAlarmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucCoCanhBaoTheoMay.resx">
+      <DependentUpon>ucCoCanhBaoTheoMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucCoCanhBaoTuMayTheoSeq.resx">
+      <DependentUpon>ucCoCanhBaoTuMayTheoSeq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucDanhSachMayXetNghiem.resx">
+      <DependentUpon>ucDanhSachMayXetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucGhepBarcode.resx">
+      <DependentUpon>ucGhepBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucKiemSoatDownloadMayXn.resx">
+      <DependentUpon>ucKiemSoatDownloadMayXn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucLayKetQuaMayTuDong.resx">
+      <DependentUpon>ucLayKetQuaMayTuDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucLuoiKetQuaMay.resx">
+      <DependentUpon>ucLuoiKetQuaMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucMappingMaMay.resx">
+      <DependentUpon>ucMappingMaMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucMappingViKhuan.resx">
+      <DependentUpon>ucMappingViKhuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucPCUpdateResultConfig.resx">
+      <DependentUpon>ucPCUpdateResultConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucSamplePosition.resx">
+      <DependentUpon>ucSamplePosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
