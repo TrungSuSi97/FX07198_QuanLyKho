@@ -88,7 +88,7 @@ namespace TPH.LIS.App
             {
                 AssignUserLoginInfoToMainForm(userloginInfo);
                 AssignPrintedHeader(userloginInfo);
-                AssignSystemConfig();
+                //AssignSystemConfig();
                 AssignPermissionToUserLogin(CommonAppVarsAndFunctions.IsAdmin ? "admin" : userloginInfo.LoginName);
                 CommonAppVarsAndFunctions.DefaultObject = _serviceSettingService.GetDefaultServiceCode();
 
@@ -380,7 +380,7 @@ namespace TPH.LIS.App
         private void FrmDangNhap_Load(object sender, EventArgs e)
         {
             cboLanguage.SelectedIndex = 0;
-            lblCopyright.Text = MessageConstant.Copyright;
+            //lblCopyright.Text = MessageConstant.Copyright;
             toolTip1.SetToolTip(btnAboutUs,
                 LanguageExtension.GetResourceValueFromKey("Vechungtoi", LanguageExtension.AppLanguage));
             LoginName = LanguageExtension.GetResourceValueFromKey("Tendangnhap", LanguageExtension.AppLanguage);
@@ -523,6 +523,11 @@ namespace TPH.LIS.App
         }
 
         private void tphPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tphPictureBoxRetangle1_Click(object sender, EventArgs e)
         {
 
         }

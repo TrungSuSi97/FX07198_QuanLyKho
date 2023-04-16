@@ -49,17 +49,13 @@
             this.btnYoutube = new TPH.Controls.TPHIconButton();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.tphPanel2 = new TPH.Controls.TPHPanel();
-            this.tphPictureBoxRetangle1 = new TPH.Controls.TPHPictureBoxRetangle();
             this.panel1 = new DevExpress.XtraEditors.PanelControl();
-            this.label3 = new DevExpress.XtraEditors.LabelControl();
-            this.lblCopyright = new DevExpress.XtraEditors.LabelControl();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnContent.SuspendLayout();
             this.pnTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tphPictureBoxRetangle2)).BeginInit();
             this.tphPanel1.SuspendLayout();
             this.tphPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tphPictureBoxRetangle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panel1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -430,6 +426,7 @@
             this.toolTip1.SetToolTip(this.btnAboutUs, "Về chúng tôi");
             this.btnAboutUs.UseHoverColor = false;
             this.btnAboutUs.UseVisualStyleBackColor = false;
+            this.btnAboutUs.Visible = false;
             this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
             // 
             // tphIconButton6
@@ -488,6 +485,7 @@
             this.toolTip1.SetToolTip(this.btnWeb, "Website");
             this.btnWeb.UseHoverColor = false;
             this.btnWeb.UseVisualStyleBackColor = false;
+            this.btnWeb.Visible = false;
             this.btnWeb.Click += new System.EventHandler(this.btnWeb_Click);
             // 
             // btnFacebook
@@ -515,6 +513,7 @@
             this.toolTip1.SetToolTip(this.btnFacebook, "Facebook");
             this.btnFacebook.UseHoverColor = false;
             this.btnFacebook.UseVisualStyleBackColor = false;
+            this.btnFacebook.Visible = false;
             this.btnFacebook.Click += new System.EventHandler(this.btnFacebook_Click);
             // 
             // btnYoutube
@@ -542,6 +541,7 @@
             this.toolTip1.SetToolTip(this.btnYoutube, "Youtube");
             this.btnYoutube.UseHoverColor = false;
             this.btnYoutube.UseVisualStyleBackColor = false;
+            this.btnYoutube.Visible = false;
             this.btnYoutube.Click += new System.EventHandler(this.btnYoutube_Click);
             // 
             // label1
@@ -551,11 +551,11 @@
             this.label1.Appearance.Options.UseFont = true;
             this.label1.Appearance.Options.UseTextOptions = true;
             this.label1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.label1.Location = new System.Drawing.Point(84, 150);
+            this.label1.Location = new System.Drawing.Point(211, 181);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 48);
+            this.label1.Size = new System.Drawing.Size(153, 26);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Giải pháp tự động hóa\r\nKhoa xét nghiệm với TPH.LabIMS";
+            this.label1.Text = "QUẢN LÝ KHO";
             // 
             // tphPanel2
             // 
@@ -564,10 +564,7 @@
             this.tphPanel2.BackImageLayout = System.Windows.Forms.ImageLayout.Tile;
             this.tphPanel2.BorderRadius = 0;
             this.tphPanel2.BottomColor = System.Drawing.Color.Empty;
-            this.tphPanel2.Controls.Add(this.tphPictureBoxRetangle1);
             this.tphPanel2.Controls.Add(this.panel1);
-            this.tphPanel2.Controls.Add(this.label3);
-            this.tphPanel2.Controls.Add(this.lblCopyright);
             this.tphPanel2.Controls.Add(this.label1);
             this.tphPanel2.Customizable = true;
             this.tphPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -580,22 +577,6 @@
             this.tphPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tphPanel2_Paint);
             this.tphPanel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tphPanel2_MouseDown);
             // 
-            // tphPictureBoxRetangle1
-            // 
-            this.tphPictureBoxRetangle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(57)))), ((int)(((byte)(112)))));
-            this.tphPictureBoxRetangle1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.tphPictureBoxRetangle1.BorderRadius = 0;
-            this.tphPictureBoxRetangle1.BorderSize = 0;
-            this.tphPictureBoxRetangle1.Customizable = true;
-            this.tphPictureBoxRetangle1.Image = ((System.Drawing.Image)(resources.GetObject("tphPictureBoxRetangle1.Image")));
-            this.tphPictureBoxRetangle1.Location = new System.Drawing.Point(0, 0);
-            this.tphPictureBoxRetangle1.Name = "tphPictureBoxRetangle1";
-            this.tphPictureBoxRetangle1.Padding = new System.Windows.Forms.Padding(5);
-            this.tphPictureBoxRetangle1.Size = new System.Drawing.Size(181, 78);
-            this.tphPictureBoxRetangle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tphPictureBoxRetangle1.TabIndex = 21;
-            this.tphPictureBoxRetangle1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -605,30 +586,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(259, 1);
             this.panel1.TabIndex = 18;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Appearance.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Appearance.Options.UseFont = true;
-            this.label3.Location = new System.Drawing.Point(169, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(252, 16);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Tăng tốc xét nghiệm - Bảo mật thông tin";
-            // 
-            // lblCopyright
-            // 
-            this.lblCopyright.Appearance.Font = new System.Drawing.Font("Arial", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCopyright.Appearance.Options.UseFont = true;
-            this.lblCopyright.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblCopyright.ImageOptions.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCopyright.Location = new System.Drawing.Point(0, 366);
-            this.lblCopyright.Name = "lblCopyright";
-            this.lblCopyright.Padding = new System.Windows.Forms.Padding(5);
-            this.lblCopyright.Size = new System.Drawing.Size(345, 25);
-            this.lblCopyright.TabIndex = 16;
-            this.lblCopyright.Text = "TPH Solutions Co., LTD - Laboratoty Information System (LIS)";
             // 
             // FrmDangNhap
             // 
@@ -657,7 +614,6 @@
             this.tphPanel1.PerformLayout();
             this.tphPanel2.ResumeLayout(false);
             this.tphPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tphPictureBoxRetangle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panel1)).EndInit();
             this.ResumeLayout(false);
 
@@ -680,9 +636,6 @@
         private DevExpress.XtraEditors.LabelControl label1;
         private Controls.TPHPanel tphPanel2;
         private DevExpress.XtraEditors.PanelControl panel1;
-        private DevExpress.XtraEditors.LabelControl label3;
-        private DevExpress.XtraEditors.LabelControl lblCopyright;
-        private Controls.TPHPictureBoxRetangle tphPictureBoxRetangle1;
         private Controls.TPHIconButton btnAboutUs;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.CheckBox chkLuuThongTinDangNhap;

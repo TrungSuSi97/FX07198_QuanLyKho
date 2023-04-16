@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogIn));
             this.gradientPanel1 = new TPH.LIS.Common.Controls.GradientPanel();
+            this.gradientPanel2 = new TPH.LIS.Common.Controls.GradientPanel();
             this.pnLogin = new DevExpress.XtraEditors.PanelControl();
             this.panel4 = new DevExpress.XtraEditors.PanelControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,15 +43,17 @@
             this.btnExit = new TPH.Controls.TPHNormalButton();
             this.btnLogIn = new TPH.Controls.TPHNormalButton();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
-            this.gradientPanel2 = new TPH.LIS.Common.Controls.GradientPanel();
             this.gradientPanel1.SuspendLayout();
+            this.gradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnLogin)).BeginInit();
             this.pnLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panel4)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panel2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.gradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gradientPanel1
@@ -69,10 +72,24 @@
             this.gradientPanel1.TabIndex = 1;
             this.gradientPanel1.TopColor = System.Drawing.Color.Empty;
             // 
+            // gradientPanel2
+            // 
+            this.gradientPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gradientPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gradientPanel2.BottomColor = System.Drawing.Color.White;
+            this.gradientPanel2.Controls.Add(this.pnLogin);
+            this.gradientPanel2.GradientDegree = 90F;
+            this.gradientPanel2.Location = new System.Drawing.Point(169, 127);
+            this.gradientPanel2.Name = "gradientPanel2";
+            this.gradientPanel2.Padding = new System.Windows.Forms.Padding(3);
+            this.gradientPanel2.Size = new System.Drawing.Size(455, 470);
+            this.gradientPanel2.TabIndex = 1;
+            this.gradientPanel2.TopColor = System.Drawing.Color.Orange;
+            // 
             // pnLogin
             // 
-            this.pnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
-            this.pnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnLogin.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.pnLogin.Appearance.Options.UseBackColor = true;
             this.pnLogin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.pnLogin.Controls.Add(this.panel4);
             this.pnLogin.Controls.Add(this.panel2);
@@ -91,7 +108,8 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Appearance.BackColor = System.Drawing.Color.White;
+            this.panel4.Appearance.Options.UseBackColor = true;
             this.panel4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.txtPassword);
@@ -128,7 +146,8 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Appearance.BackColor = System.Drawing.Color.White;
+            this.panel2.Appearance.Options.UseBackColor = true;
             this.panel2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txtUserID);
@@ -188,6 +207,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
+            this.btnExit.BackColorHover = System.Drawing.Color.Empty;
             this.btnExit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
             this.btnExit.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnExit.BorderRadius = 5;
@@ -196,6 +216,7 @@
             this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForceColorHover = System.Drawing.Color.Empty;
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -212,6 +233,7 @@
             // btnLogIn
             // 
             this.btnLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
+            this.btnLogIn.BackColorHover = System.Drawing.Color.Empty;
             this.btnLogIn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(115)))), ((int)(((byte)(148)))));
             this.btnLogIn.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnLogIn.BorderRadius = 5;
@@ -220,6 +242,7 @@
             this.btnLogIn.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
             this.btnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogIn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogIn.ForceColorHover = System.Drawing.Color.Empty;
             this.btnLogIn.ForeColor = System.Drawing.Color.White;
             this.btnLogIn.Image = ((System.Drawing.Image)(resources.GetObject("btnLogIn.Image")));
             this.btnLogIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,31 +259,20 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Appearance.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.label1.Appearance.Options.UseBackColor = true;
+            this.label1.Appearance.Options.UseFont = true;
+            this.label1.Appearance.Options.UseForeColor = true;
             this.label1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImageOptions.Alignment = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(2, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(445, 69);
+            this.label1.Size = new System.Drawing.Size(395, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG NHẬP CHƯƠNG TRÌNH";
-            // 
-            // gradientPanel2
-            // 
-            this.gradientPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gradientPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gradientPanel2.BottomColor = System.Drawing.Color.White;
-            this.gradientPanel2.Controls.Add(this.pnLogin);
-            this.gradientPanel2.GradientDegree = 90F;
-            this.gradientPanel2.Location = new System.Drawing.Point(169, 127);
-            this.gradientPanel2.Name = "gradientPanel2";
-            this.gradientPanel2.Padding = new System.Windows.Forms.Padding(3);
-            this.gradientPanel2.Size = new System.Drawing.Size(455, 470);
-            this.gradientPanel2.TabIndex = 1;
-            this.gradientPanel2.TopColor = System.Drawing.Color.Orange;
             // 
             // frmLogIn
             // 
@@ -280,16 +292,19 @@
             this.Load += new System.EventHandler(this.frmLogIn_Load);
             this.Shown += new System.EventHandler(this.frmLogIn_Shown);
             this.gradientPanel1.ResumeLayout(false);
+            this.gradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pnLogin)).EndInit();
             this.pnLogin.ResumeLayout(false);
             this.pnLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panel4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panel2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.gradientPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

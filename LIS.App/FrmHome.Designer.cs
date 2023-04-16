@@ -33,7 +33,6 @@
             this.lblXRay = new System.Windows.Forms.LinkLabel();
             this.lblElectrocardiogram = new System.Windows.Forms.LinkLabel();
             this.lblUltraSound = new System.Windows.Forms.LinkLabel();
-            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.lblAboutUs = new System.Windows.Forms.LinkLabel();
             this.panel16 = new DevExpress.XtraEditors.PanelControl();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -82,6 +81,7 @@
             this.pnAllMenu = new DevExpress.XtraEditors.PanelControl();
             this.pnLoginInInfo = new DevExpress.XtraEditors.PanelControl();
             this.pnTop = new DevExpress.XtraEditors.PanelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panel16)).BeginInit();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -173,23 +173,6 @@
             this.lblUltraSound.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblUltraSound.Visible = false;
             this.lblUltraSound.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblUltraSound_LinkClicked);
-            // 
-            // label1
-            // 
-            this.label1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
-            this.label1.Appearance.Options.UseBackColor = true;
-            this.label1.Appearance.Options.UseFont = true;
-            this.label1.Appearance.Options.UseForeColor = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Location = new System.Drawing.Point(0, 75);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(25, 0, 43, 5);
-            this.label1.Size = new System.Drawing.Size(467, 24);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Hệ thống tự động hóa Khoa xét nghiệm TPH.LabIMS";
             // 
             // lblAboutUs
             // 
@@ -322,9 +305,9 @@
             this.label15.Appearance.Options.UseForeColor = true;
             this.label15.Location = new System.Drawing.Point(79, 9);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(94, 19);
+            this.label15.Size = new System.Drawing.Size(111, 19);
             this.label15.TabIndex = 12;
-            this.label15.Text = "TPH.LabIMS";
+            this.label15.Text = "QUẢN LÝ KHO";
             // 
             // lblTieuDe
             // 
@@ -342,7 +325,7 @@
             this.lblTieuDe.Padding = new System.Windows.Forms.Padding(25, 0, 43, 0);
             this.lblTieuDe.Size = new System.Drawing.Size(909, 75);
             this.lblTieuDe.TabIndex = 1;
-            this.lblTieuDe.Text = "TRUNG TÂM XÉT NGHIỆM Y KHOA BẢO TÍN";
+            this.lblTieuDe.Text = "TÊN CÔNG TY";
             this.lblTieuDe.Click += new System.EventHandler(this.lblTieuDe_Click);
             // 
             // panel6
@@ -1053,6 +1036,23 @@
             this.pnTop.Size = new System.Drawing.Size(1284, 99);
             this.pnTop.TabIndex = 36;
             // 
+            // label1
+            // 
+            this.label1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
+            this.label1.Appearance.Options.UseBackColor = true;
+            this.label1.Appearance.Options.UseFont = true;
+            this.label1.Appearance.Options.UseForeColor = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Location = new System.Drawing.Point(0, 75);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(25, 0, 43, 5);
+            this.label1.Size = new System.Drawing.Size(181, 24);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Tên phần mềm";
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1137,7 +1137,6 @@
         private DevExpress.XtraEditors.LabelControl label17;
         private DevExpress.XtraEditors.LabelControl lblSystemType;
         private DevExpress.XtraEditors.LabelControl label15;
-        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.SimpleButton lbltraKetQua;
         private DevExpress.XtraEditors.SimpleButton lblSearPatient;
         private DevExpress.XtraEditors.SimpleButton lblTiepNhanHis;
@@ -1165,5 +1164,6 @@
         private DevExpress.XtraEditors.SimpleButton btnKetQuaSangLocSoSinh;
         private DevExpress.XtraEditors.PanelControl pnAllMenu;
         private DevExpress.XtraEditors.PanelControl pnLoginInInfo;
+        private DevExpress.XtraEditors.LabelControl label1;
     }
 }

@@ -448,10 +448,10 @@ namespace TPH.LIS.App
             lblVersion.Text = string.Format("| {0}: {1} | {2} | {3}", LanguageExtension.GetResourceValueFromKey("PhienBan", Language), Assembly.GetExecutingAssembly().GetName().Version, Environment.MachineName, ip);
             CommonAppVarsAndFunctions.ServerTime = C_Ultilities.ServerDate();
             timerMain.Start();
-            if (!CommonAppVarsAndFunctions.License.FullLicense)
-            {
-                CheckLicense(false);
-            }
+            //if (!CommonAppVarsAndFunctions.License.FullLicense)
+            //{
+            //    CheckLicense(false);
+            //}
             LoadPrinterList();
             WorkingServices.EmptyFolderContents("Logs", 3, null);
             SetMainMenu(tphDropdownBenhNhan);

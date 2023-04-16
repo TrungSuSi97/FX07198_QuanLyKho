@@ -81,19 +81,19 @@ namespace TPH.LIS.App
             frmParent fParent = (frmParent) this.TopLevelControl;
 
             fParent.rbCauHinhHeThong.Enabled = fParent.rbCaiDatKetNoiHis.Enabled = CommonAppVarsAndFunctions.IsAdmin;
-            fParent.rabCapNhatThongTinTuHis.Visible =
-                fParent.rbKQUploadHIS.Visible
-                    = fParent.rbTiepNhanHIS.Visible = CommonAppVarsAndFunctions.sysConfig.ConnectHIS;
-            lblTiepNhanHis.Visible = fParent.rbLayMau.Visible = CommonAppVarsAndFunctions.sysConfig.ConnectHIS;
-            fParent.btnThuPhi.Visible =
-                ((CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh ==
-                  EnumQuiTrinhLAB.NhapTay_ThuTien_KetQua ||
-                  CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh ==
-                  EnumQuiTrinhLAB.NhapTay_ThuTien_LayMau_KetQua ||
-                  CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh ==
-                  EnumQuiTrinhLAB.NhapTay_ThuTien_LayMau_NhanMau_KetQua)
-                    ? true
-                    : false);
+            //fParent.rabCapNhatThongTinTuHis.Visible =
+            //    fParent.rbKQUploadHIS.Visible
+            //        = fParent.rbTiepNhanHIS.Visible = CommonAppVarsAndFunctions.sysConfig.ConnectHIS;
+            //lblTiepNhanHis.Visible = fParent.rbLayMau.Visible = CommonAppVarsAndFunctions.sysConfig.ConnectHIS;
+            //fParent.btnThuPhi.Visible =
+            //    ((CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh ==
+            //      EnumQuiTrinhLAB.NhapTay_ThuTien_KetQua ||
+            //      CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh ==
+            //      EnumQuiTrinhLAB.NhapTay_ThuTien_LayMau_KetQua ||
+            //      CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh ==
+            //      EnumQuiTrinhLAB.NhapTay_ThuTien_LayMau_NhanMau_KetQua)
+            //        ? true
+            //        : false);
             //fParent.rbGroupCaiDatKetNoiHis.Visible = (CommonAppVarsAndFunctions.sysConfig.ConnectHIS || CommonAppVarsAndFunctions.sysConfig.TPHLabIMSWeb_TuDongGuiChiDinh);
             CheckEnableControls();
 
@@ -128,35 +128,35 @@ namespace TPH.LIS.App
             //}
 
             //Kiểm tra bật tắt vi sinh
-            lblKetqQuaViSinh.Visible = lblXuatKetQuaViSinh.Visible =
-                CommonAppVarsAndFunctions.CheckExist_IMSModule(IMSModule.XetNghiemViSinhNuoicay);
+            //   lblKetqQuaViSinh.Visible = lblXuatKetQuaViSinh.Visible =
+            //       CommonAppVarsAndFunctions.CheckExist_IMSModule(IMSModule.XetNghiemViSinhNuoicay);
 
-            fParent.rbDanhMucViSinh.Visible = fParent.rbKQViSinhNuoiCay.Visible =
-                fParent.rbDanhMucViSinh.Visible = (lblKetqQuaViSinh.Visible);
-            lbltraKetQua.Visible = CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemSuDungDanhSachChoTraKQ;
+            //   fParent.rbDanhMucViSinh.Visible = fParent.rbKQViSinhNuoiCay.Visible =
+            //       fParent.rbDanhMucViSinh.Visible = (lblKetqQuaViSinh.Visible);
+            //   lbltraKetQua.Visible = CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemSuDungDanhSachChoTraKQ;
 
-         //   lblNhapViTriChayMau.Visible =
-                lblThongTinMauSangLocSoSinh.Visible = lblThongTinMauSangLocTruocSinh.Visible =
-                btnKetQuaSangLocSoSinh.Visible = lblKetQuaSangLocTruocSinh.Visible =
-                    CommonAppVarsAndFunctions.CheckExist_IMSModule(IMSModule.XetNghiemSangLoc);
-            fParent.rbThongTinSangLocSoSinh.Visible = fParent.rbThongTinSangLocTruocSinh.Visible =
-                (lblThongTinMauSangLocTruocSinh.Visible);
+            ////   lblNhapViTriChayMau.Visible =
+            //       lblThongTinMauSangLocSoSinh.Visible = lblThongTinMauSangLocTruocSinh.Visible =
+            //       btnKetQuaSangLocSoSinh.Visible = lblKetQuaSangLocTruocSinh.Visible =
+            //           CommonAppVarsAndFunctions.CheckExist_IMSModule(IMSModule.XetNghiemSangLoc);
+            //   fParent.rbThongTinSangLocSoSinh.Visible = fParent.rbThongTinSangLocTruocSinh.Visible =
+            //       (lblThongTinMauSangLocTruocSinh.Visible);
 
-            lblLaboratoryResult.Visible = CommonAppVarsAndFunctions.CheckExist_IMSModule(IMSModule.XetNghiemThuongQuy);
-            fParent.rbInTheoDanhSach.Visible = fParent.rbKetQuaThuongQuy.Visible = (lblLaboratoryResult.Visible);
-            //fParent.tsbKetQuaXN.Visible = lblLaboratoryResult.Visible;
+            //   lblLaboratoryResult.Visible = CommonAppVarsAndFunctions.CheckExist_IMSModule(IMSModule.XetNghiemThuongQuy);
+            //   fParent.rbInTheoDanhSach.Visible = fParent.rbKetQuaThuongQuy.Visible = (lblLaboratoryResult.Visible);
+            //   //fParent.tsbKetQuaXN.Visible = lblLaboratoryResult.Visible;
 
-            lblKetQuaSHPT.Visible = CommonAppVarsAndFunctions.CheckExist_IMSModule(IMSModule.XetNghiemSHPT);
-            fParent.rbKQSinhHocPhanTu.Visible = lblLaboratoryResult.Visible;
-            fParent.rbKQSinhHocPhanTu.Visible = lblKetQuaSHPT.Visible;
+            //   lblKetQuaSHPT.Visible = CommonAppVarsAndFunctions.CheckExist_IMSModule(IMSModule.XetNghiemSHPT);
+            //   fParent.rbKQSinhHocPhanTu.Visible = lblLaboratoryResult.Visible;
+            //   fParent.rbKQSinhHocPhanTu.Visible = lblKetQuaSHPT.Visible;
 
-            if (!lblLaboratoryResult.Visible && !lblKetQuaSHPT.Visible)
-            {
-                fParent.rbXuatKetQua.Visible = false;
-                lblXuatKetQuaThuongQui.Visible = false;
-            }
+            //   if (!lblLaboratoryResult.Visible && !lblKetQuaSHPT.Visible)
+            //   {
+            //       fParent.rbXuatKetQua.Visible = false;
+            //       lblXuatKetQuaThuongQui.Visible = false;
+            //   }
 
-            lblKetQuaHuyetTuyDo.Visible = CommonAppVarsAndFunctions.CheckExist_IMSModule(IMSModule.XetNghiemHuyetTuyDo);
+            //   lblKetQuaHuyetTuyDo.Visible = CommonAppVarsAndFunctions.CheckExist_IMSModule(IMSModule.XetNghiemHuyetTuyDo);
             fParent.btnBenhNhan.Enabled = true;
             fParent.btnCaiDat.Enabled = true;
             fParent.btnDanhMuc.Enabled = true;
@@ -192,7 +192,7 @@ namespace TPH.LIS.App
             lblNhanMau.Enabled = CommonAppVarsAndFunctions.CheckUserPermissionToAccessFunctions(CommonAppVarsAndFunctions.PhanQuyenXetNghiem, UserConstant.PermissionTestGetSample);
             lbltraKetQua.Enabled = CommonAppVarsAndFunctions.CheckUserPermissionToAccessFunctions(CommonAppVarsAndFunctions.PhanQuyenXetNghiem, UserConstant.PermissionReturnResult);
             lblChuyenMau.Enabled = CommonAppVarsAndFunctions.CheckUserPermissionToAccessFunctions(CommonAppVarsAndFunctions.PhanQuyenXetNghiem, UserConstant.PermissionTransferSample);
-            Check_VisibleRule();
+            //Check_VisibleRule();
 
         }
         private void Check_VisibleRule()
