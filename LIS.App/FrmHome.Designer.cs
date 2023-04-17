@@ -33,7 +33,6 @@
             this.lblXRay = new System.Windows.Forms.LinkLabel();
             this.lblElectrocardiogram = new System.Windows.Forms.LinkLabel();
             this.lblUltraSound = new System.Windows.Forms.LinkLabel();
-            this.lblAboutUs = new System.Windows.Forms.LinkLabel();
             this.panel16 = new DevExpress.XtraEditors.PanelControl();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label19 = new DevExpress.XtraEditors.LabelControl();
@@ -174,24 +173,6 @@
             this.lblUltraSound.Visible = false;
             this.lblUltraSound.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblUltraSound_LinkClicked);
             // 
-            // lblAboutUs
-            // 
-            this.lblAboutUs.ActiveLinkColor = System.Drawing.Color.Teal;
-            this.lblAboutUs.AutoSize = true;
-            this.lblAboutUs.BackColor = System.Drawing.Color.Transparent;
-            this.lblAboutUs.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblAboutUs.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAboutUs.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lblAboutUs.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lblAboutUs.Location = new System.Drawing.Point(0, 76);
-            this.lblAboutUs.Name = "lblAboutUs";
-            this.lblAboutUs.Padding = new System.Windows.Forms.Padding(0, 3, 0, 5);
-            this.lblAboutUs.Size = new System.Drawing.Size(253, 23);
-            this.lblAboutUs.TabIndex = 18;
-            this.lblAboutUs.TabStop = true;
-            this.lblAboutUs.Text = "Sản phẩm được phát triển bởi TPH Solutions";
-            this.lblAboutUs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAboutUs_LinkClicked);
-            // 
             // panel16
             // 
             this.panel16.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -199,7 +180,6 @@
             this.panel16.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panel16.Controls.Add(this.pictureBox4);
             this.panel16.Controls.Add(this.label19);
-            this.panel16.Controls.Add(this.lblAboutUs);
             this.panel16.Controls.Add(this.lblPCName);
             this.panel16.Controls.Add(this.label18);
             this.panel16.Controls.Add(this.lblUserId);
@@ -211,7 +191,7 @@
             this.panel16.Margin = new System.Windows.Forms.Padding(0);
             this.panel16.Name = "panel16";
             this.panel16.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
-            this.panel16.Size = new System.Drawing.Size(375, 99);
+            this.panel16.Size = new System.Drawing.Size(375, 84);
             this.panel16.TabIndex = 17;
             // 
             // pictureBox4
@@ -323,7 +303,7 @@
             this.lblTieuDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Padding = new System.Windows.Forms.Padding(25, 0, 43, 0);
-            this.lblTieuDe.Size = new System.Drawing.Size(909, 75);
+            this.lblTieuDe.Size = new System.Drawing.Size(909, 60);
             this.lblTieuDe.TabIndex = 1;
             this.lblTieuDe.Text = "TÊN CÔNG TY";
             this.lblTieuDe.Click += new System.EventHandler(this.lblTieuDe_Click);
@@ -380,6 +360,7 @@
             this.lblReception.Size = new System.Drawing.Size(119, 84);
             this.lblReception.TabIndex = 46;
             this.lblReception.Text = "Nhập \r\nthông tin";
+            this.lblReception.Visible = false;
             this.lblReception.Click += new System.EventHandler(this.lblReception_Click);
             // 
             // lblTiepNhanHis
@@ -403,6 +384,7 @@
             this.lblTiepNhanHis.Size = new System.Drawing.Size(119, 84);
             this.lblTiepNhanHis.TabIndex = 48;
             this.lblTiepNhanHis.Text = "Tiếp nhận HIS (F1)";
+            this.lblTiepNhanHis.Visible = false;
             this.lblTiepNhanHis.Click += new System.EventHandler(this.lblTiepNhanHis_Click);
             // 
             // lbltraKetQua
@@ -426,6 +408,7 @@
             this.lbltraKetQua.Size = new System.Drawing.Size(119, 84);
             this.lbltraKetQua.TabIndex = 45;
             this.lbltraKetQua.Text = "Trả phiếu \r\nkết quả";
+            this.lbltraKetQua.Visible = false;
             this.lbltraKetQua.Click += new System.EventHandler(this.lbltraKetQua_Click);
             // 
             // lblInvoice
@@ -449,6 +432,7 @@
             this.lblInvoice.Size = new System.Drawing.Size(119, 84);
             this.lblInvoice.TabIndex = 47;
             this.lblInvoice.Text = "Thu phí";
+            this.lblInvoice.Visible = false;
             this.lblInvoice.Click += new System.EventHandler(this.lblInvoice_Click);
             // 
             // lblThongTinMauSangLocTruocSinh
@@ -472,6 +456,7 @@
             this.lblThongTinMauSangLocTruocSinh.Size = new System.Drawing.Size(119, 84);
             this.lblThongTinMauSangLocTruocSinh.TabIndex = 50;
             this.lblThongTinMauSangLocTruocSinh.Text = "Sàng lọc\r\ntrước sinh";
+            this.lblThongTinMauSangLocTruocSinh.Visible = false;
             this.lblThongTinMauSangLocTruocSinh.Click += new System.EventHandler(this.lblThongTinMauSangLocTruocSinh_Click);
             // 
             // lblThongTinMauSangLocSoSinh
@@ -495,6 +480,7 @@
             this.lblThongTinMauSangLocSoSinh.Size = new System.Drawing.Size(119, 84);
             this.lblThongTinMauSangLocSoSinh.TabIndex = 51;
             this.lblThongTinMauSangLocSoSinh.Text = "Sàng lọc\r\nsơ sinh";
+            this.lblThongTinMauSangLocSoSinh.Visible = false;
             this.lblThongTinMauSangLocSoSinh.Click += new System.EventHandler(this.lblThongTinMauSangLocSoSinh_Click);
             // 
             // lblSearPatient
@@ -518,6 +504,7 @@
             this.lblSearPatient.Size = new System.Drawing.Size(119, 84);
             this.lblSearPatient.TabIndex = 49;
             this.lblSearPatient.Text = "Tìm kiếm";
+            this.lblSearPatient.Visible = false;
             this.lblSearPatient.Click += new System.EventHandler(this.lblSearPatient_Click);
             // 
             // label2
@@ -533,9 +520,9 @@
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(15);
-            this.label2.Size = new System.Drawing.Size(189, 49);
+            this.label2.Size = new System.Drawing.Size(121, 49);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Thông tin bệnh nhân";
+            this.label2.Text = "Quản lý kho";
             // 
             // panel11
             // 
@@ -564,6 +551,7 @@
             this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel3.Size = new System.Drawing.Size(562, 104);
             this.flowLayoutPanel3.TabIndex = 43;
+            this.flowLayoutPanel3.Visible = false;
             // 
             // lblThongKeTongHop
             // 
@@ -586,6 +574,7 @@
             this.lblThongKeTongHop.Size = new System.Drawing.Size(114, 84);
             this.lblThongKeTongHop.TabIndex = 56;
             this.lblThongKeTongHop.Text = "Tổng hợp\r\nxét nghiệm";
+            this.lblThongKeTongHop.Visible = false;
             this.lblThongKeTongHop.Click += new System.EventHandler(this.lblThongKeTongHop_Click);
             // 
             // lblXuatKetQuaThuongQui
@@ -609,6 +598,7 @@
             this.lblXuatKetQuaThuongQui.Size = new System.Drawing.Size(114, 84);
             this.lblXuatKetQuaThuongQui.TabIndex = 57;
             this.lblXuatKetQuaThuongQui.Text = "Xuất lưu\r\nkết quả";
+            this.lblXuatKetQuaThuongQui.Visible = false;
             this.lblXuatKetQuaThuongQui.Click += new System.EventHandler(this.lblXuatKetQuaThuongQui_Click);
             // 
             // lblXuatKetQuaViSinh
@@ -632,6 +622,7 @@
             this.lblXuatKetQuaViSinh.Size = new System.Drawing.Size(114, 84);
             this.lblXuatKetQuaViSinh.TabIndex = 55;
             this.lblXuatKetQuaViSinh.Text = "Xuất lưu\r\nkết quả Vi sinh";
+            this.lblXuatKetQuaViSinh.Visible = false;
             this.lblXuatKetQuaViSinh.Click += new System.EventHandler(this.lblXuatKetQuaViSinh_Click);
             // 
             // label5
@@ -647,9 +638,9 @@
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(15);
-            this.label5.Size = new System.Drawing.Size(178, 49);
+            this.label5.Size = new System.Drawing.Size(89, 49);
             this.label5.TabIndex = 42;
-            this.label5.Text = "Báo cáo - Thống kê";
+            this.label5.Text = "Kế toán";
             // 
             // tphNormalButton1
             // 
@@ -735,6 +726,7 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(571, 361);
             this.flowLayoutPanel1.TabIndex = 45;
+            this.flowLayoutPanel1.Visible = false;
             // 
             // lblLayMau
             // 
@@ -757,6 +749,7 @@
             this.lblLayMau.Size = new System.Drawing.Size(119, 84);
             this.lblLayMau.TabIndex = 53;
             this.lblLayMau.Text = "Lấy mẫu\r\n(F2)";
+            this.lblLayMau.Visible = false;
             this.lblLayMau.Click += new System.EventHandler(this.lblLayMau_Click);
             // 
             // lblChuyenMau
@@ -780,6 +773,7 @@
             this.lblChuyenMau.Size = new System.Drawing.Size(119, 84);
             this.lblChuyenMau.TabIndex = 52;
             this.lblChuyenMau.Text = "Chuyển mẫu\r\n(F3)";
+            this.lblChuyenMau.Visible = false;
             this.lblChuyenMau.Click += new System.EventHandler(this.lblChuyenMau_Click);
             // 
             // lblNhanMau
@@ -803,6 +797,7 @@
             this.lblNhanMau.Size = new System.Drawing.Size(119, 84);
             this.lblNhanMau.TabIndex = 54;
             this.lblNhanMau.Text = "Nhận mẫu\r\n(F4)";
+            this.lblNhanMau.Visible = false;
             this.lblNhanMau.Click += new System.EventHandler(this.lblNhanMau_Click);
             // 
             // lblLaboratoryResult
@@ -826,6 +821,7 @@
             this.lblLaboratoryResult.Size = new System.Drawing.Size(119, 84);
             this.lblLaboratoryResult.TabIndex = 55;
             this.lblLaboratoryResult.Text = "Kết quả\r\nxét nghiệm (F5)";
+            this.lblLaboratoryResult.Visible = false;
             this.lblLaboratoryResult.Click += new System.EventHandler(this.lblLaboratoryResult_Click);
             // 
             // lblKetqQuaViSinh
@@ -849,6 +845,7 @@
             this.lblKetqQuaViSinh.Size = new System.Drawing.Size(119, 84);
             this.lblKetqQuaViSinh.TabIndex = 57;
             this.lblKetqQuaViSinh.Text = "Vi sinh";
+            this.lblKetqQuaViSinh.Visible = false;
             this.lblKetqQuaViSinh.Click += new System.EventHandler(this.lblKetqQuaViSinh_Click);
             // 
             // lblKetQuaSHPT
@@ -872,6 +869,7 @@
             this.lblKetQuaSHPT.Size = new System.Drawing.Size(119, 84);
             this.lblKetQuaSHPT.TabIndex = 58;
             this.lblKetQuaSHPT.Text = "Sinh học \r\nphân tử";
+            this.lblKetQuaSHPT.Visible = false;
             this.lblKetQuaSHPT.Click += new System.EventHandler(this.lblKetQuaSHPT_Click);
             // 
             // lblKetQuaHuyetTuyDo
@@ -895,6 +893,7 @@
             this.lblKetQuaHuyetTuyDo.Size = new System.Drawing.Size(119, 84);
             this.lblKetQuaHuyetTuyDo.TabIndex = 56;
             this.lblKetQuaHuyetTuyDo.Text = "Huyết \r\ntủy đồ";
+            this.lblKetQuaHuyetTuyDo.Visible = false;
             this.lblKetQuaHuyetTuyDo.Click += new System.EventHandler(this.lblKetQuaHuyetTuyDo_Click);
             // 
             // lblKetQuaSangLocTruocSinh
@@ -918,6 +917,7 @@
             this.lblKetQuaSangLocTruocSinh.Size = new System.Drawing.Size(119, 84);
             this.lblKetQuaSangLocTruocSinh.TabIndex = 59;
             this.lblKetQuaSangLocTruocSinh.Text = "Kết quả sàng lọc trước sinh";
+            this.lblKetQuaSangLocTruocSinh.Visible = false;
             this.lblKetQuaSangLocTruocSinh.Click += new System.EventHandler(this.lblKetQuaSangLocTruocSinh_Click);
             // 
             // btnKetQuaSangLocSoSinh
@@ -941,6 +941,7 @@
             this.btnKetQuaSangLocSoSinh.Size = new System.Drawing.Size(119, 84);
             this.btnKetQuaSangLocSoSinh.TabIndex = 60;
             this.btnKetQuaSangLocSoSinh.Text = "Kết quả sàng lọc sơ sinh";
+            this.btnKetQuaSangLocSoSinh.Visible = false;
             this.btnKetQuaSangLocSoSinh.Click += new System.EventHandler(this.btnKetQuaSangLocSoSinh_licked);
             // 
             // lblNhapViTriChayMau
@@ -973,18 +974,18 @@
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(15);
-            this.label3.Size = new System.Drawing.Size(116, 49);
+            this.label3.Size = new System.Drawing.Size(211, 49);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Xét nghiệm";
+            this.label3.Text = "Quản lý xuất nhập hàng";
             // 
             // pnMenuContaint
             // 
             this.pnMenuContaint.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnMenuContaint.Controls.Add(this.pnAllMenu);
             this.pnMenuContaint.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMenuContaint.Location = new System.Drawing.Point(0, 99);
+            this.pnMenuContaint.Location = new System.Drawing.Point(0, 84);
             this.pnMenuContaint.Name = "pnMenuContaint";
-            this.pnMenuContaint.Size = new System.Drawing.Size(1284, 512);
+            this.pnMenuContaint.Size = new System.Drawing.Size(1284, 527);
             this.pnMenuContaint.TabIndex = 35;
             // 
             // pnAllMenu
@@ -997,7 +998,7 @@
             this.pnAllMenu.Controls.Add(this.panel6);
             this.pnAllMenu.Controls.Add(this.panel7);
             this.pnAllMenu.Controls.Add(this.pnLoginInInfo);
-            this.pnAllMenu.Location = new System.Drawing.Point(76, 21);
+            this.pnAllMenu.Location = new System.Drawing.Point(76, 28);
             this.pnAllMenu.Margin = new System.Windows.Forms.Padding(0);
             this.pnAllMenu.Name = "pnAllMenu";
             this.pnAllMenu.Size = new System.Drawing.Size(1133, 471);
@@ -1033,7 +1034,7 @@
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1284, 99);
+            this.pnTop.Size = new System.Drawing.Size(1284, 84);
             this.pnTop.TabIndex = 36;
             // 
             // label1
@@ -1045,7 +1046,7 @@
             this.label1.Appearance.Options.UseFont = true;
             this.label1.Appearance.Options.UseForeColor = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Location = new System.Drawing.Point(0, 75);
+            this.label1.Location = new System.Drawing.Point(0, 60);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(25, 0, 43, 5);
@@ -1127,7 +1128,6 @@
         private System.Windows.Forms.LinkLabel lblXRay;
         private System.Windows.Forms.LinkLabel lblElectrocardiogram;
         private System.Windows.Forms.LinkLabel lblUltraSound;
-        private System.Windows.Forms.LinkLabel lblAboutUs;
         private DevExpress.XtraEditors.PanelControl panel16;
         private System.Windows.Forms.PictureBox pictureBox4;
         private DevExpress.XtraEditors.LabelControl label19;

@@ -72,7 +72,7 @@
     </Win32Resource>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>tph_labims_icon.ico</ApplicationIcon>
+    <ApplicationIcon>1403189352_81135.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CarlosAg.ExcelXmlWriter, Version=1.0.0.6, Culture=neutral, PublicKeyToken=eac822d9c4196ba1">
@@ -2310,6 +2310,7 @@
     <None Include="Images\089.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="1403189352_81135.ico" />
     <Content Include="LabIMS.ico" />
     <None Include="Resources\document_small_upload1.png" />
     <None Include="Resources\Mapping2_24x24.png" />

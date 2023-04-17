@@ -148,6 +148,7 @@ namespace TPH.LIS.App
             this.tphDropdownThuPhi = new TPH.Controls.TPHDropdownMenuStrip(this.components);
             this.rbThuPhiDichVu = new System.Windows.Forms.ToolStripMenuItem();
             this.rbBaoCaoDoanhThu = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuChamCong = new System.Windows.Forms.ToolStripMenuItem();
             this.pnMenu.SuspendLayout();
             this.pnMenuContent.SuspendLayout();
             this.pnDesktop.SuspendLayout();
@@ -316,13 +317,15 @@ namespace TPH.LIS.App
             // 
             // btnBenhNhan
             // 
-            this.btnBenhNhan._1_Size = new System.Drawing.Size(58, 51);
+            this.btnBenhNhan._1_Size = new System.Drawing.Size(58, 49);
             this.btnBenhNhan.BackColor = System.Drawing.Color.Transparent;
+            this.btnBenhNhan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBenhNhan.BackgroundImage")));
+            this.btnBenhNhan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnBenhNhan.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
             this.btnBenhNhan.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.btnBenhNhan.ButtonBorderSize = 0;
             this.btnBenhNhan.ButtonRadius = 0;
-            this.btnBenhNhan.ButtonStyle = TPH.Controls.bd.IconButton;
+            this.btnBenhNhan.ButtonStyle = TPH.Controls.bd.Normal;
             this.btnBenhNhan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBenhNhan.FlatAppearance.BorderSize = 0;
             this.btnBenhNhan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
@@ -330,18 +333,16 @@ namespace TPH.LIS.App
             this.btnBenhNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBenhNhan.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
             this.btnBenhNhan.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBenhNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(1)))));
-            this.btnBenhNhan.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.btnBenhNhan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(1)))));
+            this.btnBenhNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnBenhNhan.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnBenhNhan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.btnBenhNhan.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBenhNhan.IconSize = 45;
             this.btnBenhNhan.Location = new System.Drawing.Point(0, 57);
             this.btnBenhNhan.Name = "btnBenhNhan";
-            this.btnBenhNhan.Size = new System.Drawing.Size(58, 51);
+            this.btnBenhNhan.Size = new System.Drawing.Size(58, 49);
             this.btnBenhNhan.TabIndex = 10;
             this.btnBenhNhan.Tag = "Tiếp nhận";
-            this.btnBenhNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBenhNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBenhNhan.UseHoverColor = false;
             this.btnBenhNhan.UseVisualStyleBackColor = false;
             this.btnBenhNhan.Click += new System.EventHandler(this.btnBenhNhan_Click);
@@ -367,7 +368,7 @@ namespace TPH.LIS.App
             this.btnKetQua.IconColor = System.Drawing.Color.White;
             this.btnKetQua.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnKetQua.IconSize = 45;
-            this.btnKetQua.Location = new System.Drawing.Point(0, 210);
+            this.btnKetQua.Location = new System.Drawing.Point(0, 208);
             this.btnKetQua.Name = "btnKetQua";
             this.btnKetQua.Size = new System.Drawing.Size(58, 51);
             this.btnKetQua.TabIndex = 11;
@@ -399,7 +400,7 @@ namespace TPH.LIS.App
             this.btnThongKe.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(183)))), ((int)(((byte)(196)))));
             this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThongKe.IconSize = 45;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 261);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 259);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(58, 51);
             this.btnThongKe.TabIndex = 12;
@@ -431,7 +432,7 @@ namespace TPH.LIS.App
             this.btnDanhMuc.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(128)))));
             this.btnDanhMuc.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDanhMuc.IconSize = 45;
-            this.btnDanhMuc.Location = new System.Drawing.Point(0, 312);
+            this.btnDanhMuc.Location = new System.Drawing.Point(0, 310);
             this.btnDanhMuc.Name = "btnDanhMuc";
             this.btnDanhMuc.Size = new System.Drawing.Size(58, 51);
             this.btnDanhMuc.TabIndex = 13;
@@ -463,7 +464,7 @@ namespace TPH.LIS.App
             this.btnTaiKhoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
             this.btnTaiKhoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTaiKhoan.IconSize = 45;
-            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 465);
+            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 463);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Size = new System.Drawing.Size(58, 51);
             this.btnTaiKhoan.TabIndex = 14;
@@ -495,7 +496,7 @@ namespace TPH.LIS.App
             this.btnCaiDat.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(229)))));
             this.btnCaiDat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCaiDat.IconSize = 45;
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 414);
+            this.btnCaiDat.Location = new System.Drawing.Point(0, 412);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Size = new System.Drawing.Size(58, 51);
             this.btnCaiDat.TabIndex = 15;
@@ -599,6 +600,7 @@ namespace TPH.LIS.App
             this.rbKetQuaThuongQuy.ShortcutKeys = System.Windows.Forms.Keys.F5;
             this.rbKetQuaThuongQuy.Size = new System.Drawing.Size(233, 22);
             this.rbKetQuaThuongQuy.Text = "Kết quả xét nghiệm";
+            this.rbKetQuaThuongQuy.Visible = false;
             this.rbKetQuaThuongQuy.Click += new System.EventHandler(this.rbKetQuaThuongQuy_Click);
             // 
             // rbKQSinhHocPhanTu
@@ -607,6 +609,7 @@ namespace TPH.LIS.App
             this.rbKQSinhHocPhanTu.ShortcutKeys = System.Windows.Forms.Keys.F9;
             this.rbKQSinhHocPhanTu.Size = new System.Drawing.Size(233, 22);
             this.rbKQSinhHocPhanTu.Text = "Kết quả Sinh học phân tử";
+            this.rbKQSinhHocPhanTu.Visible = false;
             this.rbKQSinhHocPhanTu.Click += new System.EventHandler(this.rbKQSinhHocPhanTu_Click);
             // 
             // rbKQViSinhNuoiCay
@@ -615,6 +618,7 @@ namespace TPH.LIS.App
             this.rbKQViSinhNuoiCay.ShortcutKeys = System.Windows.Forms.Keys.F8;
             this.rbKQViSinhNuoiCay.Size = new System.Drawing.Size(233, 22);
             this.rbKQViSinhNuoiCay.Text = "Kết quả vi sinh nuôi cấy";
+            this.rbKQViSinhNuoiCay.Visible = false;
             this.rbKQViSinhNuoiCay.Click += new System.EventHandler(this.rbKQViSinhNuoiCay_Click);
             // 
             // rbKQUploadHIS
@@ -622,6 +626,7 @@ namespace TPH.LIS.App
             this.rbKQUploadHIS.Name = "rbKQUploadHIS";
             this.rbKQUploadHIS.Size = new System.Drawing.Size(233, 22);
             this.rbKQUploadHIS.Text = "Kết quả đã upload HIS";
+            this.rbKQUploadHIS.Visible = false;
             this.rbKQUploadHIS.Click += new System.EventHandler(this.rbKQUploadHIS_Click);
             // 
             // rbKetQuSieuAm
@@ -649,12 +654,14 @@ namespace TPH.LIS.App
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(230, 6);
+            this.toolStripSeparator1.Visible = false;
             // 
             // rbInTheoDanhSach
             // 
             this.rbInTheoDanhSach.Name = "rbInTheoDanhSach";
             this.rbInTheoDanhSach.Size = new System.Drawing.Size(233, 22);
             this.rbInTheoDanhSach.Text = "In theo danh sách";
+            this.rbInTheoDanhSach.Visible = false;
             this.rbInTheoDanhSach.Click += new System.EventHandler(this.rbInTheoDanhSach_Click);
             // 
             // rbPhieuTienTrinhViSinh
@@ -662,6 +669,7 @@ namespace TPH.LIS.App
             this.rbPhieuTienTrinhViSinh.Name = "rbPhieuTienTrinhViSinh";
             this.rbPhieuTienTrinhViSinh.Size = new System.Drawing.Size(233, 22);
             this.rbPhieuTienTrinhViSinh.Text = "Phiếu tiến trình vi sinh";
+            this.rbPhieuTienTrinhViSinh.Visible = false;
             this.rbPhieuTienTrinhViSinh.Click += new System.EventHandler(this.rbPhieuTienTrinhViSinh_Click);
             // 
             // rbGuiEMailKetQua
@@ -669,30 +677,35 @@ namespace TPH.LIS.App
             this.rbGuiEMailKetQua.Name = "rbGuiEMailKetQua";
             this.rbGuiEMailKetQua.Size = new System.Drawing.Size(233, 22);
             this.rbGuiEMailKetQua.Text = "Gửi mail kết quả";
+            this.rbGuiEMailKetQua.Visible = false;
             this.rbGuiEMailKetQua.Click += new System.EventHandler(this.rbGuiEMailKetQua_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(230, 6);
+            this.toolStripSeparator3.Visible = false;
             // 
             // rbXemPDF
             // 
             this.rbXemPDF.Name = "rbXemPDF";
             this.rbXemPDF.Size = new System.Drawing.Size(233, 22);
             this.rbXemPDF.Text = "Xem kết quả xuất PDF";
+            this.rbXemPDF.Visible = false;
             this.rbXemPDF.Click += new System.EventHandler(this.rbXemPDF_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(230, 6);
+            this.toolStripSeparator4.Visible = false;
             // 
             // rbChuyenKetQua
             // 
             this.rbChuyenKetQua.Name = "rbChuyenKetQua";
             this.rbChuyenKetQua.Size = new System.Drawing.Size(233, 22);
             this.rbChuyenKetQua.Text = "Chuyển phiếu kết quả";
+            this.rbChuyenKetQua.Visible = false;
             this.rbChuyenKetQua.Click += new System.EventHandler(this.rbChuyenKetQua_Click);
             // 
             // rbNhanPhieuKetQua
@@ -700,18 +713,21 @@ namespace TPH.LIS.App
             this.rbNhanPhieuKetQua.Name = "rbNhanPhieuKetQua";
             this.rbNhanPhieuKetQua.Size = new System.Drawing.Size(233, 22);
             this.rbNhanPhieuKetQua.Text = "Nhận phiếu kết quả";
+            this.rbNhanPhieuKetQua.Visible = false;
             this.rbNhanPhieuKetQua.Click += new System.EventHandler(this.rbNhanPhieuKetQua_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(230, 6);
+            this.toolStripSeparator5.Visible = false;
             // 
             // rbKetQuaTuMayXN
             // 
             this.rbKetQuaTuMayXN.Name = "rbKetQuaTuMayXN";
             this.rbKetQuaTuMayXN.Size = new System.Drawing.Size(233, 22);
             this.rbKetQuaTuMayXN.Text = "Kết quả từ máy";
+            this.rbKetQuaTuMayXN.Visible = false;
             this.rbKetQuaTuMayXN.Click += new System.EventHandler(this.rbKetQuaTuMayXN_Click);
             // 
             // rbXuatKetQua
@@ -861,7 +877,7 @@ namespace TPH.LIS.App
             this.btnOngMau.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(52)))), ((int)(((byte)(56)))));
             this.btnOngMau.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOngMau.IconSize = 45;
-            this.btnOngMau.Location = new System.Drawing.Point(0, 159);
+            this.btnOngMau.Location = new System.Drawing.Point(0, 157);
             this.btnOngMau.Name = "btnOngMau";
             this.btnOngMau.Size = new System.Drawing.Size(58, 51);
             this.btnOngMau.TabIndex = 16;
@@ -1020,7 +1036,7 @@ namespace TPH.LIS.App
             this.btnThuPhi.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(15)))));
             this.btnThuPhi.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThuPhi.IconSize = 45;
-            this.btnThuPhi.Location = new System.Drawing.Point(0, 108);
+            this.btnThuPhi.Location = new System.Drawing.Point(0, 106);
             this.btnThuPhi.Name = "btnThuPhi";
             this.btnThuPhi.Size = new System.Drawing.Size(58, 51);
             this.btnThuPhi.TabIndex = 17;
@@ -1165,7 +1181,7 @@ namespace TPH.LIS.App
             this.rbCapNhatPhanMem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(196)))), ((int)(((byte)(2)))));
             this.rbCapNhatPhanMem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.rbCapNhatPhanMem.IconSize = 45;
-            this.rbCapNhatPhanMem.Location = new System.Drawing.Point(0, 516);
+            this.rbCapNhatPhanMem.Location = new System.Drawing.Point(0, 514);
             this.rbCapNhatPhanMem.Name = "rbCapNhatPhanMem";
             this.rbCapNhatPhanMem.Size = new System.Drawing.Size(58, 51);
             this.rbCapNhatPhanMem.TabIndex = 18;
@@ -1202,7 +1218,7 @@ namespace TPH.LIS.App
             this.bntDanhMucHanhChinh.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(230)))));
             this.bntDanhMucHanhChinh.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bntDanhMucHanhChinh.IconSize = 45;
-            this.bntDanhMucHanhChinh.Location = new System.Drawing.Point(0, 363);
+            this.bntDanhMucHanhChinh.Location = new System.Drawing.Point(0, 361);
             this.bntDanhMucHanhChinh.Name = "bntDanhMucHanhChinh";
             this.bntDanhMucHanhChinh.Size = new System.Drawing.Size(58, 51);
             this.bntDanhMucHanhChinh.TabIndex = 19;
@@ -1281,6 +1297,7 @@ namespace TPH.LIS.App
             this.tphDropdownKetQua.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tphDropdownKetQua.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tphDropdownKetQua.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuChamCong,
             this.rbKetQuaThuongQuy,
             this.rbKQViSinhNuoiCay,
             this.rbKQSinhHocPhanTu,
@@ -1300,7 +1317,7 @@ namespace TPH.LIS.App
             this.toolStripSeparator5,
             this.rbKetQuaTuMayXN});
             this.tphDropdownKetQua.Name = "tphDropdownMenuStrip1";
-            this.tphDropdownKetQua.Size = new System.Drawing.Size(234, 336);
+            this.tphDropdownKetQua.Size = new System.Drawing.Size(234, 380);
             // 
             // tphDropdownThongKe
             // 
@@ -1505,6 +1522,13 @@ namespace TPH.LIS.App
             this.rbBaoCaoDoanhThu.Text = "Báo cáo doanh thu";
             this.rbBaoCaoDoanhThu.Click += new System.EventHandler(this.rbBaoCaoDoanhThu_Click);
             // 
+            // mnuChamCong
+            // 
+            this.mnuChamCong.Name = "mnuChamCong";
+            this.mnuChamCong.Size = new System.Drawing.Size(233, 22);
+            this.mnuChamCong.Text = "Chấm công";
+            this.mnuChamCong.Click += new System.EventHandler(this.mnuChamCong_Click);
+            // 
             // frmParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1661,5 +1685,6 @@ namespace TPH.LIS.App
         private System.Windows.Forms.ToolStripMenuItem mnuDanhMucDienGiaiSHPT;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripMenuItem mnuGuimau;
+        private System.Windows.Forms.ToolStripMenuItem mnuChamCong;
     }
 }

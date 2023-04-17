@@ -1246,5 +1246,10 @@ namespace TPH.LIS.App
         {
             ShowFormFromMenu(btnDanhMuc, new FrmGuiMauDonVi());
         }
+
+        private void mnuChamCong_Click(object sender, EventArgs e)
+        {
+            ShowFormFromMenu(btnCaiDat, new frmCLSKetQuaXN());
+        }
     }
 }
