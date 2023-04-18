@@ -751,7 +751,7 @@ namespace TPH.LIS.App.ThucThi.CanLamSang
 
         private void SeTrangThaiInTuDong()
         {
-            var fm = (frmParent) this.TopLevelControl;
+            var fm = (frmParent_old) this.TopLevelControl;
             fm.lblStatus.Text = !string.IsNullOrEmpty(ucInTuDong1.TrangThai)
                 ? string.Format(CommonAppVarsAndFunctions.LangMessageConstant.Intudong, ucInTuDong1.TrangThai)
                 : "";

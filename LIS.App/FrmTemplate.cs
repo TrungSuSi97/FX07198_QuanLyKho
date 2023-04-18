@@ -165,7 +165,7 @@ namespace TPH.LIS.App
         {
             if (this.MdiParent != null)
             {
-                frmParent f = (frmParent)this.TopLevelControl;
+                frmParent_old f = (frmParent_old)this.TopLevelControl;
                 f.CloseForm(this);
             }
             else

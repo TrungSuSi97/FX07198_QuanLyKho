@@ -435,8 +435,8 @@ namespace TPH.LIS.App
                 }
                 //   Load_FileInRunningFolderInfomation();
 
-                var frm = new FrmHome();
-                var fm = (frmParent)this.TopLevelControl;
+                var frm = new FrmStartUp();
+                var fm = (frmMDIParent)this.TopLevelControl;
                 fm.Check_EnableControl(txtUserID.Text.Trim());
                 fm.lblHello.Text = string.Format("{0}:", CommonConstant.Hello);
                 fm.lblUserName.Text = string.IsNullOrEmpty(userloginInfo.Username) ?

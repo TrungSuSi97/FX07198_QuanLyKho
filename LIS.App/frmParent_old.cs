@@ -40,7 +40,7 @@ using TPH.UpdaterManagement.Services.Impl;
 
 namespace TPH.LIS.App
 {
-    public partial class frmParent : TPHParentForm
+    public partial class frmParent_old : TPHParentForm
     {
         public void LockMenuItem(TPHDropdownMenuStrip menu)
         {
@@ -71,6 +71,8 @@ namespace TPH.LIS.App
             rbDangKy.Enabled = true;
             btnTaiKhoan.Enabled = true;
 
+            Check_Enable_BangLuong();
+
             Check_Enable_ViSinh();
             Check_Enable_TN();
             Check_Enable_XN();
@@ -79,6 +81,13 @@ namespace TPH.LIS.App
             Check_Enable_QuanLy();
             mnuCapNhatData.Enabled = CommonAppVarsAndFunctions.IsAdmin;
             mnuCapNhatData.Visible = CommonAppVarsAndFunctions.IsAdmin;
+
+        }
+
+        private void Check_Enable_BangLuong()
+        {
+            mnuChamCong.Enabled = true;
+
         }
         private void Check_Enable_ViSinh()
         {
@@ -338,7 +347,7 @@ namespace TPH.LIS.App
             UserConstant.PermissionCreateSentTest) || CommonAppVarsAndFunctions.CheckUserPermissionToAccessFunctions(
             CommonAppVarsAndFunctions.PhanQuyenXetNghiem,
             UserConstant.PermissionDeleteSentTest);
-            
+
         }
         private void Check_Enable_SA()
         {
@@ -375,7 +384,7 @@ namespace TPH.LIS.App
         public bool LocalizedLanguage = true;
         public static string Language = LanguageExtension.AppLanguage;
         Panel pnManChe = new Panel();
-        public frmParent()
+        public frmParent_old()
         {
             InitializeComponent();
             //this.Text = String.Empty;
@@ -617,7 +626,7 @@ namespace TPH.LIS.App
                 timerMain.Enabled = false;
                 LockControl(true);
                 //this.Text = string.Format(MessageConstant.PhanMemDaHetHanSuDung, CommonConstant.ApplicationName, trialDays, License.StartDate, License.EndDate);
-                MessageBox.Show(string.Format(CommonAppVarsAndFunctions.LangMessageConstant.PhanMemDaHetHanSuDungVuiLongLienHe, CommonConstant.ApplicationName, trialDays));
+                MessageBox.Show(string.Format(MessageConstant.PhanMemDaHetHanSuDungVuiLongLienHe, CommonConstant.ApplicationName, trialDays));
                 if (fromAutocheck)
                 {
                     if (!CommonAppVarsAndFunctions.License.FullLicense)
@@ -649,7 +658,7 @@ namespace TPH.LIS.App
 
                 if (difference.Days < 6)
                 {
-                    MessageBox.Show(string.Format(CommonAppVarsAndFunctions.LangMessageConstant.BanConNgayLamViecVuiLongLienHeTph, difference.Days));
+                    MessageBox.Show(string.Format(MessageConstant.BanConNgayLamViecVuiLongLienHeTph, difference.Days));
                 }
                 lblStatus.Text = String.Format(" | Remain: {0} day(s)", difference.Days);
                 _tak = new Thread(LoadPrinterList);
@@ -668,7 +677,7 @@ namespace TPH.LIS.App
             {
                 if (CommonAppVarsAndFunctions._askWhenClose)
                 {
-                    if (CustomMessageBox.MSG_Question_YesNo_GetNo(CommonAppVarsAndFunctions.LangMessageConstant.ExitProgram))
+                    if (CustomMessageBox.MSG_Question_YesNo_GetNo(MessageConstant.ExitProgram))
                     {
                         e.Cancel = true;
                     }

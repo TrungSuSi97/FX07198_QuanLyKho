@@ -1,6 +1,4 @@
-﻿using TPH.LIS.Common.Controls;
-
-namespace TPH.LIS.App
+﻿namespace TPH.LIS.App
 {
     partial class frmMDIParent
     {
@@ -32,1607 +30,1581 @@ namespace TPH.LIS.App
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMDIParent));
-            this.btnTrangChinh = new TPH.Controls.TPHIconButton();
-            this.btnBenhNhan = new TPH.Controls.TPHIconButton();
-            this.btnKetQua = new TPH.Controls.TPHIconButton();
-            this.btnThongKe = new TPH.Controls.TPHIconButton();
-            this.btnDanhMuc = new TPH.Controls.TPHIconButton();
-            this.btnTaiKhoan = new TPH.Controls.TPHIconButton();
-            this.btnCaiDat = new TPH.Controls.TPHIconButton();
-            this.rbTiepNhanHIS = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbTiepNhanBenhNhan = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbTimKiem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbThongTinSangLocSoSinh = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbThongTinSangLocTruocSinh = new System.Windows.Forms.ToolStripMenuItem();
-            this.rabCapNhatThongTinTuHis = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.rbInbaracodeKSK = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbNhapTheoDanhSach = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.rbXacNhanTraKetQua = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.rbLichSuXetNghiem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbTheoDoiMau = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbKetQuaThuongQuy = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbKQSinhHocPhanTu = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbKQViSinhNuoiCay = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbKQUploadHIS = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbKetQuSieuAm = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbXQuang = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbNoiSoi = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.rbInTheoDanhSach = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbPhieuTienTrinhViSinh = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbGuiEMailKetQua = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.rbXemPDF = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.rbChuyenKetQua = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbNhanPhieuKetQua = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.rbKetQuaTuMayXN = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbXuatKetQua = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuXuatKetQuaViSinh = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbThongKeTongHopXn = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbNhatKy = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbDashboardSo = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbDanhMucXetNghiem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbDanhMucViSinh = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbDanhMucLoaiMau = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbDmHenTraKetQua = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbDanhMucKetNoiHIS = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbCauHinhPhieuIn = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbTembarcode = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbBienDichDanhMuc = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbTinhTrangMauLyDo = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbDanhMucMaMayXetNghiem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbMappingMayViSinh = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbBienDichCo = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbBienDichKetQua = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnOngMau = new TPH.Controls.TPHIconButton();
-            this.rbDangNhapLayMau = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbBanLayMau = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbLayMau = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbChuyenMau = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbNhanMau = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuTheoDoiMau = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.rbLuuMau = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbHuyMauLuu = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbNguoiDung = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbCaiDatKetNoiHis = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbCauHinhHeThong = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbDangKy = new System.Windows.Forms.ToolStripMenuItem();
-            this.radNgonNgu = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbKhuVuc = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbThongTinMayXN = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbMayInBarCode = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbTieuDeTrangIn = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnThuPhi = new TPH.Controls.TPHIconButton();
-            this.lblThongBaoCapNhat = new TPH.Controls.TPHLabel();
-            this.lblStatus = new TPH.Controls.TPHLabel();
-            this.lblVersion = new TPH.Controls.TPHLabel();
-            this.lblTimer = new TPH.Controls.TPHLabel();
-            this.lblUserName = new TPH.Controls.TPHLabel();
-            this.lblHello = new TPH.Controls.TPHLabel();
-            this.rbCapNhatPhanMem = new TPH.Controls.TPHIconButton();
-            this.timerApp = new System.Windows.Forms.Timer(this.components);
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblHello = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblUserName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblVersion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblInTuDong = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblTimer = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblThongBaoCapNhat = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerMain = new System.Windows.Forms.Timer(this.components);
-            this.bntDanhMucHanhChinh = new TPH.Controls.TPHIconButton();
-            this.rbKhoaPhong = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbDoituongDichVu = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbNhanVien = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbDiaChi = new System.Windows.Forms.ToolStripMenuItem();
-            this.tphDropdownBenhNhan = new TPH.Controls.TPHDropdownMenuStrip(this.components);
-            this.tphDropdownKetQua = new TPH.Controls.TPHDropdownMenuStrip(this.components);
-            this.tphDropdownThongKe = new TPH.Controls.TPHDropdownMenuStrip(this.components);
-            this.rbDashboardBieuDoTron = new System.Windows.Forms.ToolStripMenuItem();
-            this.tphDropdownDanhMuc = new TPH.Controls.TPHDropdownMenuStrip(this.components);
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuChanDoan = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuDanhMucTuLuuMau = new System.Windows.Forms.ToolStripMenuItem();
-            this.tphDropdownOngMau = new TPH.Controls.TPHDropdownMenuStrip(this.components);
-            this.tphDropdownCauHinh = new TPH.Controls.TPHDropdownMenuStrip(this.components);
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuCapNhatData = new System.Windows.Forms.ToolStripMenuItem();
-            this.tphDropdownMenuHanhChinh = new TPH.Controls.TPHDropdownMenuStrip(this.components);
-            this.tphDropdownMenuStrip1 = new TPH.Controls.TPHDropdownMenuStrip(this.components);
+            this.ProgressBarMain = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerAlarm = new System.Windows.Forms.Timer(this.components);
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.tphDropdownThuPhi = new TPH.Controls.TPHDropdownMenuStrip(this.components);
-            this.rbThuPhiDichVu = new System.Windows.Forms.ToolStripMenuItem();
-            this.rbBaoCaoDoanhThu = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuQuanLyGuiMauNoiBo = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnMenu.SuspendLayout();
-            this.pnMenuContent.SuspendLayout();
-            this.pnDesktop.SuspendLayout();
-            this.pnMainFooter.SuspendLayout();
-            this.pnTPHLogo.SuspendLayout();
-            this.pnContent.SuspendLayout();
-            this.pnTitleBar.SuspendLayout();
-            this.tphDropdownBenhNhan.SuspendLayout();
-            this.tphDropdownKetQua.SuspendLayout();
-            this.tphDropdownThongKe.SuspendLayout();
-            this.tphDropdownDanhMuc.SuspendLayout();
-            this.tphDropdownOngMau.SuspendLayout();
-            this.tphDropdownCauHinh.SuspendLayout();
-            this.tphDropdownMenuHanhChinh.SuspendLayout();
-            this.tphDropdownThuPhi.SuspendLayout();
+            this.lblThongbaolamMoi = new System.Windows.Forms.Label();
+            this.btnCloseAlarm = new System.Windows.Forms.Button();
+            this.pnCoCanhBao = new System.Windows.Forms.Panel();
+            this.ucAnalyzerAlarmList1 = new TPH.LIS.Analyzer.Controls.ucAnalyzerAlarmList();
+            this.pnAlarm = new System.Windows.Forms.Panel();
+            this.rbXetNghiem = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbKetQuaThuongQuy = new DevExpress.XtraBars.BarButtonItem();
+            this.rbKQSinhHocPhanTu = new DevExpress.XtraBars.BarButtonItem();
+            this.rbInTheoDanhSach = new DevExpress.XtraBars.BarButtonItem();
+            this.rbKQViSinhNuoiCay = new DevExpress.XtraBars.BarButtonItem();
+            this.rbKetQuaTuiMau = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbLichSuXetNghiem = new DevExpress.XtraBars.BarButtonItem();
+            this.rbKQUploadHIS = new DevExpress.XtraBars.BarButtonItem();
+            this.rbGuiEMailKetQua = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbQLXNCB = new DevExpress.XtraBars.BarButtonItem();
+            this.rbQLXNG = new DevExpress.XtraBars.BarButtonItem();
+            this.rbGroupKetQuaCLSKhac = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbKetQuSieuAm = new DevExpress.XtraBars.BarButtonItem();
+            this.rbNoiSoi = new DevExpress.XtraBars.BarButtonItem();
+            this.rbXQuang = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDichVuKhac = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbTiepNhanBenhNhan = new DevExpress.XtraBars.BarButtonItem();
+            this.rbTiepNhanHIS = new DevExpress.XtraBars.BarButtonItem();
+            this.rbTimKiem = new DevExpress.XtraBars.BarButtonItem();
+            this.rabCapNhatThongTinTuHis = new DevExpress.XtraBars.BarButtonItem();
+            this.rbCapSoThuTu = new DevExpress.XtraBars.BarButtonItem();
+            this.rbNhapDanhSach = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rdGopBarcode = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDangNhapLayMau = new DevExpress.XtraBars.BarButtonItem();
+            this.rbBanLayMau = new DevExpress.XtraBars.BarButtonItem();
+            this.rbInbaracodeKSK = new DevExpress.XtraBars.BarButtonItem();
+            this.rbLayMau = new DevExpress.XtraBars.BarButtonItem();
+            this.rbChuyenMau = new DevExpress.XtraBars.BarButtonItem();
+            this.rbNhanMau = new DevExpress.XtraBars.BarButtonItem();
+            this.rbTheoDoiMau = new DevExpress.XtraBars.BarButtonItem();
+            this.rbChuyenKetQua = new DevExpress.XtraBars.BarButtonItem();
+            this.rbNhanPhieuKetQua = new DevExpress.XtraBars.BarButtonItem();
+            this.rbXacNhanTraKetQua = new DevExpress.XtraBars.BarButtonItem();
+            this.rbLuuMau = new DevExpress.XtraBars.BarButtonItem();
+            this.rbHuyMauLuu = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbNhatKy = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbThuPhi = new DevExpress.XtraBars.BarButtonItem();
+            this.rbMainMenu = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.rbThongKeTongHopXn = new DevExpress.XtraBars.BarButtonItem();
+            this.rbXuatKetQua = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDashboard = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDanhMucXetNghiem = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDanhMucLoaiMau = new DevExpress.XtraBars.BarButtonItem();
+            this.rbTinhTrangMauLyDo = new DevExpress.XtraBars.BarButtonItem();
+            this.rbCauHinhPhieuIn = new DevExpress.XtraBars.BarButtonItem();
+            this.rbMayIn = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDmHenTraKetQua = new DevExpress.XtraBars.BarButtonItem();
+            this.rbCauHinhHeThong = new DevExpress.XtraBars.BarButtonItem();
+            this.rbCaiDatKetNoiHis = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDanhMucKetNoiHIS = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDanhMucViSinh = new DevExpress.XtraBars.BarButtonItem();
+            this.rbBienDichKetQua = new DevExpress.XtraBars.BarButtonItem();
+            this.rbKhuVuc = new DevExpress.XtraBars.BarButtonItem();
+            this.rbTieuDeTrangIn = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDangKy = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDanhMucMaMayXetNghiem = new DevExpress.XtraBars.BarButtonItem();
+            this.rbCapNhatPhanMem = new DevExpress.XtraBars.BarButtonItem();
+            this.rbThongTinMayXN = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDoituongDichVu = new DevExpress.XtraBars.BarButtonItem();
+            this.rbKhoaPhong = new DevExpress.XtraBars.BarButtonItem();
+            this.rbNhanVien = new DevExpress.XtraBars.BarButtonItem();
+            this.rbNguoiDung = new DevExpress.XtraBars.BarButtonItem();
+            this.rbDoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
+            this.rbMayInBarCode = new DevExpress.XtraBars.BarButtonItem();
+            this.rbTembarcode = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.rbMauReport2 = new DevExpress.XtraBars.BarButtonItem();
+            this.rbTuLuuMau = new DevExpress.XtraBars.BarButtonItem();
+            this.rbMaPPingMaMyXnViSinh = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.mnSub = new DevExpress.XtraNavBar.NavBarControl();
+            this.nbgModules = new DevExpress.XtraNavBar.NavBarGroup();
+            this.btnHomeScreen = new DevExpress.XtraNavBar.NavBarItem();
+            this.btnTiepNhanThuCong = new DevExpress.XtraNavBar.NavBarItem();
+            this.btnTiepNhanHis = new DevExpress.XtraNavBar.NavBarItem();
+            this.tsbLayMau = new DevExpress.XtraNavBar.NavBarItem();
+            this.tsbChuyenMau = new DevExpress.XtraNavBar.NavBarItem();
+            this.tsbNhanMau = new DevExpress.XtraNavBar.NavBarItem();
+            this.tsbKetQuaXN = new DevExpress.XtraNavBar.NavBarItem();
+            this.btnTimBenhNhan = new DevExpress.XtraNavBar.NavBarItem();
+            this.btnLogOut = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
+            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.statusStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.pnCoCanhBao.SuspendLayout();
+            this.pnAlarm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbMainMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mnSub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnMenu
-            // 
-            this.pnMenu.BottomColor = System.Drawing.Color.Empty;
-            this.pnMenu.Margin = new System.Windows.Forms.Padding(4);
-            this.pnMenu.Padding = new System.Windows.Forms.Padding(0);
-            this.pnMenu.Size = new System.Drawing.Size(58, 633);
-            this.pnMenu.TopColor = System.Drawing.Color.Empty;
-            // 
-            // pnMenuContent
-            // 
-            this.pnMenuContent.Controls.Add(this.rbCapNhatPhanMem);
-            this.pnMenuContent.Controls.Add(this.btnTaiKhoan);
-            this.pnMenuContent.Controls.Add(this.btnCaiDat);
-            this.pnMenuContent.Controls.Add(this.bntDanhMucHanhChinh);
-            this.pnMenuContent.Controls.Add(this.btnDanhMuc);
-            this.pnMenuContent.Controls.Add(this.btnThongKe);
-            this.pnMenuContent.Controls.Add(this.btnKetQua);
-            this.pnMenuContent.Controls.Add(this.btnOngMau);
-            this.pnMenuContent.Controls.Add(this.btnThuPhi);
-            this.pnMenuContent.Controls.Add(this.btnBenhNhan);
-            this.pnMenuContent.Controls.Add(this.btnTrangChinh);
-            this.pnMenuContent.Location = new System.Drawing.Point(0, 51);
-            this.pnMenuContent.Margin = new System.Windows.Forms.Padding(4);
-            this.pnMenuContent.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
-            this.pnMenuContent.Size = new System.Drawing.Size(58, 582);
-            this.pnMenuContent.Controls.SetChildIndex(this.btnTrangChinh, 0);
-            this.pnMenuContent.Controls.SetChildIndex(this.btnBenhNhan, 0);
-            this.pnMenuContent.Controls.SetChildIndex(this.btnThuPhi, 0);
-            this.pnMenuContent.Controls.SetChildIndex(this.btnOngMau, 0);
-            this.pnMenuContent.Controls.SetChildIndex(this.btnKetQua, 0);
-            this.pnMenuContent.Controls.SetChildIndex(this.btnThongKe, 0);
-            this.pnMenuContent.Controls.SetChildIndex(this.btnDanhMuc, 0);
-            this.pnMenuContent.Controls.SetChildIndex(this.bntDanhMucHanhChinh, 0);
-            this.pnMenuContent.Controls.SetChildIndex(this.btnCaiDat, 0);
-            this.pnMenuContent.Controls.SetChildIndex(this.btnTaiKhoan, 0);
-            this.pnMenuContent.Controls.SetChildIndex(this.rbCapNhatPhanMem, 0);
-            // 
-            // pnDesktop
-            // 
-            this.pnDesktop.Location = new System.Drawing.Point(58, 35);
-            this.pnDesktop.Margin = new System.Windows.Forms.Padding(4);
-            this.pnDesktop.Size = new System.Drawing.Size(1124, 598);
-            // 
-            // pnMoveTabHeader
-            // 
-            this.pnMoveTabHeader.Location = new System.Drawing.Point(1082, 3);
-            this.pnMoveTabHeader.Margin = new System.Windows.Forms.Padding(4);
-            this.pnMoveTabHeader.Padding = new System.Windows.Forms.Padding(8, 2, 0, 4);
-            // 
-            // pnMainHeader
-            // 
-            this.pnMainHeader.Location = new System.Drawing.Point(35, 6);
-            this.pnMainHeader.Size = new System.Drawing.Size(983, 29);
-            // 
-            // tabMain
-            // 
-            this.tabMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabMain.Size = new System.Drawing.Size(1124, 598);
-            // 
-            // pnMainFooter
-            // 
-            this.pnMainFooter.BottomColor = System.Drawing.Color.Empty;
-            this.pnMainFooter.Controls.Add(this.lblThongBaoCapNhat);
-            this.pnMainFooter.Controls.Add(this.lblHello);
-            this.pnMainFooter.Controls.Add(this.lblUserName);
-            this.pnMainFooter.Controls.Add(this.lblStatus);
-            this.pnMainFooter.Controls.Add(this.lblVersion);
-            this.pnMainFooter.Controls.Add(this.lblTimer);
-            this.pnMainFooter.GradientDegree = 175F;
-            this.pnMainFooter.Location = new System.Drawing.Point(0, 633);
-            this.pnMainFooter.Margin = new System.Windows.Forms.Padding(4);
-            this.pnMainFooter.Size = new System.Drawing.Size(1182, 26);
-            this.pnMainFooter.Controls.SetChildIndex(this.pnTPHLogo, 0);
-            this.pnMainFooter.Controls.SetChildIndex(this.lblTimer, 0);
-            this.pnMainFooter.Controls.SetChildIndex(this.lblVersion, 0);
-            this.pnMainFooter.Controls.SetChildIndex(this.lblStatus, 0);
-            this.pnMainFooter.Controls.SetChildIndex(this.lblUserName, 0);
-            this.pnMainFooter.Controls.SetChildIndex(this.lblHello, 0);
-            this.pnMainFooter.Controls.SetChildIndex(this.lblThongBaoCapNhat, 0);
-            // 
-            // pnLogo
-            // 
-            this.pnLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.pnLogo.Size = new System.Drawing.Size(58, 51);
-            // 
-            // pnTPHLogo
-            // 
-            this.pnTPHLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(57)))), ((int)(((byte)(112)))));
-            this.pnTPHLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.pnTPHLogo.Size = new System.Drawing.Size(357, 26);
-            // 
-            // lblTPHCopyright
-            // 
-            this.lblTPHCopyright.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTPHCopyright.Size = new System.Drawing.Size(329, 26);
-            // 
-            // pnTitleBar
-            // 
-            this.pnTitleBar.Location = new System.Drawing.Point(58, 0);
-            this.pnTitleBar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.pnTitleBar.Size = new System.Drawing.Size(1124, 35);
-            // 
-            // iconCurrentChildForm
-            // 
-            this.iconCurrentChildForm._1_Size = new System.Drawing.Size(35, 29);
-            this.iconCurrentChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.iconCurrentChildForm.FlatAppearance.BorderSize = 0;
-            this.iconCurrentChildForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.iconCurrentChildForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(0, 6);
-            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(6);
-            this.iconCurrentChildForm.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(35, 29);
-            this.iconCurrentChildForm.Visible = false;
-            // 
-            // btnTrangChinh
-            // 
-            this.btnTrangChinh._1_Size = new System.Drawing.Size(58, 51);
-            this.btnTrangChinh.BackColor = System.Drawing.Color.Transparent;
-            this.btnTrangChinh.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
-            this.btnTrangChinh.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.btnTrangChinh.ButtonBorderSize = 7;
-            this.btnTrangChinh.ButtonRadius = 1;
-            this.btnTrangChinh.ButtonStyle = TPH.Controls.bd.IconButton;
-            this.btnTrangChinh.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTrangChinh.FlatAppearance.BorderSize = 0;
-            this.btnTrangChinh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnTrangChinh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnTrangChinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrangChinh.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnTrangChinh.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrangChinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.btnTrangChinh.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.btnTrangChinh.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.btnTrangChinh.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTrangChinh.IconSize = 45;
-            this.btnTrangChinh.Location = new System.Drawing.Point(0, 6);
-            this.btnTrangChinh.Name = "btnTrangChinh";
-            this.btnTrangChinh.Size = new System.Drawing.Size(58, 51);
-            this.btnTrangChinh.TabIndex = 9;
-            this.btnTrangChinh.Tag = "TRANG CHÍNH";
-            this.btnTrangChinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangChinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTrangChinh.UseHoverColor = false;
-            this.btnTrangChinh.UseVisualStyleBackColor = false;
-            this.btnTrangChinh.Click += new System.EventHandler(this.btnTrangChinh_Click);
-            // 
-            // btnBenhNhan
-            // 
-            this.btnBenhNhan._1_Size = new System.Drawing.Size(58, 51);
-            this.btnBenhNhan.BackColor = System.Drawing.Color.Transparent;
-            this.btnBenhNhan.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
-            this.btnBenhNhan.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.btnBenhNhan.ButtonBorderSize = 0;
-            this.btnBenhNhan.ButtonRadius = 0;
-            this.btnBenhNhan.ButtonStyle = TPH.Controls.bd.IconButton;
-            this.btnBenhNhan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBenhNhan.FlatAppearance.BorderSize = 0;
-            this.btnBenhNhan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnBenhNhan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnBenhNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBenhNhan.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnBenhNhan.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBenhNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(1)))));
-            this.btnBenhNhan.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.btnBenhNhan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(1)))));
-            this.btnBenhNhan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBenhNhan.IconSize = 45;
-            this.btnBenhNhan.Location = new System.Drawing.Point(0, 57);
-            this.btnBenhNhan.Name = "btnBenhNhan";
-            this.btnBenhNhan.Size = new System.Drawing.Size(58, 51);
-            this.btnBenhNhan.TabIndex = 10;
-            this.btnBenhNhan.Tag = "Tiếp nhận";
-            this.btnBenhNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBenhNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBenhNhan.UseHoverColor = false;
-            this.btnBenhNhan.UseVisualStyleBackColor = false;
-            this.btnBenhNhan.Click += new System.EventHandler(this.btnBenhNhan_Click);
-            // 
-            // btnKetQua
-            // 
-            this.btnKetQua._1_Size = new System.Drawing.Size(58, 51);
-            this.btnKetQua.BackColor = System.Drawing.Color.Transparent;
-            this.btnKetQua.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
-            this.btnKetQua.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.btnKetQua.ButtonBorderSize = 0;
-            this.btnKetQua.ButtonRadius = 0;
-            this.btnKetQua.ButtonStyle = TPH.Controls.bd.IconButton;
-            this.btnKetQua.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKetQua.FlatAppearance.BorderSize = 0;
-            this.btnKetQua.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnKetQua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnKetQua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKetQua.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnKetQua.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKetQua.ForeColor = System.Drawing.Color.White;
-            this.btnKetQua.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
-            this.btnKetQua.IconColor = System.Drawing.Color.White;
-            this.btnKetQua.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKetQua.IconSize = 45;
-            this.btnKetQua.Location = new System.Drawing.Point(0, 210);
-            this.btnKetQua.Name = "btnKetQua";
-            this.btnKetQua.Size = new System.Drawing.Size(58, 51);
-            this.btnKetQua.TabIndex = 11;
-            this.btnKetQua.Tag = "Kết quả xét nghiệm";
-            this.btnKetQua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnKetQua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKetQua.UseHoverColor = false;
-            this.btnKetQua.UseVisualStyleBackColor = false;
-            this.btnKetQua.Click += new System.EventHandler(this.btnKetQua_Click);
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe._1_Size = new System.Drawing.Size(58, 51);
-            this.btnThongKe.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKe.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
-            this.btnThongKe.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.btnThongKe.ButtonBorderSize = 0;
-            this.btnThongKe.ButtonRadius = 0;
-            this.btnThongKe.ButtonStyle = TPH.Controls.bd.IconButton;
-            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThongKe.FlatAppearance.BorderSize = 0;
-            this.btnThongKe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnThongKe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKe.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnThongKe.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(183)))), ((int)(((byte)(196)))));
-            this.btnThongKe.IconChar = FontAwesome.Sharp.IconChar.ChartPie;
-            this.btnThongKe.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(183)))), ((int)(((byte)(196)))));
-            this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThongKe.IconSize = 45;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 261);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(58, 51);
-            this.btnThongKe.TabIndex = 12;
-            this.btnThongKe.Tag = "Báo cáo - Thống kê";
-            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThongKe.UseHoverColor = false;
-            this.btnThongKe.UseVisualStyleBackColor = false;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
-            // 
-            // btnDanhMuc
-            // 
-            this.btnDanhMuc._1_Size = new System.Drawing.Size(58, 51);
-            this.btnDanhMuc.BackColor = System.Drawing.Color.Transparent;
-            this.btnDanhMuc.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
-            this.btnDanhMuc.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.btnDanhMuc.ButtonBorderSize = 0;
-            this.btnDanhMuc.ButtonRadius = 0;
-            this.btnDanhMuc.ButtonStyle = TPH.Controls.bd.IconButton;
-            this.btnDanhMuc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDanhMuc.FlatAppearance.BorderSize = 0;
-            this.btnDanhMuc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnDanhMuc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDanhMuc.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnDanhMuc.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhMuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(128)))));
-            this.btnDanhMuc.IconChar = FontAwesome.Sharp.IconChar.SlidersH;
-            this.btnDanhMuc.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(128)))));
-            this.btnDanhMuc.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDanhMuc.IconSize = 45;
-            this.btnDanhMuc.Location = new System.Drawing.Point(0, 312);
-            this.btnDanhMuc.Name = "btnDanhMuc";
-            this.btnDanhMuc.Size = new System.Drawing.Size(58, 51);
-            this.btnDanhMuc.TabIndex = 13;
-            this.btnDanhMuc.Tag = "Cấu hình danh mục xét nghiệm";
-            this.btnDanhMuc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDanhMuc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDanhMuc.UseHoverColor = false;
-            this.btnDanhMuc.UseVisualStyleBackColor = false;
-            this.btnDanhMuc.Click += new System.EventHandler(this.btnDanhMuc_Click);
-            // 
-            // btnTaiKhoan
-            // 
-            this.btnTaiKhoan._1_Size = new System.Drawing.Size(58, 51);
-            this.btnTaiKhoan.BackColor = System.Drawing.Color.Transparent;
-            this.btnTaiKhoan.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
-            this.btnTaiKhoan.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.btnTaiKhoan.ButtonBorderSize = 0;
-            this.btnTaiKhoan.ButtonRadius = 0;
-            this.btnTaiKhoan.ButtonStyle = TPH.Controls.bd.IconButton;
-            this.btnTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btnTaiKhoan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnTaiKhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaiKhoan.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnTaiKhoan.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.btnTaiKhoan.IconChar = FontAwesome.Sharp.IconChar.Key;
-            this.btnTaiKhoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(52)))));
-            this.btnTaiKhoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTaiKhoan.IconSize = 45;
-            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 465);
-            this.btnTaiKhoan.Name = "btnTaiKhoan";
-            this.btnTaiKhoan.Size = new System.Drawing.Size(58, 51);
-            this.btnTaiKhoan.TabIndex = 14;
-            this.btnTaiKhoan.Tag = "Đổi mật khẩu";
-            this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTaiKhoan.UseHoverColor = false;
-            this.btnTaiKhoan.UseVisualStyleBackColor = false;
-            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
-            // 
-            // btnCaiDat
-            // 
-            this.btnCaiDat._1_Size = new System.Drawing.Size(58, 51);
-            this.btnCaiDat.BackColor = System.Drawing.Color.Transparent;
-            this.btnCaiDat.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
-            this.btnCaiDat.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.btnCaiDat.ButtonBorderSize = 0;
-            this.btnCaiDat.ButtonRadius = 0;
-            this.btnCaiDat.ButtonStyle = TPH.Controls.bd.IconButton;
-            this.btnCaiDat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCaiDat.FlatAppearance.BorderSize = 0;
-            this.btnCaiDat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnCaiDat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnCaiDat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCaiDat.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnCaiDat.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaiDat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(229)))));
-            this.btnCaiDat.IconChar = FontAwesome.Sharp.IconChar.Tools;
-            this.btnCaiDat.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(229)))));
-            this.btnCaiDat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCaiDat.IconSize = 45;
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 414);
-            this.btnCaiDat.Name = "btnCaiDat";
-            this.btnCaiDat.Size = new System.Drawing.Size(58, 51);
-            this.btnCaiDat.TabIndex = 15;
-            this.btnCaiDat.Tag = "Cài đặt";
-            this.btnCaiDat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCaiDat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCaiDat.UseHoverColor = false;
-            this.btnCaiDat.UseVisualStyleBackColor = false;
-            this.btnCaiDat.Click += new System.EventHandler(this.btnCaiDat_Click);
-            // 
-            // rbTiepNhanHIS
-            // 
-            this.rbTiepNhanHIS.Name = "rbTiepNhanHIS";
-            this.rbTiepNhanHIS.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.rbTiepNhanHIS.Size = new System.Drawing.Size(263, 22);
-            this.rbTiepNhanHIS.Text = "Tiếp nhận từ HIS";
-            this.rbTiepNhanHIS.Click += new System.EventHandler(this.rbTiepNhanHIS_Click);
-            // 
-            // rbTiepNhanBenhNhan
-            // 
-            this.rbTiepNhanBenhNhan.Name = "rbTiepNhanBenhNhan";
-            this.rbTiepNhanBenhNhan.Size = new System.Drawing.Size(263, 22);
-            this.rbTiepNhanBenhNhan.Text = "Nhập thông tin";
-            this.rbTiepNhanBenhNhan.Click += new System.EventHandler(this.mnuNhapThuCong_Click);
-            // 
-            // rbTimKiem
-            // 
-            this.rbTimKiem.Name = "rbTimKiem";
-            this.rbTimKiem.ShortcutKeys = System.Windows.Forms.Keys.F10;
-            this.rbTimKiem.Size = new System.Drawing.Size(263, 22);
-            this.rbTimKiem.Text = "Tìm kiếm";
-            this.rbTimKiem.Click += new System.EventHandler(this.rbTimKiem_Click);
-            // 
-            // rbThongTinSangLocSoSinh
-            // 
-            this.rbThongTinSangLocSoSinh.Name = "rbThongTinSangLocSoSinh";
-            this.rbThongTinSangLocSoSinh.Size = new System.Drawing.Size(263, 22);
-            this.rbThongTinSangLocSoSinh.Text = "Nhập thông tin sàng lọc sơ sinh";
-            this.rbThongTinSangLocSoSinh.Click += new System.EventHandler(this.mnuNhapThongTinSangLoc_Click);
-            // 
-            // rbThongTinSangLocTruocSinh
-            // 
-            this.rbThongTinSangLocTruocSinh.Name = "rbThongTinSangLocTruocSinh";
-            this.rbThongTinSangLocTruocSinh.Size = new System.Drawing.Size(263, 22);
-            this.rbThongTinSangLocTruocSinh.Text = "Nhập thông tin sàng lọc trước sinh";
-            this.rbThongTinSangLocTruocSinh.Click += new System.EventHandler(this.rbThongTinSangLocTruocSinh_Click);
-            // 
-            // rabCapNhatThongTinTuHis
-            // 
-            this.rabCapNhatThongTinTuHis.Name = "rabCapNhatThongTinTuHis";
-            this.rabCapNhatThongTinTuHis.Size = new System.Drawing.Size(263, 22);
-            this.rabCapNhatThongTinTuHis.Text = "Cập nhật thông tin từ HIS";
-            this.rabCapNhatThongTinTuHis.Click += new System.EventHandler(this.rabCapNhatThongTinTuHis_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(260, 6);
-            // 
-            // rbInbaracodeKSK
-            // 
-            this.rbInbaracodeKSK.Name = "rbInbaracodeKSK";
-            this.rbInbaracodeKSK.Size = new System.Drawing.Size(263, 22);
-            this.rbInbaracodeKSK.Text = "In barcode hàng loạt";
-            this.rbInbaracodeKSK.Click += new System.EventHandler(this.rbInbaracodeKSK_Click);
-            // 
-            // rbNhapTheoDanhSach
-            // 
-            this.rbNhapTheoDanhSach.Name = "rbNhapTheoDanhSach";
-            this.rbNhapTheoDanhSach.Size = new System.Drawing.Size(263, 22);
-            this.rbNhapTheoDanhSach.Text = "Nhập theo danh sách";
-            this.rbNhapTheoDanhSach.Click += new System.EventHandler(this.rbNhapTheoDanhSach_Click);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(260, 6);
-            // 
-            // rbXacNhanTraKetQua
-            // 
-            this.rbXacNhanTraKetQua.Name = "rbXacNhanTraKetQua";
-            this.rbXacNhanTraKetQua.Size = new System.Drawing.Size(263, 22);
-            this.rbXacNhanTraKetQua.Text = "Trả phiếu kết quả";
-            this.rbXacNhanTraKetQua.Click += new System.EventHandler(this.rbXacNhanTraKetQua_Click);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(260, 6);
-            // 
-            // rbLichSuXetNghiem
-            // 
-            this.rbLichSuXetNghiem.Name = "rbLichSuXetNghiem";
-            this.rbLichSuXetNghiem.Size = new System.Drawing.Size(263, 22);
-            this.rbLichSuXetNghiem.Text = "Xem lịch sử kết quả";
-            this.rbLichSuXetNghiem.Click += new System.EventHandler(this.rbLichSuXetNghiem_Click);
-            // 
-            // rbTheoDoiMau
-            // 
-            this.rbTheoDoiMau.Name = "rbTheoDoiMau";
-            this.rbTheoDoiMau.Size = new System.Drawing.Size(263, 22);
-            this.rbTheoDoiMau.Text = "Theo dõi mẫu";
-            this.rbTheoDoiMau.Click += new System.EventHandler(this.rbTheoDoiMau_Click);
-            // 
-            // rbKetQuaThuongQuy
-            // 
-            this.rbKetQuaThuongQuy.Name = "rbKetQuaThuongQuy";
-            this.rbKetQuaThuongQuy.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.rbKetQuaThuongQuy.Size = new System.Drawing.Size(233, 22);
-            this.rbKetQuaThuongQuy.Text = "Kết quả xét nghiệm";
-            this.rbKetQuaThuongQuy.Click += new System.EventHandler(this.rbKetQuaThuongQuy_Click);
-            // 
-            // rbKQSinhHocPhanTu
-            // 
-            this.rbKQSinhHocPhanTu.Name = "rbKQSinhHocPhanTu";
-            this.rbKQSinhHocPhanTu.ShortcutKeys = System.Windows.Forms.Keys.F9;
-            this.rbKQSinhHocPhanTu.Size = new System.Drawing.Size(233, 22);
-            this.rbKQSinhHocPhanTu.Text = "Kết quả Sinh học phân tử";
-            this.rbKQSinhHocPhanTu.Click += new System.EventHandler(this.rbKQSinhHocPhanTu_Click);
-            // 
-            // rbKQViSinhNuoiCay
-            // 
-            this.rbKQViSinhNuoiCay.Name = "rbKQViSinhNuoiCay";
-            this.rbKQViSinhNuoiCay.ShortcutKeys = System.Windows.Forms.Keys.F8;
-            this.rbKQViSinhNuoiCay.Size = new System.Drawing.Size(233, 22);
-            this.rbKQViSinhNuoiCay.Text = "Kết quả vi sinh nuôi cấy";
-            this.rbKQViSinhNuoiCay.Click += new System.EventHandler(this.rbKQViSinhNuoiCay_Click);
-            // 
-            // rbKQUploadHIS
-            // 
-            this.rbKQUploadHIS.Name = "rbKQUploadHIS";
-            this.rbKQUploadHIS.Size = new System.Drawing.Size(233, 22);
-            this.rbKQUploadHIS.Text = "Kết quả đã upload HIS";
-            this.rbKQUploadHIS.Click += new System.EventHandler(this.rbKQUploadHIS_Click);
-            // 
-            // rbKetQuSieuAm
-            // 
-            this.rbKetQuSieuAm.Name = "rbKetQuSieuAm";
-            this.rbKetQuSieuAm.Size = new System.Drawing.Size(233, 22);
-            this.rbKetQuSieuAm.Text = "Kết quả siêu âm";
-            this.rbKetQuSieuAm.Visible = false;
-            // 
-            // rbXQuang
-            // 
-            this.rbXQuang.Name = "rbXQuang";
-            this.rbXQuang.Size = new System.Drawing.Size(233, 22);
-            this.rbXQuang.Text = "Kết quả X-Quang";
-            this.rbXQuang.Visible = false;
-            // 
-            // rbNoiSoi
-            // 
-            this.rbNoiSoi.Name = "rbNoiSoi";
-            this.rbNoiSoi.Size = new System.Drawing.Size(233, 22);
-            this.rbNoiSoi.Text = "Kết quả nội soi";
-            this.rbNoiSoi.Visible = false;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(230, 6);
-            // 
-            // rbInTheoDanhSach
-            // 
-            this.rbInTheoDanhSach.Name = "rbInTheoDanhSach";
-            this.rbInTheoDanhSach.Size = new System.Drawing.Size(233, 22);
-            this.rbInTheoDanhSach.Text = "In theo danh sách";
-            this.rbInTheoDanhSach.Click += new System.EventHandler(this.rbInTheoDanhSach_Click);
-            // 
-            // rbPhieuTienTrinhViSinh
-            // 
-            this.rbPhieuTienTrinhViSinh.Name = "rbPhieuTienTrinhViSinh";
-            this.rbPhieuTienTrinhViSinh.Size = new System.Drawing.Size(233, 22);
-            this.rbPhieuTienTrinhViSinh.Text = "Phiếu tiến trình vi sinh";
-            this.rbPhieuTienTrinhViSinh.Click += new System.EventHandler(this.rbPhieuTienTrinhViSinh_Click);
-            // 
-            // rbGuiEMailKetQua
-            // 
-            this.rbGuiEMailKetQua.Name = "rbGuiEMailKetQua";
-            this.rbGuiEMailKetQua.Size = new System.Drawing.Size(233, 22);
-            this.rbGuiEMailKetQua.Text = "Gửi mail kết quả";
-            this.rbGuiEMailKetQua.Click += new System.EventHandler(this.rbGuiEMailKetQua_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(230, 6);
-            // 
-            // rbXemPDF
-            // 
-            this.rbXemPDF.Name = "rbXemPDF";
-            this.rbXemPDF.Size = new System.Drawing.Size(233, 22);
-            this.rbXemPDF.Text = "Xem kết quả xuất PDF";
-            this.rbXemPDF.Click += new System.EventHandler(this.rbXemPDF_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(230, 6);
-            // 
-            // rbChuyenKetQua
-            // 
-            this.rbChuyenKetQua.Name = "rbChuyenKetQua";
-            this.rbChuyenKetQua.Size = new System.Drawing.Size(233, 22);
-            this.rbChuyenKetQua.Text = "Chuyển phiếu kết quả";
-            this.rbChuyenKetQua.Click += new System.EventHandler(this.rbChuyenKetQua_Click);
-            // 
-            // rbNhanPhieuKetQua
-            // 
-            this.rbNhanPhieuKetQua.Name = "rbNhanPhieuKetQua";
-            this.rbNhanPhieuKetQua.Size = new System.Drawing.Size(233, 22);
-            this.rbNhanPhieuKetQua.Text = "Nhận phiếu kết quả";
-            this.rbNhanPhieuKetQua.Click += new System.EventHandler(this.rbNhanPhieuKetQua_Click);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(230, 6);
-            // 
-            // rbKetQuaTuMayXN
-            // 
-            this.rbKetQuaTuMayXN.Name = "rbKetQuaTuMayXN";
-            this.rbKetQuaTuMayXN.Size = new System.Drawing.Size(233, 22);
-            this.rbKetQuaTuMayXN.Text = "Kết quả từ máy";
-            this.rbKetQuaTuMayXN.Click += new System.EventHandler(this.rbKetQuaTuMayXN_Click);
-            // 
-            // rbXuatKetQua
-            // 
-            this.rbXuatKetQua.Name = "rbXuatKetQua";
-            this.rbXuatKetQua.Size = new System.Drawing.Size(240, 22);
-            this.rbXuatKetQua.Text = "Xuất lưu kết quả xét nghiệm";
-            this.rbXuatKetQua.Click += new System.EventHandler(this.rbXuatKetQua_Click);
-            // 
-            // mnuXuatKetQuaViSinh
-            // 
-            this.mnuXuatKetQuaViSinh.Name = "mnuXuatKetQuaViSinh";
-            this.mnuXuatKetQuaViSinh.Size = new System.Drawing.Size(240, 22);
-            this.mnuXuatKetQuaViSinh.Text = "Xuất kết quả vi sinh";
-            this.mnuXuatKetQuaViSinh.Click += new System.EventHandler(this.mnuXuatKetQuaViSinh_Click);
-            // 
-            // rbThongKeTongHopXn
-            // 
-            this.rbThongKeTongHopXn.Name = "rbThongKeTongHopXn";
-            this.rbThongKeTongHopXn.Size = new System.Drawing.Size(240, 22);
-            this.rbThongKeTongHopXn.Text = "Thống kê tổng hợp xét nghiệm";
-            this.rbThongKeTongHopXn.Click += new System.EventHandler(this.rbThongKeTongHopXn_Click);
-            // 
-            // rbNhatKy
-            // 
-            this.rbNhatKy.Name = "rbNhatKy";
-            this.rbNhatKy.Size = new System.Drawing.Size(240, 22);
-            this.rbNhatKy.Text = "Nhật ký";
-            this.rbNhatKy.Click += new System.EventHandler(this.rbNhatKy_Click);
-            // 
-            // rbDashboardSo
-            // 
-            this.rbDashboardSo.Name = "rbDashboardSo";
-            this.rbDashboardSo.Size = new System.Drawing.Size(240, 22);
-            this.rbDashboardSo.Text = "Dashboard - Số";
-            this.rbDashboardSo.Click += new System.EventHandler(this.rbDashboard_Click);
-            // 
-            // rbDanhMucXetNghiem
-            // 
-            this.rbDanhMucXetNghiem.Name = "rbDanhMucXetNghiem";
-            this.rbDanhMucXetNghiem.Size = new System.Drawing.Size(278, 22);
-            this.rbDanhMucXetNghiem.Text = "Danh mục xét nghiệm";
-            this.rbDanhMucXetNghiem.Click += new System.EventHandler(this.rbDanhMucXetNghiem_Click);
-            // 
-            // rbDanhMucViSinh
-            // 
-            this.rbDanhMucViSinh.Name = "rbDanhMucViSinh";
-            this.rbDanhMucViSinh.Size = new System.Drawing.Size(278, 22);
-            this.rbDanhMucViSinh.Text = "Danh mục vi sinh";
-            this.rbDanhMucViSinh.Click += new System.EventHandler(this.rbDanhMucViSinh_Click);
-            // 
-            // rbDanhMucLoaiMau
-            // 
-            this.rbDanhMucLoaiMau.Name = "rbDanhMucLoaiMau";
-            this.rbDanhMucLoaiMau.Size = new System.Drawing.Size(278, 22);
-            this.rbDanhMucLoaiMau.Text = "Danh mục loại mẫu";
-            this.rbDanhMucLoaiMau.Click += new System.EventHandler(this.rbDanhMucLoaiMau_Click);
-            // 
-            // rbDmHenTraKetQua
-            // 
-            this.rbDmHenTraKetQua.Name = "rbDmHenTraKetQua";
-            this.rbDmHenTraKetQua.Size = new System.Drawing.Size(278, 22);
-            this.rbDmHenTraKetQua.Text = "Danh mục hẹn trả kết quả";
-            this.rbDmHenTraKetQua.Click += new System.EventHandler(this.rbDmHenTraKetQua_Click);
-            // 
-            // rbDanhMucKetNoiHIS
-            // 
-            this.rbDanhMucKetNoiHIS.Name = "rbDanhMucKetNoiHIS";
-            this.rbDanhMucKetNoiHIS.Size = new System.Drawing.Size(278, 22);
-            this.rbDanhMucKetNoiHIS.Text = "Danh mục mapping HIS";
-            this.rbDanhMucKetNoiHIS.Click += new System.EventHandler(this.rbDanhMucKetNoiHIS_Click);
-            // 
-            // rbCauHinhPhieuIn
-            // 
-            this.rbCauHinhPhieuIn.Name = "rbCauHinhPhieuIn";
-            this.rbCauHinhPhieuIn.Size = new System.Drawing.Size(278, 22);
-            this.rbCauHinhPhieuIn.Text = "Danh mục phiếu in";
-            this.rbCauHinhPhieuIn.Click += new System.EventHandler(this.rbCauHinhPhieuIn_Click);
-            // 
-            // rbTembarcode
-            // 
-            this.rbTembarcode.Name = "rbTembarcode";
-            this.rbTembarcode.Size = new System.Drawing.Size(278, 22);
-            this.rbTembarcode.Text = "Tem barcode";
-            this.rbTembarcode.Click += new System.EventHandler(this.rbTembarcode_Click);
-            // 
-            // rbBienDichDanhMuc
-            // 
-            this.rbBienDichDanhMuc.Name = "rbBienDichDanhMuc";
-            this.rbBienDichDanhMuc.Size = new System.Drawing.Size(278, 22);
-            this.rbBienDichDanhMuc.Text = "Ngôn ngữ cho danh mục";
-            this.rbBienDichDanhMuc.Click += new System.EventHandler(this.rbBienDichDanhMuc_Click);
-            // 
-            // rbTinhTrangMauLyDo
-            // 
-            this.rbTinhTrangMauLyDo.Name = "rbTinhTrangMauLyDo";
-            this.rbTinhTrangMauLyDo.Size = new System.Drawing.Size(278, 22);
-            this.rbTinhTrangMauLyDo.Text = "Danh mục lý do - Tình trạng mẫu";
-            this.rbTinhTrangMauLyDo.Click += new System.EventHandler(this.rbTinhTrangMauLyDo_Click);
-            // 
-            // rbDanhMucMaMayXetNghiem
-            // 
-            this.rbDanhMucMaMayXetNghiem.Name = "rbDanhMucMaMayXetNghiem";
-            this.rbDanhMucMaMayXetNghiem.Size = new System.Drawing.Size(278, 22);
-            this.rbDanhMucMaMayXetNghiem.Text = "Mapping mã xét nghiệm máy";
-            this.rbDanhMucMaMayXetNghiem.Click += new System.EventHandler(this.rbDanhMucMaMayXetNghiem_Click);
-            // 
-            // rbMappingMayViSinh
-            // 
-            this.rbMappingMayViSinh.Name = "rbMappingMayViSinh";
-            this.rbMappingMayViSinh.Size = new System.Drawing.Size(278, 22);
-            this.rbMappingMayViSinh.Text = "Mapping mã xét nghiệm máy - Vi sinh";
-            this.rbMappingMayViSinh.Click += new System.EventHandler(this.rbMappingMayViSinh_Click);
-            // 
-            // rbBienDichCo
-            // 
-            this.rbBienDichCo.Name = "rbBienDichCo";
-            this.rbBienDichCo.Size = new System.Drawing.Size(278, 22);
-            this.rbBienDichCo.Text = "Biên dịch cờ kết quả máy";
-            this.rbBienDichCo.Click += new System.EventHandler(this.rbBienDichCo_Click);
-            // 
-            // rbBienDichKetQua
-            // 
-            this.rbBienDichKetQua.Name = "rbBienDichKetQua";
-            this.rbBienDichKetQua.Size = new System.Drawing.Size(278, 22);
-            this.rbBienDichKetQua.Text = "Biên dịch kết quả máy";
-            this.rbBienDichKetQua.Click += new System.EventHandler(this.rbBienDichKetQua_Click);
-            // 
-            // btnOngMau
-            // 
-            this.btnOngMau._1_Size = new System.Drawing.Size(58, 51);
-            this.btnOngMau.BackColor = System.Drawing.Color.Transparent;
-            this.btnOngMau.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
-            this.btnOngMau.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.btnOngMau.ButtonBorderSize = 0;
-            this.btnOngMau.ButtonRadius = 0;
-            this.btnOngMau.ButtonStyle = TPH.Controls.bd.IconButton;
-            this.btnOngMau.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOngMau.FlatAppearance.BorderSize = 0;
-            this.btnOngMau.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnOngMau.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnOngMau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOngMau.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnOngMau.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOngMau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(52)))), ((int)(((byte)(56)))));
-            this.btnOngMau.IconChar = FontAwesome.Sharp.IconChar.Archive;
-            this.btnOngMau.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(52)))), ((int)(((byte)(56)))));
-            this.btnOngMau.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOngMau.IconSize = 45;
-            this.btnOngMau.Location = new System.Drawing.Point(0, 159);
-            this.btnOngMau.Name = "btnOngMau";
-            this.btnOngMau.Size = new System.Drawing.Size(58, 51);
-            this.btnOngMau.TabIndex = 16;
-            this.btnOngMau.Tag = "Quản lý mẫu";
-            this.btnOngMau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOngMau.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOngMau.UseHoverColor = false;
-            this.btnOngMau.UseVisualStyleBackColor = false;
-            this.btnOngMau.Click += new System.EventHandler(this.btnOngMau_Click);
-            // 
-            // rbDangNhapLayMau
-            // 
-            this.rbDangNhapLayMau.Name = "rbDangNhapLayMau";
-            this.rbDangNhapLayMau.Size = new System.Drawing.Size(217, 22);
-            this.rbDangNhapLayMau.Text = "Đăng nhập lấy mẫu";
-            this.rbDangNhapLayMau.Click += new System.EventHandler(this.rbDangNhapLayMau_Click);
-            // 
-            // rbBanLayMau
-            // 
-            this.rbBanLayMau.Name = "rbBanLayMau";
-            this.rbBanLayMau.Size = new System.Drawing.Size(217, 22);
-            this.rbBanLayMau.Text = "Bàn lấy mẫu";
-            this.rbBanLayMau.Click += new System.EventHandler(this.rbBanLayMau_Click);
-            // 
-            // rbLayMau
-            // 
-            this.rbLayMau.Name = "rbLayMau";
-            this.rbLayMau.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.rbLayMau.Size = new System.Drawing.Size(217, 22);
-            this.rbLayMau.Text = "Lấy mẫu";
-            this.rbLayMau.Click += new System.EventHandler(this.rbLayMau_Click);
-            // 
-            // rbChuyenMau
-            // 
-            this.rbChuyenMau.Name = "rbChuyenMau";
-            this.rbChuyenMau.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.rbChuyenMau.Size = new System.Drawing.Size(217, 22);
-            this.rbChuyenMau.Text = "Chuyển mẫu";
-            this.rbChuyenMau.Click += new System.EventHandler(this.rbChuyenMau_Click);
-            // 
-            // rbNhanMau
-            // 
-            this.rbNhanMau.Name = "rbNhanMau";
-            this.rbNhanMau.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.rbNhanMau.Size = new System.Drawing.Size(217, 22);
-            this.rbNhanMau.Text = "Nhận mẫu";
-            this.rbNhanMau.Click += new System.EventHandler(this.rbNhanMau_Click);
-            // 
-            // mnuTheoDoiMau
-            // 
-            this.mnuTheoDoiMau.Name = "mnuTheoDoiMau";
-            this.mnuTheoDoiMau.Size = new System.Drawing.Size(217, 22);
-            this.mnuTheoDoiMau.Text = "Theo dõi mẫu";
-            this.mnuTheoDoiMau.Click += new System.EventHandler(this.mnuTheoDoiMau_Click);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(214, 6);
-            // 
-            // rbLuuMau
-            // 
-            this.rbLuuMau.Name = "rbLuuMau";
-            this.rbLuuMau.Size = new System.Drawing.Size(217, 22);
-            this.rbLuuMau.Text = "Lưu mẫu";
-            this.rbLuuMau.Click += new System.EventHandler(this.rbLuuMau_Click);
-            // 
-            // rbHuyMauLuu
-            // 
-            this.rbHuyMauLuu.Name = "rbHuyMauLuu";
-            this.rbHuyMauLuu.Size = new System.Drawing.Size(217, 22);
-            this.rbHuyMauLuu.Text = "Mẫu đã lưu và mẫu đã hủy";
-            this.rbHuyMauLuu.Click += new System.EventHandler(this.rbHuyMauLuu_Click);
-            // 
-            // rbNguoiDung
-            // 
-            this.rbNguoiDung.Name = "rbNguoiDung";
-            this.rbNguoiDung.Size = new System.Drawing.Size(218, 22);
-            this.rbNguoiDung.Text = "Quản lý người dùng";
-            this.rbNguoiDung.Click += new System.EventHandler(this.rbNguoiDung_Click);
-            // 
-            // rbCaiDatKetNoiHis
-            // 
-            this.rbCaiDatKetNoiHis.Name = "rbCaiDatKetNoiHis";
-            this.rbCaiDatKetNoiHis.Size = new System.Drawing.Size(218, 22);
-            this.rbCaiDatKetNoiHis.Text = "Cấu hình kết nối HIS";
-            this.rbCaiDatKetNoiHis.Click += new System.EventHandler(this.rbCaiDatKetNoiHis_Click);
-            // 
-            // rbCauHinhHeThong
-            // 
-            this.rbCauHinhHeThong.Name = "rbCauHinhHeThong";
-            this.rbCauHinhHeThong.Size = new System.Drawing.Size(218, 22);
-            this.rbCauHinhHeThong.Text = "Cấu hình hệ thống";
-            this.rbCauHinhHeThong.Click += new System.EventHandler(this.rbCauHinhHeThong_Click);
-            // 
-            // rbDangKy
-            // 
-            this.rbDangKy.Name = "rbDangKy";
-            this.rbDangKy.Size = new System.Drawing.Size(218, 22);
-            this.rbDangKy.Text = "Đăng ký";
-            this.rbDangKy.Click += new System.EventHandler(this.rbDangKy_Click);
-            // 
-            // radNgonNgu
-            // 
-            this.radNgonNgu.Name = "radNgonNgu";
-            this.radNgonNgu.Size = new System.Drawing.Size(218, 22);
-            this.radNgonNgu.Text = "Ngôn ngữ";
-            this.radNgonNgu.Click += new System.EventHandler(this.radNgonNgu_Click);
-            // 
-            // rbKhuVuc
-            // 
-            this.rbKhuVuc.Name = "rbKhuVuc";
-            this.rbKhuVuc.Size = new System.Drawing.Size(218, 22);
-            this.rbKhuVuc.Text = "Danh mục khu vực";
-            this.rbKhuVuc.Click += new System.EventHandler(this.rbKhuVuc_Click);
-            // 
-            // rbThongTinMayXN
-            // 
-            this.rbThongTinMayXN.Name = "rbThongTinMayXN";
-            this.rbThongTinMayXN.Size = new System.Drawing.Size(218, 22);
-            this.rbThongTinMayXN.Text = "Thông tin máy xét nghiệm";
-            this.rbThongTinMayXN.Click += new System.EventHandler(this.rbThongTinMayXN_Click);
-            // 
-            // rbMayInBarCode
-            // 
-            this.rbMayInBarCode.Name = "rbMayInBarCode";
-            this.rbMayInBarCode.Size = new System.Drawing.Size(218, 22);
-            this.rbMayInBarCode.Text = "Danh mục máy in barcode";
-            this.rbMayInBarCode.Click += new System.EventHandler(this.rbMayInBarCode_Click);
-            // 
-            // rbTieuDeTrangIn
-            // 
-            this.rbTieuDeTrangIn.Name = "rbTieuDeTrangIn";
-            this.rbTieuDeTrangIn.Size = new System.Drawing.Size(218, 22);
-            this.rbTieuDeTrangIn.Text = "Tiêu đê phiếu in";
-            this.rbTieuDeTrangIn.Click += new System.EventHandler(this.rbTieuDeTrangIn_Click);
-            // 
-            // btnThuPhi
-            // 
-            this.btnThuPhi._1_Size = new System.Drawing.Size(58, 51);
-            this.btnThuPhi.BackColor = System.Drawing.Color.Transparent;
-            this.btnThuPhi.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
-            this.btnThuPhi.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.btnThuPhi.ButtonBorderSize = 0;
-            this.btnThuPhi.ButtonRadius = 0;
-            this.btnThuPhi.ButtonStyle = TPH.Controls.bd.IconButton;
-            this.btnThuPhi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThuPhi.FlatAppearance.BorderSize = 0;
-            this.btnThuPhi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnThuPhi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.btnThuPhi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThuPhi.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnThuPhi.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThuPhi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(15)))));
-            this.btnThuPhi.IconChar = FontAwesome.Sharp.IconChar.Donate;
-            this.btnThuPhi.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(15)))));
-            this.btnThuPhi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThuPhi.IconSize = 45;
-            this.btnThuPhi.Location = new System.Drawing.Point(0, 108);
-            this.btnThuPhi.Name = "btnThuPhi";
-            this.btnThuPhi.Size = new System.Drawing.Size(58, 51);
-            this.btnThuPhi.TabIndex = 17;
-            this.btnThuPhi.Tag = "Thu phí";
-            this.btnThuPhi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThuPhi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThuPhi.UseHoverColor = false;
-            this.btnThuPhi.UseVisualStyleBackColor = false;
-            this.btnThuPhi.Click += new System.EventHandler(this.btnThuPhi_Click);
-            // 
-            // lblThongBaoCapNhat
-            // 
-            this.lblThongBaoCapNhat.AutoSize = true;
-            this.lblThongBaoCapNhat.BackColor = System.Drawing.Color.Transparent;
-            this.lblThongBaoCapNhat.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.lblThongBaoCapNhat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblThongBaoCapNhat.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblThongBaoCapNhat.ForeColor = System.Drawing.Color.White;
-            this.lblThongBaoCapNhat.HyperLink = false;
-            this.lblThongBaoCapNhat.LabelStyle = TPH.Controls.ls.Custom;
-            this.lblThongBaoCapNhat.Location = new System.Drawing.Point(804, 0);
-            this.lblThongBaoCapNhat.Margin = new System.Windows.Forms.Padding(0);
-            this.lblThongBaoCapNhat.Name = "lblThongBaoCapNhat";
-            this.lblThongBaoCapNhat.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblThongBaoCapNhat.Size = new System.Drawing.Size(124, 20);
-            this.lblThongBaoCapNhat.TabIndex = 5;
-            this.lblThongBaoCapNhat.Text = "Thông báo cập nhật |";
-            this.lblThongBaoCapNhat.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatus.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.lblStatus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblStatus.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.HyperLink = false;
-            this.lblStatus.LabelStyle = TPH.Controls.ls.Custom;
-            this.lblStatus.Location = new System.Drawing.Point(1041, 0);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(0);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblStatus.Size = new System.Drawing.Size(0, 20);
-            this.lblStatus.TabIndex = 4;
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // lblVersion
-            // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.BackColor = System.Drawing.Color.Transparent;
-            this.lblVersion.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.lblVersion.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblVersion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblVersion.ForeColor = System.Drawing.Color.White;
-            this.lblVersion.HyperLink = false;
-            this.lblVersion.LabelStyle = TPH.Controls.ls.Custom;
-            this.lblVersion.Location = new System.Drawing.Point(1041, 0);
-            this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblVersion.Size = new System.Drawing.Size(56, 20);
-            this.lblVersion.TabIndex = 2;
-            this.lblVersion.Text = "Version |";
-            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // lblTimer
-            // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.BackColor = System.Drawing.Color.Transparent;
-            this.lblTimer.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.lblTimer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblTimer.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblTimer.ForeColor = System.Drawing.Color.White;
-            this.lblTimer.HyperLink = false;
-            this.lblTimer.LabelStyle = TPH.Controls.ls.Custom;
-            this.lblTimer.Location = new System.Drawing.Point(1097, 0);
-            this.lblTimer.Margin = new System.Windows.Forms.Padding(0);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblTimer.Size = new System.Drawing.Size(85, 20);
-            this.lblTimer.TabIndex = 3;
-            this.lblTimer.Text = "Ngày làm việc";
-            this.lblTimer.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.BackColor = System.Drawing.Color.Transparent;
-            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.lblUserName.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblUserName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(218)))), ((int)(((byte)(87)))));
-            this.lblUserName.HyperLink = false;
-            this.lblUserName.LabelStyle = TPH.Controls.ls.Custom;
-            this.lblUserName.Location = new System.Drawing.Point(1001, 0);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(0);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblUserName.Size = new System.Drawing.Size(40, 20);
-            this.lblUserName.TabIndex = 1;
-            this.lblUserName.Text = "User |";
-            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.statusStrip1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.lblHello,
+            this.lblUserName,
+            this.lblVersion,
+            this.lblInTuDong,
+            this.lblTimer,
+            this.lblStatus,
+            this.lblThongBaoCapNhat});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 753);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(13, 0, 1, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1320, 25);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.TabIndex = 11;
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Arial", 9F);
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripStatusLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel1.Image")));
+            this.toolStripStatusLabel1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(1206, 20);
+            this.toolStripStatusLabel1.Spring = true;
+            this.toolStripStatusLabel1.Text = "Copyright © 2017 TPH Solutions All Rights Reserved.";
+            this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripStatusLabel1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
             // lblHello
             // 
-            this.lblHello.AutoSize = true;
-            this.lblHello.BackColor = System.Drawing.Color.Transparent;
-            this.lblHello.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.lblHello.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblHello.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblHello.Font = new System.Drawing.Font("Arial", 9F);
             this.lblHello.ForeColor = System.Drawing.Color.White;
-            this.lblHello.HyperLink = false;
-            this.lblHello.LabelStyle = TPH.Controls.ls.Custom;
-            this.lblHello.Location = new System.Drawing.Point(928, 0);
-            this.lblHello.Margin = new System.Windows.Forms.Padding(0);
             this.lblHello.Name = "lblHello";
-            this.lblHello.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblHello.Size = new System.Drawing.Size(73, 20);
-            this.lblHello.TabIndex = 0;
-            this.lblHello.Text = "Hello: TPH | ";
-            this.lblHello.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblHello.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblHello.Size = new System.Drawing.Size(0, 20);
             // 
-            // rbCapNhatPhanMem
+            // lblUserName
             // 
-            this.rbCapNhatPhanMem._1_Size = new System.Drawing.Size(58, 51);
-            this.rbCapNhatPhanMem.BackColor = System.Drawing.Color.Transparent;
-            this.rbCapNhatPhanMem.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
-            this.rbCapNhatPhanMem.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.rbCapNhatPhanMem.ButtonBorderSize = 0;
-            this.rbCapNhatPhanMem.ButtonRadius = 0;
-            this.rbCapNhatPhanMem.ButtonStyle = TPH.Controls.bd.IconButton;
-            this.rbCapNhatPhanMem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rbCapNhatPhanMem.FlatAppearance.BorderSize = 0;
-            this.rbCapNhatPhanMem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.rbCapNhatPhanMem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.rbCapNhatPhanMem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbCapNhatPhanMem.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.rbCapNhatPhanMem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCapNhatPhanMem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(196)))), ((int)(((byte)(2)))));
-            this.rbCapNhatPhanMem.IconChar = FontAwesome.Sharp.IconChar.Download;
-            this.rbCapNhatPhanMem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(196)))), ((int)(((byte)(2)))));
-            this.rbCapNhatPhanMem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.rbCapNhatPhanMem.IconSize = 45;
-            this.rbCapNhatPhanMem.Location = new System.Drawing.Point(0, 516);
-            this.rbCapNhatPhanMem.Name = "rbCapNhatPhanMem";
-            this.rbCapNhatPhanMem.Size = new System.Drawing.Size(58, 51);
-            this.rbCapNhatPhanMem.TabIndex = 18;
-            this.rbCapNhatPhanMem.Tag = "Cập nhật ứng dụng";
-            this.rbCapNhatPhanMem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rbCapNhatPhanMem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.rbCapNhatPhanMem.UseHoverColor = false;
-            this.rbCapNhatPhanMem.UseVisualStyleBackColor = false;
-            this.rbCapNhatPhanMem.Click += new System.EventHandler(this.rbCapNhatPhanMem_Click);
+            this.lblUserName.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblUserName.Size = new System.Drawing.Size(0, 20);
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblVersion.ForeColor = System.Drawing.Color.White;
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(48, 20);
+            this.lblVersion.Text = "Version";
+            // 
+            // lblInTuDong
+            // 
+            this.lblInTuDong.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblInTuDong.ForeColor = System.Drawing.Color.White;
+            this.lblInTuDong.Name = "lblInTuDong";
+            this.lblInTuDong.Size = new System.Drawing.Size(0, 20);
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblTimer.ForeColor = System.Drawing.Color.White;
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTimer.Size = new System.Drawing.Size(52, 20);
+            this.lblTimer.Text = "lblTimer";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblStatus.ForeColor = System.Drawing.Color.Red;
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblStatus.Size = new System.Drawing.Size(0, 20);
+            // 
+            // lblThongBaoCapNhat
+            // 
+            this.lblThongBaoCapNhat.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.lblThongBaoCapNhat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblThongBaoCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("lblThongBaoCapNhat.Image")));
+            this.lblThongBaoCapNhat.Name = "lblThongBaoCapNhat";
+            this.lblThongBaoCapNhat.Size = new System.Drawing.Size(142, 24);
+            this.lblThongBaoCapNhat.Text = "Thông báo cập nhật";
+            this.lblThongBaoCapNhat.Visible = false;
             // 
             // timerMain
             // 
-            this.timerMain.Interval = 1000;
+            this.timerMain.Enabled = true;
             this.timerMain.Tick += new System.EventHandler(this.timerMain_Tick);
             // 
-            // bntDanhMucHanhChinh
+            // ProgressBarMain
             // 
-            this.bntDanhMucHanhChinh._1_Size = new System.Drawing.Size(58, 51);
-            this.bntDanhMucHanhChinh.BackColor = System.Drawing.Color.Transparent;
-            this.bntDanhMucHanhChinh.ButtonBackColorStyle = TPH.Controls.ctrls.Glass;
-            this.bntDanhMucHanhChinh.ButtonBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.bntDanhMucHanhChinh.ButtonBorderSize = 0;
-            this.bntDanhMucHanhChinh.ButtonRadius = 0;
-            this.bntDanhMucHanhChinh.ButtonStyle = TPH.Controls.bd.IconButton;
-            this.bntDanhMucHanhChinh.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bntDanhMucHanhChinh.FlatAppearance.BorderSize = 0;
-            this.bntDanhMucHanhChinh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.bntDanhMucHanhChinh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(129)))), ((int)(((byte)(176)))));
-            this.bntDanhMucHanhChinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntDanhMucHanhChinh.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.bntDanhMucHanhChinh.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntDanhMucHanhChinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(230)))));
-            this.bntDanhMucHanhChinh.IconChar = FontAwesome.Sharp.IconChar.SearchLocation;
-            this.bntDanhMucHanhChinh.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(230)))));
-            this.bntDanhMucHanhChinh.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.bntDanhMucHanhChinh.IconSize = 45;
-            this.bntDanhMucHanhChinh.Location = new System.Drawing.Point(0, 363);
-            this.bntDanhMucHanhChinh.Name = "bntDanhMucHanhChinh";
-            this.bntDanhMucHanhChinh.Size = new System.Drawing.Size(58, 51);
-            this.bntDanhMucHanhChinh.TabIndex = 19;
-            this.bntDanhMucHanhChinh.Tag = "Danh mục hành chánh";
-            this.bntDanhMucHanhChinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bntDanhMucHanhChinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bntDanhMucHanhChinh.UseHoverColor = false;
-            this.bntDanhMucHanhChinh.UseVisualStyleBackColor = false;
-            this.bntDanhMucHanhChinh.Click += new System.EventHandler(this.bntDanhMucHanhChinh_Click);
+            this.ProgressBarMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ProgressBarMain.Location = new System.Drawing.Point(0, 962);
+            this.ProgressBarMain.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ProgressBarMain.Name = "ProgressBarMain";
+            this.ProgressBarMain.Size = new System.Drawing.Size(96, 31);
+            this.ProgressBarMain.TabIndex = 13;
             // 
-            // rbKhoaPhong
+            // timer1
             // 
-            this.rbKhoaPhong.Name = "rbKhoaPhong";
-            this.rbKhoaPhong.Size = new System.Drawing.Size(231, 22);
-            this.rbKhoaPhong.Text = "Danh mục khoa phòng";
-            this.rbKhoaPhong.Click += new System.EventHandler(this.rbKhoaPhong_Click);
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // rbDoituongDichVu
+            // timerAlarm
             // 
-            this.rbDoituongDichVu.Name = "rbDoituongDichVu";
-            this.rbDoituongDichVu.Size = new System.Drawing.Size(231, 22);
-            this.rbDoituongDichVu.Text = "Danh mục đối tượng dịch vụ";
-            this.rbDoituongDichVu.Click += new System.EventHandler(this.rbDoituongDichVu_Click);
+            this.timerAlarm.Interval = 30000;
+            this.timerAlarm.Tick += new System.EventHandler(this.timerAlarm_Tick);
             // 
-            // rbNhanVien
+            // barButtonItem1
             // 
-            this.rbNhanVien.Name = "rbNhanVien";
-            this.rbNhanVien.Size = new System.Drawing.Size(231, 22);
-            this.rbNhanVien.Text = "Danh mục nhân viên - Bác sĩ";
-            this.rbNhanVien.Click += new System.EventHandler(this.rbNhanVien_Click);
-            // 
-            // rbDiaChi
-            // 
-            this.rbDiaChi.Name = "rbDiaChi";
-            this.rbDiaChi.Size = new System.Drawing.Size(231, 22);
-            this.rbDiaChi.Text = "Danh mục địa chỉ";
-            this.rbDiaChi.Click += new System.EventHandler(this.rbDiaChi_Click);
-            // 
-            // tphDropdownBenhNhan
-            // 
-            this.tphDropdownBenhNhan.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tphDropdownBenhNhan.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.tphDropdownBenhNhan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rbTiepNhanHIS,
-            this.rbTiepNhanBenhNhan,
-            this.rbTimKiem,
-            this.rbThongTinSangLocSoSinh,
-            this.rbThongTinSangLocTruocSinh,
-            this.rabCapNhatThongTinTuHis,
-            this.toolStripSeparator2,
-            this.rbInbaracodeKSK,
-            this.rbNhapTheoDanhSach,
-            this.toolStripSeparator6,
-            this.rbXacNhanTraKetQua,
-            this.toolStripSeparator7,
-            this.rbLichSuXetNghiem,
-            this.rbTheoDoiMau});
-            this.tphDropdownBenhNhan.Name = "tphDropdownBenhNhan";
-            this.tphDropdownBenhNhan.Size = new System.Drawing.Size(264, 264);
-            // 
-            // tphDropdownKetQua
-            // 
-            this.tphDropdownKetQua.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tphDropdownKetQua.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.tphDropdownKetQua.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rbKetQuaThuongQuy,
-            this.rbKQViSinhNuoiCay,
-            this.rbKQSinhHocPhanTu,
-            this.rbKQUploadHIS,
-            this.rbKetQuSieuAm,
-            this.rbXQuang,
-            this.rbNoiSoi,
-            this.toolStripSeparator1,
-            this.rbInTheoDanhSach,
-            this.rbPhieuTienTrinhViSinh,
-            this.rbGuiEMailKetQua,
-            this.toolStripSeparator3,
-            this.rbXemPDF,
-            this.toolStripSeparator4,
-            this.rbChuyenKetQua,
-            this.rbNhanPhieuKetQua,
-            this.toolStripSeparator5,
-            this.rbKetQuaTuMayXN});
-            this.tphDropdownKetQua.Name = "tphDropdownMenuStrip1";
-            this.tphDropdownKetQua.Size = new System.Drawing.Size(234, 336);
-            // 
-            // tphDropdownThongKe
-            // 
-            this.tphDropdownThongKe.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tphDropdownThongKe.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.tphDropdownThongKe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rbXuatKetQua,
-            this.mnuXuatKetQuaViSinh,
-            this.rbThongKeTongHopXn,
-            this.rbNhatKy,
-            this.rbDashboardSo,
-            this.rbDashboardBieuDoTron});
-            this.tphDropdownThongKe.Name = "tphDropdownMenuStrip1";
-            this.tphDropdownThongKe.Size = new System.Drawing.Size(241, 136);
-            // 
-            // rbDashboardBieuDoTron
-            // 
-            this.rbDashboardBieuDoTron.Name = "rbDashboardBieuDoTron";
-            this.rbDashboardBieuDoTron.Size = new System.Drawing.Size(240, 22);
-            this.rbDashboardBieuDoTron.Text = "Dashboard - Biểu đồ tròn";
-            this.rbDashboardBieuDoTron.Click += new System.EventHandler(this.rbDashboardBieuDoTron_Click);
-            // 
-            // tphDropdownDanhMuc
-            // 
-            this.tphDropdownDanhMuc.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tphDropdownDanhMuc.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.tphDropdownDanhMuc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rbDanhMucXetNghiem,
-            this.rbDanhMucViSinh,
-            this.rbDanhMucLoaiMau,
-            this.rbDmHenTraKetQua,
-            this.toolStripSeparator10,
-            this.rbCauHinhPhieuIn,
-            this.rbTembarcode,
-            this.rbBienDichDanhMuc,
-            this.rbTinhTrangMauLyDo,
-            this.mnuChanDoan,
-            this.toolStripSeparator11,
-            this.rbDanhMucKetNoiHIS,
-            this.rbDanhMucMaMayXetNghiem,
-            this.rbMappingMayViSinh,
-            this.rbBienDichCo,
-            this.rbBienDichKetQua,
-            this.toolStripSeparator12,
-            this.mnuDanhMucTuLuuMau,
-            this.mnuQuanLyGuiMauNoiBo});
-            this.tphDropdownDanhMuc.Name = "tphDropdownMenuStrip1";
-            this.tphDropdownDanhMuc.Size = new System.Drawing.Size(279, 396);
-            // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(275, 6);
-            // 
-            // mnuChanDoan
-            // 
-            this.mnuChanDoan.Name = "mnuChanDoan";
-            this.mnuChanDoan.Size = new System.Drawing.Size(278, 22);
-            this.mnuChanDoan.Text = "Danh mục chẩn đoán";
-            this.mnuChanDoan.Click += new System.EventHandler(this.mnuChanDoan_Click);
-            // 
-            // toolStripSeparator11
-            // 
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(275, 6);
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(275, 6);
-            // 
-            // mnuDanhMucTuLuuMau
-            // 
-            this.mnuDanhMucTuLuuMau.Name = "mnuDanhMucTuLuuMau";
-            this.mnuDanhMucTuLuuMau.Size = new System.Drawing.Size(278, 22);
-            this.mnuDanhMucTuLuuMau.Text = "Danh mục tủ lưu mẫu";
-            this.mnuDanhMucTuLuuMau.Click += new System.EventHandler(this.mnuDanhMucTuLuuMau_Click);
-            // 
-            // tphDropdownOngMau
-            // 
-            this.tphDropdownOngMau.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tphDropdownOngMau.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.tphDropdownOngMau.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rbDangNhapLayMau,
-            this.rbBanLayMau,
-            this.rbLayMau,
-            this.rbChuyenMau,
-            this.rbNhanMau,
-            this.mnuTheoDoiMau,
-            this.toolStripSeparator8,
-            this.rbLuuMau,
-            this.rbHuyMauLuu});
-            this.tphDropdownOngMau.Name = "tphDropdownBenhNhan";
-            this.tphDropdownOngMau.Size = new System.Drawing.Size(218, 186);
-            // 
-            // tphDropdownCauHinh
-            // 
-            this.tphDropdownCauHinh.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tphDropdownCauHinh.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.tphDropdownCauHinh.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rbNguoiDung,
-            this.rbCaiDatKetNoiHis,
-            this.rbCauHinhHeThong,
-            this.rbDangKy,
-            this.radNgonNgu,
-            this.rbKhuVuc,
-            this.rbThongTinMayXN,
-            this.rbMayInBarCode,
-            this.rbTieuDeTrangIn,
-            this.toolStripSeparator9,
-            this.mnuCapNhatData});
-            this.tphDropdownCauHinh.Name = "tphDropdownMenuStrip1";
-            this.tphDropdownCauHinh.Size = new System.Drawing.Size(219, 230);
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(215, 6);
-            // 
-            // mnuCapNhatData
-            // 
-            this.mnuCapNhatData.Name = "mnuCapNhatData";
-            this.mnuCapNhatData.Size = new System.Drawing.Size(218, 22);
-            this.mnuCapNhatData.Text = "Cập nhật data";
-            this.mnuCapNhatData.Click += new System.EventHandler(this.mnuCapNhatData_Click);
-            // 
-            // tphDropdownMenuHanhChinh
-            // 
-            this.tphDropdownMenuHanhChinh.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tphDropdownMenuHanhChinh.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.tphDropdownMenuHanhChinh.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rbKhoaPhong,
-            this.rbDoituongDichVu,
-            this.rbNhanVien,
-            this.rbDiaChi});
-            this.tphDropdownMenuHanhChinh.Name = "tphDropdownMenuStrip1";
-            this.tphDropdownMenuHanhChinh.Size = new System.Drawing.Size(232, 92);
-            // 
-            // tphDropdownMenuStrip1
-            // 
-            this.tphDropdownMenuStrip1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tphDropdownMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.tphDropdownMenuStrip1.Name = "tphDropdownMenuStrip1";
-            this.tphDropdownMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.barButtonItem1.Caption = "Tiếp nhận từ HIS";
+            this.barButtonItem1.Id = 1;
+            this.barButtonItem1.ImageOptions.ImageIndex = 2;
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.lblThongbaolamMoi);
+            this.panel1.Controls.Add(this.btnCloseAlarm);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(28, 24);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(0, 20);
+            this.panel1.TabIndex = 18;
             // 
-            // backgroundWorker1
+            // lblThongbaolamMoi
             // 
-            this.backgroundWorker1.WorkerSupportsCancellation = true;
+            this.lblThongbaolamMoi.AutoSize = true;
+            this.lblThongbaolamMoi.ForeColor = System.Drawing.Color.White;
+            this.lblThongbaolamMoi.Location = new System.Drawing.Point(3, 2);
+            this.lblThongbaolamMoi.Name = "lblThongbaolamMoi";
+            this.lblThongbaolamMoi.Size = new System.Drawing.Size(196, 16);
+            this.lblThongbaolamMoi.TabIndex = 1;
+            this.lblThongbaolamMoi.Text = "Thông báo sẽ tự làm mới sau:";
             // 
-            // tphDropdownThuPhi
+            // btnCloseAlarm
             // 
-            this.tphDropdownThuPhi.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tphDropdownThuPhi.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.tphDropdownThuPhi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rbThuPhiDichVu,
-            this.rbBaoCaoDoanhThu});
-            this.tphDropdownThuPhi.Name = "tphDropdownMenuStrip1";
-            this.tphDropdownThuPhi.Size = new System.Drawing.Size(178, 48);
+            this.btnCloseAlarm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseAlarm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseAlarm.Image = global::TPH.LIS.App.Properties.Resources.Prohibit_icon_16x16;
+            this.btnCloseAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCloseAlarm.Location = new System.Drawing.Point(-372, -3);
+            this.btnCloseAlarm.Name = "btnCloseAlarm";
+            this.btnCloseAlarm.Size = new System.Drawing.Size(106, 25);
+            this.btnCloseAlarm.TabIndex = 0;
+            this.btnCloseAlarm.Text = "Ẩn thông báo";
+            this.btnCloseAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCloseAlarm.UseVisualStyleBackColor = true;
+            this.btnCloseAlarm.Click += new System.EventHandler(this.btnCloseAlarm_Click);
             // 
-            // rbThuPhiDichVu
+            // pnCoCanhBao
             // 
-            this.rbThuPhiDichVu.Name = "rbThuPhiDichVu";
-            this.rbThuPhiDichVu.Size = new System.Drawing.Size(177, 22);
-            this.rbThuPhiDichVu.Text = "Thu phí dịch vụ";
-            this.rbThuPhiDichVu.Click += new System.EventHandler(this.rbThuPhiDichVu_Click);
+            this.pnCoCanhBao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnCoCanhBao.Controls.Add(this.ucAnalyzerAlarmList1);
+            this.pnCoCanhBao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnCoCanhBao.Location = new System.Drawing.Point(0, 20);
+            this.pnCoCanhBao.Name = "pnCoCanhBao";
+            this.pnCoCanhBao.Padding = new System.Windows.Forms.Padding(3);
+            this.pnCoCanhBao.Size = new System.Drawing.Size(0, 664);
+            this.pnCoCanhBao.TabIndex = 17;
             // 
-            // rbBaoCaoDoanhThu
+            // ucAnalyzerAlarmList1
             // 
-            this.rbBaoCaoDoanhThu.Name = "rbBaoCaoDoanhThu";
-            this.rbBaoCaoDoanhThu.Size = new System.Drawing.Size(177, 22);
-            this.rbBaoCaoDoanhThu.Text = "Báo cáo doanh thu";
-            this.rbBaoCaoDoanhThu.Click += new System.EventHandler(this.rbBaoCaoDoanhThu_Click);
+            this.ucAnalyzerAlarmList1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucAnalyzerAlarmList1.DataSource = null;
+            this.ucAnalyzerAlarmList1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucAnalyzerAlarmList1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucAnalyzerAlarmList1.Location = new System.Drawing.Point(3, 3);
+            this.ucAnalyzerAlarmList1.Margin = new System.Windows.Forms.Padding(0);
+            this.ucAnalyzerAlarmList1.Name = "ucAnalyzerAlarmList1";
+            this.ucAnalyzerAlarmList1.Size = new System.Drawing.Size(731, 656);
+            this.ucAnalyzerAlarmList1.TabIndex = 0;
             // 
-            // mnuQuanLyGuiMauNoiBo
+            // pnAlarm
             // 
-            this.mnuQuanLyGuiMauNoiBo.Name = "mnuQuanLyGuiMauNoiBo";
-            this.mnuQuanLyGuiMauNoiBo.Size = new System.Drawing.Size(278, 22);
-            this.mnuQuanLyGuiMauNoiBo.Text = "Quản lý gửi mẫu nội bộ";
-            this.mnuQuanLyGuiMauNoiBo.Click += new System.EventHandler(this.mnuQuanLyGuiMauNoiBo_Click);
+            this.pnAlarm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnAlarm.BackColor = System.Drawing.Color.LightGray;
+            this.pnAlarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnAlarm.Controls.Add(this.pnCoCanhBao);
+            this.pnAlarm.Controls.Add(this.panel1);
+            this.pnAlarm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnAlarm.Location = new System.Drawing.Point(1310, 164);
+            this.pnAlarm.Name = "pnAlarm";
+            this.pnAlarm.Size = new System.Drawing.Size(0, 552);
+            this.pnAlarm.TabIndex = 18;
+            // 
+            // rbXetNghiem
+            // 
+            this.rbXetNghiem.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.rbXetNghiem.Appearance.Options.UseFont = true;
+            this.rbXetNghiem.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup6,
+            this.ribbonPageGroup11,
+            this.ribbonPageGroup3,
+            this.rbGroupKetQuaCLSKhac});
+            this.rbXetNghiem.Name = "rbXetNghiem";
+            this.rbXetNghiem.Text = "Trả kết quả";
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup6.ItemLinks.Add(this.rbKetQuaThuongQuy);
+            this.ribbonPageGroup6.ItemLinks.Add(this.rbKQSinhHocPhanTu);
+            this.ribbonPageGroup6.ItemLinks.Add(this.rbInTheoDanhSach);
+            this.ribbonPageGroup6.ItemLinks.Add(this.rbKQViSinhNuoiCay);
+            this.ribbonPageGroup6.ItemLinks.Add(this.rbKetQuaTuiMau);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageGroup6.Text = "Xét nghiệm";
+            // 
+            // rbKetQuaThuongQuy
+            // 
+            this.rbKetQuaThuongQuy.Caption = "Kết quả thường quy";
+            this.rbKetQuaThuongQuy.Id = 11;
+            this.rbKetQuaThuongQuy.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.Clipboard_icon__1_;
+            this.rbKetQuaThuongQuy.Name = "rbKetQuaThuongQuy";
+            this.rbKetQuaThuongQuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbKetQuaThuongQuy_ItemClick);
+            // 
+            // rbKQSinhHocPhanTu
+            // 
+            this.rbKQSinhHocPhanTu.Caption = "Kết quả SHPT";
+            this.rbKQSinhHocPhanTu.Id = 12;
+            this.rbKQSinhHocPhanTu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbKQSinhHocPhanTu.ImageOptions.Image")));
+            this.rbKQSinhHocPhanTu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbKQSinhHocPhanTu.ImageOptions.LargeImage")));
+            this.rbKQSinhHocPhanTu.Name = "rbKQSinhHocPhanTu";
+            this.rbKQSinhHocPhanTu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbKQSinhHocPhanTu_ItemClick);
+            // 
+            // rbInTheoDanhSach
+            // 
+            this.rbInTheoDanhSach.Caption = "In theo danh sách";
+            this.rbInTheoDanhSach.Id = 8;
+            this.rbInTheoDanhSach.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.Printer_green_icon;
+            this.rbInTheoDanhSach.Name = "rbInTheoDanhSach";
+            this.rbInTheoDanhSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbInTheoDanhSach_ItemClick);
+            // 
+            // rbKQViSinhNuoiCay
+            // 
+            this.rbKQViSinhNuoiCay.Caption = "Kết quả vi sinh nuôi cấy";
+            this.rbKQViSinhNuoiCay.Id = 13;
+            this.rbKQViSinhNuoiCay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbKQViSinhNuoiCay.ImageOptions.Image")));
+            this.rbKQViSinhNuoiCay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbKQViSinhNuoiCay.ImageOptions.LargeImage")));
+            this.rbKQViSinhNuoiCay.Name = "rbKQViSinhNuoiCay";
+            this.rbKQViSinhNuoiCay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbKQViSinhNuoiCay_ItemClick);
+            // 
+            // rbKetQuaTuiMau
+            // 
+            this.rbKetQuaTuiMau.Caption = "Kết quả túi máu";
+            this.rbKetQuaTuiMau.Id = 14;
+            this.rbKetQuaTuiMau.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.repertorium_icon;
+            this.rbKetQuaTuiMau.Name = "rbKetQuaTuiMau";
+            this.rbKetQuaTuiMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbKetQuaTuiMau_ItemClick);
+            // 
+            // ribbonPageGroup11
+            // 
+            this.ribbonPageGroup11.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup11.ItemLinks.Add(this.rbLichSuXetNghiem);
+            this.ribbonPageGroup11.ItemLinks.Add(this.rbKQUploadHIS);
+            this.ribbonPageGroup11.ItemLinks.Add(this.rbGuiEMailKetQua);
+            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+            // 
+            // rbLichSuXetNghiem
+            // 
+            this.rbLichSuXetNghiem.Caption = "Lịch sử xét nghiệm";
+            this.rbLichSuXetNghiem.Id = 9;
+            this.rbLichSuXetNghiem.ImageOptions.ImageUri.Uri = "SwitchTimeScalesTo";
+            this.rbLichSuXetNghiem.ImageOptions.LargeImageIndex = 22;
+            this.rbLichSuXetNghiem.Name = "rbLichSuXetNghiem";
+            this.rbLichSuXetNghiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbLichSuXetNghiem_ItemClick);
+            // 
+            // rbKQUploadHIS
+            // 
+            this.rbKQUploadHIS.Caption = "Danh sách upload HIS";
+            this.rbKQUploadHIS.Id = 10;
+            this.rbKQUploadHIS.ImageOptions.ImageIndex = 24;
+            this.rbKQUploadHIS.ImageOptions.ImageUri.Uri = "SendBehindText";
+            this.rbKQUploadHIS.ImageOptions.LargeImageIndex = 24;
+            this.rbKQUploadHIS.Name = "rbKQUploadHIS";
+            this.rbKQUploadHIS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbKQUploadHIS_ItemClick);
+            // 
+            // rbGuiEMailKetQua
+            // 
+            this.rbGuiEMailKetQua.Caption = "Gửi kết quả qua Email ";
+            this.rbGuiEMailKetQua.Id = 4;
+            this.rbGuiEMailKetQua.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.Mail_icon__1_;
+            this.rbGuiEMailKetQua.Name = "rbGuiEMailKetQua";
+            this.rbGuiEMailKetQua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbGuiEMailKetQua_ItemClick);
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.rbQLXNCB);
+            this.ribbonPageGroup3.ItemLinks.Add(this.rbQLXNG);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Quản lý xét nghiệm";
+            this.ribbonPageGroup3.Visible = false;
+            // 
+            // rbQLXNCB
+            // 
+            this.rbQLXNCB.Caption = "Quản lý xét nghiệm cảnh báo";
+            this.rbQLXNCB.Id = 25;
+            this.rbQLXNCB.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbQLXNCB.ImageOptions.LargeImage")));
+            this.rbQLXNCB.Name = "rbQLXNCB";
+            this.rbQLXNCB.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbQLXNCB_ItemClick);
+            // 
+            // rbQLXNG
+            // 
+            this.rbQLXNG.Caption = "Quản lý xét nghiệm gửi";
+            this.rbQLXNG.Id = 26;
+            this.rbQLXNG.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbQLXNG.ImageOptions.Image")));
+            this.rbQLXNG.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbQLXNG.ImageOptions.LargeImage")));
+            this.rbQLXNG.Name = "rbQLXNG";
+            this.rbQLXNG.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbQLXNG_ItemClick);
+            // 
+            // rbGroupKetQuaCLSKhac
+            // 
+            this.rbGroupKetQuaCLSKhac.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.rbGroupKetQuaCLSKhac.ItemLinks.Add(this.rbKetQuSieuAm);
+            this.rbGroupKetQuaCLSKhac.ItemLinks.Add(this.rbNoiSoi);
+            this.rbGroupKetQuaCLSKhac.ItemLinks.Add(this.rbXQuang);
+            this.rbGroupKetQuaCLSKhac.ItemLinks.Add(this.rbDichVuKhac);
+            this.rbGroupKetQuaCLSKhac.Name = "rbGroupKetQuaCLSKhac";
+            this.rbGroupKetQuaCLSKhac.Text = "Chẩn đoán hình ảnh";
+            // 
+            // rbKetQuSieuAm
+            // 
+            this.rbKetQuSieuAm.Caption = "Siêu âm";
+            this.rbKetQuSieuAm.Id = 15;
+            this.rbKetQuSieuAm.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.System_Security_Reader_1_icon;
+            this.rbKetQuSieuAm.Name = "rbKetQuSieuAm";
+            // 
+            // rbNoiSoi
+            // 
+            this.rbNoiSoi.Caption = "Nội soi";
+            this.rbNoiSoi.Id = 16;
+            this.rbNoiSoi.ImageOptions.ImageUri.Uri = "BehindText";
+            this.rbNoiSoi.Name = "rbNoiSoi";
+            // 
+            // rbXQuang
+            // 
+            this.rbXQuang.Caption = "X Quang";
+            this.rbXQuang.Id = 17;
+            this.rbXQuang.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.Healthcare_Scan_Body_icon;
+            this.rbXQuang.Name = "rbXQuang";
+            // 
+            // rbDichVuKhac
+            // 
+            this.rbDichVuKhac.Caption = "DV khác";
+            this.rbDichVuKhac.Id = 18;
+            this.rbDichVuKhac.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.Folder_Options_icon;
+            this.rbDichVuKhac.Name = "rbDichVuKhac";
+            this.rbDichVuKhac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbDichVuKhac_ItemClick);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.ribbonPage1.Appearance.Options.UseFont = true;
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup14,
+            this.ribbonPageGroup4});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Bệnh nhân";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup1.ItemLinks.Add(this.rbTiepNhanBenhNhan);
+            this.ribbonPageGroup1.ItemLinks.Add(this.rbTiepNhanHIS);
+            this.ribbonPageGroup1.ItemLinks.Add(this.rbTimKiem);
+            this.ribbonPageGroup1.ItemLinks.Add(this.rabCapNhatThongTinTuHis);
+            this.ribbonPageGroup1.ItemLinks.Add(this.rbCapSoThuTu);
+            this.ribbonPageGroup1.ItemLinks.Add(this.rbNhapDanhSach);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Thông tin bệnh nhân";
+            // 
+            // rbTiepNhanBenhNhan
+            // 
+            this.rbTiepNhanBenhNhan.Caption = "Tiếp nhận";
+            this.rbTiepNhanBenhNhan.Id = 1;
+            this.rbTiepNhanBenhNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbTiepNhanBenhNhan.ImageOptions.Image")));
+            this.rbTiepNhanBenhNhan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbTiepNhanBenhNhan.ImageOptions.LargeImage")));
+            this.rbTiepNhanBenhNhan.Name = "rbTiepNhanBenhNhan";
+            this.rbTiepNhanBenhNhan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbTiepNhanBenhNhan_ItemClick);
+            // 
+            // rbTiepNhanHIS
+            // 
+            this.rbTiepNhanHIS.Caption = "Tiếp nhận từ HIS";
+            this.rbTiepNhanHIS.Id = 1;
+            this.rbTiepNhanHIS.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbTiepNhanHIS.ImageOptions.Image")));
+            this.rbTiepNhanHIS.ImageOptions.ImageUri.Uri = "AddNewDataSource";
+            this.rbTiepNhanHIS.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbTiepNhanHIS.ImageOptions.LargeImage")));
+            this.rbTiepNhanHIS.Name = "rbTiepNhanHIS";
+            this.rbTiepNhanHIS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbTiepNhanHIS_ItemClick);
+            // 
+            // rbTimKiem
+            // 
+            this.rbTimKiem.Caption = "Tìm kiếm";
+            this.rbTimKiem.Id = 2;
+            this.rbTimKiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbTimKiem.ImageOptions.Image")));
+            this.rbTimKiem.ImageOptions.ImageUri.Uri = "Find";
+            this.rbTimKiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbTimKiem.ImageOptions.LargeImage")));
+            this.rbTimKiem.Name = "rbTimKiem";
+            this.rbTimKiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbTimKiem_ItemClick);
+            // 
+            // rabCapNhatThongTinTuHis
+            // 
+            this.rabCapNhatThongTinTuHis.Caption = "Cập nhật thông tin từ HIS";
+            this.rabCapNhatThongTinTuHis.Id = 10;
+            this.rabCapNhatThongTinTuHis.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rabCapNhatThongTinTuHis.ImageOptions.Image")));
+            this.rabCapNhatThongTinTuHis.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rabCapNhatThongTinTuHis.ImageOptions.LargeImage")));
+            this.rabCapNhatThongTinTuHis.Name = "rabCapNhatThongTinTuHis";
+            this.rabCapNhatThongTinTuHis.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rabCapNhatThongTinTuHis_ItemClick);
+            // 
+            // rbCapSoThuTu
+            // 
+            this.rbCapSoThuTu.Caption = "Cấp số thứ tự (HIS)";
+            this.rbCapSoThuTu.Id = 29;
+            this.rbCapSoThuTu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbCapSoThuTu.ImageOptions.Image")));
+            this.rbCapSoThuTu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbCapSoThuTu.ImageOptions.LargeImage")));
+            this.rbCapSoThuTu.Name = "rbCapSoThuTu";
+            this.rbCapSoThuTu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbCapSoThuTu_ItemClick);
+            // 
+            // rbNhapDanhSach
+            // 
+            this.rbNhapDanhSach.Caption = "Nhập theo danh sách";
+            this.rbNhapDanhSach.Id = 14;
+            this.rbNhapDanhSach.ImageOptions.ImageUri.Uri = "AddItem";
+            this.rbNhapDanhSach.Name = "rbNhapDanhSach";
+            this.rbNhapDanhSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbNhapDanhSach_ItemClick);
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup2.ItemLinks.Add(this.rdGopBarcode);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbDangNhapLayMau);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbBanLayMau);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbInbaracodeKSK);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbLayMau);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbChuyenMau);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbNhanMau);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbTheoDoiMau);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbChuyenKetQua);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbNhanPhieuKetQua);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbXacNhanTraKetQua);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbLuuMau);
+            this.ribbonPageGroup2.ItemLinks.Add(this.rbHuyMauLuu);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Mẫu xét nghiệm";
+            // 
+            // rdGopBarcode
+            // 
+            this.rdGopBarcode.Caption = "Gộp barcode";
+            this.rdGopBarcode.Id = 16;
+            this.rdGopBarcode.ImageOptions.Image = global::TPH.LIS.App.Properties.Resources.attendanceicon;
+            this.rdGopBarcode.Name = "rdGopBarcode";
+            this.rdGopBarcode.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rdGopBarcode_ItemClick);
+            // 
+            // rbDangNhapLayMau
+            // 
+            this.rbDangNhapLayMau.Caption = "Đăng nhập lấy mẫu";
+            this.rbDangNhapLayMau.Id = 4;
+            this.rbDangNhapLayMau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbDangNhapLayMau.ImageOptions.Image")));
+            this.rbDangNhapLayMau.Name = "rbDangNhapLayMau";
+            this.rbDangNhapLayMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbDangNhapLayMau_ItemClick);
+            // 
+            // rbBanLayMau
+            // 
+            this.rbBanLayMau.Caption = "Bàn lấy mẫu";
+            this.rbBanLayMau.Id = 5;
+            this.rbBanLayMau.ImageOptions.Image = global::TPH.LIS.App.Properties.Resources.Add_Tubes_48x48;
+            this.rbBanLayMau.Name = "rbBanLayMau";
+            this.rbBanLayMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBanLayMau_ItemClick);
+            // 
+            // rbInbaracodeKSK
+            // 
+            this.rbInbaracodeKSK.Caption = "In barcode Khám sức khỏe";
+            this.rbInbaracodeKSK.Id = 4;
+            this.rbInbaracodeKSK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbInbaracodeKSK.ImageOptions.Image")));
+            this.rbInbaracodeKSK.Name = "rbInbaracodeKSK";
+            this.rbInbaracodeKSK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbInbaracodeKSK_ItemClick);
+            // 
+            // rbLayMau
+            // 
+            this.rbLayMau.Caption = "Lấy mẫu";
+            this.rbLayMau.Id = 2;
+            this.rbLayMau.ImageOptions.Image = global::TPH.LIS.App.Properties.Resources.blood_drop_icon__1_;
+            this.rbLayMau.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.blood_drop_icon__1_;
+            this.rbLayMau.Name = "rbLayMau";
+            this.rbLayMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbLayMau_ItemClick);
+            // 
+            // rbChuyenMau
+            // 
+            this.rbChuyenMau.Caption = "Chuyển mẫu";
+            this.rbChuyenMau.Id = 3;
+            this.rbChuyenMau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbChuyenMau.ImageOptions.Image")));
+            this.rbChuyenMau.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbChuyenMau.ImageOptions.LargeImage")));
+            this.rbChuyenMau.Name = "rbChuyenMau";
+            this.rbChuyenMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbChuyenMau_ItemClick);
+            // 
+            // rbNhanMau
+            // 
+            this.rbNhanMau.Caption = "Nhận mẫu";
+            this.rbNhanMau.Id = 3;
+            this.rbNhanMau.ImageOptions.Image = global::TPH.LIS.App.Properties.Resources.tubes_icon;
+            this.rbNhanMau.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.tubes_icon;
+            this.rbNhanMau.Name = "rbNhanMau";
+            this.rbNhanMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbNhanMau_ItemClick);
+            // 
+            // rbTheoDoiMau
+            // 
+            this.rbTheoDoiMau.Caption = "Theo dõi mẫu";
+            this.rbTheoDoiMau.Id = 6;
+            this.rbTheoDoiMau.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.green_ok_icon;
+            this.rbTheoDoiMau.Name = "rbTheoDoiMau";
+            this.rbTheoDoiMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbTheoDoiMau_ItemClick);
+            // 
+            // rbChuyenKetQua
+            // 
+            this.rbChuyenKetQua.Caption = "Chuyển phiếu KQ XN";
+            this.rbChuyenKetQua.Id = 5;
+            this.rbChuyenKetQua.ImageOptions.Image = global::TPH.LIS.App.Properties.Resources.forward1;
+            this.rbChuyenKetQua.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.forward2;
+            this.rbChuyenKetQua.Name = "rbChuyenKetQua";
+            this.rbChuyenKetQua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbChuyenKetQua_ItemClick);
+            // 
+            // rbNhanPhieuKetQua
+            // 
+            this.rbNhanPhieuKetQua.Caption = "Nhận phiếu kết quả";
+            this.rbNhanPhieuKetQua.Id = 7;
+            this.rbNhanPhieuKetQua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbNhanPhieuKetQua.ImageOptions.Image")));
+            this.rbNhanPhieuKetQua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbNhanPhieuKetQua.ImageOptions.LargeImage")));
+            this.rbNhanPhieuKetQua.Name = "rbNhanPhieuKetQua";
+            this.rbNhanPhieuKetQua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbNhanPhieuKetQua_ItemClick);
+            // 
+            // rbXacNhanTraKetQua
+            // 
+            this.rbXacNhanTraKetQua.Caption = "Trả phiếu KQ XN";
+            this.rbXacNhanTraKetQua.Id = 6;
+            this.rbXacNhanTraKetQua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbXacNhanTraKetQua.ImageOptions.Image")));
+            this.rbXacNhanTraKetQua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbXacNhanTraKetQua.ImageOptions.LargeImage")));
+            this.rbXacNhanTraKetQua.Name = "rbXacNhanTraKetQua";
+            this.rbXacNhanTraKetQua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbXacNhanTraKetQua_ItemClick);
+            // 
+            // rbLuuMau
+            // 
+            this.rbLuuMau.Caption = "Lưu mẫu";
+            this.rbLuuMau.Id = 8;
+            this.rbLuuMau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbLuuMau.ImageOptions.Image")));
+            this.rbLuuMau.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbLuuMau.ImageOptions.LargeImage")));
+            this.rbLuuMau.Name = "rbLuuMau";
+            this.rbLuuMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbLuuMau_ItemClick);
+            // 
+            // rbHuyMauLuu
+            // 
+            this.rbHuyMauLuu.Caption = "Hủy mẫu lưu";
+            this.rbHuyMauLuu.Id = 9;
+            this.rbHuyMauLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbHuyMauLuu.ImageOptions.Image")));
+            this.rbHuyMauLuu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbHuyMauLuu.ImageOptions.LargeImage")));
+            this.rbHuyMauLuu.Name = "rbHuyMauLuu";
+            this.rbHuyMauLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbHuyMauLuu_ItemClick);
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup14.ItemLinks.Add(this.rbNhatKy);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            // 
+            // rbNhatKy
+            // 
+            this.rbNhatKy.Caption = "Nhật ký";
+            this.rbNhatKy.Id = 11;
+            this.rbNhatKy.ImageOptions.ImageUri.Uri = "Today";
+            this.rbNhatKy.ImageOptions.LargeImageIndex = 57;
+            this.rbNhatKy.Name = "rbNhatKy";
+            this.rbNhatKy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbNhatKy_ItemClick);
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup4.ItemLinks.Add(this.rbThuPhi);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            // 
+            // rbThuPhi
+            // 
+            this.rbThuPhi.Caption = "Thu phí dịch vụ";
+            this.rbThuPhi.Id = 7;
+            this.rbThuPhi.ImageOptions.ImageUri.Uri = "Currency";
+            this.rbThuPhi.ImageOptions.LargeImageIndex = 15;
+            this.rbThuPhi.Name = "rbThuPhi";
+            this.rbThuPhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbThuPhi_ItemClick);
+            // 
+            // rbMainMenu
+            // 
+            this.rbMainMenu.ButtonGroupsVertAlign = DevExpress.Utils.VertAlignment.Center;
+            this.rbMainMenu.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Green;
+            this.rbMainMenu.ExpandCollapseItem.Id = 0;
+            this.rbMainMenu.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMainMenu.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.rbMainMenu.ExpandCollapseItem,
+            this.rbMainMenu.SearchEditItem,
+            this.rbTiepNhanHIS,
+            this.rbLayMau,
+            this.rbChuyenMau,
+            this.rbTiepNhanBenhNhan,
+            this.rbTimKiem,
+            this.rbNhanMau,
+            this.rbInbaracodeKSK,
+            this.rbBanLayMau,
+            this.rbTheoDoiMau,
+            this.rbThuPhi,
+            this.rbInTheoDanhSach,
+            this.rbLichSuXetNghiem,
+            this.rbKQUploadHIS,
+            this.rbKetQuaThuongQuy,
+            this.rbKQSinhHocPhanTu,
+            this.rbKQViSinhNuoiCay,
+            this.rbKetQuaTuiMau,
+            this.rbKetQuSieuAm,
+            this.rbNoiSoi,
+            this.rbXQuang,
+            this.rbDichVuKhac,
+            this.rbThongKeTongHopXn,
+            this.rbXuatKetQua,
+            this.rbDashboard,
+            this.rbDanhMucXetNghiem,
+            this.rbDanhMucLoaiMau,
+            this.rbTinhTrangMauLyDo,
+            this.rbCauHinhPhieuIn,
+            this.rbMayIn,
+            this.rbDmHenTraKetQua,
+            this.rbCauHinhHeThong,
+            this.rbCaiDatKetNoiHis,
+            this.rbDanhMucKetNoiHIS,
+            this.rbDanhMucViSinh,
+            this.rbBienDichKetQua,
+            this.rbKhuVuc,
+            this.rbTieuDeTrangIn,
+            this.rbDangKy,
+            this.rbDanhMucMaMayXetNghiem,
+            this.rbCapNhatPhanMem,
+            this.rbThongTinMayXN,
+            this.rbGuiEMailKetQua,
+            this.rbDoituongDichVu,
+            this.rbKhoaPhong,
+            this.rbNhanVien,
+            this.rbNguoiDung,
+            this.rbDoiMatKhau,
+            this.rbMayInBarCode,
+            this.rbNhatKy,
+            this.rbTembarcode,
+            this.barButtonItem3,
+            this.rbMauReport2,
+            this.rbDangNhapLayMau,
+            this.rbChuyenKetQua,
+            this.rbXacNhanTraKetQua,
+            this.rbNhanPhieuKetQua,
+            this.rbLuuMau,
+            this.rbHuyMauLuu,
+            this.rabCapNhatThongTinTuHis,
+            this.rbNhapDanhSach,
+            this.rdGopBarcode,
+            this.rbQLXNCB,
+            this.rbQLXNG,
+            this.rbTuLuuMau,
+            this.rbMaPPingMaMyXnViSinh,
+            this.rbCapSoThuTu});
+            this.rbMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.rbMainMenu.MaxItemId = 30;
+            this.rbMainMenu.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Never;
+            this.rbMainMenu.Name = "rbMainMenu";
+            this.rbMainMenu.OptionsCustomizationForm.FormIcon = ((System.Drawing.Icon)(resources.GetObject("resource.FormIcon")));
+            this.rbMainMenu.OptionsPageCategories.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageCategoryAlignment.Left;
+            this.rbMainMenu.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage1,
+            this.rbXetNghiem,
+            this.ribbonPage2,
+            this.ribbonPage3});
+            this.rbMainMenu.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
+            this.rbMainMenu.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
+            this.rbMainMenu.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.True;
+            this.rbMainMenu.ShowQatLocationSelector = false;
+            this.rbMainMenu.Size = new System.Drawing.Size(1320, 160);
+            // 
+            // rbThongKeTongHopXn
+            // 
+            this.rbThongKeTongHopXn.Caption = "Thống kê xét nghiệm";
+            this.rbThongKeTongHopXn.Id = 19;
+            this.rbThongKeTongHopXn.ImageOptions.ImageUri.Uri = "Pie";
+            this.rbThongKeTongHopXn.Name = "rbThongKeTongHopXn";
+            this.rbThongKeTongHopXn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbThongKeTongHopXn_ItemClick);
+            // 
+            // rbXuatKetQua
+            // 
+            this.rbXuatKetQua.Caption = "Xuất kết quả";
+            this.rbXuatKetQua.Id = 20;
+            this.rbXuatKetQua.ImageOptions.Image = global::TPH.LIS.App.Properties.Resources.Microsoft_Excel_2013_icon;
+            this.rbXuatKetQua.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.Microsoft_Excel_2013_icon;
+            this.rbXuatKetQua.Name = "rbXuatKetQua";
+            this.rbXuatKetQua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbXuatKetQua_ItemClick);
+            // 
+            // rbDashboard
+            // 
+            this.rbDashboard.Caption = "Bảng tổng hợp nhanh";
+            this.rbDashboard.Id = 21;
+            this.rbDashboard.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.fusion_tables_icon;
+            this.rbDashboard.Name = "rbDashboard";
+            this.rbDashboard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbDashboard_ItemClick);
+            // 
+            // rbDanhMucXetNghiem
+            // 
+            this.rbDanhMucXetNghiem.Caption = "Danh mục xét nghiệm";
+            this.rbDanhMucXetNghiem.Id = 22;
+            this.rbDanhMucXetNghiem.ImageOptions.ImageUri.Uri = "ListBullets";
+            this.rbDanhMucXetNghiem.ImageOptions.LargeImageIndex = 35;
+            this.rbDanhMucXetNghiem.Name = "rbDanhMucXetNghiem";
+            this.rbDanhMucXetNghiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbDanhMucXetNghiem_ItemClick);
+            // 
+            // rbDanhMucLoaiMau
+            // 
+            this.rbDanhMucLoaiMau.Caption = "Danh mục loại mẫu";
+            this.rbDanhMucLoaiMau.Id = 23;
+            this.rbDanhMucLoaiMau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbDanhMucLoaiMau.ImageOptions.Image")));
+            this.rbDanhMucLoaiMau.Name = "rbDanhMucLoaiMau";
+            this.rbDanhMucLoaiMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbDanhMucLoaiMau_ItemClick);
+            // 
+            // rbTinhTrangMauLyDo
+            // 
+            this.rbTinhTrangMauLyDo.Caption = "Tình trạng mẫu - lý do";
+            this.rbTinhTrangMauLyDo.Id = 24;
+            this.rbTinhTrangMauLyDo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbTinhTrangMauLyDo.ImageOptions.Image")));
+            this.rbTinhTrangMauLyDo.Name = "rbTinhTrangMauLyDo";
+            this.rbTinhTrangMauLyDo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbTinhTrangMauLyDo_ItemClick);
+            // 
+            // rbCauHinhPhieuIn
+            // 
+            this.rbCauHinhPhieuIn.Caption = "Phiếu kết quả";
+            this.rbCauHinhPhieuIn.Id = 25;
+            this.rbCauHinhPhieuIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbCauHinhPhieuIn.ImageOptions.Image")));
+            this.rbCauHinhPhieuIn.Name = "rbCauHinhPhieuIn";
+            this.rbCauHinhPhieuIn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbCauHinhPhieuIn_ItemClick);
+            // 
+            // rbMayIn
+            // 
+            this.rbMayIn.Caption = "Máy in kết quả";
+            this.rbMayIn.Id = 26;
+            this.rbMayIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbMayIn.ImageOptions.Image")));
+            this.rbMayIn.Name = "rbMayIn";
+            this.rbMayIn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbMayIn_ItemClick);
+            // 
+            // rbDmHenTraKetQua
+            // 
+            this.rbDmHenTraKetQua.Caption = "Hẹn trả kết quả";
+            this.rbDmHenTraKetQua.Id = 27;
+            this.rbDmHenTraKetQua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbDmHenTraKetQua.ImageOptions.Image")));
+            this.rbDmHenTraKetQua.Name = "rbDmHenTraKetQua";
+            this.rbDmHenTraKetQua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbDmHenTraKetQua_ItemClick);
+            // 
+            // rbCauHinhHeThong
+            // 
+            this.rbCauHinhHeThong.Caption = "Cấu hình hệ thống";
+            this.rbCauHinhHeThong.Id = 1;
+            this.rbCauHinhHeThong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbCauHinhHeThong.ImageOptions.Image")));
+            this.rbCauHinhHeThong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbCauHinhHeThong.ImageOptions.LargeImage")));
+            this.rbCauHinhHeThong.Name = "rbCauHinhHeThong";
+            this.rbCauHinhHeThong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbCauHinhHeThong_ItemClick);
+            // 
+            // rbCaiDatKetNoiHis
+            // 
+            this.rbCaiDatKetNoiHis.Caption = "Cài đặt kết nối HIS";
+            this.rbCaiDatKetNoiHis.Id = 2;
+            this.rbCaiDatKetNoiHis.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbCaiDatKetNoiHis.ImageOptions.Image")));
+            this.rbCaiDatKetNoiHis.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbCaiDatKetNoiHis.ImageOptions.LargeImage")));
+            this.rbCaiDatKetNoiHis.Name = "rbCaiDatKetNoiHis";
+            this.rbCaiDatKetNoiHis.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbCaiDatKetNoiHis_ItemClick);
+            // 
+            // rbDanhMucKetNoiHIS
+            // 
+            this.rbDanhMucKetNoiHIS.Caption = "Mapping danh mục HIS";
+            this.rbDanhMucKetNoiHIS.Id = 3;
+            this.rbDanhMucKetNoiHIS.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbDanhMucKetNoiHIS.ImageOptions.Image")));
+            this.rbDanhMucKetNoiHIS.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbDanhMucKetNoiHIS.ImageOptions.LargeImage")));
+            this.rbDanhMucKetNoiHIS.Name = "rbDanhMucKetNoiHIS";
+            this.rbDanhMucKetNoiHIS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbDanhMucKetNoiHIS_ItemClick);
+            // 
+            // rbDanhMucViSinh
+            // 
+            this.rbDanhMucViSinh.Caption = "Danh mục vi sinh";
+            this.rbDanhMucViSinh.Id = 4;
+            this.rbDanhMucViSinh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbDanhMucViSinh.ImageOptions.Image")));
+            this.rbDanhMucViSinh.Name = "rbDanhMucViSinh";
+            this.rbDanhMucViSinh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbDanhMucViSinh_ItemClick);
+            // 
+            // rbBienDichKetQua
+            // 
+            this.rbBienDichKetQua.Caption = "Biên dịch kết quả";
+            this.rbBienDichKetQua.Id = 5;
+            this.rbBienDichKetQua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbBienDichKetQua.ImageOptions.Image")));
+            this.rbBienDichKetQua.Name = "rbBienDichKetQua";
+            this.rbBienDichKetQua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBienDichKetQua_ItemClick);
+            // 
+            // rbKhuVuc
+            // 
+            this.rbKhuVuc.Caption = "Khu vực - máy tính";
+            this.rbKhuVuc.Id = 6;
+            this.rbKhuVuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbKhuVuc.ImageOptions.Image")));
+            this.rbKhuVuc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbKhuVuc.ImageOptions.LargeImage")));
+            this.rbKhuVuc.Name = "rbKhuVuc";
+            this.rbKhuVuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbKhuVuc_ItemClick);
+            // 
+            // rbTieuDeTrangIn
+            // 
+            this.rbTieuDeTrangIn.Caption = "Tiêu đề trang in";
+            this.rbTieuDeTrangIn.Id = 7;
+            this.rbTieuDeTrangIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbTieuDeTrangIn.ImageOptions.Image")));
+            this.rbTieuDeTrangIn.Name = "rbTieuDeTrangIn";
+            this.rbTieuDeTrangIn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbTieuDeTrangIn_ItemClick);
+            // 
+            // rbDangKy
+            // 
+            this.rbDangKy.Caption = "Đăng ký";
+            this.rbDangKy.Id = 8;
+            this.rbDangKy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbDangKy.ImageOptions.Image")));
+            this.rbDangKy.ImageOptions.ImageIndex = 45;
+            this.rbDangKy.Name = "rbDangKy";
+            this.rbDangKy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbDangKy_ItemClick);
+            // 
+            // rbDanhMucMaMayXetNghiem
+            // 
+            this.rbDanhMucMaMayXetNghiem.Caption = "Mapping mã máy XN";
+            this.rbDanhMucMaMayXetNghiem.Id = 10;
+            this.rbDanhMucMaMayXetNghiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbDanhMucMaMayXetNghiem.ImageOptions.Image")));
+            this.rbDanhMucMaMayXetNghiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbDanhMucMaMayXetNghiem.ImageOptions.LargeImage")));
+            this.rbDanhMucMaMayXetNghiem.Name = "rbDanhMucMaMayXetNghiem";
+            this.rbDanhMucMaMayXetNghiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbDanhMucMayXetNghiem_ItemClick);
+            // 
+            // rbCapNhatPhanMem
+            // 
+            this.rbCapNhatPhanMem.Caption = "Cập nhật  ứng dụng";
+            this.rbCapNhatPhanMem.Id = 2;
+            this.rbCapNhatPhanMem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbCapNhatPhanMem.ImageOptions.Image")));
+            this.rbCapNhatPhanMem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbCapNhatPhanMem.ImageOptions.LargeImage")));
+            this.rbCapNhatPhanMem.Name = "rbCapNhatPhanMem";
+            this.rbCapNhatPhanMem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbCapNhatPhanMem_ItemClick);
+            // 
+            // rbThongTinMayXN
+            // 
+            this.rbThongTinMayXN.Caption = "Thông tin máy XN";
+            this.rbThongTinMayXN.Id = 3;
+            this.rbThongTinMayXN.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbThongTinMayXN.ImageOptions.Image")));
+            this.rbThongTinMayXN.Name = "rbThongTinMayXN";
+            this.rbThongTinMayXN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbThongTinMayXN_ItemClick);
+            // 
+            // rbDoituongDichVu
+            // 
+            this.rbDoituongDichVu.Caption = "Đối tượng";
+            this.rbDoituongDichVu.Id = 5;
+            this.rbDoituongDichVu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbDoituongDichVu.ImageOptions.Image")));
+            this.rbDoituongDichVu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbDoituongDichVu.ImageOptions.LargeImage")));
+            this.rbDoituongDichVu.Name = "rbDoituongDichVu";
+            this.rbDoituongDichVu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbDoituongDichVu_ItemClick);
+            // 
+            // rbKhoaPhong
+            // 
+            this.rbKhoaPhong.Caption = "Khoa phòng";
+            this.rbKhoaPhong.Id = 6;
+            this.rbKhoaPhong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbKhoaPhong.ImageOptions.Image")));
+            this.rbKhoaPhong.Name = "rbKhoaPhong";
+            this.rbKhoaPhong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbKhoaPhong_ItemClick);
+            // 
+            // rbNhanVien
+            // 
+            this.rbNhanVien.Caption = "Nhân viên";
+            this.rbNhanVien.Id = 7;
+            this.rbNhanVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbNhanVien.ImageOptions.Image")));
+            this.rbNhanVien.Name = "rbNhanVien";
+            this.rbNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbNhanVien_ItemClick);
+            // 
+            // rbNguoiDung
+            // 
+            this.rbNguoiDung.Caption = "Người dùng";
+            this.rbNguoiDung.Id = 8;
+            this.rbNguoiDung.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbNguoiDung.ImageOptions.Image")));
+            this.rbNguoiDung.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbNguoiDung.ImageOptions.LargeImage")));
+            this.rbNguoiDung.Name = "rbNguoiDung";
+            this.rbNguoiDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbNguoiDung_ItemClick);
+            // 
+            // rbDoiMatKhau
+            // 
+            this.rbDoiMatKhau.Caption = "Đổi mật khẩu";
+            this.rbDoiMatKhau.Id = 9;
+            this.rbDoiMatKhau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbDoiMatKhau.ImageOptions.Image")));
+            this.rbDoiMatKhau.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbDoiMatKhau.ImageOptions.LargeImage")));
+            this.rbDoiMatKhau.Name = "rbDoiMatKhau";
+            this.rbDoiMatKhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
+            // rbMayInBarCode
+            // 
+            this.rbMayInBarCode.Caption = "Máy in barcode";
+            this.rbMayInBarCode.Id = 10;
+            this.rbMayInBarCode.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbMayInBarCode.ImageOptions.Image")));
+            this.rbMayInBarCode.Name = "rbMayInBarCode";
+            this.rbMayInBarCode.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbMayInBarCode_ItemClick);
+            // 
+            // rbTembarcode
+            // 
+            this.rbTembarcode.Caption = "Tem Barcode";
+            this.rbTembarcode.Id = 1;
+            this.rbTembarcode.ImageOptions.Image = global::TPH.LIS.App.Properties.Resources.barcodes_16x16;
+            this.rbTembarcode.Name = "rbTembarcode";
+            this.rbTembarcode.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbTembarcode_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 2;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // rbMauReport2
+            // 
+            this.rbMauReport2.Caption = "Mẫu report";
+            this.rbMauReport2.Id = 3;
+            this.rbMauReport2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbMauReport2.ImageOptions.Image")));
+            this.rbMauReport2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbMauReport2.ImageOptions.LargeImage")));
+            this.rbMauReport2.Name = "rbMauReport2";
+            this.rbMauReport2.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.rbMauReport2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbMauReport2_ItemClick);
+            // 
+            // rbTuLuuMau
+            // 
+            this.rbTuLuuMau.Caption = "Tủ lưu mẫu";
+            this.rbTuLuuMau.Id = 27;
+            this.rbTuLuuMau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbTuLuuMau.ImageOptions.Image")));
+            this.rbTuLuuMau.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbTuLuuMau.ImageOptions.LargeImage")));
+            this.rbTuLuuMau.Name = "rbTuLuuMau";
+            this.rbTuLuuMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbTuLuuMau_ItemClick);
+            // 
+            // rbMaPPingMaMyXnViSinh
+            // 
+            this.rbMaPPingMaMyXnViSinh.Caption = "Mapping mã máy XN vi sinh";
+            this.rbMaPPingMaMyXnViSinh.Id = 28;
+            this.rbMaPPingMaMyXnViSinh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbMaPPingMaMyXnViSinh.ImageOptions.Image")));
+            this.rbMaPPingMaMyXnViSinh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbMaPPingMaMyXnViSinh.ImageOptions.LargeImage")));
+            this.rbMaPPingMaMyXnViSinh.Name = "rbMaPPingMaMyXnViSinh";
+            this.rbMaPPingMaMyXnViSinh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbMaPPingMaMyXnViSinh_ItemClick);
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.ribbonPage2.Appearance.Options.UseFont = true;
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup5});
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "Báo cáo";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup5.ItemLinks.Add(this.rbThongKeTongHopXn);
+            this.ribbonPageGroup5.ItemLinks.Add(this.rbXuatKetQua);
+            this.ribbonPageGroup5.ItemLinks.Add(this.rbDashboard);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.ribbonPage3.Appearance.Options.UseFont = true;
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup7,
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup9,
+            this.ribbonPageGroup10,
+            this.ribbonPageGroup13,
+            this.ribbonPageGroup8});
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "Cấu hình";
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup7.ItemLinks.Add(this.rbDanhMucXetNghiem);
+            this.ribbonPageGroup7.ItemLinks.Add(this.rbDanhMucLoaiMau);
+            this.ribbonPageGroup7.ItemLinks.Add(this.rbTinhTrangMauLyDo);
+            this.ribbonPageGroup7.ItemLinks.Add(this.rbCauHinhPhieuIn);
+            this.ribbonPageGroup7.ItemLinks.Add(this.rbDmHenTraKetQua);
+            this.ribbonPageGroup7.ItemLinks.Add(this.rbMayIn);
+            this.ribbonPageGroup7.ItemLinks.Add(this.rbDanhMucViSinh);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.Text = "Danh mục xét nghiệm";
+            // 
+            // ribbonPageGroup12
+            // 
+            this.ribbonPageGroup12.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup12.ItemLinks.Add(this.rbDoituongDichVu);
+            this.ribbonPageGroup12.ItemLinks.Add(this.rbKhoaPhong);
+            this.ribbonPageGroup12.ItemLinks.Add(this.rbNhanVien);
+            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            this.ribbonPageGroup12.Text = "Hành chính";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup9.ItemLinks.Add(this.rbDanhMucMaMayXetNghiem);
+            this.ribbonPageGroup9.ItemLinks.Add(this.rbThongTinMayXN);
+            this.ribbonPageGroup9.ItemLinks.Add(this.rbBienDichKetQua);
+            this.ribbonPageGroup9.ItemLinks.Add(this.rbMayInBarCode);
+            this.ribbonPageGroup9.ItemLinks.Add(this.rbMaPPingMaMyXnViSinh);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            this.ribbonPageGroup9.Text = "Thiết bị";
+            // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup10.ItemLinks.Add(this.rbCaiDatKetNoiHis);
+            this.ribbonPageGroup10.ItemLinks.Add(this.rbDanhMucKetNoiHIS);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            this.ribbonPageGroup10.Text = "Kết nối HIS";
+            // 
+            // ribbonPageGroup13
+            // 
+            this.ribbonPageGroup13.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup13.ItemLinks.Add(this.rbNguoiDung);
+            this.ribbonPageGroup13.ItemLinks.Add(this.rbDoiMatKhau);
+            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            this.ribbonPageGroup13.Text = "Người dùng";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup8.ItemLinks.Add(this.rbCauHinhHeThong);
+            this.ribbonPageGroup8.ItemLinks.Add(this.rbKhuVuc);
+            this.ribbonPageGroup8.ItemLinks.Add(this.rbTembarcode);
+            this.ribbonPageGroup8.ItemLinks.Add(this.rbTieuDeTrangIn);
+            this.ribbonPageGroup8.ItemLinks.Add(this.rbDangKy);
+            this.ribbonPageGroup8.ItemLinks.Add(this.rbCapNhatPhanMem);
+            this.ribbonPageGroup8.ItemLinks.Add(this.rbMauReport2);
+            this.ribbonPageGroup8.ItemLinks.Add(this.rbTuLuuMau);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "Hệ thống";
+            // 
+            // mnSub
+            // 
+            this.mnSub.ActiveGroup = this.nbgModules;
+            this.mnSub.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mnSub.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.nbgModules});
+            this.mnSub.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.btnHomeScreen,
+            this.tsbLayMau,
+            this.tsbChuyenMau,
+            this.tsbNhanMau,
+            this.tsbKetQuaXN,
+            this.btnTimBenhNhan,
+            this.btnTiepNhanHis,
+            this.btnLogOut,
+            this.btnTiepNhanThuCong});
+            this.mnSub.LinkSelectionMode = DevExpress.XtraNavBar.LinkSelectionModeType.OneInControl;
+            this.mnSub.Location = new System.Drawing.Point(0, 160);
+            this.mnSub.Name = "mnSub";
+            this.mnSub.NavigationPaneGroupClientHeight = 320;
+            this.mnSub.OptionsNavPane.ExpandedWidth = 69;
+            this.mnSub.OptionsNavPane.ShowOverflowButton = false;
+            this.mnSub.OptionsNavPane.ShowOverflowPanel = false;
+            this.mnSub.OptionsNavPane.ShowSplitter = false;
+            this.mnSub.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.SideBar;
+            this.mnSub.Size = new System.Drawing.Size(69, 593);
+            this.mnSub.TabIndex = 22;
+            this.mnSub.Text = "navBarControl1";
+            this.mnSub.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinNavigationPaneViewInfoRegistrator("Visual Studio 2013 Blue");
+            // 
+            // nbgModules
+            // 
+            this.nbgModules.Caption = "Menu";
+            this.nbgModules.Expanded = true;
+            this.nbgModules.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
+            this.nbgModules.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnHomeScreen),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnTiepNhanThuCong),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnTiepNhanHis),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.tsbLayMau),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.tsbChuyenMau),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.tsbNhanMau),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.tsbKetQuaXN),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnTimBenhNhan),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnLogOut)});
+            this.nbgModules.Name = "nbgModules";
+            this.nbgModules.NavigationPaneVisible = false;
+            this.nbgModules.SelectedLinkIndex = 1;
+            this.nbgModules.TopVisibleLinkIndex = 1;
+            // 
+            // btnHomeScreen
+            // 
+            this.btnHomeScreen.Caption = "Màn hình chính";
+            this.btnHomeScreen.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHomeScreen.ImageOptions.LargeImage")));
+            this.btnHomeScreen.Name = "btnHomeScreen";
+            this.btnHomeScreen.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiGrid_LinkClicked);
+            // 
+            // btnTiepNhanThuCong
+            // 
+            this.btnTiepNhanThuCong.Caption = "Tiếp nhận";
+            this.btnTiepNhanThuCong.ImageOptions.ImageUri.Uri = "Add";
+            this.btnTiepNhanThuCong.Name = "btnTiepNhanThuCong";
+            // 
+            // btnTiepNhanHis
+            // 
+            this.btnTiepNhanHis.Caption = "F1";
+            this.btnTiepNhanHis.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTiepNhanHis.ImageOptions.LargeImage")));
+            this.btnTiepNhanHis.Name = "btnTiepNhanHis";
+            toolTipItem1.Text = "Tiếp nhận từ HIS";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnTiepNhanHis.SuperTip = superToolTip1;
+            this.btnTiepNhanHis.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiGridCardView_LinkClicked);
+            // 
+            // tsbLayMau
+            // 
+            this.tsbLayMau.Caption = "F2";
+            this.tsbLayMau.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.blood_drop_icon__1_;
+            this.tsbLayMau.Name = "tsbLayMau";
+            toolTipItem2.Text = "Lấy mẫu";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.tsbLayMau.SuperTip = superToolTip2;
+            this.tsbLayMau.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiSpreadsheet_LinkClicked);
+            // 
+            // tsbChuyenMau
+            // 
+            this.tsbChuyenMau.Caption = "F3";
+            this.tsbChuyenMau.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("tsbChuyenMau.ImageOptions.LargeImage")));
+            this.tsbChuyenMau.Name = "tsbChuyenMau";
+            toolTipItem3.Text = "Chuyển mẫu";
+            superToolTip3.Items.Add(toolTipItem3);
+            this.tsbChuyenMau.SuperTip = superToolTip3;
+            this.tsbChuyenMau.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiWord_LinkClicked);
+            // 
+            // tsbNhanMau
+            // 
+            this.tsbNhanMau.Caption = "F4";
+            this.tsbNhanMau.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.tubes_icon;
+            this.tsbNhanMau.Name = "tsbNhanMau";
+            toolTipItem4.Text = "Nhận mẫu";
+            superToolTip4.Items.Add(toolTipItem4);
+            this.tsbNhanMau.SuperTip = superToolTip4;
+            this.tsbNhanMau.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiSnap_LinkClicked);
+            // 
+            // tsbKetQuaXN
+            // 
+            this.tsbKetQuaXN.Caption = "F5";
+            this.tsbKetQuaXN.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.Clipboard_icon__1_;
+            this.tsbKetQuaXN.Name = "tsbKetQuaXN";
+            toolTipItem5.Text = "Kết quả";
+            superToolTip5.Items.Add(toolTipItem5);
+            this.tsbKetQuaXN.SuperTip = superToolTip5;
+            this.tsbKetQuaXN.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiReports_LinkClicked);
+            // 
+            // btnTimBenhNhan
+            // 
+            this.btnTimBenhNhan.Caption = "F6";
+            this.btnTimBenhNhan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTimBenhNhan.ImageOptions.LargeImage")));
+            this.btnTimBenhNhan.Name = "btnTimBenhNhan";
+            toolTipItem6.Text = "Tìm kiếm";
+            superToolTip6.Items.Add(toolTipItem6);
+            this.btnTimBenhNhan.SuperTip = superToolTip6;
+            this.btnTimBenhNhan.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiPivot_LinkClicked);
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Caption = "Đăng xuất";
+            this.btnLogOut.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.logout_icon__2_;
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem2_LinkClicked);
+            // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Caption = "F1";
+            this.navBarItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.LargeImage")));
+            this.navBarItem1.Name = "navBarItem1";
+            // 
+            // navBarItem3
+            // 
+            this.navBarItem3.Caption = "Thoát ứng dụng";
+            this.navBarItem3.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.delete_icon__3_;
+            this.navBarItem3.Name = "navBarItem3";
+            // 
+            // navBarItem4
+            // 
+            this.navBarItem4.Caption = "Thoát ứng dụng";
+            this.navBarItem4.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.delete_icon__3_;
+            this.navBarItem4.Name = "navBarItem4";
+            // 
+            // navBarItem5
+            // 
+            this.navBarItem5.Caption = "Thoát ứng dụng";
+            this.navBarItem5.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.delete_icon__3_;
+            this.navBarItem5.Name = "navBarItem5";
+            // 
+            // documentManager1
+            // 
+            this.documentManager1.MdiParent = this;
+            this.documentManager1.MenuManager = this.rbMainMenu;
+            this.documentManager1.View = this.tabbedView1;
+            this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
+            this.tabbedView1});
+            // 
+            // tabbedView1
+            // 
+            this.tabbedView1.Appearance.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.tabbedView1.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.tabbedView1.Appearance.Options.UseFont = true;
+            this.tabbedView1.AppearancePage.HeaderActive.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.tabbedView1.AppearancePage.HeaderActive.Options.UseFont = true;
+            this.tabbedView1.AppearancePage.HeaderDisabled.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.tabbedView1.AppearancePage.HeaderDisabled.Options.UseFont = true;
+            this.tabbedView1.AppearancePage.HeaderSelected.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.tabbedView1.AppearancePage.HeaderSelected.Options.UseFont = true;
+            this.tabbedView1.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.tabbedView1.RootContainer.Orientation = System.Windows.Forms.Orientation.Vertical;
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Tiêu đề trang in";
+            this.barButtonItem2.Id = 7;
+            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Cập nhật thông tin từ HIS";
+            this.barButtonItem4.Id = 10;
+            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
+            this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Caption = "Mapping mã máy XN";
+            this.barButtonItem6.Id = 10;
+            this.barButtonItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
+            this.barButtonItem6.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
+            this.barButtonItem6.Name = "barButtonItem6";
             // 
             // frmMDIParent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(150)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.ControlBox = false;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseFont = true;
+            this.Appearance.Options.UseForeColor = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1320, 778);
+            this.Controls.Add(this.mnSub);
+            this.Controls.Add(this.pnAlarm);
+            this.Controls.Add(this.ProgressBarMain);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.rbMainMenu);
+            this.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frmMDIParent.IconOptions.Icon")));
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmMDIParent.IconOptions.SvgImage")));
+            this.IsMdiContainer = true;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmMDIParent";
-            this.Text = "TPH.LabIMS - Laboratory Information System";
+            this.Ribbon = this.rbMainMenu;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "TPH.LabIMS";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMDIParent_FormClosing);
-            this.Load += new System.EventHandler(this.FrmMain_Load);
-            this.Shown += new System.EventHandler(this.FrmMain_Shown);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMDIParent_FormClosed);
+            this.Load += new System.EventHandler(this.frmMDIParent_Load);
+            this.Shown += new System.EventHandler(this.frmMDIParent_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMDIParent_KeyDown);
-            this.Controls.SetChildIndex(this.pnContent, 0);
-            this.pnMenu.ResumeLayout(false);
-            this.pnMenuContent.ResumeLayout(false);
-            this.pnDesktop.ResumeLayout(false);
-            this.pnMainFooter.ResumeLayout(false);
-            this.pnMainFooter.PerformLayout();
-            this.pnTPHLogo.ResumeLayout(false);
-            this.pnContent.ResumeLayout(false);
-            this.pnTitleBar.ResumeLayout(false);
-            this.tphDropdownBenhNhan.ResumeLayout(false);
-            this.tphDropdownKetQua.ResumeLayout(false);
-            this.tphDropdownThongKe.ResumeLayout(false);
-            this.tphDropdownDanhMuc.ResumeLayout(false);
-            this.tphDropdownOngMau.ResumeLayout(false);
-            this.tphDropdownCauHinh.ResumeLayout(false);
-            this.tphDropdownMenuHanhChinh.ResumeLayout(false);
-            this.tphDropdownThuPhi.ResumeLayout(false);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmMDIParent_KeyPress);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.pnCoCanhBao.ResumeLayout(false);
+            this.pnAlarm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rbMainMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mnSub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        public Controls.TPHIconButton btnTrangChinh;
-        public Controls.TPHIconButton btnCaiDat;
-        public Controls.TPHIconButton btnTaiKhoan;
-        public Controls.TPHIconButton btnDanhMuc;
-        public Controls.TPHIconButton btnThongKe;
-        public Controls.TPHIconButton btnKetQua;
-        public Controls.TPHIconButton btnBenhNhan;
-        public Controls.TPHIconButton btnOngMau;
-        private Controls.TPHDropdownMenuStrip tphDropdownBenhNhan;
-        private Controls.TPHDropdownMenuStrip tphDropdownKetQua;
-        private Controls.TPHDropdownMenuStrip tphDropdownThongKe;
-        private Controls.TPHDropdownMenuStrip tphDropdownDanhMuc;
-        private Controls.TPHDropdownMenuStrip tphDropdownOngMau;
-        private System.Windows.Forms.ToolStripMenuItem mnuTheoDoiMau;
-        public System.Windows.Forms.ToolStripMenuItem rbTiepNhanHIS;
-        public System.Windows.Forms.ToolStripMenuItem rbTimKiem;
-        public System.Windows.Forms.ToolStripMenuItem rbKetQuaThuongQuy;
-        public System.Windows.Forms.ToolStripMenuItem rbKQSinhHocPhanTu;
-        public System.Windows.Forms.ToolStripMenuItem rbKQViSinhNuoiCay;
-        public System.Windows.Forms.ToolStripMenuItem rbXuatKetQua;
-        public System.Windows.Forms.ToolStripMenuItem rbThongKeTongHopXn;
-        public System.Windows.Forms.ToolStripMenuItem rbThongTinSangLocSoSinh;
-        public System.Windows.Forms.ToolStripMenuItem rbThongTinSangLocTruocSinh;
-        private Controls.TPHDropdownMenuStrip tphDropdownCauHinh;
-        public System.Windows.Forms.ToolStripMenuItem rbCauHinhHeThong;
-        public System.Windows.Forms.ToolStripMenuItem rbCaiDatKetNoiHis;
-        public System.Windows.Forms.ToolStripMenuItem rabCapNhatThongTinTuHis;
-        public System.Windows.Forms.ToolStripMenuItem rbKQUploadHIS;
-        public System.Windows.Forms.ToolStripMenuItem rbLayMau;
-        public Controls.TPHIconButton btnThuPhi;
-        public System.Windows.Forms.ToolStripMenuItem rbKetQuSieuAm;
-        public System.Windows.Forms.ToolStripMenuItem rbXQuang;
-        public System.Windows.Forms.ToolStripMenuItem rbNoiSoi;
-        public System.Windows.Forms.ToolStripMenuItem rbDanhMucViSinh;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        public System.Windows.Forms.ToolStripMenuItem rbInTheoDanhSach;
-        public System.Windows.Forms.ToolStripMenuItem rbNhanMau;
-        public System.Windows.Forms.ToolStripMenuItem rbChuyenMau;
-        public System.Windows.Forms.ToolStripMenuItem rbTiepNhanBenhNhan;
-        public Controls.TPHLabel lblHello;
-        public Controls.TPHLabel lblUserName;
-        private System.Windows.Forms.ToolStripMenuItem rbDangKy;
-        public Controls.TPHIconButton rbCapNhatPhanMem;
-        private System.Windows.Forms.ToolStripMenuItem rbPhieuTienTrinhViSinh;
-        private System.Windows.Forms.ToolStripMenuItem rbGuiEMailKetQua;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem rbInbaracodeKSK;
-        public System.Windows.Forms.ToolStripMenuItem rbNhapTheoDanhSach;
-        private System.Windows.Forms.ToolStripMenuItem rbDanhMucLoaiMau;
-        private System.Windows.Forms.ToolStripMenuItem rbDmHenTraKetQua;
-        private System.Windows.Forms.ToolStripMenuItem rbDanhMucKetNoiHIS;
-        private System.Windows.Forms.ToolStripMenuItem rbCauHinhPhieuIn;
-        private System.Windows.Forms.ToolStripMenuItem rbTembarcode;
-        private System.Windows.Forms.ToolStripMenuItem radNgonNgu;
-        public System.Windows.Forms.ToolStripMenuItem rbBienDichDanhMuc;
-        private System.Windows.Forms.ToolStripMenuItem rbTinhTrangMauLyDo;
-        private System.Windows.Forms.ToolStripMenuItem rbDanhMucMaMayXetNghiem;
-        private System.Windows.Forms.ToolStripMenuItem rbMappingMayViSinh;
-        private System.Windows.Forms.ToolStripMenuItem rbBienDichCo;
-        private System.Windows.Forms.ToolStripMenuItem rbBienDichKetQua;
-        private System.Windows.Forms.ToolStripMenuItem rbNhatKy;
-        private System.Windows.Forms.ToolStripMenuItem rbDashboardSo;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem rbXemPDF;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem rbChuyenKetQua;
-        private System.Windows.Forms.ToolStripMenuItem rbNhanPhieuKetQua;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem rbKetQuaTuMayXN;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripMenuItem rbXacNhanTraKetQua;
-        private System.Windows.Forms.ToolStripMenuItem rbDangNhapLayMau;
-        private System.Windows.Forms.ToolStripMenuItem rbBanLayMau;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripMenuItem rbLichSuXetNghiem;
-        private System.Windows.Forms.ToolStripMenuItem rbTheoDoiMau;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripMenuItem rbLuuMau;
-        private System.Windows.Forms.ToolStripMenuItem rbHuyMauLuu;
-        private System.Windows.Forms.ToolStripMenuItem rbNguoiDung;
-        public Controls.TPHLabel lblTimer;
-        public Controls.TPHLabel lblVersion;
-        public Controls.TPHLabel lblStatus;
-        public System.Windows.Forms.ToolStripMenuItem rbDanhMucXetNghiem;
-        private System.Windows.Forms.Timer timerApp;
+       
+      
+      
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        
+        public System.Windows.Forms.ToolStripStatusLabel lblHello;
+        public System.Windows.Forms.ToolStripStatusLabel lblTimer;
         private System.Windows.Forms.Timer timerMain;
-        public Controls.TPHLabel lblThongBaoCapNhat;
-        private System.Windows.Forms.ToolStripMenuItem mnuXuatKetQuaViSinh;
-        public Controls.TPHIconButton bntDanhMucHanhChinh;
-        private Controls.TPHDropdownMenuStrip tphDropdownMenuHanhChinh;
-        private System.Windows.Forms.ToolStripMenuItem rbKhoaPhong;
-        private System.Windows.Forms.ToolStripMenuItem rbDoituongDichVu;
-        private System.Windows.Forms.ToolStripMenuItem rbNhanVien;
-        private System.Windows.Forms.ToolStripMenuItem rbDiaChi;
-        private System.Windows.Forms.ToolStripMenuItem rbKhuVuc;
-        private System.Windows.Forms.ToolStripMenuItem rbThongTinMayXN;
-        private System.Windows.Forms.ToolStripMenuItem rbMayInBarCode;
-        private System.Windows.Forms.ToolStripMenuItem rbTieuDeTrangIn;
-        private Controls.TPHDropdownMenuStrip tphDropdownMenuStrip1;
+        public System.Windows.Forms.ToolStripStatusLabel lblUserName;
+        public System.Windows.Forms.ProgressBar ProgressBarMain;
+        public System.Windows.Forms.ToolStripStatusLabel lblStatus;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.ToolStripStatusLabel lblVersion;
+        public System.Windows.Forms.ToolStripStatusLabel lblInTuDong;
+        private System.Windows.Forms.Timer timerAlarm;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.ToolStripMenuItem mnuChanDoan;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-        public System.Windows.Forms.ToolStripMenuItem mnuCapNhatData;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.ToolStripMenuItem rbDashboardBieuDoTron;
-        private Controls.TPHDropdownMenuStrip tphDropdownThuPhi;
-        public System.Windows.Forms.ToolStripMenuItem rbThuPhiDichVu;
-        public System.Windows.Forms.ToolStripMenuItem rbBaoCaoDoanhThu;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
-        public System.Windows.Forms.ToolStripMenuItem mnuDanhMucTuLuuMau;
-        public System.Windows.Forms.ToolStripMenuItem mnuQuanLyGuiMauNoiBo;
+        private System.Windows.Forms.Label lblThongbaolamMoi;
+        private System.Windows.Forms.Button btnCloseAlarm;
+        private System.Windows.Forms.Panel pnCoCanhBao;
+        private Analyzer.Controls.ucAnalyzerAlarmList ucAnalyzerAlarmList1;
+        private System.Windows.Forms.Panel pnAlarm;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rbXetNghiem;
+        private DevExpress.XtraBars.BarButtonItem rbInTheoDanhSach;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem rbLayMau;
+        private DevExpress.XtraBars.BarButtonItem rbChuyenMau;
+        private DevExpress.XtraBars.BarButtonItem rbNhanMau;
+        private DevExpress.XtraBars.BarButtonItem rbBanLayMau;
+        private DevExpress.XtraBars.BarButtonItem rbTheoDoiMau;
+        private DevExpress.XtraBars.BarButtonItem rbInbaracodeKSK;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.Ribbon.RibbonControl rbMainMenu;
+        private DevExpress.XtraBars.BarButtonItem rbDashboard;
+        private DevExpress.XtraBars.BarButtonItem rbDanhMucLoaiMau;
+        private DevExpress.XtraBars.BarButtonItem rbTinhTrangMauLyDo;
+        private DevExpress.XtraBars.BarButtonItem rbCauHinhPhieuIn;
+        private DevExpress.XtraBars.BarButtonItem rbMayIn;
+        private DevExpress.XtraBars.BarButtonItem rbDmHenTraKetQua;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.BarButtonItem rbBienDichKetQua;
+        private DevExpress.XtraBars.BarButtonItem rbTieuDeTrangIn;
+        private DevExpress.XtraBars.BarButtonItem rbDangKy;
+        private DevExpress.XtraBars.BarButtonItem rbDanhMucMaMayXetNghiem;
+        private DevExpress.XtraBars.BarButtonItem rbCapNhatPhanMem;
+        private DevExpress.XtraBars.BarButtonItem rbThongTinMayXN;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
+        private DevExpress.XtraBars.BarButtonItem rbGuiEMailKetQua;
+        private DevExpress.XtraBars.BarButtonItem rbDoituongDichVu;
+        private DevExpress.XtraBars.BarButtonItem rbKhoaPhong;
+        private DevExpress.XtraBars.BarButtonItem rbNhanVien;
+        private DevExpress.XtraBars.BarButtonItem rbNguoiDung;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
+        private DevExpress.XtraBars.BarButtonItem rbMayInBarCode;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
+        private DevExpress.XtraBars.BarButtonItem rbNhatKy;
+        private DevExpress.XtraNavBar.NavBarControl mnSub;
+        private DevExpress.XtraNavBar.NavBarGroup nbgModules;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem4;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem5;
+        public DevExpress.XtraNavBar.NavBarItem btnHomeScreen;
+        public DevExpress.XtraNavBar.NavBarItem tsbLayMau;
+        public DevExpress.XtraNavBar.NavBarItem tsbChuyenMau;
+        public DevExpress.XtraNavBar.NavBarItem tsbNhanMau;
+        public DevExpress.XtraNavBar.NavBarItem tsbKetQuaXN;
+        public DevExpress.XtraNavBar.NavBarItem btnTimBenhNhan;
+        public DevExpress.XtraNavBar.NavBarItem btnTiepNhanHis;
+        public DevExpress.XtraNavBar.NavBarItem btnLogOut;
+        public DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
+        public DevExpress.XtraBars.BarButtonItem rbLichSuXetNghiem;
+        public DevExpress.XtraBars.BarButtonItem rbKQUploadHIS;
+        public DevExpress.XtraBars.BarButtonItem rbCaiDatKetNoiHis;
+        public DevExpress.XtraBars.BarButtonItem rbDanhMucKetNoiHIS;
+        public DevExpress.XtraBars.BarButtonItem rbCauHinhHeThong;
+        public DevExpress.XtraBars.BarButtonItem rbKhuVuc;
+        public DevExpress.XtraBars.BarButtonItem rbTiepNhanHIS;
+        public DevExpress.XtraBars.BarButtonItem rbThuPhi;
+        public DevExpress.XtraBars.Ribbon.RibbonPageGroup rbGroupKetQuaCLSKhac;
+        public DevExpress.XtraBars.BarButtonItem rbKetQuSieuAm;
+        public DevExpress.XtraBars.BarButtonItem rbNoiSoi;
+        public DevExpress.XtraBars.BarButtonItem rbXQuang;
+        public DevExpress.XtraBars.BarButtonItem rbDichVuKhac;
+        public DevExpress.XtraBars.BarButtonItem rbKQSinhHocPhanTu;
+        public DevExpress.XtraBars.BarButtonItem rbKQViSinhNuoiCay;
+        public DevExpress.XtraBars.BarButtonItem rbKetQuaTuiMau;
+        public DevExpress.XtraBars.BarButtonItem rbDanhMucViSinh;
+        public DevExpress.XtraBars.BarButtonItem rbTiepNhanBenhNhan;
+        public DevExpress.XtraBars.BarButtonItem rbTimKiem;
+        public DevExpress.XtraBars.BarButtonItem rbKetQuaThuongQuy;
+        public DevExpress.XtraBars.BarButtonItem rbXuatKetQua;
+        public DevExpress.XtraBars.BarButtonItem rbThongKeTongHopXn;
+        public DevExpress.XtraBars.BarButtonItem rbDanhMucXetNghiem;
+        public DevExpress.XtraBars.BarButtonItem rbDoiMatKhau;
+        private DevExpress.XtraBars.BarButtonItem rbTembarcode;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem rbMauReport2;
+        public DevExpress.XtraNavBar.NavBarItem btnTiepNhanThuCong;
+        private DevExpress.XtraBars.BarButtonItem rbDangNhapLayMau;
+        private DevExpress.XtraBars.BarButtonItem rbChuyenKetQua;
+        private DevExpress.XtraBars.BarButtonItem rbXacNhanTraKetQua;
+        private DevExpress.XtraBars.BarButtonItem rbNhanPhieuKetQua;
+        private DevExpress.XtraBars.BarButtonItem rbLuuMau;
+        private DevExpress.XtraBars.BarButtonItem rbHuyMauLuu;
+        private DevExpress.XtraBars.BarButtonItem rabCapNhatThongTinTuHis;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem rbNhapDanhSach;
+        private DevExpress.XtraBars.BarButtonItem rdGopBarcode;
+        private System.Windows.Forms.ToolStripStatusLabel lblThongBaoCapNhat;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem rbQLXNCB;
+        private DevExpress.XtraBars.BarButtonItem rbQLXNG;
+        public DevExpress.XtraBars.BarButtonItem rbTuLuuMau;
+        private DevExpress.XtraBars.BarButtonItem rbMaPPingMaMyXnViSinh;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem rbCapSoThuTu;
     }
 }
+

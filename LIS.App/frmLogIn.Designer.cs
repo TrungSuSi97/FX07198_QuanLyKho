@@ -43,6 +43,7 @@
             this.btnExit = new TPH.Controls.TPHNormalButton();
             this.btnLogIn = new TPH.Controls.TPHNormalButton();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.gradientPanel1.SuspendLayout();
             this.gradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnLogin)).BeginInit();
@@ -54,6 +55,8 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gradientPanel1
@@ -88,17 +91,19 @@
             // 
             // pnLogin
             // 
+            this.pnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnLogin.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
             this.pnLogin.Appearance.Options.UseBackColor = true;
             this.pnLogin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.pnLogin.Controls.Add(this.panelControl1);
             this.pnLogin.Controls.Add(this.panel4);
             this.pnLogin.Controls.Add(this.panel2);
             this.pnLogin.Controls.Add(this.pictureBox4);
             this.pnLogin.Controls.Add(this.chkSave);
             this.pnLogin.Controls.Add(this.btnExit);
             this.pnLogin.Controls.Add(this.btnLogIn);
-            this.pnLogin.Controls.Add(this.label1);
-            this.pnLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnLogin.Location = new System.Drawing.Point(3, 3);
             this.pnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnLogin.Name = "pnLogin";
@@ -195,14 +200,15 @@
             // chkSave
             // 
             this.chkSave.AutoSize = true;
+            this.chkSave.BackColor = System.Drawing.Color.Transparent;
             this.chkSave.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSave.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkSave.ForeColor = System.Drawing.Color.Black;
             this.chkSave.Location = new System.Drawing.Point(73, 327);
             this.chkSave.Name = "chkSave";
             this.chkSave.Size = new System.Drawing.Size(221, 22);
             this.chkSave.TabIndex = 7;
             this.chkSave.Text = "Ghi nhớ thông tin đăng nhập";
-            this.chkSave.UseVisualStyleBackColor = true;
+            this.chkSave.UseVisualStyleBackColor = false;
             // 
             // btnExit
             // 
@@ -261,18 +267,29 @@
             // 
             this.label1.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.label1.Appearance.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.label1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.label1.Appearance.Options.UseBackColor = true;
             this.label1.Appearance.Options.UseFont = true;
             this.label1.Appearance.Options.UseForeColor = true;
-            this.label1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.label1.ImageOptions.Alignment = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(2, 2);
+            this.label1.Location = new System.Drawing.Point(20, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(395, 34);
+            this.label1.Size = new System.Drawing.Size(393, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG NHẬP CHƯƠNG TRÌNH";
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.White;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.label1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(2, 2);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(443, 53);
+            this.panelControl1.TabIndex = 25;
             // 
             // frmLogIn
             // 
@@ -305,6 +322,9 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -314,7 +334,6 @@
         private DevExpress.XtraEditors.PanelControl pnLogin;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUserID;
-        private DevExpress.XtraEditors.LabelControl label1;
         private TPH.Controls.TPHNormalButton btnExit;
         private TPH.Controls.TPHNormalButton btnLogIn;
         private System.Windows.Forms.CheckBox chkSave;
@@ -325,5 +344,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Common.Controls.GradientPanel gradientPanel2;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.LabelControl label1;
     }
 }

@@ -308,7 +308,7 @@ namespace TPH.LIS.App.ThucThi.BenhNhan
         {
             if (gvDanhSach.FocusedRowHandle >-1)
             {
-                frmParent fm = (frmParent)this.TopLevelControl;
+                frmParent_old fm = (frmParent_old)this.TopLevelControl;
                 if (fm != null)
                 {
                     frmCLSKetQuaXN frm = new frmCLSKetQuaXN();
@@ -337,7 +337,7 @@ namespace TPH.LIS.App.ThucThi.BenhNhan
 
             if (this.TopLevelControl != this)
             {
-                frmParent fm = (frmParent)this.TopLevelControl;
+                frmParent_old fm = (frmParent_old)this.TopLevelControl;
                 var frm = new FrmTiepNhanBenhNhan();
                 if (fm.CloseChild(frm))
                 {

@@ -22,6 +22,7 @@ namespace TPH.LIS.App
     public class CommonAppVarsAndFunctions
     {
         public static readonly IUpdaterService updateService = new UpdaterService();
+        public static ISystemConfigService _iConfig;
         public static Dictionary<string, List<string>> dicWorkingTest = new Dictionary<string, List<string>>();
         public static string DefaultObject { get; internal set; }
         public static int[] PCWorkPlaceOfHis { get; internal set; }
@@ -254,6 +255,10 @@ namespace TPH.LIS.App
         public static bool closeApp = false;
         public static bool forceUpdateRequest = false;
         public static bool IsFinishShow = false;
+
+        public static bool _haveAlarm = false;
+        public static string fileVersion = string.Empty;
+        public static string appName = string.Empty;
         public static void RefreshHisConfigData()
         {
             Lab.Middleware.LISConnect.DataAccesses.IConnectHISDataAccess _iHisConfig = new Lab.Middleware.LISConnect.DataAccesses.ConnectHISDataAccess();

@@ -865,17 +865,17 @@
     <Compile Include="FrmDangNhap.Designer.cs">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmGetCopy.cs">
+    <Compile Include="frmMDIParent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmGetCopy.designer.cs">
-      <DependentUpon>FrmGetCopy.cs</DependentUpon>
+    <Compile Include="frmMDIParent.Designer.cs">
+      <DependentUpon>frmMDIParent.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmParent.cs">
+    <Compile Include="frmParent_old.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmParent.Designer.cs">
-      <DependentUpon>frmParent.cs</DependentUpon>
+    <Compile Include="frmParent_old.Designer.cs">
+      <DependentUpon>frmParent_old.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPreViewReport.cs">
       <SubType>Form</SubType>
@@ -888,6 +888,18 @@
     </Compile>
     <Compile Include="FrmReportvi.Designer.cs">
       <DependentUpon>FrmReportvi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStartup_Old.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStartup_Old.designer.cs">
+      <DependentUpon>FrmStartup_Old.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStartup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStartup.designer.cs">
+      <DependentUpon>FrmStartup.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1871,17 +1883,23 @@
     <EmbeddedResource Include="FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmGetCopy.resx">
-      <DependentUpon>FrmGetCopy.cs</DependentUpon>
+    <EmbeddedResource Include="frmMDIParent.resx">
+      <DependentUpon>frmMDIParent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmParent.resx">
-      <DependentUpon>frmParent.cs</DependentUpon>
+    <EmbeddedResource Include="frmParent_old.resx">
+      <DependentUpon>frmParent_old.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPreViewReport.resx">
       <DependentUpon>FrmPreViewReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReportvi.resx">
       <DependentUpon>FrmReportvi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStartup_Old.resx">
+      <DependentUpon>FrmStartup_Old.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStartup.resx">
+      <DependentUpon>FrmStartup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -2674,6 +2692,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppCode\CustomControl\" />
+    <Folder Include="QuanLyChamCong\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

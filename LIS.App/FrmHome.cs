@@ -78,7 +78,7 @@ namespace TPH.LIS.App
 
         private void FrmHome_Shown(object sender, EventArgs e)
         {
-            frmParent fParent = (frmParent) this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old) this.TopLevelControl;
 
             fParent.rbCauHinhHeThong.Enabled = fParent.rbCaiDatKetNoiHis.Enabled = CommonAppVarsAndFunctions.IsAdmin;
             //fParent.rabCapNhatThongTinTuHis.Visible =
@@ -172,7 +172,7 @@ namespace TPH.LIS.App
 
         private void CheckEnableControls()
         {
-            frmParent fParent = (frmParent)this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old)this.TopLevelControl;
             lblTiepNhanHis.Enabled = fParent.rbTiepNhanHIS.Enabled;
             lblSearPatient.Enabled = fParent.rbTimKiem.Enabled;
             lblReception.Enabled = fParent.rbTiepNhanBenhNhan.Enabled;
@@ -197,7 +197,7 @@ namespace TPH.LIS.App
         }
         private void Check_VisibleRule()
         {
-            frmParent fParent = (frmParent)this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old)this.TopLevelControl;
             var processRule = CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh;
             switch (processRule)
             {
@@ -312,7 +312,7 @@ namespace TPH.LIS.App
         private void lblPatientFile_Click(object sender, EventArgs e)
         {
             FrmHoSoBenhAn f = new FrmHoSoBenhAn();
-            frmParent fParent = (frmParent)this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old)this.TopLevelControl;
             fParent.ShowForm(f);
         }
 
@@ -320,55 +320,55 @@ namespace TPH.LIS.App
         {
             var f = new FrmTimBenhNhan();
             f.pnMenu.Visible = false;
-            var fParent = (frmParent)this.TopLevelControl;
+            var fParent = (frmParent_old)this.TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblUltraSound_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmCLSKQSieuAm f = new frmCLSKQSieuAm();
-            frmParent fParent = (frmParent)this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old)this.TopLevelControl;
             fParent.ShowForm(f);
         }
 
         private void lblEndoscopic_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmCLSKQNoiSoi f = new frmCLSKQNoiSoi();
-            frmParent fParent = (frmParent)this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old)this.TopLevelControl;
             fParent.ShowForm(f);
         }
 
         private void lblXRay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmCLSKetQuaXQuang f = new frmCLSKetQuaXQuang();
-            frmParent fParent = (frmParent)this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old)this.TopLevelControl;
             fParent.ShowForm(f);
         }
 
         private void lblElectrocardiogram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FrmDienTim f = new FrmDienTim();
-            frmParent fParent = (frmParent)this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old)this.TopLevelControl;
             fParent.ShowForm(f);
         }
 
         private void lblKhamBenh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FrmKhamBenh f = new FrmKhamBenh();
-            frmParent fParent = (frmParent)this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old)this.TopLevelControl;
             fParent.ShowForm(f);
         }
 
         private void lblInvoice_Click(object sender, EventArgs e)
         {
             var f = new FrmThuPhiDichVu();
-            var fParent = (frmParent)this.TopLevelControl;
+            var fParent = (frmParent_old)this.TopLevelControl;
             fParent?.ShowForm(f);
         }
         private void lblOrder_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FrmChiDinhCLS f = new FrmChiDinhCLS();
-            frmParent fParent = (frmParent)this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old)this.TopLevelControl;
             fParent.ShowForm(f);
         }
         private void lblTieuDe_Click(object sender, EventArgs e)
@@ -387,13 +387,13 @@ namespace TPH.LIS.App
         private void lblNhapViTriChayMau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var f = new FrmNhapViTriMauSangLocSoSinh();
-            frmParent fParent = (frmParent)this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old)this.TopLevelControl;
             fParent.ShowForm(f);
         }
         private void btnKetQuaSangLocSoSinh_licked(object sender, EventArgs e)
         {
             var f = new FrmKetQuaXnSangLocSoSinh();
-            frmParent fParent = (frmParent)this.TopLevelControl;
+            frmParent_old fParent = (frmParent_old)this.TopLevelControl;
             fParent.ShowForm(f);
         }
 
@@ -416,112 +416,112 @@ namespace TPH.LIS.App
         private void lblReception_Click(object sender, EventArgs e)
         {
             var f = new FrmTiepNhanBenhNhan();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lbltraKetQua_Click(object sender, EventArgs e)
         {
             var f = new FrmTraKetQua();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblTiepNhanHis_Click(object sender, EventArgs e)
         {
             var f = new FrmTiepNhanHIS();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblThongTinMauSangLocTruocSinh_Click(object sender, EventArgs e)
         {
             var f = new FrmThongTinSangLocTruocSinh();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblThongTinMauSangLocSoSinh_Click(object sender, EventArgs e)
         {
             var f = new FrmThongTinSangLocSoSinh();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblThongKeTongHop_Click(object sender, EventArgs e)
         {
             var f = new frmThongKeTongHopXN();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblXuatKetQuaViSinh_Click(object sender, EventArgs e)
         {
             var f = new frmXuatKetQuaXetNghiem_ViSinh();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblXuatKetQuaThuongQui_Click(object sender, EventArgs e)
         {
             var f = new frmXuatKetQuaXetNghiem();
-            frmParent fParent = (frmParent)TopLevelControl;
+            frmParent_old fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblLayMau_Click(object sender, EventArgs e)
         {
             var f = new FrmLayMau();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblChuyenMau_Click(object sender, EventArgs e)
         {
             var f = new FrmXacNhanChuyenMau();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblNhanMau_Click(object sender, EventArgs e)
         {
             var f = new FrmCLSXetNghiem_DuyetNhanMau();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblLaboratoryResult_Click(object sender, EventArgs e)
         {
             var f = new frmCLSKetQuaXN();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblKetqQuaViSinh_Click(object sender, EventArgs e)
         {
             var f = new FrmCLSKetQuaViSinh();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblKetQuaSHPT_Click(object sender, EventArgs e)
         {
             var f = new FrmSinhHocPhanTu();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblKetQuaHuyetTuyDo_Click(object sender, EventArgs e)
         {
             var f = new FrmCLS_KetQua_HuyetTuyDo();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 
         private void lblKetQuaSangLocTruocSinh_Click(object sender, EventArgs e)
         {
             var f = new FrmKetQuaXnSangLocTruocSinh();
-            var fParent = (frmParent)TopLevelControl;
+            var fParent = (frmParent_old)TopLevelControl;
             fParent?.ShowForm(f);
         }
 

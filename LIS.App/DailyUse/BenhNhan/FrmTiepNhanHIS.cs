@@ -3239,7 +3239,7 @@ namespace TPH.LIS.App.ThucThi.BenhNhan
             ControlExtension.SetLowerCaseForXGridColumns(gvDanhSach);
             _PainterChuaLayMau = new GridSkinElementsPainter(gvChiDinh_Lis);
             chkUpdateAll.Visible = btnUpdateThongTin.Visible = CommonAppVarsAndFunctions.UserID.Trim().Equals("admin", StringComparison.OrdinalIgnoreCase);
-            var fparent = (frmParent)this.TopLevelControl;
+            var fparent = (frmParent_old)this.TopLevelControl;
             mnuThemXNMapping.Enabled = mnuMapMaXN.Enabled = fparent.rbDanhMucXetNghiem.Enabled;
             pnPhieuHen.Size = new Size(pnPhieuHen.Width, 0);
             gvHisDanhSachBenhNhanCho.FocusedRowChanged += GvHisDanhSachBenhNhanCho_FocusedRowChanged;

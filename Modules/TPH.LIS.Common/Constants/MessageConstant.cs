@@ -5,6 +5,7 @@ namespace TPH.LIS.Common
 {
     public class MessageConstant
     {
+
         public const string ClinicManagement = "TPH.LabIMS";
         /// <summary>
         /// THÔNG BÁO LỖI
@@ -39,7 +40,7 @@ namespace TPH.LIS.Common
         /// <summary>
         /// Bạn có chắc muốn thoát ứng dụng?
         /// </summary>
-        public string ExitProgram => LanguageExtension.GetResourceValueFromKey("BancochacmuonthoatungdungHOI", LanguageExtension.AppLanguage);
+        public static string ExitProgram => LanguageExtension.GetResourceValueFromKey("BancochacmuonthoatungdungHOI", LanguageExtension.AppLanguage);
         /// <summary>
         /// Bạn có chắn muốn Xoá các chỉ định được chọn?
         /// </summary>
@@ -49,7 +50,7 @@ namespace TPH.LIS.Common
         /// <summary>
         /// Ngày làm việc
         /// </summary>
-        public string NgayLamViec => LanguageExtension.GetResourceValueFromKey("NgayLamViec",
+        public static string NgayLamViec => LanguageExtension.GetResourceValueFromKey("NgayLamViec",
             LanguageExtension.AppLanguage);
         /// <summary>
         /// Phần mềm chưa đăng ký ngày sử dụng, vui lòng nhập mã đăng ký để sử dụng.
@@ -119,27 +120,30 @@ namespace TPH.LIS.Common
         /// <summary>
         /// {0}: Đã hết thời gian dùng thử ({1} ngày từ: {2:dd/MM/yyyy} đến: {3:dd/MM/yyyy})
         /// </summary>
-        public string PhanMemDaHetHanSuDung => LanguageExtension.GetResourceValueFromKey(
+        public static string PhanMemDaHetHanSuDung => LanguageExtension.GetResourceValueFromKey(
             "MONGOACNHONKHONGDONGNGOACNHONLADahetthoigiandungthuMONGOACDONMONGOACNHONMOTDONGNGOACNHONngaytuLAMONGOACNHONHAILAddTRENMMTRENyyyyDONGNGOACNHONdenLAMONGOACNHONBALAddTRENMMTRENyyyyDONGNGOACNHONDONGNGOACDON",
             LanguageExtension.AppLanguage);
         /// <summary>
         /// {0}: Đã hết thời gian dùng thử ({1} ngày). Vui lòng liên hệ với Kỹ thuật TPH để được hổ trợ!
         /// </summary>
-        public string PhanMemDaHetHanSuDungVuiLongLienHe => LanguageExtension.GetResourceValueFromKey(
+        public static  string PhanMemDaHetHanSuDungVuiLongLienHe => LanguageExtension.GetResourceValueFromKey(
             "MONGOACNHONKHONGDONGNGOACNHONLADahetthoigiandungthuMONGOACDONMONGOACNHONMOTDONGNGOACNHONngayDONGNGOACDONCHAMVuilonglienhevoiKythuatTPHdeduochotroCHAMCAM",
             LanguageExtension.AppLanguage);
         /// <summary>
         /// {0}: Phiên bản dùng thử (Bạn còn {1} ngày sử dụng)
         /// </summary>
-        public string PhanMemConNgayDungThu => LanguageExtension.GetResourceValueFromKey(
+        public static string PhanMemConNgayDungThu => LanguageExtension.GetResourceValueFromKey(
             "MONGOACNHONKHONGDONGNGOACNHONLAPhienbandungthuMONGOACDONBanconMONGOACNHONMOTDONGNGOACNHONngaysudungDONGNGOACDON",
             LanguageExtension.AppLanguage);
         /// <summary>
         /// Bạn còn {0} ngày sử dùng. Vui lòng liên hệ với TPH để không bị gián đoạn công việc!
         /// </summary>
-        public string BanConNgayLamViecVuiLongLienHeTph => LanguageExtension.GetResourceValueFromKey(
-            "BanconMONGOACNHONKHONGDONGNGOACNHONngaysudungCHAMVuilonglienhevoiTPHdekhongbigiandoancongviecCHAMCAM",
-            LanguageExtension.AppLanguage);
+        /// 
+        //public  string BanConNgayLamViecVuiLongLienHeTph => LanguageExtension.GetResourceValueFromKey(
+        //    "BanconMONGOACNHONKHONGDONGNGOACNHONngaysudungCHAMVuilonglienhevoiTPHdekhongbigiandoancongviecCHAMCAM",
+        //    LanguageExtension.AppLanguage);
+        public const string BanConNgayLamViecVuiLongLienHeTph = "Bạn còn {0} ngày sử dùng. Vui lòng liên hệ với TPH để không bị gián đoạn công việc!";
+
         /// <summary>
         /// Máy tính chưa khai báo khu vực làm việc!
         /// </summary>

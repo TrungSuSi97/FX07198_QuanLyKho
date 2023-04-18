@@ -2,7 +2,7 @@
 
 namespace TPH.LIS.App
 {
-    partial class frmParent
+    partial class frmParent_old
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace TPH.LIS.App
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmParent));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmParent_old));
             this.btnTrangChinh = new TPH.Controls.TPHIconButton();
             this.btnBenhNhan = new TPH.Controls.TPHIconButton();
             this.btnKetQua = new TPH.Controls.TPHIconButton();
@@ -126,6 +126,7 @@ namespace TPH.LIS.App
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuGuimau = new System.Windows.Forms.ToolStripMenuItem();
             this.tphDropdownKetQua = new TPH.Controls.TPHDropdownMenuStrip(this.components);
+            this.mnuChamCong = new System.Windows.Forms.ToolStripMenuItem();
             this.tphDropdownThongKe = new TPH.Controls.TPHDropdownMenuStrip(this.components);
             this.rbDashboardBieuDoTron = new System.Windows.Forms.ToolStripMenuItem();
             this.tphDropdownDanhMuc = new TPH.Controls.TPHDropdownMenuStrip(this.components);
@@ -148,7 +149,6 @@ namespace TPH.LIS.App
             this.tphDropdownThuPhi = new TPH.Controls.TPHDropdownMenuStrip(this.components);
             this.rbThuPhiDichVu = new System.Windows.Forms.ToolStripMenuItem();
             this.rbBaoCaoDoanhThu = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuChamCong = new System.Windows.Forms.ToolStripMenuItem();
             this.pnMenu.SuspendLayout();
             this.pnMenuContent.SuspendLayout();
             this.pnDesktop.SuspendLayout();
@@ -1317,7 +1317,14 @@ namespace TPH.LIS.App
             this.toolStripSeparator5,
             this.rbKetQuaTuMayXN});
             this.tphDropdownKetQua.Name = "tphDropdownMenuStrip1";
-            this.tphDropdownKetQua.Size = new System.Drawing.Size(234, 380);
+            this.tphDropdownKetQua.Size = new System.Drawing.Size(234, 358);
+            // 
+            // mnuChamCong
+            // 
+            this.mnuChamCong.Name = "mnuChamCong";
+            this.mnuChamCong.Size = new System.Drawing.Size(233, 22);
+            this.mnuChamCong.Text = "Chấm công";
+            this.mnuChamCong.Click += new System.EventHandler(this.mnuChamCong_Click);
             // 
             // tphDropdownThongKe
             // 
@@ -1522,14 +1529,7 @@ namespace TPH.LIS.App
             this.rbBaoCaoDoanhThu.Text = "Báo cáo doanh thu";
             this.rbBaoCaoDoanhThu.Click += new System.EventHandler(this.rbBaoCaoDoanhThu_Click);
             // 
-            // mnuChamCong
-            // 
-            this.mnuChamCong.Name = "mnuChamCong";
-            this.mnuChamCong.Size = new System.Drawing.Size(233, 22);
-            this.mnuChamCong.Text = "Chấm công";
-            this.mnuChamCong.Click += new System.EventHandler(this.mnuChamCong_Click);
-            // 
-            // frmParent
+            // frmParent_old
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -1539,7 +1539,7 @@ namespace TPH.LIS.App
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "frmParent";
+            this.Name = "frmParent_old";
             this.Text = "TPH.LabIMS - Laboratory Information System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMDIParent_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);

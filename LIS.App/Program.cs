@@ -122,21 +122,34 @@ namespace TPH.LIS.App
 
         private static void Run() 
         {
-            var logIn = new FrmDangNhap();
-            logIn.ShowDialog();
-            if (logIn.DialogResult == DialogResult.OK)
-            {
-                var f = new frmParent
-                {
-                    AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F),
-                    AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-                };
-                Application.Run(f);
-            }
-            else
-            {
-                Application.Exit();
-            }
+            //var logIn = new FrmDangNhap();
+            //logIn.ShowDialog();
+            //if (logIn.DialogResult == DialogResult.OK)
+            //{
+            //    var f = new frmParent_old
+            //    {
+            //        AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F),
+            //        AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+            //    };
+            //    Application.Run(f);
+            //}
+            //else
+            //{
+            //    Application.Exit();
+            //}
+
+
+            //DevExpress.XtraEditors.WindowsFormsSettings.SetDPIAware();
+            //DevExpress.XtraEditors.WindowsFormsSettings.EnableFormSkins();
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Visual Studio 2013 Blue");
+            //DevExpress.XtraEditors.WindowsFormsSettings.DefaultLookAndFeel.SetSkinStyle("Office 2013 Light Gray");
+            //DevExpress.XtraEditors.WindowsFormsSettings.AllowPixelScrolling = DevExpress.Utils.DefaultBoolean.True;
+            // DevExpress.XtraEditors.WindowsFormsSettings.ScrollUIMode = DevExpress.XtraEditors.ScrollUIMode.Touch;
+            DevExpress.Utils.AppearanceObject.DefaultFont = new Font("Arial", 9F);
+            DevExpress.XtraBars.Ribbon.RibbonControl.AllowSystemShortcuts = false;
+
+            Application.EnableVisualStyles();
+            Application.Run(new frmMDIParent());
         }
 
         private static void RunApplication()
@@ -166,7 +179,7 @@ namespace TPH.LIS.App
                 logIn.ShowDialog();
                 if (logIn.DialogResult == DialogResult.OK)
                 {
-                    var f = new frmParent
+                    var f = new frmParent_old
                     {
                         AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F),
                         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
