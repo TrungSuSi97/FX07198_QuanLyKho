@@ -37,7 +37,6 @@
             this.pnMenuMain = new System.Windows.Forms.Panel();
             this.pnCanLamSang = new System.Windows.Forms.Panel();
             this.pnCLSClinic = new System.Windows.Forms.Panel();
-            this.lblUltraSound = new System.Windows.Forms.LinkLabel();
             this.pnCALXetNghiem = new System.Windows.Forms.Panel();
             this.lblLayMau = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,7 +54,6 @@
             this.panel5.SuspendLayout();
             this.pnMenuMain.SuspendLayout();
             this.pnCanLamSang.SuspendLayout();
-            this.pnCLSClinic.SuspendLayout();
             this.pnCALXetNghiem.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -162,28 +160,10 @@
             // 
             // pnCLSClinic
             // 
-            this.pnCLSClinic.Controls.Add(this.lblUltraSound);
             this.pnCLSClinic.Location = new System.Drawing.Point(316, 28);
             this.pnCLSClinic.Name = "pnCLSClinic";
             this.pnCLSClinic.Size = new System.Drawing.Size(217, 250);
             this.pnCLSClinic.TabIndex = 38;
-            // 
-            // lblUltraSound
-            // 
-            this.lblUltraSound.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblUltraSound.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblUltraSound.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUltraSound.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblUltraSound.LinkColor = System.Drawing.Color.White;
-            this.lblUltraSound.Location = new System.Drawing.Point(0, 0);
-            this.lblUltraSound.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblUltraSound.Name = "lblUltraSound";
-            this.lblUltraSound.Size = new System.Drawing.Size(217, 48);
-            this.lblUltraSound.TabIndex = 13;
-            this.lblUltraSound.TabStop = true;
-            this.lblUltraSound.Text = "Kết quả siêu âm";
-            this.lblUltraSound.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblUltraSound.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblUltraSound_LinkClicked);
             // 
             // pnCALXetNghiem
             // 
@@ -206,7 +186,7 @@
             this.lblLayMau.Size = new System.Drawing.Size(217, 48);
             this.lblLayMau.TabIndex = 22;
             this.lblLayMau.TabStop = true;
-            this.lblLayMau.Text = "Lấy mẫu xét nghiệm";
+            this.lblLayMau.Text = "Nhập hàng";
             this.lblLayMau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblLayMau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLayMau_LinkClicked);
             // 
@@ -251,7 +231,7 @@
             this.lblReception.Size = new System.Drawing.Size(250, 48);
             this.lblReception.TabIndex = 22;
             this.lblReception.TabStop = true;
-            this.lblReception.Text = "Tiếp nhận bệnh nhân";
+            this.lblReception.Text = "Tồn kho";
             this.lblReception.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblReception.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblReception_LinkClicked);
             // 
@@ -325,7 +305,7 @@
             this.lblThongKeTongHop.Size = new System.Drawing.Size(250, 48);
             this.lblThongKeTongHop.TabIndex = 33;
             this.lblThongKeTongHop.TabStop = true;
-            this.lblThongKeTongHop.Text = "Tổng hợp thống kê xét nghiệm";
+            this.lblThongKeTongHop.Text = "Ngân sách";
             this.lblThongKeTongHop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblThongKeTongHop.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblThongKeTongHop_LinkClicked);
             // 
@@ -365,7 +345,6 @@
             this.pnMenuMain.PerformLayout();
             this.pnCanLamSang.ResumeLayout(false);
             this.pnCanLamSang.PerformLayout();
-            this.pnCLSClinic.ResumeLayout(false);
             this.pnCALXetNghiem.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -384,7 +363,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.LinkLabel lblUltraSound;
         private System.Windows.Forms.Panel pnMenuMain;
         private System.Windows.Forms.LinkLabel lblReception;
         private System.Windows.Forms.Label label6;

@@ -71,7 +71,7 @@ namespace TPH.LIS.App
                 fParent.rbDanhMucKetNoiHIS.Visibility
                 = fParent.rbCaiDatKetNoiHis.Visibility
                 = fParent.rbTiepNhanHIS.Visibility = (CommonAppVarsAndFunctions.sysConfig.ConnectHIS ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never);
-                 lblTiepNhanHis.Visible = fParent.tsbLayMau.Visible
+                 lblTiepNhanHis.Visible 
                 = CommonAppVarsAndFunctions.sysConfig.ConnectHIS;
             fParent.rbThuPhi.Visibility =
                 ((CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh == EnumQuiTrinhLAB.NhapTay_ThuTien_KetQua || CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh == EnumQuiTrinhLAB.NhapTay_ThuTien_LayMau_KetQua || CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh == EnumQuiTrinhLAB.NhapTay_ThuTien_LayMau_NhanMau_KetQua) ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never);
@@ -81,21 +81,21 @@ namespace TPH.LIS.App
 
             //Kiểm tra bật tắt chức năng siêu âm
             lblUltraSound.Visible = CommonAppVarsAndFunctions.CheckExist_LoaiDichVu(ServiceType.ClsSieuAm);
-            fParent.rbKetQuSieuAm.Visibility = (lblUltraSound.Visible ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never);// fParent.mnuKQSieuAm.Visible = fParent.mnuTKTongHopSieuAm.Visible =;
+            //fParent.rbKetQuSieuAm.Visibility = (lblUltraSound.Visible ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never);// fParent.mnuKQSieuAm.Visible = fParent.mnuTKTongHopSieuAm.Visible =;
             //Kiểm tra bật tắt chức năng X-Quang
             lblXRay.Visible = CommonAppVarsAndFunctions.CheckExist_LoaiDichVu(ServiceType.ClsXQuang);
-            fParent.rbXQuang.Visibility = (lblXRay.Visible ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never); // = fParent.mnuTKTongHopXQuang.Visible;
+            //fParent.rbXQuang.Visibility = (lblXRay.Visible ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never); // = fParent.mnuTKTongHopXQuang.Visible;
             //Kiểm tra bật tắt chức năng điện tim
             lblElectrocardiogram.Visible = (CommonAppVarsAndFunctions.CheckExist_LoaiDichVu(ServiceType.Enclitic) || CommonAppVarsAndFunctions.CheckExist_LoaiDichVu(ServiceType.DvKhac)); 
              fParent.rbDichVuKhac.Visibility = (lblElectrocardiogram.Visible ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never); //fParent.mnuCLS_KQDV_Khac.Visible = 
             //Kiểm tra bật tắt chức năng điện tim
             lblEndoscopic.Visible = CommonAppVarsAndFunctions.CheckExist_LoaiDichVu(ServiceType.ClsNoiSoi);
-            fParent.rbNoiSoi.Visibility = (lblEndoscopic.Visible ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never); // = fParent.mnuKQNoiSoi.Visible = fParent.mnuTKTongHopNoiSoi.Visible = 
+            //fParent.rbNoiSoi.Visibility = (lblEndoscopic.Visible ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never); // = fParent.mnuKQNoiSoi.Visible = fParent.mnuTKTongHopNoiSoi.Visible = 
 
-            if (lblUltraSound.Visible || lblXRay.Visible || lblElectrocardiogram.Visible || lblEndoscopic.Visible)
-                fParent.rbGroupKetQuaCLSKhac.Visible = true;
-            else
-                fParent.rbGroupKetQuaCLSKhac.Visible = false;
+            //if (lblUltraSound.Visible || lblXRay.Visible || lblElectrocardiogram.Visible || lblEndoscopic.Visible)
+            //    fParent.rbGroupKetQuaCLSKhac.Visible = true;
+            //else
+            //    fParent.rbGroupKetQuaCLSKhac.Visible = false;
             //Kiểm tra bật tắt khám bệnh
             //  pnKhamBenh.Visible = fParent.mnuDMKhamBenh.Visible = fParent.mnuKhamBenh.Visible = CommonAppVarsAndFunctions.CheckExist_LoaiDichVu(ServiceType.KhamBenh);
             if (!pnKhamBenh.Visible)
@@ -142,74 +142,74 @@ namespace TPH.LIS.App
         }
         private void Check_VisibleRule()
         {
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            var processRule = CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh;
-            switch (processRule)
-            {
-                case EnumQuiTrinhLAB.NhapTay_KetQua:
-                    lblLayMau.Visible = false;
-                    lblNhanMau.Visible = false;
-                    fParent.btnTiepNhanHis.Visible = fParent.tsbLayMau.Visible = fParent.tsbNhanMau.Visible = fParent.tsbChuyenMau.Visible = lblTiepNhanHis.Visible = false;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhapCD;
-                    break;
-                case EnumQuiTrinhLAB.NhapTay_LayMau_KetQua:
-                    lblNhanMau.Visible = false;
-                    fParent.btnTiepNhanHis.Visible = fParent.tsbNhanMau.Visible = fParent.tsbChuyenMau.Visible = lblTiepNhanHis.Visible = false;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianLayMau;
-                    break;
-                case EnumQuiTrinhLAB.NhapTay_LayMau_NhanMau_KetQua:
-                    fParent.btnTiepNhanHis.Visible = lblTiepNhanHis.Visible = false;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhanMau;
-                    break;
-                case EnumQuiTrinhLAB.NhapTay_NhanMau_KetQua:
-                    lblLayMau.Visible = false;
-                    fParent.btnTiepNhanHis.Visible = fParent.tsbLayMau.Visible = lblTiepNhanHis.Visible = false;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhanMau;
-                    break;
-                case EnumQuiTrinhLAB.NhapTuHIS_KetQua:
-                    fParent.btnTiepNhanThuCong.Visible = false;
-                    lblLayMau.Visible = false;
-                    lblNhanMau.Visible = false;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhapCD;
-                    break;
-                case EnumQuiTrinhLAB.NhapTuHIS_LayMau_KetQua:
-                    fParent.btnTiepNhanThuCong.Visible = false;
-                    lblNhanMau.Visible = false;
-                    fParent.tsbChuyenMau.Visible = fParent.tsbNhanMau.Visible = false;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianLayMau;
-                    break;
-                case EnumQuiTrinhLAB.NhapTuHIS_NhanMau_KetQua:
-                    fParent.btnTiepNhanThuCong.Visible = false;
-                    lblLayMau.Visible = false;
-                    fParent.tsbLayMau.Visible = false;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhanMau;
-                    break;
-                case EnumQuiTrinhLAB.NhapTuHIS_LayMau_NhanMau_KetQua:
-                    fParent.btnTiepNhanThuCong.Visible = false;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhanMau;
-                    break;
-                case EnumQuiTrinhLAB.NhapTay_ThuTien_KetQua:
-                    lblLayMau.Visible = false;
-                    lblNhanMau.Visible = false;
-                    fParent.btnTiepNhanHis.Visible = fParent.tsbNhanMau.Visible = fParent.tsbLayMau.Visible = lblTiepNhanHis.Visible = false;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhapCD;
-                    break;
-                case EnumQuiTrinhLAB.NhapTay_ThuTien_LayMau_KetQua:
-                    lblNhanMau.Visible = false;
-                    fParent.btnTiepNhanHis.Visible = fParent.tsbNhanMau.Visible = lblTiepNhanHis.Visible = false;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianLayMau;
-                    break;
-                case EnumQuiTrinhLAB.NhapTay_ThuTien_LayMau_NhanMau_KetQua:
-                    fParent.btnTiepNhanHis.Visible = lblTiepNhanHis.Visible = false;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhanMau;
-                    break;
-                default:
-                    lblLayMau.Visible = true;
-                    lblNhanMau.Visible = true;
-                    fParent.btnTiepNhanHis.Visible = fParent.tsbLayMau.Visible = lblTiepNhanHis.Visible = true;
-                    CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhapCD;
-                    break;
-            }
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //var processRule = CommonAppVarsAndFunctions.sysConfig.ClsXetNghiemXemQuiTrinh;
+            //switch (processRule)
+            //{
+            //    case EnumQuiTrinhLAB.NhapTay_KetQua:
+            //        lblLayMau.Visible = false;
+            //        lblNhanMau.Visible = false;
+            //        fParent.btnTiepNhanHis.Visible = fParent.tsbLayMau.Visible = fParent.tsbNhanMau.Visible = fParent.tsbChuyenMau.Visible = lblTiepNhanHis.Visible = false;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhapCD;
+            //        break;
+            //    case EnumQuiTrinhLAB.NhapTay_LayMau_KetQua:
+            //        lblNhanMau.Visible = false;
+            //        fParent.btnTiepNhanHis.Visible = fParent.tsbNhanMau.Visible = fParent.tsbChuyenMau.Visible = lblTiepNhanHis.Visible = false;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianLayMau;
+            //        break;
+            //    case EnumQuiTrinhLAB.NhapTay_LayMau_NhanMau_KetQua:
+            //        fParent.btnTiepNhanHis.Visible = lblTiepNhanHis.Visible = false;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhanMau;
+            //        break;
+            //    case EnumQuiTrinhLAB.NhapTay_NhanMau_KetQua:
+            //        lblLayMau.Visible = false;
+            //        fParent.btnTiepNhanHis.Visible = fParent.tsbLayMau.Visible = lblTiepNhanHis.Visible = false;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhanMau;
+            //        break;
+            //    case EnumQuiTrinhLAB.NhapTuHIS_KetQua:
+            //        fParent.btnTiepNhanThuCong.Visible = false;
+            //        lblLayMau.Visible = false;
+            //        lblNhanMau.Visible = false;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhapCD;
+            //        break;
+            //    case EnumQuiTrinhLAB.NhapTuHIS_LayMau_KetQua:
+            //        fParent.btnTiepNhanThuCong.Visible = false;
+            //        lblNhanMau.Visible = false;
+            //        fParent.tsbChuyenMau.Visible = fParent.tsbNhanMau.Visible = false;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianLayMau;
+            //        break;
+            //    case EnumQuiTrinhLAB.NhapTuHIS_NhanMau_KetQua:
+            //        fParent.btnTiepNhanThuCong.Visible = false;
+            //        lblLayMau.Visible = false;
+            //        fParent.tsbLayMau.Visible = false;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhanMau;
+            //        break;
+            //    case EnumQuiTrinhLAB.NhapTuHIS_LayMau_NhanMau_KetQua:
+            //        fParent.btnTiepNhanThuCong.Visible = false;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhanMau;
+            //        break;
+            //    case EnumQuiTrinhLAB.NhapTay_ThuTien_KetQua:
+            //        lblLayMau.Visible = false;
+            //        lblNhanMau.Visible = false;
+            //        fParent.btnTiepNhanHis.Visible = fParent.tsbNhanMau.Visible = fParent.tsbLayMau.Visible = lblTiepNhanHis.Visible = false;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhapCD;
+            //        break;
+            //    case EnumQuiTrinhLAB.NhapTay_ThuTien_LayMau_KetQua:
+            //        lblNhanMau.Visible = false;
+            //        fParent.btnTiepNhanHis.Visible = fParent.tsbNhanMau.Visible = lblTiepNhanHis.Visible = false;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianLayMau;
+            //        break;
+            //    case EnumQuiTrinhLAB.NhapTay_ThuTien_LayMau_NhanMau_KetQua:
+            //        fParent.btnTiepNhanHis.Visible = lblTiepNhanHis.Visible = false;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhanMau;
+            //        break;
+            //    default:
+            //        lblLayMau.Visible = true;
+            //        lblNhanMau.Visible = true;
+            //        fParent.btnTiepNhanHis.Visible = fParent.tsbLayMau.Visible = lblTiepNhanHis.Visible = true;
+            //        CommonAppVarsAndFunctions.gioTinhTgThucHien = enumGioTinhThucHien.ThoiGianNhapCD;
+            //        break;
+            //}
 
 
         }

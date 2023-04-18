@@ -1301,7 +1301,7 @@ namespace TPH.LIS.App
                CommonAppVarsAndFunctions.PhanQuyenTiepNhan, UserConstant.PermissionReceptionViewPatientInfo))
             {
                 // Thông tin bệnh nhân
-                btnTiepNhanThuCong.Enabled = rbInbaracodeKSK.Enabled = rbTiepNhanBenhNhan.Enabled 
+                rbTiepNhanBenhNhan.Enabled
                                            = rbQLXNG.Enabled = rbNhapDanhSach.Enabled = rdGopBarcode.Enabled = true;
             }
             rbCapSoThuTu.Enabled = rabCapNhatThongTinTuHis.Enabled = rbTiepNhanHIS.Enabled = btnTiepNhanHis.Enabled = CheckUserPermissionToAccessFunctions(
@@ -1380,9 +1380,7 @@ namespace TPH.LIS.App
             rbDanhMucXetNghiem.Enabled = CheckUserPermissionToAccessFunctions(
               CommonAppVarsAndFunctions.PhanQuyenQuanLy,
                UserConstant.PermissionCategoriesManagementOfTest);
-            rbTuLuuMau.Enabled = CheckUserPermissionToAccessFunctions(
-              CommonAppVarsAndFunctions.PhanQuyenQuanLy,
-               UserConstant.PermissionCategoriesManagementOfTest);
+
             rbTinhTrangMauLyDo.Enabled = CheckUserPermissionToAccessFunctions(
               CommonAppVarsAndFunctions.PhanQuyenQuanLy,
                UserConstant.PermissionCategoriesReason);
@@ -1429,7 +1427,6 @@ namespace TPH.LIS.App
                 UserConstant.PermissionTestViewResult))
             {
                 rbKetQuaThuongQuy.Enabled = true;
-                tsbKetQuaXN.Enabled = true;
                 rbXacNhanTraKetQua.Enabled = true;
             }
             rbChuyenKetQua.Enabled = CheckUserPermissionToAccessFunctions(
@@ -1457,14 +1454,14 @@ namespace TPH.LIS.App
                  CommonAppVarsAndFunctions.PhanQuyenXetNghiem,
                   UserConstant.PermissionMicroBiologyViewResult);
 
-            rbDangNhapLayMau.Enabled = rbBanLayMau.Enabled = tsbLayMau.Enabled = rbLayMau.Enabled = CheckUserPermissionToAccessFunctions(
+            rbDangNhapLayMau.Enabled = rbBanLayMau.Enabled = rbLayMau.Enabled = CheckUserPermissionToAccessFunctions(
                  CommonAppVarsAndFunctions.PhanQuyenXetNghiem,
                   UserConstant.PermissionTestCollectSample);
 
-            tsbNhanMau.Enabled = rbNhanMau.Enabled = CheckUserPermissionToAccessFunctions(
+            rbNhanMau.Enabled = CheckUserPermissionToAccessFunctions(
                CommonAppVarsAndFunctions.PhanQuyenXetNghiem, UserConstant.PermissionTestGetSample);
 
-            tsbChuyenMau.Enabled = rbChuyenMau.Enabled = CheckUserPermissionToAccessFunctions(
+            rbChuyenMau.Enabled = CheckUserPermissionToAccessFunctions(
                CommonAppVarsAndFunctions.PhanQuyenXetNghiem, UserConstant.PermissionTransferSample);
 
             rbLichSuXetNghiem.Enabled = CheckUserPermissionToAccessFunctions(
@@ -1473,8 +1470,8 @@ namespace TPH.LIS.App
             rbTheoDoiMau.Enabled = CheckUserPermissionToAccessFunctions(
             CommonAppVarsAndFunctions.PhanQuyenXetNghiem, UserConstant.PermissionViewSampleTracking);
 
-            tsbChuyenMau.Enabled = rbChuyenMau.Enabled = CheckUserPermissionToAccessFunctions(
-               CommonAppVarsAndFunctions.PhanQuyenXetNghiem, UserConstant.PermissionTransferSample);
+            rbChuyenMau.Enabled = CheckUserPermissionToAccessFunctions(
+              CommonAppVarsAndFunctions.PhanQuyenXetNghiem, UserConstant.PermissionTransferSample);
 
             rbKetQuaTuiMau.Enabled = CheckUserPermissionToAccessFunctions(
                 CommonAppVarsAndFunctions.PhanQuyenXetNghiem, UserConstant.PermissionBloodTestViewResult);
@@ -1513,13 +1510,7 @@ namespace TPH.LIS.App
 
         private void Check_Enable_SA()
         {
-            //Xem kết quả
-            if (CheckUserPermissionToAccessFunctions(
-               CommonAppVarsAndFunctions.PhanQuyenSieuAm,
-                UserConstant.PermissionViewResultOfSupersonic))
-            {
-                rbKetQuSieuAm.Enabled = true;
-            }
+
             //Quyền gửi mail
             if (CheckUserPermissionToAccessFunctions(
                CommonAppVarsAndFunctions.PhanQuyenSieuAm,
@@ -1698,7 +1689,7 @@ namespace TPH.LIS.App
         private void rbTembarcode_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var f = new TPH.LIS.BarcodePrinting.Barcode.FrmQuanLyBarcode();
-            f.userDangNhap =CommonAppVarsAndFunctions.UserID;
+            f.userDangNhap = CommonAppVarsAndFunctions.UserID;
             f.Show();
         }
 
@@ -1772,7 +1763,7 @@ namespace TPH.LIS.App
         {
 
 
-           
+
         }
 
         private void rbTuLuuMau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1791,6 +1782,11 @@ namespace TPH.LIS.App
         {
             //var f = new FrmCapSothuTu_HIS();
             //ShowForm(f);
+        }
+
+        private void rbChamCong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

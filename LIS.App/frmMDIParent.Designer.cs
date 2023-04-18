@@ -34,14 +34,6 @@
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblHello = new System.Windows.Forms.ToolStripStatusLabel();
@@ -69,17 +61,11 @@
             this.rbInTheoDanhSach = new DevExpress.XtraBars.BarButtonItem();
             this.rbKQViSinhNuoiCay = new DevExpress.XtraBars.BarButtonItem();
             this.rbKetQuaTuiMau = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbLichSuXetNghiem = new DevExpress.XtraBars.BarButtonItem();
             this.rbKQUploadHIS = new DevExpress.XtraBars.BarButtonItem();
             this.rbGuiEMailKetQua = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbQLXNCB = new DevExpress.XtraBars.BarButtonItem();
             this.rbQLXNG = new DevExpress.XtraBars.BarButtonItem();
-            this.rbGroupKetQuaCLSKhac = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rbKetQuSieuAm = new DevExpress.XtraBars.BarButtonItem();
-            this.rbNoiSoi = new DevExpress.XtraBars.BarButtonItem();
-            this.rbXQuang = new DevExpress.XtraBars.BarButtonItem();
             this.rbDichVuKhac = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -93,7 +79,6 @@
             this.rdGopBarcode = new DevExpress.XtraBars.BarButtonItem();
             this.rbDangNhapLayMau = new DevExpress.XtraBars.BarButtonItem();
             this.rbBanLayMau = new DevExpress.XtraBars.BarButtonItem();
-            this.rbInbaracodeKSK = new DevExpress.XtraBars.BarButtonItem();
             this.rbLayMau = new DevExpress.XtraBars.BarButtonItem();
             this.rbChuyenMau = new DevExpress.XtraBars.BarButtonItem();
             this.rbNhanMau = new DevExpress.XtraBars.BarButtonItem();
@@ -137,26 +122,21 @@
             this.rbTembarcode = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.rbMauReport2 = new DevExpress.XtraBars.BarButtonItem();
-            this.rbTuLuuMau = new DevExpress.XtraBars.BarButtonItem();
             this.rbMaPPingMaMyXnViSinh = new DevExpress.XtraBars.BarButtonItem();
+            this.rbChamCong = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.mnSub = new DevExpress.XtraNavBar.NavBarControl();
             this.nbgModules = new DevExpress.XtraNavBar.NavBarGroup();
             this.btnHomeScreen = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnTiepNhanThuCong = new DevExpress.XtraNavBar.NavBarItem();
             this.btnTiepNhanHis = new DevExpress.XtraNavBar.NavBarItem();
-            this.tsbLayMau = new DevExpress.XtraNavBar.NavBarItem();
-            this.tsbChuyenMau = new DevExpress.XtraNavBar.NavBarItem();
-            this.tsbNhanMau = new DevExpress.XtraNavBar.NavBarItem();
-            this.tsbKetQuaXN = new DevExpress.XtraNavBar.NavBarItem();
             this.btnTimBenhNhan = new DevExpress.XtraNavBar.NavBarItem();
             this.btnLogOut = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
@@ -168,6 +148,7 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnCoCanhBao.SuspendLayout();
@@ -330,7 +311,7 @@
             this.btnCloseAlarm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseAlarm.Image = global::TPH.LIS.App.Properties.Resources.Prohibit_icon_16x16;
             this.btnCloseAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCloseAlarm.Location = new System.Drawing.Point(-372, -3);
+            this.btnCloseAlarm.Location = new System.Drawing.Point(-378, -3);
             this.btnCloseAlarm.Name = "btnCloseAlarm";
             this.btnCloseAlarm.Size = new System.Drawing.Size(106, 25);
             this.btnCloseAlarm.TabIndex = 0;
@@ -380,12 +361,9 @@
             this.rbXetNghiem.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.rbXetNghiem.Appearance.Options.UseFont = true;
             this.rbXetNghiem.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup6,
-            this.ribbonPageGroup11,
-            this.ribbonPageGroup3,
-            this.rbGroupKetQuaCLSKhac});
+            this.ribbonPageGroup6});
             this.rbXetNghiem.Name = "rbXetNghiem";
-            this.rbXetNghiem.Text = "Trả kết quả";
+            this.rbXetNghiem.Text = "Quản lý xuất nhập hàng";
             // 
             // ribbonPageGroup6
             // 
@@ -440,14 +418,6 @@
             this.rbKetQuaTuiMau.Name = "rbKetQuaTuiMau";
             this.rbKetQuaTuiMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbKetQuaTuiMau_ItemClick);
             // 
-            // ribbonPageGroup11
-            // 
-            this.ribbonPageGroup11.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonPageGroup11.ItemLinks.Add(this.rbLichSuXetNghiem);
-            this.ribbonPageGroup11.ItemLinks.Add(this.rbKQUploadHIS);
-            this.ribbonPageGroup11.ItemLinks.Add(this.rbGuiEMailKetQua);
-            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
-            // 
             // rbLichSuXetNghiem
             // 
             this.rbLichSuXetNghiem.Caption = "Lịch sử xét nghiệm";
@@ -475,14 +445,6 @@
             this.rbGuiEMailKetQua.Name = "rbGuiEMailKetQua";
             this.rbGuiEMailKetQua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbGuiEMailKetQua_ItemClick);
             // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.rbQLXNCB);
-            this.ribbonPageGroup3.ItemLinks.Add(this.rbQLXNG);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Quản lý xét nghiệm";
-            this.ribbonPageGroup3.Visible = false;
-            // 
             // rbQLXNCB
             // 
             this.rbQLXNCB.Caption = "Quản lý xét nghiệm cảnh báo";
@@ -499,37 +461,6 @@
             this.rbQLXNG.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbQLXNG.ImageOptions.LargeImage")));
             this.rbQLXNG.Name = "rbQLXNG";
             this.rbQLXNG.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbQLXNG_ItemClick);
-            // 
-            // rbGroupKetQuaCLSKhac
-            // 
-            this.rbGroupKetQuaCLSKhac.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.rbGroupKetQuaCLSKhac.ItemLinks.Add(this.rbKetQuSieuAm);
-            this.rbGroupKetQuaCLSKhac.ItemLinks.Add(this.rbNoiSoi);
-            this.rbGroupKetQuaCLSKhac.ItemLinks.Add(this.rbXQuang);
-            this.rbGroupKetQuaCLSKhac.ItemLinks.Add(this.rbDichVuKhac);
-            this.rbGroupKetQuaCLSKhac.Name = "rbGroupKetQuaCLSKhac";
-            this.rbGroupKetQuaCLSKhac.Text = "Chẩn đoán hình ảnh";
-            // 
-            // rbKetQuSieuAm
-            // 
-            this.rbKetQuSieuAm.Caption = "Siêu âm";
-            this.rbKetQuSieuAm.Id = 15;
-            this.rbKetQuSieuAm.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.System_Security_Reader_1_icon;
-            this.rbKetQuSieuAm.Name = "rbKetQuSieuAm";
-            // 
-            // rbNoiSoi
-            // 
-            this.rbNoiSoi.Caption = "Nội soi";
-            this.rbNoiSoi.Id = 16;
-            this.rbNoiSoi.ImageOptions.ImageUri.Uri = "BehindText";
-            this.rbNoiSoi.Name = "rbNoiSoi";
-            // 
-            // rbXQuang
-            // 
-            this.rbXQuang.Caption = "X Quang";
-            this.rbXQuang.Id = 17;
-            this.rbXQuang.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.Healthcare_Scan_Body_icon;
-            this.rbXQuang.Name = "rbXQuang";
             // 
             // rbDichVuKhac
             // 
@@ -549,7 +480,7 @@
             this.ribbonPageGroup14,
             this.ribbonPageGroup4});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Bệnh nhân";
+            this.ribbonPage1.Text = "Quản lý kho";
             // 
             // ribbonPageGroup1
             // 
@@ -624,7 +555,6 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.rdGopBarcode);
             this.ribbonPageGroup2.ItemLinks.Add(this.rbDangNhapLayMau);
             this.ribbonPageGroup2.ItemLinks.Add(this.rbBanLayMau);
-            this.ribbonPageGroup2.ItemLinks.Add(this.rbInbaracodeKSK);
             this.ribbonPageGroup2.ItemLinks.Add(this.rbLayMau);
             this.ribbonPageGroup2.ItemLinks.Add(this.rbChuyenMau);
             this.ribbonPageGroup2.ItemLinks.Add(this.rbNhanMau);
@@ -660,14 +590,6 @@
             this.rbBanLayMau.ImageOptions.Image = global::TPH.LIS.App.Properties.Resources.Add_Tubes_48x48;
             this.rbBanLayMau.Name = "rbBanLayMau";
             this.rbBanLayMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBanLayMau_ItemClick);
-            // 
-            // rbInbaracodeKSK
-            // 
-            this.rbInbaracodeKSK.Caption = "In barcode Khám sức khỏe";
-            this.rbInbaracodeKSK.Id = 4;
-            this.rbInbaracodeKSK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbInbaracodeKSK.ImageOptions.Image")));
-            this.rbInbaracodeKSK.Name = "rbInbaracodeKSK";
-            this.rbInbaracodeKSK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbInbaracodeKSK_ItemClick);
             // 
             // rbLayMau
             // 
@@ -794,7 +716,6 @@
             this.rbTiepNhanBenhNhan,
             this.rbTimKiem,
             this.rbNhanMau,
-            this.rbInbaracodeKSK,
             this.rbBanLayMau,
             this.rbTheoDoiMau,
             this.rbThuPhi,
@@ -805,9 +726,6 @@
             this.rbKQSinhHocPhanTu,
             this.rbKQViSinhNuoiCay,
             this.rbKetQuaTuiMau,
-            this.rbKetQuSieuAm,
-            this.rbNoiSoi,
-            this.rbXQuang,
             this.rbDichVuKhac,
             this.rbThongKeTongHopXn,
             this.rbXuatKetQua,
@@ -851,11 +769,11 @@
             this.rdGopBarcode,
             this.rbQLXNCB,
             this.rbQLXNG,
-            this.rbTuLuuMau,
             this.rbMaPPingMaMyXnViSinh,
-            this.rbCapSoThuTu});
+            this.rbCapSoThuTu,
+            this.rbChamCong});
             this.rbMainMenu.Location = new System.Drawing.Point(0, 0);
-            this.rbMainMenu.MaxItemId = 30;
+            this.rbMainMenu.MaxItemId = 31;
             this.rbMainMenu.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Never;
             this.rbMainMenu.Name = "rbMainMenu";
             this.rbMainMenu.OptionsCustomizationForm.FormIcon = ((System.Drawing.Icon)(resources.GetObject("resource.FormIcon")));
@@ -864,6 +782,7 @@
             this.ribbonPage1,
             this.rbXetNghiem,
             this.ribbonPage2,
+            this.ribbonPage4,
             this.ribbonPage3});
             this.rbMainMenu.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.rbMainMenu.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
@@ -1115,15 +1034,6 @@
             this.rbMauReport2.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.rbMauReport2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbMauReport2_ItemClick);
             // 
-            // rbTuLuuMau
-            // 
-            this.rbTuLuuMau.Caption = "Tủ lưu mẫu";
-            this.rbTuLuuMau.Id = 27;
-            this.rbTuLuuMau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbTuLuuMau.ImageOptions.Image")));
-            this.rbTuLuuMau.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("rbTuLuuMau.ImageOptions.LargeImage")));
-            this.rbTuLuuMau.Name = "rbTuLuuMau";
-            this.rbTuLuuMau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbTuLuuMau_ItemClick);
-            // 
             // rbMaPPingMaMyXnViSinh
             // 
             this.rbMaPPingMaMyXnViSinh.Caption = "Mapping mã máy XN vi sinh";
@@ -1133,6 +1043,14 @@
             this.rbMaPPingMaMyXnViSinh.Name = "rbMaPPingMaMyXnViSinh";
             this.rbMaPPingMaMyXnViSinh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbMaPPingMaMyXnViSinh_ItemClick);
             // 
+            // rbChamCong
+            // 
+            this.rbChamCong.Caption = "Chấm công";
+            this.rbChamCong.Id = 30;
+            this.rbChamCong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("rbChamCong.ImageOptions.SvgImage")));
+            this.rbChamCong.Name = "rbChamCong";
+            this.rbChamCong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbChamCong_ItemClick);
+            // 
             // ribbonPage2
             // 
             this.ribbonPage2.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
@@ -1140,7 +1058,7 @@
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5});
             this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Báo cáo";
+            this.ribbonPage2.Text = "Kế toán";
             // 
             // ribbonPageGroup5
             // 
@@ -1150,6 +1068,21 @@
             this.ribbonPageGroup5.ItemLinks.Add(this.rbDashboard);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
+            // ribbonPage4
+            // 
+            this.ribbonPage4.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.ribbonPage4.Appearance.Options.UseFont = true;
+            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3});
+            this.ribbonPage4.Name = "ribbonPage4";
+            this.ribbonPage4.Text = "Bảng lương";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.rbChamCong);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Bảng lương";
+            // 
             // ribbonPage3
             // 
             this.ribbonPage3.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
@@ -1157,8 +1090,6 @@
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup7,
             this.ribbonPageGroup12,
-            this.ribbonPageGroup9,
-            this.ribbonPageGroup10,
             this.ribbonPageGroup13,
             this.ribbonPageGroup8});
             this.ribbonPage3.Name = "ribbonPage3";
@@ -1186,25 +1117,6 @@
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             this.ribbonPageGroup12.Text = "Hành chính";
             // 
-            // ribbonPageGroup9
-            // 
-            this.ribbonPageGroup9.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonPageGroup9.ItemLinks.Add(this.rbDanhMucMaMayXetNghiem);
-            this.ribbonPageGroup9.ItemLinks.Add(this.rbThongTinMayXN);
-            this.ribbonPageGroup9.ItemLinks.Add(this.rbBienDichKetQua);
-            this.ribbonPageGroup9.ItemLinks.Add(this.rbMayInBarCode);
-            this.ribbonPageGroup9.ItemLinks.Add(this.rbMaPPingMaMyXnViSinh);
-            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            this.ribbonPageGroup9.Text = "Thiết bị";
-            // 
-            // ribbonPageGroup10
-            // 
-            this.ribbonPageGroup10.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonPageGroup10.ItemLinks.Add(this.rbCaiDatKetNoiHis);
-            this.ribbonPageGroup10.ItemLinks.Add(this.rbDanhMucKetNoiHIS);
-            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            this.ribbonPageGroup10.Text = "Kết nối HIS";
-            // 
             // ribbonPageGroup13
             // 
             this.ribbonPageGroup13.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
@@ -1223,7 +1135,6 @@
             this.ribbonPageGroup8.ItemLinks.Add(this.rbDangKy);
             this.ribbonPageGroup8.ItemLinks.Add(this.rbCapNhatPhanMem);
             this.ribbonPageGroup8.ItemLinks.Add(this.rbMauReport2);
-            this.ribbonPageGroup8.ItemLinks.Add(this.rbTuLuuMau);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Hệ thống";
             // 
@@ -1235,14 +1146,9 @@
             this.nbgModules});
             this.mnSub.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.btnHomeScreen,
-            this.tsbLayMau,
-            this.tsbChuyenMau,
-            this.tsbNhanMau,
-            this.tsbKetQuaXN,
             this.btnTimBenhNhan,
             this.btnTiepNhanHis,
-            this.btnLogOut,
-            this.btnTiepNhanThuCong});
+            this.btnLogOut});
             this.mnSub.LinkSelectionMode = DevExpress.XtraNavBar.LinkSelectionModeType.OneInControl;
             this.mnSub.Location = new System.Drawing.Point(0, 160);
             this.mnSub.Name = "mnSub";
@@ -1264,18 +1170,12 @@
             this.nbgModules.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
             this.nbgModules.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnHomeScreen),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnTiepNhanThuCong),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnTiepNhanHis),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.tsbLayMau),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.tsbChuyenMau),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.tsbNhanMau),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.tsbKetQuaXN),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnTimBenhNhan),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnLogOut)});
             this.nbgModules.Name = "nbgModules";
             this.nbgModules.NavigationPaneVisible = false;
             this.nbgModules.SelectedLinkIndex = 1;
-            this.nbgModules.TopVisibleLinkIndex = 1;
             // 
             // btnHomeScreen
             // 
@@ -1284,70 +1184,24 @@
             this.btnHomeScreen.Name = "btnHomeScreen";
             this.btnHomeScreen.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiGrid_LinkClicked);
             // 
-            // btnTiepNhanThuCong
-            // 
-            this.btnTiepNhanThuCong.Caption = "Tiếp nhận";
-            this.btnTiepNhanThuCong.ImageOptions.ImageUri.Uri = "Add";
-            this.btnTiepNhanThuCong.Name = "btnTiepNhanThuCong";
-            // 
             // btnTiepNhanHis
             // 
             this.btnTiepNhanHis.Caption = "F1";
             this.btnTiepNhanHis.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTiepNhanHis.ImageOptions.LargeImage")));
             this.btnTiepNhanHis.Name = "btnTiepNhanHis";
-            toolTipItem1.Text = "Tiếp nhận từ HIS";
+            toolTipItem1.Text = "Chấm công";
             superToolTip1.Items.Add(toolTipItem1);
             this.btnTiepNhanHis.SuperTip = superToolTip1;
             this.btnTiepNhanHis.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiGridCardView_LinkClicked);
-            // 
-            // tsbLayMau
-            // 
-            this.tsbLayMau.Caption = "F2";
-            this.tsbLayMau.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.blood_drop_icon__1_;
-            this.tsbLayMau.Name = "tsbLayMau";
-            toolTipItem2.Text = "Lấy mẫu";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.tsbLayMau.SuperTip = superToolTip2;
-            this.tsbLayMau.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiSpreadsheet_LinkClicked);
-            // 
-            // tsbChuyenMau
-            // 
-            this.tsbChuyenMau.Caption = "F3";
-            this.tsbChuyenMau.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("tsbChuyenMau.ImageOptions.LargeImage")));
-            this.tsbChuyenMau.Name = "tsbChuyenMau";
-            toolTipItem3.Text = "Chuyển mẫu";
-            superToolTip3.Items.Add(toolTipItem3);
-            this.tsbChuyenMau.SuperTip = superToolTip3;
-            this.tsbChuyenMau.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiWord_LinkClicked);
-            // 
-            // tsbNhanMau
-            // 
-            this.tsbNhanMau.Caption = "F4";
-            this.tsbNhanMau.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.tubes_icon;
-            this.tsbNhanMau.Name = "tsbNhanMau";
-            toolTipItem4.Text = "Nhận mẫu";
-            superToolTip4.Items.Add(toolTipItem4);
-            this.tsbNhanMau.SuperTip = superToolTip4;
-            this.tsbNhanMau.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiSnap_LinkClicked);
-            // 
-            // tsbKetQuaXN
-            // 
-            this.tsbKetQuaXN.Caption = "F5";
-            this.tsbKetQuaXN.ImageOptions.LargeImage = global::TPH.LIS.App.Properties.Resources.Clipboard_icon__1_;
-            this.tsbKetQuaXN.Name = "tsbKetQuaXN";
-            toolTipItem5.Text = "Kết quả";
-            superToolTip5.Items.Add(toolTipItem5);
-            this.tsbKetQuaXN.SuperTip = superToolTip5;
-            this.tsbKetQuaXN.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiReports_LinkClicked);
             // 
             // btnTimBenhNhan
             // 
             this.btnTimBenhNhan.Caption = "F6";
             this.btnTimBenhNhan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTimBenhNhan.ImageOptions.LargeImage")));
             this.btnTimBenhNhan.Name = "btnTimBenhNhan";
-            toolTipItem6.Text = "Tìm kiếm";
-            superToolTip6.Items.Add(toolTipItem6);
-            this.btnTimBenhNhan.SuperTip = superToolTip6;
+            toolTipItem2.Text = "Tìm kiếm";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnTimBenhNhan.SuperTip = superToolTip2;
             this.btnTimBenhNhan.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiPivot_LinkClicked);
             // 
             // btnLogOut
@@ -1426,6 +1280,11 @@
             this.barButtonItem6.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
             this.barButtonItem6.Name = "barButtonItem6";
             // 
+            // ribbonPage5
+            // 
+            this.ribbonPage5.Name = "ribbonPage5";
+            this.ribbonPage5.Text = "ribbonPage5";
+            // 
             // frmMDIParent
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.Control;
@@ -1450,7 +1309,7 @@
             this.Name = "frmMDIParent";
             this.Ribbon = this.rbMainMenu;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "TPH.LabIMS";
+            this.Text = "Quản lý kho";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMDIParent_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMDIParent_FormClosed);
@@ -1509,7 +1368,6 @@
         private DevExpress.XtraBars.BarButtonItem rbNhanMau;
         private DevExpress.XtraBars.BarButtonItem rbBanLayMau;
         private DevExpress.XtraBars.BarButtonItem rbTheoDoiMau;
-        private DevExpress.XtraBars.BarButtonItem rbInbaracodeKSK;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonControl rbMainMenu;
         private DevExpress.XtraBars.BarButtonItem rbDashboard;
@@ -1529,9 +1387,6 @@
         private DevExpress.XtraBars.BarButtonItem rbDanhMucMaMayXetNghiem;
         private DevExpress.XtraBars.BarButtonItem rbCapNhatPhanMem;
         private DevExpress.XtraBars.BarButtonItem rbThongTinMayXN;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.BarButtonItem rbGuiEMailKetQua;
         private DevExpress.XtraBars.BarButtonItem rbDoituongDichVu;
         private DevExpress.XtraBars.BarButtonItem rbKhoaPhong;
@@ -1549,10 +1404,6 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem4;
         private DevExpress.XtraNavBar.NavBarItem navBarItem5;
         public DevExpress.XtraNavBar.NavBarItem btnHomeScreen;
-        public DevExpress.XtraNavBar.NavBarItem tsbLayMau;
-        public DevExpress.XtraNavBar.NavBarItem tsbChuyenMau;
-        public DevExpress.XtraNavBar.NavBarItem tsbNhanMau;
-        public DevExpress.XtraNavBar.NavBarItem tsbKetQuaXN;
         public DevExpress.XtraNavBar.NavBarItem btnTimBenhNhan;
         public DevExpress.XtraNavBar.NavBarItem btnTiepNhanHis;
         public DevExpress.XtraNavBar.NavBarItem btnLogOut;
@@ -1566,10 +1417,6 @@
         public DevExpress.XtraBars.BarButtonItem rbKhuVuc;
         public DevExpress.XtraBars.BarButtonItem rbTiepNhanHIS;
         public DevExpress.XtraBars.BarButtonItem rbThuPhi;
-        public DevExpress.XtraBars.Ribbon.RibbonPageGroup rbGroupKetQuaCLSKhac;
-        public DevExpress.XtraBars.BarButtonItem rbKetQuSieuAm;
-        public DevExpress.XtraBars.BarButtonItem rbNoiSoi;
-        public DevExpress.XtraBars.BarButtonItem rbXQuang;
         public DevExpress.XtraBars.BarButtonItem rbDichVuKhac;
         public DevExpress.XtraBars.BarButtonItem rbKQSinhHocPhanTu;
         public DevExpress.XtraBars.BarButtonItem rbKQViSinhNuoiCay;
@@ -1586,7 +1433,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem rbMauReport2;
-        public DevExpress.XtraNavBar.NavBarItem btnTiepNhanThuCong;
         private DevExpress.XtraBars.BarButtonItem rbDangNhapLayMau;
         private DevExpress.XtraBars.BarButtonItem rbChuyenKetQua;
         private DevExpress.XtraBars.BarButtonItem rbXacNhanTraKetQua;
@@ -1598,13 +1444,15 @@
         private DevExpress.XtraBars.BarButtonItem rbNhapDanhSach;
         private DevExpress.XtraBars.BarButtonItem rdGopBarcode;
         private System.Windows.Forms.ToolStripStatusLabel lblThongBaoCapNhat;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem rbQLXNCB;
         private DevExpress.XtraBars.BarButtonItem rbQLXNG;
-        public DevExpress.XtraBars.BarButtonItem rbTuLuuMau;
         private DevExpress.XtraBars.BarButtonItem rbMaPPingMaMyXnViSinh;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem rbCapSoThuTu;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private DevExpress.XtraBars.BarButtonItem rbChamCong;
     }
 }
 
