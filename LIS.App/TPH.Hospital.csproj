@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TPH.LIS.App</RootNamespace>
-    <AssemblyName>TPH.LabIMS</AssemblyName>
+    <AssemblyName>QuanLyKho</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>

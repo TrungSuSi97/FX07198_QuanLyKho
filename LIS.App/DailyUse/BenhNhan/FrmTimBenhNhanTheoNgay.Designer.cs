@@ -135,10 +135,6 @@
             this.xtraScrollableControlMain.Margin = new System.Windows.Forms.Padding(0);
             this.xtraScrollableControlMain.Size = new System.Drawing.Size(729, 25);
             // 
-            // ucGroupHeaderChonMain
-            // 
-            this.ucGroupHeaderChonMain.Location = new System.Drawing.Point(131, 1);
-            // 
             // pnFormControl
             // 
             this.pnFormControl.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -610,7 +606,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(729, 542);
-            this.ControlBox = false;
+            this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "FrmTimBenhNhanTheoNgay";
             this.Text = "FrmTimBenhNhanTheoNgay";

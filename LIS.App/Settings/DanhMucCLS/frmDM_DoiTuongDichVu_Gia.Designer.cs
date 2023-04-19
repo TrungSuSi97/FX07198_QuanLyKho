@@ -534,7 +534,7 @@ namespace TPH.LIS.App.CauHinh.DanhMucCLS
             this.lblTitle.Appearance.Options.UseBackColor = true;
             this.lblTitle.Appearance.Options.UseFont = true;
             this.lblTitle.Appearance.Options.UseForeColor = true;
-            this.lblTitle.Size = new System.Drawing.Size(286, 22);
+            this.lblTitle.Size = new System.Drawing.Size(291, 22);
             this.lblTitle.Text = "CẤU HÌNH THÔNG TIN - GIÁ DỊCH VỤ ";
             // 
             // pnContaint
@@ -543,12 +543,12 @@ namespace TPH.LIS.App.CauHinh.DanhMucCLS
             this.pnContaint.Appearance.Options.UseBackColor = true;
             this.pnContaint.Controls.Add(this.tabControl1);
             this.pnContaint.Location = new System.Drawing.Point(0, 0);
-            this.pnContaint.Margin = new System.Windows.Forms.Padding(0,0,0,0);
+            this.pnContaint.Margin = new System.Windows.Forms.Padding(0);
             this.pnContaint.Size = new System.Drawing.Size(1134, 661);
             // 
             // pnLabel
             // 
-            this.pnLabel.Margin = new System.Windows.Forms.Padding(0,0,0,0);
+            this.pnLabel.Margin = new System.Windows.Forms.Padding(0);
             this.pnLabel.Padding = new System.Windows.Forms.Padding(4, 10, 4, 2);
             this.pnLabel.Size = new System.Drawing.Size(1134, 0);
             // 
@@ -581,11 +581,6 @@ namespace TPH.LIS.App.CauHinh.DanhMucCLS
             this.xtraScrollableControlMain.Appearance.BackColor2 = System.Drawing.Color.Gray;
             this.xtraScrollableControlMain.Appearance.Options.UseBackColor = true;
             this.xtraScrollableControlMain.Size = new System.Drawing.Size(1134, 0);
-            // 
-            // ucGroupHeaderChonMain
-            // 
-            this.ucGroupHeaderChonMain.Location = new System.Drawing.Point(288, 1);
-            this.ucGroupHeaderChonMain.Size = new System.Drawing.Size(10, 0);
             // 
             // pnFormControl
             // 
@@ -2214,7 +2209,7 @@ namespace TPH.LIS.App.CauHinh.DanhMucCLS
             this.tabNoiSoi.Controls.Add(this.panel11);
             this.tabNoiSoi.Controls.Add(this.panel10);
             this.tabNoiSoi.Location = new System.Drawing.Point(4, 27);
-            this.tabNoiSoi.Margin = new System.Windows.Forms.Padding(0,0,0,0);
+            this.tabNoiSoi.Margin = new System.Windows.Forms.Padding(0);
             this.tabNoiSoi.Name = "tabNoiSoi";
             this.tabNoiSoi.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabNoiSoi.Size = new System.Drawing.Size(1172, 626);
@@ -3264,7 +3259,7 @@ namespace TPH.LIS.App.CauHinh.DanhMucCLS
             this.tabKhamBenh.Controls.Add(this.panel12);
             this.tabKhamBenh.Controls.Add(this.panel19);
             this.tabKhamBenh.Location = new System.Drawing.Point(4, 27);
-            this.tabKhamBenh.Margin = new System.Windows.Forms.Padding(0,0,0,0);
+            this.tabKhamBenh.Margin = new System.Windows.Forms.Padding(0);
             this.tabKhamBenh.Name = "tabKhamBenh";
             this.tabKhamBenh.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabKhamBenh.Size = new System.Drawing.Size(1172, 626);
@@ -3826,7 +3821,7 @@ namespace TPH.LIS.App.CauHinh.DanhMucCLS
             this.tabDVKhac.Controls.Add(this.panel16);
             this.tabDVKhac.Controls.Add(this.panel18);
             this.tabDVKhac.Location = new System.Drawing.Point(4, 27);
-            this.tabDVKhac.Margin = new System.Windows.Forms.Padding(0,0,0,0);
+            this.tabDVKhac.Margin = new System.Windows.Forms.Padding(0);
             this.tabDVKhac.Name = "tabDVKhac";
             this.tabDVKhac.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabDVKhac.Size = new System.Drawing.Size(1172, 626);
@@ -4405,7 +4400,7 @@ namespace TPH.LIS.App.CauHinh.DanhMucCLS
             this.tabThuoc.Controls.Add(this.panel21);
             this.tabThuoc.Controls.Add(this.panel20);
             this.tabThuoc.Location = new System.Drawing.Point(4, 27);
-            this.tabThuoc.Margin = new System.Windows.Forms.Padding(0,0,0,0);
+            this.tabThuoc.Margin = new System.Windows.Forms.Padding(0);
             this.tabThuoc.Name = "tabThuoc";
             this.tabThuoc.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabThuoc.Size = new System.Drawing.Size(1172, 626);
@@ -4987,6 +4982,7 @@ namespace TPH.LIS.App.CauHinh.DanhMucCLS
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1134, 661);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "frmDM_DoiTuongDichVu_Gia";
             this.Text = "Cấu hình giá";

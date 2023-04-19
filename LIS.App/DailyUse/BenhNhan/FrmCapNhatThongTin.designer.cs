@@ -107,7 +107,7 @@
             this.lblTitle.Appearance.Options.UseBackColor = true;
             this.lblTitle.Appearance.Options.UseFont = true;
             this.lblTitle.Appearance.Options.UseForeColor = true;
-            this.lblTitle.Size = new System.Drawing.Size(277, 22);
+            this.lblTitle.Size = new System.Drawing.Size(282, 22);
             this.lblTitle.Text = "CẬP NHẬT THÔNG TIN BỆNH NHÂN";
             // 
             // pnContaint
@@ -151,10 +151,6 @@
             this.xtraScrollableControlMain.Appearance.BackColor2 = System.Drawing.Color.Gray;
             this.xtraScrollableControlMain.Appearance.Options.UseBackColor = true;
             this.xtraScrollableControlMain.Size = new System.Drawing.Size(913, 0);
-            // 
-            // ucGroupHeaderChonMain
-            // 
-            this.ucGroupHeaderChonMain.Location = new System.Drawing.Point(279, 1);
             // 
             // pnFormControl
             // 
@@ -711,7 +707,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -752,9 +747,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(913, 333);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmCapNhatThongTin";
             this.Text = "FrmCapNhatThongTin";
             this.Load += new System.EventHandler(this.FrmCapNhatThongTin_Load);

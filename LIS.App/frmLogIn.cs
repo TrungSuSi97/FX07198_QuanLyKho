@@ -47,6 +47,8 @@ namespace TPH.LIS.App
         {
             //var fm = (frmMDIParent)this.TopLevelControl;
             //fm.SetCloseProgram(true);
+            this.Close();
+            Application.Exit();
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDMCLS_DanhMucViSinh));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabDanhMucViSinh = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabImport = new System.Windows.Forms.TabControl();
@@ -3466,7 +3466,7 @@
             this.tabKhangSinh.Location = new System.Drawing.Point(4, 28);
             this.tabKhangSinh.Name = "tabKhangSinh";
             this.tabKhangSinh.Padding = new System.Windows.Forms.Padding(3);
-            this.tabKhangSinh.Size = new System.Drawing.Size(1268, 606);
+            this.tabKhangSinh.Size = new System.Drawing.Size(1168, 617);
             this.tabKhangSinh.TabIndex = 2;
             this.tabKhangSinh.Text = "Danh mục kháng sinh";
             this.tabKhangSinh.UseVisualStyleBackColor = true;
@@ -3491,8 +3491,8 @@
             this.splitContainer2.Panel2.Controls.Add(this.ucAddEditKhangSinh);
             this.splitContainer2.Panel2.Controls.Add(this.grbKhangSinhThongTin);
             this.splitContainer2.Panel2.Controls.Add(this.label3);
-            this.splitContainer2.Size = new System.Drawing.Size(1262, 600);
-            this.splitContainer2.SplitterDistance = 559;
+            this.splitContainer2.Size = new System.Drawing.Size(1162, 611);
+            this.splitContainer2.SplitterDistance = 514;
             this.splitContainer2.TabIndex = 1;
             // 
             // grbKhangSinhDanhSachNhom
@@ -3502,7 +3502,7 @@
             this.grbKhangSinhDanhSachNhom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbKhangSinhDanhSachNhom.Location = new System.Drawing.Point(0, 143);
             this.grbKhangSinhDanhSachNhom.Name = "grbKhangSinhDanhSachNhom";
-            this.grbKhangSinhDanhSachNhom.Size = new System.Drawing.Size(557, 455);
+            this.grbKhangSinhDanhSachNhom.Size = new System.Drawing.Size(512, 466);
             this.grbKhangSinhDanhSachNhom.TabIndex = 4;
             this.grbKhangSinhDanhSachNhom.TabStop = false;
             this.grbKhangSinhDanhSachNhom.Text = "Danh sách nhóm";
@@ -3531,7 +3531,7 @@
             this.dtgKhangSinhNhomDanhSach.Name = "dtgKhangSinhNhomDanhSach";
             this.dtgKhangSinhNhomDanhSach.ReadOnly = true;
             this.dtgKhangSinhNhomDanhSach.RowHeadersWidth = 82;
-            this.dtgKhangSinhNhomDanhSach.Size = new System.Drawing.Size(551, 406);
+            this.dtgKhangSinhNhomDanhSach.Size = new System.Drawing.Size(506, 417);
             this.dtgKhangSinhNhomDanhSach.TabIndex = 0;
             this.dtgKhangSinhNhomDanhSach.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgKhangSinhNhomDanhSach_CellEnter);
             // 
@@ -3574,8 +3574,8 @@
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "GioNhap";
-            dataGridViewCellStyle3.Format = "HH:mm dd/mm/yyyy";
-            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "HH:mm dd/mm/yyyy";
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn12.HeaderText = "Thời gian nhập";
             this.dataGridViewTextBoxColumn12.MinimumWidth = 10;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
@@ -3594,8 +3594,8 @@
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "GioSua";
-            dataGridViewCellStyle4.Format = "HH:mm dd/mm/yyyy";
-            this.dataGridViewTextBoxColumn14.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "HH:mm dd/mm/yyyy";
+            this.dataGridViewTextBoxColumn14.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn14.HeaderText = "Thời gian sửa";
             this.dataGridViewTextBoxColumn14.MinimumWidth = 10;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
@@ -3622,7 +3622,7 @@
             this.toolStripButton9,
             this.toolStripSeparator6,
             this.btnKhangSinhLamMoiNhom});
-            this.bvKhangSinhNhomDanhSach.Location = new System.Drawing.Point(3, 425);
+            this.bvKhangSinhNhomDanhSach.Location = new System.Drawing.Point(3, 436);
             this.bvKhangSinhNhomDanhSach.MoveFirstItem = this.toolStripButton6;
             this.bvKhangSinhNhomDanhSach.MoveLastItem = this.toolStripButton9;
             this.bvKhangSinhNhomDanhSach.MoveNextItem = this.toolStripButton8;
@@ -3630,7 +3630,7 @@
             this.bvKhangSinhNhomDanhSach.Name = "bvKhangSinhNhomDanhSach";
             this.bvKhangSinhNhomDanhSach.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.bvKhangSinhNhomDanhSach.PositionItem = this.toolStripTextBox2;
-            this.bvKhangSinhNhomDanhSach.Size = new System.Drawing.Size(551, 27);
+            this.bvKhangSinhNhomDanhSach.Size = new System.Drawing.Size(506, 27);
             this.bvKhangSinhNhomDanhSach.TabIndex = 1;
             this.bvKhangSinhNhomDanhSach.Text = "customBindingNavigator3";
             // 
@@ -3724,7 +3724,7 @@
             this.ucAddEditKhangSinhNhom.Margin = new System.Windows.Forms.Padding(6);
             this.ucAddEditKhangSinhNhom.MinimumSize = new System.Drawing.Size(465, 33);
             this.ucAddEditKhangSinhNhom.Name = "ucAddEditKhangSinhNhom";
-            this.ucAddEditKhangSinhNhom.Size = new System.Drawing.Size(557, 43);
+            this.ucAddEditKhangSinhNhom.Size = new System.Drawing.Size(512, 43);
             this.ucAddEditKhangSinhNhom.TabIndex = 0;
             this.ucAddEditKhangSinhNhom.ButtonAddClick += new System.EventHandler(this.ucAddEditKhangSinhNhom_ButtonAddClick);
             this.ucAddEditKhangSinhNhom.ButtonEditClick += new System.EventHandler(this.ucAddEditKhangSinhNhom_ButtonEditClick);
@@ -3743,7 +3743,7 @@
             this.grbKhangSinhNhomThongTin.Dock = System.Windows.Forms.DockStyle.Top;
             this.grbKhangSinhNhomThongTin.Location = new System.Drawing.Point(0, 18);
             this.grbKhangSinhNhomThongTin.Name = "grbKhangSinhNhomThongTin";
-            this.grbKhangSinhNhomThongTin.Size = new System.Drawing.Size(557, 82);
+            this.grbKhangSinhNhomThongTin.Size = new System.Drawing.Size(512, 82);
             this.grbKhangSinhNhomThongTin.TabIndex = 0;
             this.grbKhangSinhNhomThongTin.TabStop = false;
             this.grbKhangSinhNhomThongTin.Text = "Thông tin nhóm";
@@ -3849,7 +3849,7 @@
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(557, 18);
+            this.label2.Size = new System.Drawing.Size(512, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "DANH MỤC NHÓM KHÁNG SINH";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3861,7 +3861,7 @@
             this.grbKhangSinhDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbKhangSinhDanhSach.Location = new System.Drawing.Point(0, 143);
             this.grbKhangSinhDanhSach.Name = "grbKhangSinhDanhSach";
-            this.grbKhangSinhDanhSach.Size = new System.Drawing.Size(697, 455);
+            this.grbKhangSinhDanhSach.Size = new System.Drawing.Size(642, 466);
             this.grbKhangSinhDanhSach.TabIndex = 5;
             this.grbKhangSinhDanhSach.TabStop = false;
             this.grbKhangSinhDanhSach.Text = "Danh sách kháng sinh";
@@ -3874,7 +3874,7 @@
             this.gcKhangSinh.MainView = this.gvKhangSinh;
             this.gcKhangSinh.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gcKhangSinh.Name = "gcKhangSinh";
-            this.gcKhangSinh.Size = new System.Drawing.Size(691, 368);
+            this.gcKhangSinh.Size = new System.Drawing.Size(636, 379);
             this.gcKhangSinh.TabIndex = 14;
             this.gcKhangSinh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvKhangSinh});
@@ -4117,7 +4117,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 19);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(691, 65);
+            this.panel1.Size = new System.Drawing.Size(636, 65);
             this.panel1.TabIndex = 3;
             // 
             // btnKhangSinhLamMoi
@@ -4263,7 +4263,7 @@
             this.ucAddEditKhangSinh.Margin = new System.Windows.Forms.Padding(6);
             this.ucAddEditKhangSinh.MinimumSize = new System.Drawing.Size(465, 33);
             this.ucAddEditKhangSinh.Name = "ucAddEditKhangSinh";
-            this.ucAddEditKhangSinh.Size = new System.Drawing.Size(697, 43);
+            this.ucAddEditKhangSinh.Size = new System.Drawing.Size(642, 43);
             this.ucAddEditKhangSinh.TabIndex = 0;
             this.ucAddEditKhangSinh.ButtonAddClick += new System.EventHandler(this.ucAddEditKhangSinh_ButtonAddClick);
             this.ucAddEditKhangSinh.ButtonEditClick += new System.EventHandler(this.ucAddEditKhangSinh_ButtonEditClick);
@@ -4285,7 +4285,7 @@
             this.grbKhangSinhThongTin.Dock = System.Windows.Forms.DockStyle.Top;
             this.grbKhangSinhThongTin.Location = new System.Drawing.Point(0, 18);
             this.grbKhangSinhThongTin.Name = "grbKhangSinhThongTin";
-            this.grbKhangSinhThongTin.Size = new System.Drawing.Size(697, 82);
+            this.grbKhangSinhThongTin.Size = new System.Drawing.Size(642, 82);
             this.grbKhangSinhThongTin.TabIndex = 4;
             this.grbKhangSinhThongTin.TabStop = false;
             this.grbKhangSinhThongTin.Text = "Thông tin kháng sinh";
@@ -4442,7 +4442,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(697, 18);
+            this.label3.Size = new System.Drawing.Size(642, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "DANH MỤC KHÁNG SINH";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4453,7 +4453,7 @@
             this.tabViKhuan.Location = new System.Drawing.Point(4, 28);
             this.tabViKhuan.Name = "tabViKhuan";
             this.tabViKhuan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabViKhuan.Size = new System.Drawing.Size(1268, 606);
+            this.tabViKhuan.Size = new System.Drawing.Size(1168, 617);
             this.tabViKhuan.TabIndex = 1;
             this.tabViKhuan.Text = "Danh mục phân loại -  danh pháp vi khuẩn";
             this.tabViKhuan.UseVisualStyleBackColor = true;
@@ -4475,8 +4475,8 @@
             this.splitContainer3.Panel2.Controls.Add(this.treViKhuanDanhSachPhanLoai);
             this.splitContainer3.Panel2.Controls.Add(this.panel3);
             this.splitContainer3.Panel2.Controls.Add(this.label4);
-            this.splitContainer3.Size = new System.Drawing.Size(1262, 600);
-            this.splitContainer3.SplitterDistance = 556;
+            this.splitContainer3.Size = new System.Drawing.Size(1162, 611);
+            this.splitContainer3.SplitterDistance = 511;
             this.splitContainer3.TabIndex = 0;
             // 
             // panel12
@@ -4488,7 +4488,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(0, 349);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(556, 251);
+            this.panel12.Size = new System.Drawing.Size(511, 262);
             this.panel12.TabIndex = 2;
             // 
             // dtgKhangKhangSinh
@@ -4503,7 +4503,7 @@
             this.dtgKhangKhangSinh.Location = new System.Drawing.Point(192, 18);
             this.dtgKhangKhangSinh.Name = "dtgKhangKhangSinh";
             this.dtgKhangKhangSinh.RowHeadersWidth = 82;
-            this.dtgKhangKhangSinh.Size = new System.Drawing.Size(364, 206);
+            this.dtgKhangKhangSinh.Size = new System.Drawing.Size(319, 217);
             this.dtgKhangKhangSinh.TabIndex = 11;
             // 
             // colKhangKhangSinh
@@ -4542,7 +4542,7 @@
             this.btnDeleteKhangKhangSinh,
             this.toolStripSeparator1,
             this.btnLoad_KhangKhangSinh});
-            this.bvKhangKhangSinh.Location = new System.Drawing.Point(192, 224);
+            this.bvKhangKhangSinh.Location = new System.Drawing.Point(192, 235);
             this.bvKhangKhangSinh.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bvKhangKhangSinh.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bvKhangKhangSinh.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -4550,7 +4550,7 @@
             this.bvKhangKhangSinh.Name = "bvKhangKhangSinh";
             this.bvKhangKhangSinh.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.bvKhangKhangSinh.PositionItem = this.bindingNavigatorPositionItem;
-            this.bvKhangKhangSinh.Size = new System.Drawing.Size(364, 27);
+            this.bvKhangKhangSinh.Size = new System.Drawing.Size(319, 27);
             this.bvKhangKhangSinh.TabIndex = 12;
             this.bvKhangKhangSinh.Text = "bindingNavigator1";
             // 
@@ -4658,7 +4658,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel13.Location = new System.Drawing.Point(0, 18);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(192, 233);
+            this.panel13.Size = new System.Drawing.Size(192, 244);
             this.panel13.TabIndex = 10;
             // 
             // txtTenKhangKhangSinh
@@ -4736,7 +4736,7 @@
             this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(556, 18);
+            this.label11.Size = new System.Drawing.Size(511, 18);
             this.label11.TabIndex = 8;
             this.label11.Text = "KHÁNG KHÁNG SINH";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4754,7 +4754,7 @@
             this.ucAddEditViKhuan.Margin = new System.Windows.Forms.Padding(6);
             this.ucAddEditViKhuan.MinimumSize = new System.Drawing.Size(465, 33);
             this.ucAddEditViKhuan.Name = "ucAddEditViKhuan";
-            this.ucAddEditViKhuan.Size = new System.Drawing.Size(556, 42);
+            this.ucAddEditViKhuan.Size = new System.Drawing.Size(511, 42);
             this.ucAddEditViKhuan.TabIndex = 1;
             this.ucAddEditViKhuan.ButtonAddClick += new System.EventHandler(this.ucAddEditViKhuan_ButtonAddClick);
             this.ucAddEditViKhuan.ButtonEditClick += new System.EventHandler(this.ucAddEditViKhuan_ButtonEditClick);
@@ -4785,7 +4785,7 @@
             this.grbViKhuanThongTin.Enabled = false;
             this.grbViKhuanThongTin.Location = new System.Drawing.Point(0, 0);
             this.grbViKhuanThongTin.Name = "grbViKhuanThongTin";
-            this.grbViKhuanThongTin.Size = new System.Drawing.Size(556, 307);
+            this.grbViKhuanThongTin.Size = new System.Drawing.Size(511, 307);
             this.grbViKhuanThongTin.TabIndex = 0;
             this.grbViKhuanThongTin.TabStop = false;
             this.grbViKhuanThongTin.Text = "Thông tin phân loại";
@@ -5059,7 +5059,7 @@
             this.treViKhuanDanhSachPhanLoai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treViKhuanDanhSachPhanLoai.Location = new System.Drawing.Point(0, 61);
             this.treViKhuanDanhSachPhanLoai.Name = "treViKhuanDanhSachPhanLoai";
-            this.treViKhuanDanhSachPhanLoai.Size = new System.Drawing.Size(702, 539);
+            this.treViKhuanDanhSachPhanLoai.Size = new System.Drawing.Size(647, 550);
             this.treViKhuanDanhSachPhanLoai.TabIndex = 5;
             this.treViKhuanDanhSachPhanLoai.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treViKhuanDanhSachPhanLoai_AfterSelect);
             // 
@@ -5074,7 +5074,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 18);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(702, 43);
+            this.panel3.Size = new System.Drawing.Size(647, 43);
             this.panel3.TabIndex = 6;
             // 
             // btnViKhuanLamMoi
@@ -5161,7 +5161,7 @@
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(702, 18);
+            this.label4.Size = new System.Drawing.Size(647, 18);
             this.label4.TabIndex = 4;
             this.label4.Text = "DANH SÁNH PHÂN LOẠI VI KHUẨN";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
