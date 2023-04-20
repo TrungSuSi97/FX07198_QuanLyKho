@@ -32,6 +32,7 @@ using TPH.LIS.User.Constants;
 using TPH.LIS.User.Enum;
 using System.Net.Sockets;
 using System.Net;
+using TPH.LIS.App.QuanLyChamCong;
 
 namespace TPH.LIS.App
 {
@@ -1265,6 +1266,14 @@ namespace TPH.LIS.App
             Check_Enable_VatTu();
             Check_Enable_TCKT();
             Check_Enable_QuanLy();
+
+            Check_Enable_BangLuong();
+
+        }
+
+        private void Check_Enable_BangLuong()
+        {
+            rbChamCong.Enabled = true;
         }
 
         public static bool CheckUserPermissionToAccessFunctions(
@@ -1786,7 +1795,8 @@ namespace TPH.LIS.App
 
         private void rbChamCong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            var f = new FrmChamCong();
+            ShowForm(f);
         }
     }
 }

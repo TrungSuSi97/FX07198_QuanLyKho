@@ -48,7 +48,7 @@
             this.lblTitle.Appearance.Options.UseBackColor = true;
             this.lblTitle.Appearance.Options.UseFont = true;
             this.lblTitle.Appearance.Options.UseForeColor = true;
-            this.lblTitle.Size = new System.Drawing.Size(139, 22);
+            this.lblTitle.Size = new System.Drawing.Size(144, 22);
             this.lblTitle.Text = "THÔNG TIN KHOA";
             // 
             // pnContaint
@@ -94,10 +94,6 @@
             this.xtraScrollableControlMain.Appearance.Options.UseBackColor = true;
             this.xtraScrollableControlMain.Size = new System.Drawing.Size(1101, 27);
             // 
-            // ucGroupHeaderChonMain
-            // 
-            this.ucGroupHeaderChonMain.Location = new System.Drawing.Point(141, 1);
-            // 
             // pnFormControl
             // 
             this.pnFormControl.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -141,6 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1101, 661);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmDashBoardTAT.IconOptions.Icon")));
+            this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "FrmDashBoardTAT";
             this.ShowInTaskbar = true;

@@ -173,10 +173,10 @@
             this.lblTimer,
             this.lblStatus,
             this.lblThongBaoCapNhat});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 753);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 756);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(13, 0, 1, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1320, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(1320, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 11;
             // 
@@ -184,12 +184,10 @@
             // 
             this.toolStripStatusLabel1.Font = new System.Drawing.Font("Arial", 9F);
             this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
-            this.toolStripStatusLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel1.Image")));
             this.toolStripStatusLabel1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(1206, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(1206, 17);
             this.toolStripStatusLabel1.Spring = true;
-            this.toolStripStatusLabel1.Text = "Copyright © 2017 TPH Solutions All Rights Reserved.";
             this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolStripStatusLabel1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
@@ -199,7 +197,7 @@
             this.lblHello.ForeColor = System.Drawing.Color.White;
             this.lblHello.Name = "lblHello";
             this.lblHello.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblHello.Size = new System.Drawing.Size(0, 20);
+            this.lblHello.Size = new System.Drawing.Size(0, 17);
             // 
             // lblUserName
             // 
@@ -207,14 +205,14 @@
             this.lblUserName.ForeColor = System.Drawing.Color.White;
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUserName.Size = new System.Drawing.Size(0, 20);
+            this.lblUserName.Size = new System.Drawing.Size(0, 17);
             // 
             // lblVersion
             // 
             this.lblVersion.Font = new System.Drawing.Font("Arial", 9F);
             this.lblVersion.ForeColor = System.Drawing.Color.White;
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(48, 20);
+            this.lblVersion.Size = new System.Drawing.Size(48, 17);
             this.lblVersion.Text = "Version";
             // 
             // lblInTuDong
@@ -222,7 +220,7 @@
             this.lblInTuDong.Font = new System.Drawing.Font("Arial", 9F);
             this.lblInTuDong.ForeColor = System.Drawing.Color.White;
             this.lblInTuDong.Name = "lblInTuDong";
-            this.lblInTuDong.Size = new System.Drawing.Size(0, 20);
+            this.lblInTuDong.Size = new System.Drawing.Size(0, 17);
             // 
             // lblTimer
             // 
@@ -230,7 +228,7 @@
             this.lblTimer.ForeColor = System.Drawing.Color.White;
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTimer.Size = new System.Drawing.Size(52, 20);
+            this.lblTimer.Size = new System.Drawing.Size(52, 17);
             this.lblTimer.Text = "lblTimer";
             // 
             // lblStatus
@@ -239,7 +237,7 @@
             this.lblStatus.ForeColor = System.Drawing.Color.Red;
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblStatus.Size = new System.Drawing.Size(0, 20);
+            this.lblStatus.Size = new System.Drawing.Size(0, 17);
             // 
             // lblThongBaoCapNhat
             // 
@@ -311,7 +309,7 @@
             this.btnCloseAlarm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseAlarm.Image = global::TPH.LIS.App.Properties.Resources.Prohibit_icon_16x16;
             this.btnCloseAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCloseAlarm.Location = new System.Drawing.Point(-378, -3);
+            this.btnCloseAlarm.Location = new System.Drawing.Point(-384, -3);
             this.btnCloseAlarm.Name = "btnCloseAlarm";
             this.btnCloseAlarm.Size = new System.Drawing.Size(106, 25);
             this.btnCloseAlarm.TabIndex = 0;
@@ -1158,7 +1156,7 @@
             this.mnSub.OptionsNavPane.ShowOverflowPanel = false;
             this.mnSub.OptionsNavPane.ShowSplitter = false;
             this.mnSub.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.SideBar;
-            this.mnSub.Size = new System.Drawing.Size(69, 593);
+            this.mnSub.Size = new System.Drawing.Size(69, 596);
             this.mnSub.TabIndex = 22;
             this.mnSub.Text = "navBarControl1";
             this.mnSub.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinNavigationPaneViewInfoRegistrator("Visual Studio 2013 Blue");

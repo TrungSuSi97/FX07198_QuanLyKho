@@ -69,8 +69,8 @@
             this.colDonViTinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFlat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLoaiXetNghiem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.listPrinter = new System.Windows.Forms.ListBox();
             this.colMauGui = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.listPrinter = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pnFunction)).BeginInit();
             this.pnFunction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnPrintBarcode)).BeginInit();
@@ -655,6 +655,15 @@
             this.colLoaiXetNghiem.VisibleIndex = 10;
             this.colLoaiXetNghiem.Width = 64;
             // 
+            // colMauGui
+            // 
+            this.colMauGui.Caption = "Mẫu gửi";
+            this.colMauGui.FieldName = "MauGui";
+            this.colMauGui.Name = "colMauGui";
+            this.colMauGui.OptionsColumn.ReadOnly = true;
+            this.colMauGui.Visible = true;
+            this.colMauGui.VisibleIndex = 11;
+            // 
             // listPrinter
             // 
             this.listPrinter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -671,15 +680,6 @@
             this.listPrinter.TabIndex = 87;
             this.listPrinter.Visible = false;
             this.listPrinter.SelectedIndexChanged += new System.EventHandler(this.listPrinter_SelectedIndexChanged);
-            // 
-            // colMauGui
-            // 
-            this.colMauGui.Caption = "Mẫu gửi";
-            this.colMauGui.FieldName = "MauGui";
-            this.colMauGui.Name = "colMauGui";
-            this.colMauGui.OptionsColumn.ReadOnly = true;
-            this.colMauGui.Visible = true;
-            this.colMauGui.VisibleIndex = 11;
             // 
             // ucChiTietChiDinh
             // 

@@ -655,12 +655,6 @@
     <Compile Include="DailyUse\BenhNhan\FrmDangNhapLayMau.Designer.cs">
       <DependentUpon>FrmDangNhapLayMau.cs</DependentUpon>
     </Compile>
-    <Compile Include="DailyUse\BenhNhan\FrmDashBoard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DailyUse\BenhNhan\FrmDashBoard.Designer.cs">
-      <DependentUpon>FrmDashBoard.cs</DependentUpon>
-    </Compile>
     <Compile Include="DailyUse\BenhNhan\FrmDSChuyenMauTheoBarcode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -907,6 +901,12 @@
       <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyChamCong\FrmChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChamCong\FrmChamCong.Designer.cs">
+      <DependentUpon>FrmChamCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings\DanhMucCLS\FrmCheDoCopy_HenTraKQ.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1748,9 +1748,6 @@
     <EmbeddedResource Include="DailyUse\BenhNhan\FrmChonThoiGian.resx">
       <DependentUpon>FrmChonThoiGian.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DailyUse\BenhNhan\FrmDashBoard.resx">
-      <DependentUpon>FrmDashBoard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DailyUse\BenhNhan\FrmDashBoardTAT_Chart.resx">
       <DependentUpon>FrmDashBoardTAT_Chart.cs</DependentUpon>
     </EmbeddedResource>
@@ -1904,6 +1901,9 @@
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyChamCong\FrmChamCong.resx">
+      <DependentUpon>FrmChamCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\DanhMucCLS\FrmCheDoCopy_HenTraKQ.resx">
       <DependentUpon>FrmCheDoCopy_HenTraKQ.cs</DependentUpon>
@@ -2692,7 +2692,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppCode\CustomControl\" />
-    <Folder Include="QuanLyChamCong\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
