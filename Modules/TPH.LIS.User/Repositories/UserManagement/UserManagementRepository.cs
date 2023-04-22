@@ -71,7 +71,11 @@ namespace TPH.LIS.User.Repositories.UserManagement
                         Departement = StringConverter.ToString(reader["BoPhan"]),
                         IsAdmin = NumberConverter.ToBool(reader["IsAdmin"]),
                         Password = StringConverter.ToString(reader["MatKhau"]).Trim(),
-                        StaffID = StringConverter.ToString(reader["MaNhanVien"]).Trim()
+                        StaffID = StringConverter.ToString(reader["MaNhanVien"]).Trim(),
+                        MaNhomNhanVien = StringConverter.ToString(reader["MaNhomNhanVien"]).Trim(),
+                        TenNhomNhanVien = StringConverter.ToString(reader["TenNhomNhanVien"]).Trim(),
+                        MaBoPhan = StringConverter.ToString(reader["MaBoPhan"]).Trim(),
+                        TenBoPhan = StringConverter.ToString(reader["TenBoPhan"]).Trim()
                     };
                 }
             }

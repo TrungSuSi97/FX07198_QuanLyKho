@@ -357,6 +357,18 @@
     <Compile Include="AppCode\ucNgonNguDanhMuc.designer.cs">
       <DependentUpon>ucNgonNguDanhMuc.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_ChucVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_ChucVu.Designer.cs">
+      <DependentUpon>ucSearchLookupEditor_ChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_NhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_NhanVien.Designer.cs">
+      <DependentUpon>ucSearchLookupEditor_NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppCode\ucSearchLookupEditor_AntibioticPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -374,6 +386,12 @@
     </Compile>
     <Compile Include="AppCode\ucSearchLookupEditor_DanhSachDichVu.Designer.cs">
       <DependentUpon>ucSearchLookupEditor_DanhSachDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_BoPhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_BoPhan.Designer.cs">
+      <DependentUpon>ucSearchLookupEditor_BoPhan.cs</DependentUpon>
     </Compile>
     <Compile Include="AppCode\ucSearchLookupEditor_DoiChieuSHPT.cs">
       <SubType>UserControl</SubType>
@@ -1631,6 +1649,12 @@
     <EmbeddedResource Include="AppCode\ucNgonNguDanhMuc.resx">
       <DependentUpon>ucNgonNguDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_ChucVu.resx">
+      <DependentUpon>ucSearchLookupEditor_ChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_NhanVien.resx">
+      <DependentUpon>ucSearchLookupEditor_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppCode\ucSearchLookupEditor_AntibioticPanel.resx">
       <DependentUpon>ucSearchLookupEditor_AntibioticPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -1639,6 +1663,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppCode\ucSearchLookupEditor_DanhSachDichVu.resx">
       <DependentUpon>ucSearchLookupEditor_DanhSachDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_BoPhan.resx">
+      <DependentUpon>ucSearchLookupEditor_BoPhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppCode\ucSearchLookupEditor_DoiChieuSHPT.resx">
       <DependentUpon>ucSearchLookupEditor_DoiChieuSHPT.cs</DependentUpon>

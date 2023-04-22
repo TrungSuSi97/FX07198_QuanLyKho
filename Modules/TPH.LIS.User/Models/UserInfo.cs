@@ -13,6 +13,15 @@ namespace TPH.LIS.User.Models
         public string Departement { get; set; }
         public string StaffID { get; set; }
         public string Password { get; set; }
+
+        public string MaNhomNhanVien { get; set; }
+        public string TenNhomNhanVien { get; set; }
+        public string MaBoPhan { get; set; }
+        public string TenBoPhan { get; set; }
+
+
+
+
     }
     #region ql_nguoidung
     public class QL_NGUOIDUNG

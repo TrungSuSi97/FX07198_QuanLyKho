@@ -5,6 +5,7 @@ using System.IO;
 using System.Windows.Forms;
 using TPH.LIS.App.DailyUse.BenhNhan;
 using TPH.LIS.App.DailyUse.CanLamSang;
+using TPH.LIS.App.QuanLyChamCong;
 using TPH.LIS.App.ThongKe;
 using TPH.LIS.App.ThucThi.BenhNhan;
 using TPH.LIS.App.ThucThi.CanLamSang;
@@ -244,7 +245,7 @@ namespace TPH.LIS.App
         }
         private void lblReception_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var f = new DailyUse.BenhNhan.FrmTiepNhanBenhNhan();
+            var f = new FrmChamCong();
             frmMDIParent fParent = (frmMDIParent)this.MdiParent;
             fParent.ShowForm(f);
         }

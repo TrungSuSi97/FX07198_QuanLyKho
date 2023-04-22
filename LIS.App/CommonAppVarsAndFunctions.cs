@@ -38,6 +38,11 @@ namespace TPH.LIS.App
         public static string NhomIn { get; internal set; }
         public static string UserID { get; internal set; }
         public static string UserName { get; internal set; }
+        public static string MaNhomNhanVien { get; internal set; }
+        public static string TenNhomNhanVien { get; internal set; }
+        public static string MaBoPhan { get; internal set; }
+        public static string TenBoPhan { get; internal set; }
+
         public static bool RefreshReport { get; internal set; }
 
 

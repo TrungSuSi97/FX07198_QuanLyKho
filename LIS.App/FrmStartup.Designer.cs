@@ -40,26 +40,27 @@
             this.pnCALXetNghiem = new System.Windows.Forms.Panel();
             this.lblLayMau = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnKhamBenh = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblThongKeTongHop = new System.Windows.Forms.LinkLabel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblReception = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblThongKeTongHop = new System.Windows.Forms.LinkLabel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.gradientPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnMenuMain.SuspendLayout();
             this.pnCanLamSang.SuspendLayout();
             this.pnCALXetNghiem.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // gradientPanel1
@@ -133,6 +134,7 @@
             this.pnMenuMain.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pnMenuMain.BackColor = System.Drawing.Color.Transparent;
             this.pnMenuMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnMenuMain.Controls.Add(this.label4);
             this.pnMenuMain.Controls.Add(this.pnCanLamSang);
             this.pnMenuMain.Controls.Add(this.pnKhamBenh);
             this.pnMenuMain.Controls.Add(this.panel3);
@@ -202,63 +204,6 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "QUẢN LÝ XUẤT NHẬP HÀNG";
             // 
-            // pnKhamBenh
-            // 
-            this.pnKhamBenh.Location = new System.Drawing.Point(923, 0);
-            this.pnKhamBenh.Name = "pnKhamBenh";
-            this.pnKhamBenh.Size = new System.Drawing.Size(329, 292);
-            this.pnKhamBenh.TabIndex = 40;
-            this.pnKhamBenh.Visible = false;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.lblReception);
-            this.panel6.Location = new System.Drawing.Point(101, 28);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(250, 289);
-            this.panel6.TabIndex = 35;
-            // 
-            // lblReception
-            // 
-            this.lblReception.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblReception.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblReception.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReception.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblReception.LinkColor = System.Drawing.Color.White;
-            this.lblReception.Location = new System.Drawing.Point(0, 0);
-            this.lblReception.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblReception.Name = "lblReception";
-            this.lblReception.Size = new System.Drawing.Size(250, 48);
-            this.lblReception.TabIndex = 22;
-            this.lblReception.TabStop = true;
-            this.lblReception.Text = "Tồn kho";
-            this.lblReception.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblReception.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblReception_LinkClicked);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Yellow;
-            this.label6.Location = new System.Drawing.Point(468, 320);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 22);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "KẾ TOÁN";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(97, 3);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 22);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "QUẢN LÝ KHO";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
@@ -270,27 +215,22 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox5
+            // pnKhamBenh
             // 
-            this.pictureBox5.BackgroundImage = global::TPH.LIS.App.Properties.Resources.statistics_icon__1_;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(391, 320);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(70, 63);
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
+            this.pnKhamBenh.Location = new System.Drawing.Point(923, 0);
+            this.pnKhamBenh.Name = "pnKhamBenh";
+            this.pnKhamBenh.Size = new System.Drawing.Size(329, 292);
+            this.pnKhamBenh.TabIndex = 40;
+            this.pnKhamBenh.Visible = false;
             // 
-            // pictureBox1
+            // panel3
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 63);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.panel3.AutoSize = true;
+            this.panel3.Controls.Add(this.lblThongKeTongHop);
+            this.panel3.Location = new System.Drawing.Point(474, 345);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(250, 150);
+            this.panel3.TabIndex = 37;
             // 
             // lblThongKeTongHop
             // 
@@ -309,14 +249,88 @@
             this.lblThongKeTongHop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblThongKeTongHop.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblThongKeTongHop_LinkClicked);
             // 
-            // panel3
+            // panel6
             // 
-            this.panel3.AutoSize = true;
-            this.panel3.Controls.Add(this.lblThongKeTongHop);
-            this.panel3.Location = new System.Drawing.Point(474, 345);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 150);
-            this.panel3.TabIndex = 37;
+            this.panel6.Controls.Add(this.lblReception);
+            this.panel6.Location = new System.Drawing.Point(101, 28);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(250, 264);
+            this.panel6.TabIndex = 35;
+            // 
+            // lblReception
+            // 
+            this.lblReception.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblReception.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblReception.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReception.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblReception.LinkColor = System.Drawing.Color.White;
+            this.lblReception.Location = new System.Drawing.Point(0, 0);
+            this.lblReception.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReception.Name = "lblReception";
+            this.lblReception.Size = new System.Drawing.Size(250, 48);
+            this.lblReception.TabIndex = 22;
+            this.lblReception.TabStop = true;
+            this.lblReception.Text = "Chấm công";
+            this.lblReception.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblReception.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblReception_LinkClicked);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Yellow;
+            this.label6.Location = new System.Drawing.Point(468, 320);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 22);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "KẾ TOÁN";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::TPH.LIS.App.Properties.Resources.statistics_icon__1_;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(391, 320);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(70, 63);
+            this.pictureBox5.TabIndex = 30;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.Location = new System.Drawing.Point(97, 3);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 22);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "CHẤM CÔNG";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 63);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Yellow;
+            this.label4.Location = new System.Drawing.Point(97, 320);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 22);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "QUẢN LÝ KHO";
             // 
             // FrmStartUp
             // 
@@ -346,11 +360,11 @@
             this.pnCanLamSang.ResumeLayout(false);
             this.pnCanLamSang.PerformLayout();
             this.pnCALXetNghiem.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -378,5 +392,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.LinkLabel lblThongKeTongHop;
+        private System.Windows.Forms.Label label4;
     }
 }

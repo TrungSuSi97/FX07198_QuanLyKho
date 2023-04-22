@@ -167,9 +167,14 @@ namespace TPH.LIS.App
         {
             CommonAppVarsAndFunctions.NhomIn = userloginInfo.Departement;
             CommonAppVarsAndFunctions.UserID = txtUserID.Text.Trim();
-            CommonAppVarsAndFunctions.UserName = txtUserID.Text.Trim();
+            CommonAppVarsAndFunctions.UserName = userloginInfo.Username;
             CommonAppVarsAndFunctions.UserPass = txtPassword.Text;
             CommonAppVarsAndFunctions.IsAdmin = userloginInfo.IsAdmin;
+            CommonAppVarsAndFunctions.MaNhomNhanVien = userloginInfo.MaNhomNhanVien;
+            CommonAppVarsAndFunctions.TenNhomNhanVien = userloginInfo.TenNhomNhanVien;
+            CommonAppVarsAndFunctions.MaBoPhan = userloginInfo.MaBoPhan;
+            CommonAppVarsAndFunctions.TenBoPhan = userloginInfo.TenBoPhan;
+
         }
         private void AssignPrintedHeader(UserInfo userloginInfo)
         {
