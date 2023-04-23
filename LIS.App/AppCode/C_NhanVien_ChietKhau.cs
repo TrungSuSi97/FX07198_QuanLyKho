@@ -71,6 +71,7 @@ namespace TPH.LIS.App.AppCode
 
             LabServices_Helper.BindContex(da, ref dt, strSql, ref dtg, ref bv);
         }
+      
         public void Get_BoPhanXN(SqlDataAdapter da, DataGridView dtg, BindingNavigator bv, string filter, ref DataTable dt)
         {
             dt = new DataTable();

@@ -102,38 +102,38 @@ namespace TPH.LIS.App.CauHinh.DanhMucCLS
         /// <param name="_Type">1:Dịch vụ ; 2:Dịch vụ XN ; 3: Dịch vụ siêu âm; 4: Dịch vụ XQuang; 5: Tất cả; 6: Dịch vụ siêu âm; 7: Dịch vụ khám bệnh; 8: Dịch vụ khác; 9: Dịch vụ thuốc</param>
         private void LoadDichVu(int _Type)
         {
-            if (_Type == 1 || _Type == 5)
-            {
-                sysConfig.Get_DoiTuongDichVu(ref daService, dtgService, bvService, "", ref dtDichVu);
-            }
-            if (_Type == 2 || _Type == 5)
-            {
-                sysConfig.Get_DoiTuongDichVu(dtgServiceXN,bvService_XN, "", ref dtDichVu_XN);
-            }
-            if (_Type == 3 || _Type == 5)
-            {
-                sysConfig.Get_DoiTuongDichVu(dtgDichVu_SA, bvDichVu_SA, "", ref dtDichVu_SA);
-            }
-            if (_Type == 4 || _Type == 5)
-            {
-                sysConfig.Get_DoiTuongDichVu(dtgDichVu_XQuang, bvDichVu_XQuang, "", ref dtDichVu_XQuang);
-            }
-            if (_Type == 6 || _Type == 5)
-            {
-                sysConfig.Get_DoiTuongDichVu(dtgDichVu_NoiSoi, bvDichVu_NoiSoi, "", ref dtDichVu_NoiSoi);
-            }
-            if (_Type == 7 || _Type == 5)
-            {
-                sysConfig.Get_DoiTuongDichVu(dtgDicVu_KB, bvDicVu_KB, "", ref dtDichVu_KhamBenh);
-            }
-            if (_Type == 8 || _Type == 5)
-            {
-                sysConfig.Get_DoiTuongDichVu(dtgDichVu_Khac, bvDichVu_Khac, "", ref dtDichVu_Khac);
-            }
-            if (_Type == 9 || _Type == 5)
-            {
-                sysConfig.Get_DoiTuongDichVu(dtgDichVu_Thuoc, bvDichVu_Thuoc, "", ref dtDichVu_Thuoc);
-            }
+            //if (_Type == 1 || _Type == 5)
+            //{
+            //    sysConfig.Get_DoiTuongDichVu(ref daService, dtgService, bvService, "", ref dtDichVu);
+            //}
+            //if (_Type == 2 || _Type == 5)
+            //{
+            //    sysConfig.Get_DoiTuongDichVu(dtgServiceXN,bvService_XN, "", ref dtDichVu_XN);
+            //}
+            //if (_Type == 3 || _Type == 5)
+            //{
+            //    sysConfig.Get_DoiTuongDichVu(dtgDichVu_SA, bvDichVu_SA, "", ref dtDichVu_SA);
+            //}
+            //if (_Type == 4 || _Type == 5)
+            //{
+            //    sysConfig.Get_DoiTuongDichVu(dtgDichVu_XQuang, bvDichVu_XQuang, "", ref dtDichVu_XQuang);
+            //}
+            //if (_Type == 6 || _Type == 5)
+            //{
+            //    sysConfig.Get_DoiTuongDichVu(dtgDichVu_NoiSoi, bvDichVu_NoiSoi, "", ref dtDichVu_NoiSoi);
+            //}
+            //if (_Type == 7 || _Type == 5)
+            //{
+            //    sysConfig.Get_DoiTuongDichVu(dtgDicVu_KB, bvDicVu_KB, "", ref dtDichVu_KhamBenh);
+            //}
+            //if (_Type == 8 || _Type == 5)
+            //{
+            //    sysConfig.Get_DoiTuongDichVu(dtgDichVu_Khac, bvDichVu_Khac, "", ref dtDichVu_Khac);
+            //}
+            //if (_Type == 9 || _Type == 5)
+            //{
+            //    sysConfig.Get_DoiTuongDichVu(dtgDichVu_Thuoc, bvDichVu_Thuoc, "", ref dtDichVu_Thuoc);
+            //}
         }
         /// <summary>
         /// Lấy chi tiết dịch vụ

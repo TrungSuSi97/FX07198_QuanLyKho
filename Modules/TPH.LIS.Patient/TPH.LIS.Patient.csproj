@@ -161,9 +161,9 @@
       <Project>{b93b48f6-c3a3-41f4-88c3-a0232fa5c615}</Project>
       <Name>TPH.LIS.Log</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TPH.LIS.User\TPH.LIS.User.csproj">
+    <ProjectReference Include="..\TPH.LIS.User\TPH.LIS..User.csproj">
       <Project>{3CDB515A-73AF-4845-9CC0-5844D03ADFF3}</Project>
-      <Name>TPH.LIS.User</Name>
+      <Name>TPH.LIS..User</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

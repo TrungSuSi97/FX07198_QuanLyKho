@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TPH.LIS.App.AppCode;
+using TPH.Common.Converter;
+using TPH.LIS.Common.Extensions;
+using TPH.LIS.User.Services.UserManagement;
 
 namespace TPH.LIS.App.QuanLyChamCong
 {
     public partial class FrmChamCong : FrmTemplate
     {
+        private readonly IUserManagementService _IUserService = new UserManagementService();
+
         public FrmChamCong()
         {
             InitializeComponent();
@@ -20,12 +16,24 @@ namespace TPH.LIS.App.QuanLyChamCong
 
         private void btnVaoLam_Click(object sender, EventArgs e)
         {
+            ChamCongVaoLam();
+            LoadLuoiChamCong();
+        }
 
+        private void ChamCongVaoLam()
+        {
+            _IUserService.Insert_User_ChamCong(CommonAppVarsAndFunctions.UserID);
+
+        }
+        private void ChamCongRaVe()
+        {
+            _IUserService.User_ChamCongRaVe(CommonAppVarsAndFunctions.UserID);
         }
 
         private void btnRaVe_Click(object sender, EventArgs e)
         {
-
+            ChamCongRaVe();
+            LoadLuoiChamCong();
         }
 
         private void Clear_BindingInformation()
@@ -42,11 +50,20 @@ namespace TPH.LIS.App.QuanLyChamCong
 
         private void FrmChamCong_Load(object sender, EventArgs e)
         {
+
             Clear_BindingInformation();
             Load_NhanVien();
             Load_BoPhan();
             Load_ChucVu();
             LoadThongTinCaNhan();
+            LoadLuoiChamCong();
+            searchDuLieuCC();
+        }
+        private void LoadLuoiChamCong()
+        {
+            gcResult.DataSource = null;
+            gcResult.DataSource = WorkingServices.ConvertColumnNameToLower_Upper
+                (_IUserService.DanhSachChamCong(CommonAppVarsAndFunctions.UserID), true);
         }
 
         private void LoadThongTinCaNhan()
@@ -83,6 +100,26 @@ namespace TPH.LIS.App.QuanLyChamCong
             ucSearchLookupEditor_ChucVu1.CatchTabKey = true;
             //ucSearchLookupEditor_NhanVien1.ControlNext = ucSearchLookupEditor_CongTacVien;
             //ucSearchLookupEditor_NhanVien1.ControlBack = ucSearchLookupEditor_Object1;
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Excel.ExportToExcel.Export(gcDuLieuCC, string.Format("DuLieuChamCong_{0}", DateTime.Now.ToString("ddMMyyyyHHmmss")));
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            searchDuLieuCC();
+        }
+        private void searchDuLieuCC()
+        {
+            gcDuLieuCC.DataSource = null;
+            var maNV = StringConverter.ToString(ucSearchLookupEditor_NhanVien1.SelectedValue);
+            var maboPhan = StringConverter.ToString(ucSearchLookupEditor_BoPhan1.SelectedValue);
+            var maChucVu = StringConverter.ToString(ucSearchLookupEditor_ChucVu1.SelectedValue);
+
+            gcDuLieuCC.DataSource = WorkingServices.ConvertColumnNameToLower_Upper
+         (_IUserService.DuLieuChamCong(maNV, maboPhan,maChucVu), true);
         }
     }
 }

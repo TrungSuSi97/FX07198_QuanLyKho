@@ -29,7 +29,7 @@ namespace TPH.LIS.Configuration.Repositories.SystemConfig
             using (var reader = DataProvider.ExecuteReader(CommandType.StoredProcedure, "selCauHinhHeThong"
                 , new SqlParameter[] {
                     WorkingServices.GetParaFromOject("@PCname",string.IsNullOrEmpty(withLocationID)? CommonConfigConstant.AllComputer: withLocationID)
-                  , WorkingServices.GetParaFromOject("@LocationID", withLocationID) })) 
+                  , WorkingServices.GetParaFromOject("@LocationID", withLocationID) }))
             {
                 if (!reader.HasRows)
                 {
@@ -1458,12 +1458,12 @@ namespace TPH.LIS.Configuration.Repositories.SystemConfig
                         WorkingServices.GetParaFromOject("@KhamChuaBenh", objInfo.Khamchuabenh),
                         WorkingServices.GetParaFromOject("@GuiChiDinh", objInfo.Guichidinh),
                         WorkingServices.GetParaFromOject("@ThongKe", objInfo.Thongke),
-                        WorkingServices.GetParaFromOject("@his_id", objInfo.His_id),
-                        WorkingServices.GetParaFromOject("@chungchihanhnghe", objInfo.Chungchihanhnghe),
                         WorkingServices.GetParaFromOject("@NguoiSua", objInfo.Nguoisua),
                         WorkingServices.GetParaFromOject("@NhomNhanVien", objInfo.Nhomnhanvien),
                         WorkingServices.GetParaFromOject("@MaKhoaPhong", objInfo.Makhoaphong),
-                        WorkingServices.GetParaFromOject("@MaPhong", objInfo.Maphong)
+                        WorkingServices.GetParaFromOject("@MaPhong", objInfo.Maphong),
+                        WorkingServices.GetParaFromOject("@MaBoPhan", objInfo.MaBoPhan)
+
                         };
             return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure, "upd_ql_nhanvien", para) > -1;
         }
@@ -1536,6 +1536,8 @@ namespace TPH.LIS.Configuration.Repositories.SystemConfig
                 objInfo.Makhoaphong = StringConverter.ToString(drInfo["MaKhoaPhong"]);
             if (!string.IsNullOrEmpty(drInfo["MaPhong"].ToString()))
                 objInfo.Maphong = StringConverter.ToString(drInfo["MaPhong"]);
+            if (!string.IsNullOrEmpty(drInfo["MaBoPhan"].ToString()))
+                objInfo.MaBoPhan = StringConverter.ToString(drInfo["MaBoPhan"]);
             return objInfo;
         }
         public bool CheckExists_ql_nhanvien(string manhanvien)
@@ -2060,7 +2062,7 @@ namespace TPH.LIS.Configuration.Repositories.SystemConfig
         }
         public List<DM_KHUVUC_MAYTINH> Get_LstInfo_dm_khuvuc_maytinh(string tenmaytinh)
         {
-            DataTable dt = DataThongTinKhuVucTheomayTinh( tenmaytinh);
+            DataTable dt = DataThongTinKhuVucTheomayTinh(tenmaytinh);
             var objLst = new List<DM_KHUVUC_MAYTINH>();
             if (dt.Rows.Count > 0)
             {
@@ -6051,7 +6053,7 @@ namespace TPH.LIS.Configuration.Repositories.SystemConfig
                         WorkingServices.GetParaFromOject("@phanLoaiMau", ((phanLoaiMau??new string[]{ }).Length > 0 ?string.Join(",",phanLoaiMau) : string.Empty))
             };
             var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "selDanhMucXetNghiem_LoaiMau", para);
-            if (ds != null) 
+            if (ds != null)
                 return ds.Tables[0];
             return null;
         }

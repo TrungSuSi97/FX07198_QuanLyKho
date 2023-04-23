@@ -221,9 +221,9 @@
       <Project>{da4788f0-bfd6-45fc-9eb6-0f3d5b9cefa3}</Project>
       <Name>TPH.LIS.Patient</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TPH.LIS.User\TPH.LIS.User.csproj">
+    <ProjectReference Include="..\TPH.LIS.User\TPH.LIS..User.csproj">
       <Project>{3cdb515a-73af-4845-9cc0-5844d03adff3}</Project>
-      <Name>TPH.LIS.User</Name>
+      <Name>TPH.LIS..User</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

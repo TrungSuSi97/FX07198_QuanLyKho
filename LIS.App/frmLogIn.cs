@@ -407,13 +407,13 @@ namespace TPH.LIS.App
 
             var userloginInfo = _userManagementService.GetUserInfoByLoginName(txtUserID.Text);
 
-            if (AssignWorkPlace(userloginInfo.IsAdmin ? "admin" : txtUserID.Text.Trim()))
-            {
+            //if (AssignWorkPlace(userloginInfo.IsAdmin ? "admin" : txtUserID.Text.Trim()))
+            //{
                 AssignUserLoginInfoToMainForm(userloginInfo);
                 AssignPrintedHeader(userloginInfo);
                 AssignSystemConfig();
                 AssignPermissionToUserLogin(CommonAppVarsAndFunctions.IsAdmin ? "admin" : userloginInfo.LoginName);
-                CommonAppVarsAndFunctions.DefaultObject = _serviceSettingService.GetDefaultServiceCode();
+                //CommonAppVarsAndFunctions.DefaultObject = _serviceSettingService.GetDefaultServiceCode();
 
                 WriteUserLoginInfoToRegistry();
 
@@ -460,20 +460,20 @@ namespace TPH.LIS.App
                 {
                     this.BeginInvoke(new MethodInvoker(Close));
                 }
-            }
-            else if (userloginInfo.IsAdmin && string.IsNullOrEmpty(CommonAppVarsAndFunctions.PCWorkPlace))
-            {
-                CustomMessageBox.MSG_Information_OK("Máy tính chưa khai báo khu vực làm việc!");
-                var f = new Settings.HeThong.FrmCauHinh_KhuVuc();
-                f.pnMenu.Visible = true;
-                f.AdjustForm();
-                f.ShowDialog();
-            }
-            else
-            {
-                CustomMessageBox.MSG_Information_OK("Máy tính chưa khai báo khu vực làm việc.\nHoặc tài khoản không được cấp quyền trong khu vực này.");
-                Application.Exit();
-            }
+            //}
+            //else if (userloginInfo.IsAdmin && string.IsNullOrEmpty(CommonAppVarsAndFunctions.PCWorkPlace))
+            //{
+            //    CustomMessageBox.MSG_Information_OK("Máy tính chưa khai báo khu vực làm việc!");
+            //    var f = new Settings.HeThong.FrmCauHinh_KhuVuc();
+            //    f.pnMenu.Visible = true;
+            //    f.AdjustForm();
+            //    f.ShowDialog();
+            //}
+            //else
+            //{
+            //    CustomMessageBox.MSG_Information_OK("Máy tính chưa khai báo khu vực làm việc.\nHoặc tài khoản không được cấp quyền trong khu vực này.");
+            //    Application.Exit();
+            //}
         }
         private void CheckAutoLogin()
         {

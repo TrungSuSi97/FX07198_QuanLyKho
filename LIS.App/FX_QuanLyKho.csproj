@@ -2696,9 +2696,9 @@
       <Project>{850CDA2A-81C7-4B64-8D3B-256877BF777C}</Project>
       <Name>TPH.LIS.TestResult</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Modules\TPH.LIS.User\TPH.LIS.User.csproj">
+    <ProjectReference Include="..\Modules\TPH.LIS.User\TPH.LIS..User.csproj">
       <Project>{3cdb515a-73af-4845-9cc0-5844d03adff3}</Project>
-      <Name>TPH.LIS.User</Name>
+      <Name>TPH.LIS..User</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modules\TPH.Report\TPH.Report.csproj">
       <Project>{cf79eb8f-0d24-4845-8ef8-67a3c8f8972b}</Project>

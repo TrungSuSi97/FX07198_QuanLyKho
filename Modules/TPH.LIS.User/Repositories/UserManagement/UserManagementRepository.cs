@@ -43,11 +43,11 @@ namespace TPH.LIS.User.Repositories.UserManagement
         }
         private bool KiemTraTonTaiUser(string maNguoiDung)
         {
-            using (var users = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "selDanhSach_UserKhongNhanvien",  new SqlParameter[] { WorkingServices.GetParaFromOject("@MaNguoiDung", maNguoiDung) }))
+            using (var users = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "selDanhSach_UserKhongNhanvien", new SqlParameter[] { WorkingServices.GetParaFromOject("@MaNguoiDung", maNguoiDung) }))
             {
                 if (users != null && users.Tables.Count > 0)
                 {
-                    return users.Tables[0].Rows.Count >0;
+                    return users.Tables[0].Rows.Count > 0;
                 }
             }
             return false;
@@ -98,7 +98,7 @@ namespace TPH.LIS.User.Repositories.UserManagement
         public DataTable GetAllUsers_CoPhanQuyen(string AppCode)
         {
 
-            using (var users = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "selDanhSach_UserCoQuyenTrenApp", new SqlParameter[] { WorkingServices.GetParaFromOject("@PhanHe", AppCode)}))
+            using (var users = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "selDanhSach_UserCoQuyenTrenApp", new SqlParameter[] { WorkingServices.GetParaFromOject("@PhanHe", AppCode) }))
             {
                 if (users != null && users.Tables.Count > 0)
                 {
@@ -109,8 +109,8 @@ namespace TPH.LIS.User.Repositories.UserManagement
             return new DataTable();
         }
         public DataTable GetUsersKyTenCoPhanQuyen(string MaNguoiDung, string lstPhanQuyenBP, bool kyten, bool doichieuSHPT = false)
-        { 
-                var sqlPara = new SqlParameter[]{WorkingServices.GetParaFromOject("@lstPhanQuyenBP", lstPhanQuyenBP.Replace("'","")),
+        {
+            var sqlPara = new SqlParameter[]{WorkingServices.GetParaFromOject("@lstPhanQuyenBP", lstPhanQuyenBP.Replace("'","")),
                 WorkingServices.GetParaFromOject("@MaNguoiDung", MaNguoiDung),
                 WorkingServices.GetParaFromOject("@kyten", kyten),
                 WorkingServices.GetParaFromOject("@doichieuSHPT", doichieuSHPT)};
@@ -125,7 +125,7 @@ namespace TPH.LIS.User.Repositories.UserManagement
 
             return new DataTable();
         }
-        public DataTable GetUsersByConditions(string MaNguoiDung, bool kyten, bool doichieuSHPT =false)
+        public DataTable GetUsersByConditions(string MaNguoiDung, bool kyten, bool doichieuSHPT = false)
         {
             var sqlPara = new SqlParameter[]{
                 WorkingServices.GetParaFromOject("@MaNguoiDung", MaNguoiDung),
@@ -142,7 +142,7 @@ namespace TPH.LIS.User.Repositories.UserManagement
 
             return new DataTable();
         }
-    
+
         public BaseModel Insert_ql_nguoidung(QL_NGUOIDUNG objInfo)
         {
             var sqlPara = new SqlParameter[]{WorkingServices.GetParaFromOject("@maNguoiDung", objInfo.Manguoidung),
@@ -185,9 +185,9 @@ namespace TPH.LIS.User.Repositories.UserManagement
                 WorkingServices.GetParaFromOject("@MaSoChuKySo", objInfo.Masochukyso),
                 WorkingServices.GetParaFromOject("@KyTenLanhDao", objInfo.Kytenlanhdao),
                 WorkingServices.GetParaFromOject("@Signpicture", objInfo.Signpicture, isImage:true)
-                
+
             };
-            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure, "upd_ql_nguoidung", sqlPara)> -1;
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure, "upd_ql_nguoidung", sqlPara) > -1;
         }
         public bool Delete_ql_nguoidung(QL_NGUOIDUNG objInfo, string useraction)
         {
@@ -297,7 +297,7 @@ namespace TPH.LIS.User.Repositories.UserManagement
         }
         public DataTable DataDanhSachLoaiChuNang(string allowIDList)
         {
-            var sqlQuery =string.Format("select p.MaPhanLoai as MaQuyen, p.TenPhanLoai as TenQuyen,p.MaPhanLoai as MaLoaiDichVu from {{TPH_Standard}}_Dictionary.dbo.CauHinh_PhanLoaiChucNang p where EnumID in  (6,9,11,14,{0}) and KhongSuDung = 0", allowIDList);
+            var sqlQuery = string.Format("select p.MaPhanLoai as MaQuyen, p.TenPhanLoai as TenQuyen,p.MaPhanLoai as MaLoaiDichVu from {{TPH_Standard}}_Dictionary.dbo.CauHinh_PhanLoaiChucNang p where EnumID in  (6,9,11,14,{0}) and KhongSuDung = 0", allowIDList);
             return DataProvider.ExecuteDataset(CommandType.Text, sqlQuery).Tables[0];
         }
         public DataTable DataDanhSachNhom(string maNguoiDung)
@@ -346,7 +346,7 @@ namespace TPH.LIS.User.Repositories.UserManagement
         public DataTable DataDanhSachBoPhan(string maNguoiDung, bool isAdmin = false)
         {
             var sqlQuery = string.Format("select p.MaBoPhan as MaQuyen, p.TenBoPhan as TenQuyen, '{0}' as  MaLoaiDichVu  from {{TPH_Standard}}_Dictionary.dbo.DM_XetNghiem_BOPHAN p", ServiceType.ClsXetNghiem.ToString());
-            if(!isAdmin)
+            if (!isAdmin)
                 sqlQuery += string.Format(" and p.MaBoPhan in (select q.MaPhanQuyen from {{TPH_Standard}}_System.dbo.ql_nguoidung_phanquyen q where q.MaNhomQuyen = '{0}' and q.MaNguoiDung = '{1}')", FunctionGroup.BoPhan.ToString(), maNguoiDung);
             return DataProvider.ExecuteDataset(CommandType.Text, sqlQuery).Tables[0];
         }
@@ -658,6 +658,45 @@ namespace TPH.LIS.User.Repositories.UserManagement
             return Data_ql_nguoidung_nhomphanquyen(manguoidung, manhomphanquyen).Rows.Count > 0;
         }
 
+        #endregion
+
+        #region Chấm công
+        public bool Insert_User_ChamCong(string maNhanVien)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@MaNhanVien", maNhanVien),
+                        };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure, "FX_ins_User_ChamCong", para) > 0;
+
+        }
+        public bool User_ChamCongRaVe(string maNhanVien)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@MaNhanVien", maNhanVien),
+                        };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure, "FX_upd_User_ChamCongRaVe", para) > 0;
+        }
+
+        public DataTable DanhSachChamCong(string maNhanVien)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@MaNhanVien", maNhanVien)
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_DanhSachChamCong", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+        }
+        public DataTable DuLieuChamCong(string maNhanVien, string maBP, string maCV)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@MaNhanVien", maNhanVien),
+                        WorkingServices.GetParaFromOject("@MaBoPhan", maBP),
+                        WorkingServices.GetParaFromOject("@MaChucVu", maCV)
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_DuLieuChamCong", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+        }
         #endregion
     }
 }

@@ -158,6 +158,8 @@ namespace TPH.LIS.Configuration.Models
         public string Nhomnhanvien { get; set; }
         public string Makhoaphong { get; set; }
         public string Maphong { get; set; }
+        public string MaBoPhan { get; set; }
+
         public QL_NHANVIEN() { }
         public QL_NHANVIEN(string manhanvien, string tennhanvien, string diachi, string dienthoai, string chucvu, bool danghi, bool khamchuabenh, bool guichidinh, DateTime tgnhap, bool thongke
         , string his_id, string chungchihanhnghe, string nguoinhap, string nguoisua, DateTime? ngaysua, string nhomnhanvien)

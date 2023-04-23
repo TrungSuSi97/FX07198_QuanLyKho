@@ -298,5 +298,26 @@ namespace TPH.LIS.User.Services.UserManagement
         }
 
         #endregion
+
+        #region Chấm công
+        public bool Insert_User_ChamCong(string maNhanVien)
+        {
+            return _userManagement.Insert_User_ChamCong(maNhanVien);
+        }
+        public bool User_ChamCongRaVe(string maNhanVien)
+        {
+            return _userManagement.User_ChamCongRaVe(maNhanVien);
+        }
+
+        public DataTable DanhSachChamCong(string maNhanVien)
+        {
+            return _userManagement.DanhSachChamCong(maNhanVien);
+        }
+        public DataTable DuLieuChamCong(string maNhanVien, string maBP, string maCV)
+        {
+            return _userManagement.DuLieuChamCong(maNhanVien, maBP, maCV);
+        }
+
+        #endregion
     }
 }

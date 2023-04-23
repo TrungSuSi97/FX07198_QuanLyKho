@@ -1179,7 +1179,7 @@ namespace TPH.LIS.App
         private void rbNguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var frm = new Settings.NhanVien.FrmTaiKhoanNguoiDung();
-            frm.ShowDialog();
+            ShowForm(frm);
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1250,7 +1250,6 @@ namespace TPH.LIS.App
         }
         public void Check_EnableControl(string userId)
         {
-            rbCapNhatPhanMem.Enabled = true;
             btnLogOut.Enabled = true;
             btnHomeScreen.Enabled = true;
             rbDangKy.Enabled = true;
@@ -1280,10 +1279,11 @@ namespace TPH.LIS.App
             string[] allowPermissions,
             string check)
         {
-            return
-                allowPermissions.Any(
-                    currentPermission =>
-                        currentPermission.Trim().Equals(check.Trim(), StringComparison.OrdinalIgnoreCase));
+            //return
+            //    allowPermissions.Any(
+            //        currentPermission =>
+            //            currentPermission.Trim().Equals(check.Trim(), StringComparison.OrdinalIgnoreCase));
+            return true;
         }
         private void Check_Enable_ViSinh()
         {
@@ -1329,9 +1329,7 @@ namespace TPH.LIS.App
         private void Check_Enable_QuanLy()
         {
             //QL Giá dịch vụ
-            rbDoituongDichVu.Enabled = CheckUserPermissionToAccessFunctions(
-               CommonAppVarsAndFunctions.PhanQuyenQuanLy,
-                UserConstant.PermissionViewCustomerObject);
+ 
             rbKhoaPhong.Enabled = CheckUserPermissionToAccessFunctions(
                CommonAppVarsAndFunctions.PhanQuyenQuanLy,
                 UserConstant.PermissionManangeLocation);
@@ -1378,9 +1376,7 @@ namespace TPH.LIS.App
             rbCauHinhHeThong.Enabled = CheckUserPermissionToAccessFunctions(
              CommonAppVarsAndFunctions.PhanQuyenQuanLy,
               UserConstant.PermissionConfigSystem);
-            rbTembarcode.Enabled = CheckUserPermissionToAccessFunctions(
-             CommonAppVarsAndFunctions.PhanQuyenQuanLy,
-              UserConstant.PermissionConfigSystem);
+     
 
             rbMayIn.Enabled = CheckUserPermissionToAccessFunctions(
               CommonAppVarsAndFunctions.PhanQuyenQuanLy,

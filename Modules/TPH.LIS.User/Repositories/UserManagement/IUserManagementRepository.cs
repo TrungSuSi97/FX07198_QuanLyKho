@@ -86,5 +86,14 @@ namespace TPH.LIS.User.Repositories.UserManagement
         QL_NGUOIDUNG_NHOMPHANQUYEN Get_Info_ql_nguoidung_nhomphanquyen(string manguoidung, string manhomphanquyen);
         bool CheckExists_ql_nguoidung_nhomphanquyen(string manguoidung, string manhomphanquyen);
         #endregion
+
+        #region Chấm công
+        bool Insert_User_ChamCong(string maNhanVien);
+        bool User_ChamCongRaVe(string maNhanVien);
+
+        DataTable DanhSachChamCong(string maNhanVien);
+        DataTable DuLieuChamCong(string maNhanVien, string maBP, string maCV);
+        #endregion
     }
 }
+
