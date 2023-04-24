@@ -35,6 +35,7 @@
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnMenuMain = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnCanLamSang = new System.Windows.Forms.Panel();
             this.pnCLSClinic = new System.Windows.Forms.Panel();
             this.pnCALXetNghiem = new System.Windows.Forms.Panel();
@@ -50,7 +51,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblLuong = new System.Windows.Forms.LinkLabel();
             this.gradientPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnMenuMain.SuspendLayout();
@@ -148,6 +149,18 @@
             this.pnMenuMain.Name = "pnMenuMain";
             this.pnMenuMain.Size = new System.Drawing.Size(1258, 523);
             this.pnMenuMain.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Yellow;
+            this.label4.Location = new System.Drawing.Point(97, 320);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 22);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "QUẢN LÝ KHO";
             // 
             // pnCanLamSang
             // 
@@ -251,6 +264,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.lblLuong);
             this.panel6.Controls.Add(this.lblReception);
             this.panel6.Location = new System.Drawing.Point(101, 28);
             this.panel6.Name = "panel6";
@@ -320,17 +334,22 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // label4
+            // lblLuong
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(97, 320);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 22);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "QUẢN LÝ KHO";
+            this.lblLuong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLuong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblLuong.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLuong.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblLuong.LinkColor = System.Drawing.Color.White;
+            this.lblLuong.Location = new System.Drawing.Point(0, 48);
+            this.lblLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLuong.Name = "lblLuong";
+            this.lblLuong.Size = new System.Drawing.Size(250, 48);
+            this.lblLuong.TabIndex = 23;
+            this.lblLuong.TabStop = true;
+            this.lblLuong.Text = "Lương";
+            this.lblLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLuong.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLuong_LinkClicked);
             // 
             // FrmStartUp
             // 
@@ -393,5 +412,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.LinkLabel lblThongKeTongHop;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel lblLuong;
     }
 }

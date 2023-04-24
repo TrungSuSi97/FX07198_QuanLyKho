@@ -128,6 +128,7 @@
             this.ucQuanLyNguoiDung1.Name = "ucQuanLyNguoiDung1";
             this.ucQuanLyNguoiDung1.Size = new System.Drawing.Size(1097, 533);
             this.ucQuanLyNguoiDung1.TabIndex = 0;
+            this.ucQuanLyNguoiDung1.Load += new System.EventHandler(this.ucQuanLyNguoiDung1_Load);
             // 
             // FrmTaiKhoanNguoiDung
             // 

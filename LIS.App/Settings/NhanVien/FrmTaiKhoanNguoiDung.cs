@@ -15,5 +15,10 @@ namespace TPH.LIS.App.Settings.NhanVien
             ucQuanLyNguoiDung1.HeThong = "TPH.LabIMS";
             ucQuanLyNguoiDung1.Load_Data();
         }
+
+        private void ucQuanLyNguoiDung1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

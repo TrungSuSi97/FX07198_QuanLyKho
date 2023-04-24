@@ -1772,7 +1772,13 @@ namespace TPH.LIS.App
 
         private void rbChamCong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmChamCong();
+            var f = new FrmChamCongNew();
+            ShowForm(f);
+        }
+
+        private void btnLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var f = new FrmLuong();
             ShowForm(f);
         }
     }

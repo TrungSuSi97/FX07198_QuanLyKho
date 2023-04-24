@@ -913,6 +913,12 @@
     <Compile Include="FrmStartup.designer.cs">
       <DependentUpon>FrmStartup.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTemplateCommon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTemplateCommon.designer.cs">
+      <DependentUpon>FrmTemplateCommon.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -924,6 +930,12 @@
     </Compile>
     <Compile Include="QuanLyChamCong\FrmChamCong.Designer.cs">
       <DependentUpon>FrmChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyChamCong\FrmChamCongNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChamCong\FrmChamCongNew.Designer.cs">
+      <DependentUpon>FrmChamCongNew.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\DanhMucCLS\FrmCheDoCopy_HenTraKQ.cs">
       <SubType>Form</SubType>
@@ -1925,12 +1937,18 @@
     <EmbeddedResource Include="FrmStartup.resx">
       <DependentUpon>FrmStartup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTemplateCommon.resx">
+      <DependentUpon>FrmTemplateCommon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyChamCong\FrmChamCong.resx">
       <DependentUpon>FrmChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyChamCong\FrmChamCongNew.resx">
+      <DependentUpon>FrmChamCongNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\DanhMucCLS\FrmCheDoCopy_HenTraKQ.resx">
       <DependentUpon>FrmCheDoCopy_HenTraKQ.cs</DependentUpon>

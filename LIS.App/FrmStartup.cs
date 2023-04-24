@@ -245,7 +245,7 @@ namespace TPH.LIS.App
         }
         private void lblReception_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var f = new FrmChamCong();
+            var f = new FrmChamCongNew();
             frmMDIParent fParent = (frmMDIParent)this.MdiParent;
             fParent.ShowForm(f);
         }
@@ -356,6 +356,13 @@ namespace TPH.LIS.App
         private void FrmStartUp_Activated(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void lblLuong_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var f = new FrmLuong();
+            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            fParent.ShowForm(f);
         }
     }
 }
