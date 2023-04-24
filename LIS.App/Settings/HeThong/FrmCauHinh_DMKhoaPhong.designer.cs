@@ -34,10 +34,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvBoPhan = new TPH.LIS.Common.Controls.CustomDatagridView();
-            this.customTextBox2 = new TPH.LIS.Common.Controls.CustomTextBox(this.components);
-            this.customTextBox3 = new TPH.LIS.Common.Controls.CustomTextBox(this.components);
-            this.customLable5 = new TPH.LIS.Common.Controls.CustomLable();
-            this.customLable6 = new TPH.LIS.Common.Controls.CustomLable();
+            this.MaBoPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenBoPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bvBoPhan = new TPH.LIS.Common.Controls.CustomBindingNavigator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -50,8 +48,10 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.MaBoPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenBoPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customTextBox2 = new TPH.LIS.Common.Controls.CustomTextBox(this.components);
+            this.customTextBox3 = new TPH.LIS.Common.Controls.CustomTextBox(this.components);
+            this.customLable5 = new TPH.LIS.Common.Controls.CustomLable();
+            this.customLable6 = new TPH.LIS.Common.Controls.CustomLable();
             ((System.ComponentModel.ISupportInitialize)(this.pnContaint)).BeginInit();
             this.pnContaint.SuspendLayout();
             this.pnLabel.SuspendLayout();
@@ -205,69 +205,21 @@
             this.dgvBoPhan.Size = new System.Drawing.Size(945, 442);
             this.dgvBoPhan.TabIndex = 3;
             // 
-            // customTextBox2
+            // MaBoPhan
             // 
-            this.customTextBox2.BackColorEnter = System.Drawing.Color.Yellow;
-            this.customTextBox2.BindFieldName = null;
-            this.customTextBox2.ForceColorEnter = System.Drawing.Color.DarkRed;
-            this.customTextBox2.Location = new System.Drawing.Point(656, 54);
-            this.customTextBox2.Name = "customTextBox2";
-            this.customTextBox2.OldValue = null;
-            this.customTextBox2.Size = new System.Drawing.Size(245, 21);
-            this.customTextBox2.TabIndex = 3;
-            this.customTextBox2.UseFocusColor = true;
-            this.customTextBox2.Visible = false;
+            this.MaBoPhan.DataPropertyName = "MaBoPhan";
+            this.MaBoPhan.HeaderText = "Mã bộ phận";
+            this.MaBoPhan.MaxInputLength = 15;
+            this.MaBoPhan.Name = "MaBoPhan";
+            this.MaBoPhan.Width = 90;
             // 
-            // customTextBox3
+            // TenBoPhan
             // 
-            this.customTextBox3.BackColorEnter = System.Drawing.Color.Yellow;
-            this.customTextBox3.BindFieldName = null;
-            this.customTextBox3.ForceColorEnter = System.Drawing.Color.DarkRed;
-            this.customTextBox3.Location = new System.Drawing.Point(398, 54);
-            this.customTextBox3.Name = "customTextBox3";
-            this.customTextBox3.OldValue = null;
-            this.customTextBox3.Size = new System.Drawing.Size(100, 21);
-            this.customTextBox3.TabIndex = 2;
-            this.customTextBox3.UseFocusColor = true;
-            this.customTextBox3.Visible = false;
-            // 
-            // customLable5
-            // 
-            this.customLable5.AutoSize = true;
-            this.customLable5.BindFieldName = null;
-            this.customLable5.Color = System.Drawing.Color.Black;
-            this.customLable5.ForeColorClicked = System.Drawing.Color.White;
-            this.customLable5.GetControl = null;
-            this.customLable5.Location = new System.Drawing.Point(518, 58);
-            this.customLable5.Name = "customLable5";
-            this.customLable5.OldValue = null;
-            this.customLable5.ShadowDepth = 3;
-            this.customLable5.Size = new System.Drawing.Size(132, 15);
-            this.customLable5.Softness = 1.5F;
-            this.customLable5.TabIndex = 1;
-            this.customLable5.Text = "Tên khoa phòng/đơn vị";
-            this.customLable5.UseShadow = false;
-            this.customLable5.UseZoom = false;
-            this.customLable5.Visible = false;
-            // 
-            // customLable6
-            // 
-            this.customLable6.AutoSize = true;
-            this.customLable6.BindFieldName = null;
-            this.customLable6.Color = System.Drawing.Color.Black;
-            this.customLable6.ForeColorClicked = System.Drawing.Color.White;
-            this.customLable6.GetControl = null;
-            this.customLable6.Location = new System.Drawing.Point(254, 58);
-            this.customLable6.Name = "customLable6";
-            this.customLable6.OldValue = null;
-            this.customLable6.ShadowDepth = 3;
-            this.customLable6.Size = new System.Drawing.Size(127, 15);
-            this.customLable6.Softness = 1.5F;
-            this.customLable6.TabIndex = 0;
-            this.customLable6.Text = "Mã khoa phòng/đơn vị";
-            this.customLable6.UseShadow = false;
-            this.customLable6.UseZoom = false;
-            this.customLable6.Visible = false;
+            this.TenBoPhan.DataPropertyName = "TenBoPhan";
+            this.TenBoPhan.HeaderText = "Tên bộ phận";
+            this.TenBoPhan.MaxInputLength = 150;
+            this.TenBoPhan.Name = "TenBoPhan";
+            this.TenBoPhan.Width = 250;
             // 
             // bvBoPhan
             // 
@@ -333,7 +285,6 @@
             // 
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
             this.toolStripTextBox1.Text = "0";
@@ -380,21 +331,69 @@
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
-            // MaBoPhan
+            // customTextBox2
             // 
-            this.MaBoPhan.DataPropertyName = "MaBoPhan";
-            this.MaBoPhan.HeaderText = "Mã bộ phận";
-            this.MaBoPhan.MaxInputLength = 15;
-            this.MaBoPhan.Name = "MaBoPhan";
-            this.MaBoPhan.Width = 90;
+            this.customTextBox2.BackColorEnter = System.Drawing.Color.Yellow;
+            this.customTextBox2.BindFieldName = null;
+            this.customTextBox2.ForceColorEnter = System.Drawing.Color.DarkRed;
+            this.customTextBox2.Location = new System.Drawing.Point(656, 54);
+            this.customTextBox2.Name = "customTextBox2";
+            this.customTextBox2.OldValue = null;
+            this.customTextBox2.Size = new System.Drawing.Size(245, 21);
+            this.customTextBox2.TabIndex = 3;
+            this.customTextBox2.UseFocusColor = true;
+            this.customTextBox2.Visible = false;
             // 
-            // TenBoPhan
+            // customTextBox3
             // 
-            this.TenBoPhan.DataPropertyName = "TenBoPhan";
-            this.TenBoPhan.HeaderText = "Tên bộ phận";
-            this.TenBoPhan.MaxInputLength = 150;
-            this.TenBoPhan.Name = "TenBoPhan";
-            this.TenBoPhan.Width = 250;
+            this.customTextBox3.BackColorEnter = System.Drawing.Color.Yellow;
+            this.customTextBox3.BindFieldName = null;
+            this.customTextBox3.ForceColorEnter = System.Drawing.Color.DarkRed;
+            this.customTextBox3.Location = new System.Drawing.Point(398, 54);
+            this.customTextBox3.Name = "customTextBox3";
+            this.customTextBox3.OldValue = null;
+            this.customTextBox3.Size = new System.Drawing.Size(100, 21);
+            this.customTextBox3.TabIndex = 2;
+            this.customTextBox3.UseFocusColor = true;
+            this.customTextBox3.Visible = false;
+            // 
+            // customLable5
+            // 
+            this.customLable5.AutoSize = true;
+            this.customLable5.BindFieldName = null;
+            this.customLable5.Color = System.Drawing.Color.Black;
+            this.customLable5.ForeColorClicked = System.Drawing.Color.White;
+            this.customLable5.GetControl = null;
+            this.customLable5.Location = new System.Drawing.Point(518, 58);
+            this.customLable5.Name = "customLable5";
+            this.customLable5.OldValue = null;
+            this.customLable5.ShadowDepth = 3;
+            this.customLable5.Size = new System.Drawing.Size(132, 15);
+            this.customLable5.Softness = 1.5F;
+            this.customLable5.TabIndex = 1;
+            this.customLable5.Text = "Tên khoa phòng/đơn vị";
+            this.customLable5.UseShadow = false;
+            this.customLable5.UseZoom = false;
+            this.customLable5.Visible = false;
+            // 
+            // customLable6
+            // 
+            this.customLable6.AutoSize = true;
+            this.customLable6.BindFieldName = null;
+            this.customLable6.Color = System.Drawing.Color.Black;
+            this.customLable6.ForeColorClicked = System.Drawing.Color.White;
+            this.customLable6.GetControl = null;
+            this.customLable6.Location = new System.Drawing.Point(254, 58);
+            this.customLable6.Name = "customLable6";
+            this.customLable6.OldValue = null;
+            this.customLable6.ShadowDepth = 3;
+            this.customLable6.Size = new System.Drawing.Size(127, 15);
+            this.customLable6.Softness = 1.5F;
+            this.customLable6.TabIndex = 0;
+            this.customLable6.Text = "Mã khoa phòng/đơn vị";
+            this.customLable6.UseShadow = false;
+            this.customLable6.UseZoom = false;
+            this.customLable6.Visible = false;
             // 
             // FrmCauHinh_DMKhoaPhong
             // 

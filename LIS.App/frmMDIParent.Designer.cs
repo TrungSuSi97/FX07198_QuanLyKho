@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMDIParent));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblHello = new System.Windows.Forms.ToolStripStatusLabel();
@@ -45,8 +45,6 @@
             this.lblThongBaoCapNhat = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerMain = new System.Windows.Forms.Timer(this.components);
             this.ProgressBarMain = new System.Windows.Forms.ProgressBar();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timerAlarm = new System.Windows.Forms.Timer(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblThongbaolamMoi = new System.Windows.Forms.Label();
@@ -255,16 +253,6 @@
             this.ProgressBarMain.Size = new System.Drawing.Size(96, 31);
             this.ProgressBarMain.TabIndex = 13;
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timerAlarm
-            // 
-            this.timerAlarm.Interval = 30000;
-            this.timerAlarm.Tick += new System.EventHandler(this.timerAlarm_Tick);
-            // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "Tiếp nhận từ HIS";
@@ -299,7 +287,7 @@
             this.btnCloseAlarm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseAlarm.Image = global::TPH.LIS.App.Properties.Resources.Prohibit_icon_16x16;
             this.btnCloseAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCloseAlarm.Location = new System.Drawing.Point(-394, -3);
+            this.btnCloseAlarm.Location = new System.Drawing.Point(-396, -3);
             this.btnCloseAlarm.Name = "btnCloseAlarm";
             this.btnCloseAlarm.Size = new System.Drawing.Size(106, 25);
             this.btnCloseAlarm.TabIndex = 0;
@@ -1061,9 +1049,9 @@
             this.btnTiepNhanHis.Caption = "F1";
             this.btnTiepNhanHis.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTiepNhanHis.ImageOptions.LargeImage")));
             this.btnTiepNhanHis.Name = "btnTiepNhanHis";
-            toolTipItem1.Text = "Chấm công";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.btnTiepNhanHis.SuperTip = superToolTip1;
+            toolTipItem6.Text = "Chấm công";
+            superToolTip6.Items.Add(toolTipItem6);
+            this.btnTiepNhanHis.SuperTip = superToolTip6;
             this.btnTiepNhanHis.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiGridCardView_LinkClicked);
             // 
             // btnTimBenhNhan
@@ -1071,9 +1059,9 @@
             this.btnTimBenhNhan.Caption = "F6";
             this.btnTimBenhNhan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTimBenhNhan.ImageOptions.LargeImage")));
             this.btnTimBenhNhan.Name = "btnTimBenhNhan";
-            toolTipItem2.Text = "Tìm kiếm";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btnTimBenhNhan.SuperTip = superToolTip2;
+            toolTipItem5.Text = "Tìm kiếm";
+            superToolTip5.Items.Add(toolTipItem5);
+            this.btnTimBenhNhan.SuperTip = superToolTip5;
             this.btnTimBenhNhan.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiPivot_LinkClicked);
             // 
             // btnLogOut
@@ -1218,10 +1206,8 @@
         public System.Windows.Forms.ProgressBar ProgressBarMain;
         public System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.ToolStripStatusLabel lblVersion;
         public System.Windows.Forms.ToolStripStatusLabel lblInTuDong;
-        private System.Windows.Forms.Timer timerAlarm;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblThongbaolamMoi;

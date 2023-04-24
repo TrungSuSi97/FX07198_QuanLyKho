@@ -53,6 +53,7 @@
             this.tangca = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ucGroupHeader1 = new TPH.LIS.Common.Controls.ucGroupHeader();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -400,7 +401,8 @@
             this.isnghi,
             this.tangca,
             this.gridColumn11,
-            this.gridColumn12});
+            this.gridColumn12,
+            this.gridColumn9});
             this.gvResult.DetailHeight = 284;
             this.gvResult.GridControl = this.gcResult;
             this.gvResult.GroupFormat = "{0}: [#image]{1}  -  {2}";
@@ -505,7 +507,7 @@
             this.tangca.Name = "tangca";
             this.tangca.OptionsColumn.ReadOnly = true;
             this.tangca.Visible = true;
-            this.tangca.VisibleIndex = 10;
+            this.tangca.VisibleIndex = 11;
             this.tangca.Width = 84;
             // 
             // gridColumn11
@@ -531,6 +533,15 @@
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 6;
             this.gridColumn12.Width = 146;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Giờ làm việc";
+            this.gridColumn9.FieldName = "giolamviec";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 10;
+            this.gridColumn9.Width = 82;
             // 
             // ucGroupHeader1
             // 
@@ -573,7 +584,7 @@
             this.xtraTabPage2.Controls.Add(this.ucGroupHeader3);
             this.xtraTabPage2.Controls.Add(this.panel1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(910, 545);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1178, 613);
             this.xtraTabPage2.Text = "XUẤT DỮ LIỆU CHẤM CÔNG";
             // 
             // gcDuLieuCC
@@ -592,7 +603,7 @@
             this.gcDuLieuCC.MainView = this.gvDuLieuCC;
             this.gcDuLieuCC.Margin = new System.Windows.Forms.Padding(0);
             this.gcDuLieuCC.Name = "gcDuLieuCC";
-            this.gcDuLieuCC.Size = new System.Drawing.Size(910, 333);
+            this.gcDuLieuCC.Size = new System.Drawing.Size(1178, 401);
             this.gcDuLieuCC.TabIndex = 102;
             this.gcDuLieuCC.UseEmbeddedNavigator = true;
             this.gcDuLieuCC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -727,7 +738,7 @@
             this.ucGroupHeader3.MaximumSize = new System.Drawing.Size(0, 23);
             this.ucGroupHeader3.MinimumSize = new System.Drawing.Size(0, 23);
             this.ucGroupHeader3.Name = "ucGroupHeader3";
-            this.ucGroupHeader3.Size = new System.Drawing.Size(910, 23);
+            this.ucGroupHeader3.Size = new System.Drawing.Size(1178, 23);
             this.ucGroupHeader3.TabIndex = 101;
             // 
             // panel1
@@ -743,7 +754,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(910, 189);
+            this.panel1.Size = new System.Drawing.Size(1178, 189);
             this.panel1.TabIndex = 0;
             // 
             // btnExcel
@@ -964,5 +975,6 @@
         public DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
     }
 }

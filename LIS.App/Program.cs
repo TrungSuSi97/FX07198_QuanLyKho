@@ -15,6 +15,7 @@ namespace TPH.LIS.App
 {
     static class Program
     {
+
         private static ISystemConfigService _systemService = new SystemConfigService();
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();
@@ -120,7 +121,7 @@ namespace TPH.LIS.App
             }
         }
 
-        private static void Run() 
+        private static void Run()
         {
             //var logIn = new FrmDangNhap();
             //logIn.ShowDialog();

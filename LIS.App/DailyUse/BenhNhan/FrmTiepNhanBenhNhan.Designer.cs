@@ -238,7 +238,6 @@
             this.pnContaint.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.pnContaint.Appearance.Options.UseBackColor = true;
             this.pnContaint.Controls.Add(this.splitContainer1);
-            this.pnContaint.Location = new System.Drawing.Point(0, 0);
             this.pnContaint.Margin = new System.Windows.Forms.Padding(0);
             this.pnContaint.Padding = new System.Windows.Forms.Padding(3);
             this.pnContaint.Size = new System.Drawing.Size(1084, 621);
@@ -874,6 +873,7 @@
             // 
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(38, 23);
             this.toolStripTextBox1.Text = "0";

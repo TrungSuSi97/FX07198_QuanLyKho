@@ -123,7 +123,6 @@ namespace TPH.LIS.App
                 WorkingServices.EmptyFolderContents("Logs", 3, null);
 
                 CommonAppVarsAndFunctions.ServerTime = C_Ultilities.ServerDate();
-                timer1.Start();
                 _active = true;
 
                 LockControl(true);
@@ -162,14 +161,12 @@ namespace TPH.LIS.App
                     }
                     else
                     {
-                        Start_StopAlarm(false);
                         BarcodeBatenderService.CloseBartender();
 
                     }
                 }
                 else
                 {
-                    Start_StopAlarm(false);
                     BarcodeBatenderService.CloseBartender();
                 }
                 //if (_tak != null)
@@ -177,7 +174,6 @@ namespace TPH.LIS.App
             }
             else
             {
-                Start_StopAlarm(false);
                 BarcodeBatenderService.CloseBartender();
             }
             //else if (_tak != null)
@@ -259,63 +255,63 @@ namespace TPH.LIS.App
         {
             CommonAppVarsAndFunctions.ServerTime = CommonAppVarsAndFunctions.ServerTime.AddSeconds(1);
             lblTimer.Text = string.Format("| {0}: {1: dd/MM/yyyy HH:mm:ss}", MessageConstant.NgayLamViec, CommonAppVarsAndFunctions.ServerTime);
-            if (!CommonAppVarsAndFunctions.License.FullLicense)
-            {
-                if (CommonAppVarsAndFunctions.ServerTime >= CommonAppVarsAndFunctions.License.EndDate || CommonAppVarsAndFunctions.ServerTime <= CommonAppVarsAndFunctions.License.StartDate)
-                {
-                    timer1.Stop();
-                    _active = false;
-                    Application.Restart();
-                }
-                else
-                {
-                    if (CommonAppVarsAndFunctions.License.ChangeLicense)
-                    {
-                        var difference = CommonAppVarsAndFunctions.License.EndDate - CommonAppVarsAndFunctions.ServerTime.Date;
-                        this.Text = string.Format(MessageConstant.PhanMemConNgayDungThu, CommonConstant.ApplicationName, difference.Days); ;
-                        CommonAppVarsAndFunctions.License.ChangeLicense = false;
-                    }
-                }
-            }
+            //if (!CommonAppVarsAndFunctions.License.FullLicense)
+            //{
+            //    if (CommonAppVarsAndFunctions.ServerTime >= CommonAppVarsAndFunctions.License.EndDate || CommonAppVarsAndFunctions.ServerTime <= CommonAppVarsAndFunctions.License.StartDate)
+            //    {
+            //        timer1.Stop();
+            //        _active = false;
+            //        Application.Restart();
+            //    }
+            //    else
+            //    {
+            //        if (CommonAppVarsAndFunctions.License.ChangeLicense)
+            //        {
+            //            var difference = CommonAppVarsAndFunctions.License.EndDate - CommonAppVarsAndFunctions.ServerTime.Date;
+            //            this.Text = string.Format(MessageConstant.PhanMemConNgayDungThu, CommonConstant.ApplicationName, difference.Days); ;
+            //            CommonAppVarsAndFunctions.License.ChangeLicense = false;
+            //        }
+            //    }
+            //}
 
-            //kiểm tra update
-            if (iCountingUpdate >= iCountToCheckUpdate)
-            {
-                CommonAppVarsAndFunctions.ServerTime = AppCode.C_Ultilities.ServerDate();
-                var checkUpdateFlat = CommonAppVarsAndFunctions._iConfig.Check_UpdateSoftware(Environment.MachineName
-                    , CommonAppVarsAndFunctions.fileVersion, CommonAppVarsAndFunctions.appName);
-                if (checkUpdateFlat == 2)
-                {
-                    if (forceUpdateRequest)
-                    {
-                        mnuCapNhatPhanMem_Click(sender, e);
-                    }
-                    else
-                    {
-                        isNeedUpdate = true;
-                        iCountingUpdate = 0;
-                        iCountingforceUpdate = 0;
-                        forceUpdateRequest = true;
-                        // mnuCapNhatPhanMem.Text = string.Format("CẢNH BÁO: ỨNG DỤNG TỰ CẬP NHẬT SAU {0}s", iCountToCheckUpdate);
-                    }
-                }
-                else
-                {
-                    forceUpdateRequest = false;
-                    //   mnuCapNhatPhanMem.Text = "Cập nhật phần mềm";
-                    isNeedUpdate = checkUpdateFlat == 1;
-                    iCountingUpdate = 0;
-                }
-            }
-            else
-            {
-                iCountingforceUpdate++;
-                iCountingUpdate++;
-                if (CommonAppVarsAndFunctions.ServerTime.Hour == 0 && CommonAppVarsAndFunctions.ServerTime.Minute == 00 && CommonAppVarsAndFunctions.ServerTime.Second == 0)
-                {
-                    WorkingServices.EmptyFolderContents("Logs", 3, null);
-                }
-            }
+            ////kiểm tra update
+            //if (iCountingUpdate >= iCountToCheckUpdate)
+            //{
+            //    CommonAppVarsAndFunctions.ServerTime = AppCode.C_Ultilities.ServerDate();
+            //    var checkUpdateFlat = CommonAppVarsAndFunctions._iConfig.Check_UpdateSoftware(Environment.MachineName
+            //        , CommonAppVarsAndFunctions.fileVersion, CommonAppVarsAndFunctions.appName);
+            //    if (checkUpdateFlat == 2)
+            //    {
+            //        if (forceUpdateRequest)
+            //        {
+            //            mnuCapNhatPhanMem_Click(sender, e);
+            //        }
+            //        else
+            //        {
+            //            isNeedUpdate = true;
+            //            iCountingUpdate = 0;
+            //            iCountingforceUpdate = 0;
+            //            forceUpdateRequest = true;
+            //            // mnuCapNhatPhanMem.Text = string.Format("CẢNH BÁO: ỨNG DỤNG TỰ CẬP NHẬT SAU {0}s", iCountToCheckUpdate);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        forceUpdateRequest = false;
+            //        //   mnuCapNhatPhanMem.Text = "Cập nhật phần mềm";
+            //        isNeedUpdate = checkUpdateFlat == 1;
+            //        iCountingUpdate = 0;
+            //    }
+            //}
+            //else
+            //{
+            //    iCountingforceUpdate++;
+            //    iCountingUpdate++;
+            //    if (CommonAppVarsAndFunctions.ServerTime.Hour == 0 && CommonAppVarsAndFunctions.ServerTime.Minute == 00 && CommonAppVarsAndFunctions.ServerTime.Second == 0)
+            //    {
+            //        WorkingServices.EmptyFolderContents("Logs", 3, null);
+            //    }
+            //}
 
             //if (isNeedUpdate)
             //{
@@ -334,7 +330,7 @@ namespace TPH.LIS.App
             //else if (mnuAlarm.BackColor == Color.Yellow)
             //    mnuAlarm.BackColor = Color.Empty;
             counting++;
-            lblThongbaolamMoi.Text = string.Format("Thông báo sẽ tự làm mới sau: {0}s", ((timerAlarm.Interval) / 1000) - counting);
+            //lblThongbaolamMoi.Text = string.Format("Thông báo sẽ tự làm mới sau: {0}s", ((timerAlarm.Interval) / 1000) - counting);
         }
         private void Check_MessOfBartender()
         {
@@ -899,35 +895,20 @@ namespace TPH.LIS.App
         #endregion
         int counting = 0;
 
-        private void timerAlarm_Tick(object sender, EventArgs e)
-        {
-            timerAlarm.Stop();
-            //counting = 0;
-            //try
-            //{
-            //    Load_DSCanhBaoTuMay();
-            //}
-            //catch (Exception ex)
-            //{
-            //    WriteLog.LogService.RecordLogError(CommonAppVarsAndFunctions.UserID, "Logs_TimerAlarm", ex);
-            //}
-            //counting = 0;
-            timerAlarm.Start();
-        }
-        public void Start_StopAlarm(bool start)
-        {
-            if (start)
-            {
-                counting = 0;
-                timerAlarm.Enabled = true;
-                timerAlarm.Start();
-            }
-            else
-            {
-                timerAlarm.Stop();
-                timerAlarm.Enabled = false;
-            }
-        }
+        //public void Start_StopAlarm(bool start)
+        //{
+        //    if (start)
+        //    {
+        //        counting = 0;
+        //        timerAlarm.Enabled = true;
+        //        timerAlarm.Start();
+        //    }
+        //    else
+        //    {
+        //        timerAlarm.Stop();
+        //        timerAlarm.Enabled = false;
+        //    }
+        //}
 
         private void mnuTheoDoiMau_Click(object sender, EventArgs e)
         {

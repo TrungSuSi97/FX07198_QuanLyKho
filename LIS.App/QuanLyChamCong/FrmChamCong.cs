@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using TPH.Common.Converter;
 using TPH.LIS.Common.Extensions;
 using TPH.LIS.User.Services.UserManagement;
@@ -62,8 +63,22 @@ namespace TPH.LIS.App.QuanLyChamCong
         private void LoadLuoiChamCong()
         {
             gcResult.DataSource = null;
-            gcResult.DataSource = WorkingServices.ConvertColumnNameToLower_Upper
+            var data = WorkingServices.ConvertColumnNameToLower_Upper
                 (_IUserService.DanhSachChamCong(CommonAppVarsAndFunctions.UserID), true);
+
+            foreach (DataRow item in data.Rows)
+            {
+                if (DateTimeConverter.ToDateTime(item["ThoiGianVaoLam"]) != DateTime.MinValue
+                    && DateTimeConverter.ToDateTime(item["ThoiGianRaVe"]) != DateTime.MinValue)
+                {
+                    TimeSpan variable = DateTimeConverter.ToDateTime(item["ThoiGianRaVe"]) -
+                        DateTimeConverter.ToDateTime(item["ThoiGianVaoLam"]);
+                    item["GioLamViec"] = variable.TotalHours.ToString("0.00");
+                }
+                else
+                    item["GioLamViec"] = 0;
+            }
+            gcResult.DataSource = data;
         }
 
         private void LoadThongTinCaNhan()
@@ -119,7 +134,7 @@ namespace TPH.LIS.App.QuanLyChamCong
             var maChucVu = StringConverter.ToString(ucSearchLookupEditor_ChucVu1.SelectedValue);
 
             gcDuLieuCC.DataSource = WorkingServices.ConvertColumnNameToLower_Upper
-         (_IUserService.DuLieuChamCong(maNV, maboPhan,maChucVu), true);
+         (_IUserService.DuLieuChamCong(maNV, maboPhan, maChucVu), true);
         }
     }
 }
