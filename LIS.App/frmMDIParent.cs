@@ -1253,7 +1253,8 @@ namespace TPH.LIS.App
 
         private void Check_Enable_BangLuong()
         {
-            rbChamCong.Enabled = true;
+            rbChamCong.Enabled = btnLuong.Enabled = true;
+
         }
 
         public static bool CheckUserPermissionToAccessFunctions(
@@ -1310,7 +1311,7 @@ namespace TPH.LIS.App
         private void Check_Enable_QuanLy()
         {
             //QL Giá dịch vụ
- 
+
             rbKhoaPhong.Enabled = CheckUserPermissionToAccessFunctions(
                CommonAppVarsAndFunctions.PhanQuyenQuanLy,
                 UserConstant.PermissionManangeLocation);
@@ -1357,7 +1358,7 @@ namespace TPH.LIS.App
             rbCauHinhHeThong.Enabled = CheckUserPermissionToAccessFunctions(
              CommonAppVarsAndFunctions.PhanQuyenQuanLy,
               UserConstant.PermissionConfigSystem);
-     
+
 
             rbMayIn.Enabled = CheckUserPermissionToAccessFunctions(
               CommonAppVarsAndFunctions.PhanQuyenQuanLy,

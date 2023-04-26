@@ -30,19 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLuong));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExcel = new TPH.Controls.TPHNormalButton();
-            this.btnTimKiem = new TPH.Controls.TPHNormalButton();
-            this.ucSearchLookupEditor_ChucVu1 = new TPH.LIS.App.AppCode.ucSearchLookupEditor_ChucVu();
-            this.ucSearchLookupEditor_NhanVien1 = new TPH.LIS.App.AppCode.ucSearchLookupEditor_NhanVien();
-            this.ucSearchLookupEditor_BoPhan1 = new TPH.LIS.App.AppCode.ucSearchLookupEditor_BoPhan();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.ucGroupHeader3 = new TPH.LIS.Common.Controls.ucGroupHeader();
-            this.ucGroupHeader1 = new TPH.LIS.Common.Controls.ucGroupHeader();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.gcDuLieuCC = new DevExpress.XtraGrid.GridControl();
             this.gvDuLieuCC = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,14 +42,25 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ucGroupHeader1 = new TPH.LIS.Common.Controls.ucGroupHeader();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExcel = new TPH.Controls.TPHNormalButton();
+            this.btnTimKiem = new TPH.Controls.TPHNormalButton();
+            this.ucSearchLookupEditor_ChucVu1 = new TPH.LIS.App.AppCode.ucSearchLookupEditor_ChucVu();
+            this.ucSearchLookupEditor_NhanVien1 = new TPH.LIS.App.AppCode.ucSearchLookupEditor_NhanVien();
+            this.ucSearchLookupEditor_BoPhan1 = new TPH.LIS.App.AppCode.ucSearchLookupEditor_BoPhan();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.ucGroupHeader3 = new TPH.LIS.Common.Controls.ucGroupHeader();
             this.pnContaint.SuspendLayout();
             this.pnLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDuLieuCC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDuLieuCC)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -106,6 +106,12 @@
             this.xtraTabPage1,
             this.xtraTabPage2});
             // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(907, 528);
+            this.xtraTabPage1.Text = "xtraTabPage1";
+            // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.gcDuLieuCC);
@@ -115,11 +121,159 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(907, 528);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
-            // xtraTabPage1
+            // gcDuLieuCC
             // 
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(237, 324);
-            this.xtraTabPage1.Text = "xtraTabPage1";
+            this.gcDuLieuCC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcDuLieuCC.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Arial", 8F);
+            this.gcDuLieuCC.EmbeddedNavigator.Appearance.Options.UseFont = true;
+            this.gcDuLieuCC.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.gcDuLieuCC.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gcDuLieuCC.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gcDuLieuCC.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gcDuLieuCC.EmbeddedNavigator.Buttons.Remove.Visible = false;
+            this.gcDuLieuCC.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(0);
+            this.gcDuLieuCC.EmbeddedNavigator.TextStringFormat = "Dòng {0}/{1}";
+            this.gcDuLieuCC.Location = new System.Drawing.Point(0, 237);
+            this.gcDuLieuCC.MainView = this.gvDuLieuCC;
+            this.gcDuLieuCC.Margin = new System.Windows.Forms.Padding(0);
+            this.gcDuLieuCC.Name = "gcDuLieuCC";
+            this.gcDuLieuCC.Size = new System.Drawing.Size(907, 291);
+            this.gcDuLieuCC.TabIndex = 104;
+            this.gcDuLieuCC.UseEmbeddedNavigator = true;
+            this.gcDuLieuCC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvDuLieuCC});
+            // 
+            // gvDuLieuCC
+            // 
+            this.gvDuLieuCC.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7,
+            this.gridColumn8});
+            this.gvDuLieuCC.DetailHeight = 284;
+            this.gvDuLieuCC.GridControl = this.gcDuLieuCC;
+            this.gvDuLieuCC.GroupFormat = "{0}: [#image]{1}  -  {2}";
+            this.gvDuLieuCC.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GiaRieng", null, "{0:N0}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TienCong", null, "{0:N0}")});
+            this.gvDuLieuCC.Name = "gvDuLieuCC";
+            this.gvDuLieuCC.OptionsSelection.CheckBoxSelectorColumnWidth = 26;
+            this.gvDuLieuCC.OptionsSelection.MultiSelect = true;
+            this.gvDuLieuCC.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gvDuLieuCC.OptionsView.ColumnAutoWidth = false;
+            this.gvDuLieuCC.OptionsView.ShowFooter = true;
+            this.gvDuLieuCC.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã nhân viên";
+            this.gridColumn1.FieldName = "manhanvien";
+            this.gridColumn1.MinWidth = 17;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.Width = 90;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Họ tên";
+            this.gridColumn2.FieldName = "tennhanvien";
+            this.gridColumn2.MinWidth = 17;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.Width = 270;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Chức vụ";
+            this.gridColumn3.FieldName = "tennhomnhanvien";
+            this.gridColumn3.MinWidth = 17;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 4;
+            this.gridColumn3.Width = 115;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Bộ phận";
+            this.gridColumn4.FieldName = "tenbophan";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.ReadOnly = true;
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Tổng số ngày đi làm";
+            this.gridColumn5.FieldName = "songaydilam";
+            this.gridColumn5.MinWidth = 17;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
+            this.gridColumn5.OptionsColumn.ReadOnly = true;
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.Width = 142;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Tổng số ngày đến muộn";
+            this.gridColumn6.FieldName = "songaydenmuon";
+            this.gridColumn6.MinWidth = 17;
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
+            this.gridColumn6.OptionsColumn.ReadOnly = true;
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 6;
+            this.gridColumn6.Width = 148;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Tổng số ngày nghỉ";
+            this.gridColumn7.FieldName = "songaynghi";
+            this.gridColumn7.MinWidth = 17;
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.ReadOnly = true;
+            this.gridColumn7.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.Width = 134;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Ngày tăng ca";
+            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn8.FieldName = "ngaytangca";
+            this.gridColumn8.MinWidth = 17;
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.ReadOnly = true;
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 8;
+            this.gridColumn8.Width = 84;
+            // 
+            // ucGroupHeader1
+            // 
+            this.ucGroupHeader1.BackColor = System.Drawing.Color.Transparent;
+            this.ucGroupHeader1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ucGroupHeader1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucGroupHeader1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(218)))), ((int)(((byte)(89)))));
+            this.ucGroupHeader1.GroupCaption = "DỮ LIỆU LƯƠNG";
+            this.ucGroupHeader1.GroupCaptionAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ucGroupHeader1.Location = new System.Drawing.Point(0, 214);
+            this.ucGroupHeader1.Margin = new System.Windows.Forms.Padding(0);
+            this.ucGroupHeader1.MaximumSize = new System.Drawing.Size(0, 23);
+            this.ucGroupHeader1.MinimumSize = new System.Drawing.Size(0, 23);
+            this.ucGroupHeader1.Name = "ucGroupHeader1";
+            this.ucGroupHeader1.Size = new System.Drawing.Size(907, 23);
+            this.ucGroupHeader1.TabIndex = 103;
             // 
             // panel1
             // 
@@ -278,160 +432,6 @@
             this.ucGroupHeader3.Size = new System.Drawing.Size(907, 23);
             this.ucGroupHeader3.TabIndex = 102;
             // 
-            // ucGroupHeader1
-            // 
-            this.ucGroupHeader1.BackColor = System.Drawing.Color.Transparent;
-            this.ucGroupHeader1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucGroupHeader1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucGroupHeader1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(218)))), ((int)(((byte)(89)))));
-            this.ucGroupHeader1.GroupCaption = "DỮ LIỆU LƯƠNG";
-            this.ucGroupHeader1.GroupCaptionAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ucGroupHeader1.Location = new System.Drawing.Point(0, 214);
-            this.ucGroupHeader1.Margin = new System.Windows.Forms.Padding(0);
-            this.ucGroupHeader1.MaximumSize = new System.Drawing.Size(0, 23);
-            this.ucGroupHeader1.MinimumSize = new System.Drawing.Size(0, 23);
-            this.ucGroupHeader1.Name = "ucGroupHeader1";
-            this.ucGroupHeader1.Size = new System.Drawing.Size(907, 23);
-            this.ucGroupHeader1.TabIndex = 103;
-            // 
-            // gcDuLieuCC
-            // 
-            this.gcDuLieuCC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcDuLieuCC.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Arial", 8F);
-            this.gcDuLieuCC.EmbeddedNavigator.Appearance.Options.UseFont = true;
-            this.gcDuLieuCC.EmbeddedNavigator.Buttons.Append.Visible = false;
-            this.gcDuLieuCC.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
-            this.gcDuLieuCC.EmbeddedNavigator.Buttons.Edit.Visible = false;
-            this.gcDuLieuCC.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
-            this.gcDuLieuCC.EmbeddedNavigator.Buttons.Remove.Visible = false;
-            this.gcDuLieuCC.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(0);
-            this.gcDuLieuCC.EmbeddedNavigator.TextStringFormat = "Dòng {0}/{1}";
-            this.gcDuLieuCC.Location = new System.Drawing.Point(0, 237);
-            this.gcDuLieuCC.MainView = this.gvDuLieuCC;
-            this.gcDuLieuCC.Margin = new System.Windows.Forms.Padding(0);
-            this.gcDuLieuCC.Name = "gcDuLieuCC";
-            this.gcDuLieuCC.Size = new System.Drawing.Size(907, 291);
-            this.gcDuLieuCC.TabIndex = 104;
-            this.gcDuLieuCC.UseEmbeddedNavigator = true;
-            this.gcDuLieuCC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvDuLieuCC});
-            // 
-            // gvDuLieuCC
-            // 
-            this.gvDuLieuCC.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7,
-            this.gridColumn8});
-            this.gvDuLieuCC.DetailHeight = 284;
-            this.gvDuLieuCC.GridControl = this.gcDuLieuCC;
-            this.gvDuLieuCC.GroupFormat = "{0}: [#image]{1}  -  {2}";
-            this.gvDuLieuCC.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GiaRieng", null, "{0:N0}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TienCong", null, "{0:N0}")});
-            this.gvDuLieuCC.Name = "gvDuLieuCC";
-            this.gvDuLieuCC.OptionsSelection.CheckBoxSelectorColumnWidth = 26;
-            this.gvDuLieuCC.OptionsSelection.MultiSelect = true;
-            this.gvDuLieuCC.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.gvDuLieuCC.OptionsView.ColumnAutoWidth = false;
-            this.gvDuLieuCC.OptionsView.ShowFooter = true;
-            this.gvDuLieuCC.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Mã nhân viên";
-            this.gridColumn1.FieldName = "manhanvien";
-            this.gridColumn1.MinWidth = 17;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.ReadOnly = true;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 90;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Họ tên";
-            this.gridColumn2.FieldName = "tennhanvien";
-            this.gridColumn2.MinWidth = 17;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.AllowEdit = false;
-            this.gridColumn2.OptionsColumn.ReadOnly = true;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 270;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Chức vụ";
-            this.gridColumn3.FieldName = "tennhomnhanvien";
-            this.gridColumn3.MinWidth = 17;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.ReadOnly = true;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 4;
-            this.gridColumn3.Width = 115;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Bộ phận";
-            this.gridColumn4.FieldName = "tenbophan";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.OptionsColumn.ReadOnly = true;
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Tổng số ngày đi làm";
-            this.gridColumn5.FieldName = "songaydilam";
-            this.gridColumn5.MinWidth = 17;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.OptionsColumn.AllowEdit = false;
-            this.gridColumn5.OptionsColumn.ReadOnly = true;
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
-            this.gridColumn5.Width = 142;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Tổng số ngày đến muộn";
-            this.gridColumn6.FieldName = "songaydenmuon";
-            this.gridColumn6.MinWidth = 17;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.OptionsColumn.AllowEdit = false;
-            this.gridColumn6.OptionsColumn.ReadOnly = true;
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 6;
-            this.gridColumn6.Width = 148;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Tổng số ngày nghỉ";
-            this.gridColumn7.FieldName = "songaynghi";
-            this.gridColumn7.MinWidth = 17;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.ReadOnly = true;
-            this.gridColumn7.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 7;
-            this.gridColumn7.Width = 134;
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.Caption = "Ngày tăng ca";
-            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn8.FieldName = "ngaytangca";
-            this.gridColumn8.MinWidth = 17;
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.OptionsColumn.ReadOnly = true;
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 8;
-            this.gridColumn8.Width = 84;
-            // 
             // FrmLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -444,10 +444,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDuLieuCC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDuLieuCC)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

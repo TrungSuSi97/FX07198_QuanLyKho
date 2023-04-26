@@ -32,6 +32,7 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.btnTangCa = new TPH.Controls.TPHNormalButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtBP = new System.Windows.Forms.TextBox();
             this.txtCV = new System.Windows.Forms.TextBox();
@@ -78,6 +79,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.btnLamMoi = new TPH.Controls.TPHNormalButton();
             this.pnContaint.SuspendLayout();
             this.pnLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -156,6 +158,8 @@
             // 
             // splitContainerControl1.Panel1
             // 
+            this.splitContainerControl1.Panel1.Controls.Add(this.btnLamMoi);
+            this.splitContainerControl1.Panel1.Controls.Add(this.btnTangCa);
             this.splitContainerControl1.Panel1.Controls.Add(this.labelControl1);
             this.splitContainerControl1.Panel1.Controls.Add(this.txtBP);
             this.splitContainerControl1.Panel1.Controls.Add(this.txtCV);
@@ -177,6 +181,32 @@
             this.splitContainerControl1.Size = new System.Drawing.Size(887, 498);
             this.splitContainerControl1.SplitterPosition = 288;
             this.splitContainerControl1.TabIndex = 0;
+            // 
+            // btnTangCa
+            // 
+            this.btnTangCa.BackColor = System.Drawing.Color.IndianRed;
+            this.btnTangCa.BackColorHover = System.Drawing.Color.Empty;
+            this.btnTangCa.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.btnTangCa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(217)))), ((int)(((byte)(214)))));
+            this.btnTangCa.BorderRadius = 5;
+            this.btnTangCa.BorderSize = 1;
+            this.btnTangCa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTangCa.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTangCa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTangCa.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTangCa.ForceColorHover = System.Drawing.Color.Empty;
+            this.btnTangCa.ForeColor = System.Drawing.Color.White;
+            this.btnTangCa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTangCa.Location = new System.Drawing.Point(371, 243);
+            this.btnTangCa.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTangCa.Name = "btnTangCa";
+            this.btnTangCa.Size = new System.Drawing.Size(107, 38);
+            this.btnTangCa.TabIndex = 110;
+            this.btnTangCa.Text = "Tăng ca";
+            this.btnTangCa.TextColor = System.Drawing.Color.White;
+            this.btnTangCa.UseHightLight = true;
+            this.btnTangCa.UseVisualStyleBackColor = false;
+            this.btnTangCa.Click += new System.EventHandler(this.btnTangCa_Click);
             // 
             // labelControl1
             // 
@@ -468,14 +498,14 @@
             // tangca
             // 
             this.tangca.Caption = "Tăng ca";
-            this.tangca.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.tangca.FieldName = "tangca";
+            this.tangca.FieldName = "istangca";
             this.tangca.MinWidth = 17;
             this.tangca.Name = "tangca";
             this.tangca.OptionsColumn.ReadOnly = true;
+            this.tangca.UnboundDataType = typeof(bool);
             this.tangca.Visible = true;
-            this.tangca.VisibleIndex = 11;
-            this.tangca.Width = 84;
+            this.tangca.VisibleIndex = 10;
+            this.tangca.Width = 92;
             // 
             // gridColumn11
             // 
@@ -507,7 +537,7 @@
             this.gridColumn9.FieldName = "giolamviec";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 10;
+            this.gridColumn9.VisibleIndex = 11;
             this.gridColumn9.Width = 82;
             // 
             // ucGroupHeader1
@@ -665,7 +695,7 @@
             // 
             this.gridColumn8.Caption = "Ngày tăng ca";
             this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn8.FieldName = "ngaytangca";
+            this.gridColumn8.FieldName = "songaytangca";
             this.gridColumn8.MinWidth = 17;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.ReadOnly = true;
@@ -831,6 +861,32 @@
             this.labelControl5.TabIndex = 110;
             this.labelControl5.Text = "Mã nhân viên";
             // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnLamMoi.BackColorHover = System.Drawing.Color.Empty;
+            this.btnLamMoi.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.btnLamMoi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(217)))), ((int)(((byte)(214)))));
+            this.btnLamMoi.BorderRadius = 5;
+            this.btnLamMoi.BorderSize = 1;
+            this.btnLamMoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamMoi.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.ForceColorHover = System.Drawing.Color.Empty;
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLamMoi.Location = new System.Drawing.Point(238, 243);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(107, 38);
+            this.btnLamMoi.TabIndex = 111;
+            this.btnLamMoi.Text = "Làm mới lưới";
+            this.btnLamMoi.TextColor = System.Drawing.Color.White;
+            this.btnLamMoi.UseHightLight = true;
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
             // FrmChamCongNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -913,5 +969,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
+        private Controls.TPHNormalButton btnTangCa;
+        private Controls.TPHNormalButton btnLamMoi;
     }
 }

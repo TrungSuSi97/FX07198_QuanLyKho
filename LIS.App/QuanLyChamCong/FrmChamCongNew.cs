@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using TPH.LIS.Common.Extensions;
 using TPH.Common.Converter;
 using TPH.LIS.User.Services.UserManagement;
+using TPH.LIS.Common.Controls;
 
 namespace TPH.LIS.App.QuanLyChamCong
 {
@@ -29,12 +30,19 @@ namespace TPH.LIS.App.QuanLyChamCong
 
         private void ChamCongVaoLam()
         {
-            _IUserService.Insert_User_ChamCong(CommonAppVarsAndFunctions.UserID);
+            if (_IUserService.Insert_User_ChamCong(CommonAppVarsAndFunctions.UserID))
+            {
+                CustomMessageBox.MSG_Information_OK("Bạn đã chấm công vào làm.");
+            }
+
 
         }
         private void ChamCongRaVe()
         {
-            _IUserService.User_ChamCongRaVe(CommonAppVarsAndFunctions.UserID);
+            if (_IUserService.User_ChamCongRaVe(CommonAppVarsAndFunctions.UserID))
+            {
+                CustomMessageBox.MSG_Information_OK("Bạn đã chấm công ra về.");
+            }
         }
 
         private void btnRaVe_Click(object sender, EventArgs e)
@@ -97,7 +105,6 @@ namespace TPH.LIS.App.QuanLyChamCong
 
         }
 
-
         private void Load_NhanVien()
         {
             ucSearchLookupEditor_NhanVien1.Load_NhanVien();
@@ -140,7 +147,35 @@ namespace TPH.LIS.App.QuanLyChamCong
             var maChucVu = StringConverter.ToString(ucSearchLookupEditor_ChucVu1.SelectedValue);
 
             gcDuLieuCC.DataSource = WorkingServices.ConvertColumnNameToLower_Upper
-         (_IUserService.DuLieuChamCong(maNV, maboPhan, maChucVu), true);
+             (_IUserService.DuLieuChamCong(maNV, maboPhan, maChucVu), true);
+        }
+
+        private void btnTangCa_Click(object sender, EventArgs e)
+        {
+            TangCa();
+        }
+
+        private void TangCa()
+        {
+            if (CustomMessageBox.MSG_Question_YesNo_GetNo("Bạn muốn tăng ca ngày hôm nay?")) return;
+            var maNV = StringConverter.ToString(CommonAppVarsAndFunctions.UserID);
+
+            if (_IUserService.CheckTangCa5Ngay(maNV))
+            {
+                CustomMessageBox.MSG_Information_OK("Bạn đã tăng ca 5 ngày?");
+                return;
+            }
+
+            if (_IUserService.Udp_TangCa(maNV))
+            {
+                CustomMessageBox.MSG_Information_OK("Bạn đã tăng ca thành công?");
+            }
+            
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            LoadLuoiChamCong();
         }
     }
 }

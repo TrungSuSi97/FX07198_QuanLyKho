@@ -697,6 +697,27 @@ namespace TPH.LIS.User.Repositories.UserManagement
             if (ds == null) return null;
             return ds.Tables[0];
         }
+        public bool Udp_TangCa(string maNhanVien)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@MaNhanVien", maNhanVien),
+                        };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure, "FX_upd_User_TangCa", para) > 0;
+        }
+        public bool CheckTangCa5Ngay(string maNhanVien)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@MaNhanVien", maNhanVien)
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_CheckTangCa", para);
+
+            return NumberConverter.ToInt(ds.Tables[0].Columns["songaytangca"]) >= 5;
+        }
+
+
+
+
+
         #endregion
     }
 }

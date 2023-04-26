@@ -937,6 +937,12 @@
     <Compile Include="QuanLyChamCong\FrmChamCongNew.Designer.cs">
       <DependentUpon>FrmChamCongNew.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyChamCong\FrmLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChamCong\FrmLuong.Designer.cs">
+      <DependentUpon>FrmLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings\DanhMucCLS\FrmCheDoCopy_HenTraKQ.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1949,6 +1955,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyChamCong\FrmChamCongNew.resx">
       <DependentUpon>FrmChamCongNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyChamCong\FrmLuong.resx">
+      <DependentUpon>FrmLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\DanhMucCLS\FrmCheDoCopy_HenTraKQ.resx">
       <DependentUpon>FrmCheDoCopy_HenTraKQ.cs</DependentUpon>

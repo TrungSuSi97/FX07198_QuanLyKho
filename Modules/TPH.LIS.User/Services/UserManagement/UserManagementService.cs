@@ -317,6 +317,21 @@ namespace TPH.LIS.User.Services.UserManagement
         {
             return _userManagement.DuLieuChamCong(maNhanVien, maBP, maCV);
         }
+        public bool Udp_TangCa(string maNhanVien)
+        {
+            return _userManagement.Udp_TangCa(maNhanVien);
+        }
+        public bool CheckTangCa5Ngay(string maNhanVien)
+        { 
+            return _userManagement.CheckTangCa5Ngay(maNhanVien);
+        }
+
+
+
+
+
+
+
 
         #endregion
     }

@@ -114,6 +114,7 @@
             this.rbMauReport2 = new DevExpress.XtraBars.BarButtonItem();
             this.rbMaPPingMaMyXnViSinh = new DevExpress.XtraBars.BarButtonItem();
             this.rbChamCong = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLuong = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -139,7 +140,6 @@
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnLuong = new DevExpress.XtraBars.BarButtonItem();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnCoCanhBao.SuspendLayout();
@@ -290,7 +290,7 @@
             this.btnCloseAlarm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseAlarm.Image = global::TPH.LIS.App.Properties.Resources.Prohibit_icon_16x16;
             this.btnCloseAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCloseAlarm.Location = new System.Drawing.Point(-398, -3);
+            this.btnCloseAlarm.Location = new System.Drawing.Point(-400, -3);
             this.btnCloseAlarm.Name = "btnCloseAlarm";
             this.btnCloseAlarm.Size = new System.Drawing.Size(106, 25);
             this.btnCloseAlarm.TabIndex = 0;
@@ -942,6 +942,14 @@
             this.rbChamCong.Name = "rbChamCong";
             this.rbChamCong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbChamCong_ItemClick);
             // 
+            // btnLuong
+            // 
+            this.btnLuong.Caption = "Lương";
+            this.btnLuong.Id = 31;
+            this.btnLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLuong.ImageOptions.SvgImage")));
+            this.btnLuong.Name = "btnLuong";
+            this.btnLuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuong_ItemClick);
+            // 
             // ribbonPage2
             // 
             this.ribbonPage2.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
@@ -1163,14 +1171,6 @@
             this.barButtonItem7.Id = 30;
             this.barButtonItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem7.ImageOptions.SvgImage")));
             this.barButtonItem7.Name = "barButtonItem7";
-            // 
-            // btnLuong
-            // 
-            this.btnLuong.Caption = "Lương";
-            this.btnLuong.Id = 31;
-            this.btnLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLuong.ImageOptions.SvgImage")));
-            this.btnLuong.Name = "btnLuong";
-            this.btnLuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuong_ItemClick);
             // 
             // frmMDIParent
             // 

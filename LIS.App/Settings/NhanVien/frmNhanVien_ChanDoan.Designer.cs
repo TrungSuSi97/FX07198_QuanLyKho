@@ -64,7 +64,7 @@
             this.btnAddBacSi = new TPH.Controls.TPHNormalButton();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtBacSi = new System.Windows.Forms.TextBox();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLuong = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pnContaint)).BeginInit();
             this.pnContaint.SuspendLayout();
             this.pnLabel.SuspendLayout();
@@ -222,7 +222,7 @@
             this.colBoPhan,
             this.colChucVu,
             this.gridColumn1,
-            this.gridColumn2});
+            this.colLuong});
             this.gvNhanVien.GridControl = this.gcNhanVien;
             this.gvNhanVien.GroupCount = 1;
             this.gvNhanVien.Name = "gvNhanVien";
@@ -601,13 +601,14 @@
             this.txtBacSi.TabIndex = 1;
             this.txtBacSi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBacSi_KeyPress);
             // 
-            // gridColumn2
+            // colLuong
             // 
-            this.gridColumn2.Caption = "Lương";
-            this.gridColumn2.FieldName = "Luong";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 12;
+            this.colLuong.Caption = "Lương";
+            this.colLuong.FieldName = "Luong";
+            this.colLuong.Name = "colLuong";
+            this.colLuong.Visible = true;
+            this.colLuong.VisibleIndex = 12;
+            this.colLuong.Width = 115;
             // 
             // frmNhanVien_ChanDoan
             // 
@@ -682,6 +683,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn lukMaPhong;
         private DevExpress.XtraGrid.Columns.GridColumn lukTenPhong;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn colLuong;
     }
 }

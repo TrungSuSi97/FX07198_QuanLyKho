@@ -90,6 +90,11 @@ namespace TPH.LIS.User.Services.UserManagement
         DataTable DanhSachChamCong(string maNhanVien);
         DataTable DuLieuChamCong(string maNhanVien, string maBP, string maCV);
 
+        bool Udp_TangCa(string maNhanVien);
+        bool CheckTangCa5Ngay(string maNhanVien);
+
+
+
 
         #endregion
     }
