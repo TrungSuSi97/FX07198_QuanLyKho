@@ -97,14 +97,14 @@ namespace TPH.LIS.User.Repositories.UserManagement
         bool CheckTangCa5Ngay(string maNhanVien);
 
 
-
-
-
-
+        #endregion
+        #region Lương
+        DataTable DuLieuLuong(UserLuongModel model);
 
 
 
         #endregion
+
     }
 }
 

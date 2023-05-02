@@ -363,6 +363,18 @@
     <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_ChucVu.Designer.cs">
       <DependentUpon>ucSearchLookupEditor_ChucVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Nam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Nam.Designer.cs">
+      <DependentUpon>ucSearchLookupEditor_Nam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Thang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Thang.Designer.cs">
+      <DependentUpon>ucSearchLookupEditor_Thang.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -925,12 +937,6 @@
       <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyChamCong\FrmChamCong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyChamCong\FrmChamCong.Designer.cs">
-      <DependentUpon>FrmChamCong.cs</DependentUpon>
-    </Compile>
     <Compile Include="QuanLyChamCong\FrmChamCongNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1670,6 +1676,12 @@
     <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_ChucVu.resx">
       <DependentUpon>ucSearchLookupEditor_ChucVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Nam.resx">
+      <DependentUpon>ucSearchLookupEditor_Nam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Thang.resx">
+      <DependentUpon>ucSearchLookupEditor_Thang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_NhanVien.resx">
       <DependentUpon>ucSearchLookupEditor_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -1949,9 +1961,6 @@
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyChamCong\FrmChamCong.resx">
-      <DependentUpon>FrmChamCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyChamCong\FrmChamCongNew.resx">
       <DependentUpon>FrmChamCongNew.cs</DependentUpon>
@@ -2647,10 +2656,6 @@
       <Project>{14eb32ef-0539-4da0-818a-1cdd3cd6e127}</Project>
       <Name>TPH.HIS.API</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Modules\TPH.HIS.LIS.API\TPH.LIS.API.csproj">
-      <Project>{c5da58da-aabc-4288-a2f6-95d3d9457a0b}</Project>
-      <Name>TPH.LIS.API</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Modules\TPH.HIS\TPH.HIS.csproj">
       <Project>{b51ab14e-71b9-4c92-85f6-a318b51aa382}</Project>
       <Name>TPH.HIS</Name>
@@ -2730,14 +2735,6 @@
     <ProjectReference Include="..\Modules\TPH.Report\TPH.Report.csproj">
       <Project>{cf79eb8f-0d24-4845-8ef8-67a3c8f8972b}</Project>
       <Name>TPH.Report</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Modules\TPH.UpdaterManagement\TPH.UpdaterManagement.csproj">
-      <Project>{711ec01f-0cfb-45ea-be1e-c888698ca314}</Project>
-      <Name>TPH.UpdaterManagement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Modules\TPH.ViettelSignCertificate\TPH.ViettelSignCertificate.csproj">
-      <Project>{331624A7-EF50-4407-918D-8A097ABE410B}</Project>
-      <Name>TPH.ViettelSignCertificate</Name>
     </ProjectReference>
     <ProjectReference Include="..\TPH.WriteLog\TPH.WriteLog.csproj">
       <Project>{37482CAD-D9AF-4741-9CB6-16A6BA6A412E}</Project>

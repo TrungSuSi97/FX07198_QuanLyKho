@@ -32,9 +32,9 @@ using TPH.LIS.DigitalSignature.Service.Impl;
 using TPH.LIS.Patient.Services.TestMethod;
 using TPH.LIS.User.Constants;
 using TPH.LIS.User.Enum;
-using TPH.ViettelSignCertificate.Models.Requests;
-using TPH.ViettelSignCertificate.Services.Impl;
-using TPH.ViettelSignCertificate.Services;
+//using TPH.ViettelSignCertificate.Models.Requests;
+//using TPH.ViettelSignCertificate.Services.Impl;
+//using TPH.ViettelSignCertificate.Services;
 using static System.Net.WebRequestMethods;
 using DevExpress.XtraPrinting.Drawing;
 
@@ -47,7 +47,7 @@ namespace TPH.LIS.App
         private readonly ISystemConfigService _systemConfigService = new SystemConfigService();
         private readonly ITestMethodService _testMethodService = new TestMethodService();
         private readonly IDigitalSignature _digSign = new DigitalSignatureService();
-        private readonly ISignCertificate _signCertificate = new SignCertificateImpl();
+        //private readonly ISignCertificate _signCertificate = new SignCertificateImpl();
         private readonly IConnectHISService _iHISService = new ConnectHISService();
         public THONGTINFILEKY _objSign = new THONGTINFILEKY();
         private HisConnection labIMSWebConfigInfo;
@@ -905,136 +905,136 @@ namespace TPH.LIS.App
         #region Ký số HSM
         private void DigitalSignedByHSM(bool print = false)
         {
-            var logContent = string.Empty;
-            WriteLog.LogService.RecordLogFile("KySo", "url");
-            var url = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLinkAPI;
-            WriteLog.LogService.RecordLogFile("KySo", "username");
-            var username = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuTaiKhoan;
-            WriteLog.LogService.RecordLogFile("KySo", "password");
-            var password = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuMatKhau;
-            WriteLog.LogService.RecordLogFile("KySo", "serial");
-            var serial = IdChuKySo; // CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuSerial;
-            WriteLog.LogService.RecordLogFile("KySo", "digest");
-            var digest = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuSHA;
-            WriteLog.LogService.RecordLogFile("KySo", "username");
-            //CustomMessageBox.MSG_Information_OK(string.Format("DigitalSignedBy"));
-            logContent += string.Format("url: {0}, username: {1}, password: {2}, serial: {3}, digest: {4}"
-                , url, username, TPH.Common.StringCryptography.EnDeCrypt.EncryptString(password, AuthorizationConstant.Clinic), serial, digest);
-            if (string.IsNullOrWhiteSpace(url) ||
-                string.IsNullOrWhiteSpace(username) ||
-                string.IsNullOrWhiteSpace(password) ||
-                string.IsNullOrWhiteSpace(serial))
-            {
-                MessageBox.Show("Vui lòng cấu hình thông tin Chữ ký số!");
-                return;
-            }
-            var report = (XtraReport)documentViewer1.DocumentSource;
-            var pdfData = GetPDFByte(report);
+            //var logContent = string.Empty;
+            //WriteLog.LogService.RecordLogFile("KySo", "url");
+            //var url = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLinkAPI;
+            //WriteLog.LogService.RecordLogFile("KySo", "username");
+            //var username = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuTaiKhoan;
+            //WriteLog.LogService.RecordLogFile("KySo", "password");
+            //var password = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuMatKhau;
+            //WriteLog.LogService.RecordLogFile("KySo", "serial");
+            //var serial = IdChuKySo; // CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuSerial;
+            //WriteLog.LogService.RecordLogFile("KySo", "digest");
+            //var digest = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuSHA;
+            //WriteLog.LogService.RecordLogFile("KySo", "username");
+            ////CustomMessageBox.MSG_Information_OK(string.Format("DigitalSignedBy"));
+            //logContent += string.Format("url: {0}, username: {1}, password: {2}, serial: {3}, digest: {4}"
+            //    , url, username, TPH.Common.StringCryptography.EnDeCrypt.EncryptString(password, AuthorizationConstant.Clinic), serial, digest);
+            //if (string.IsNullOrWhiteSpace(url) ||
+            //    string.IsNullOrWhiteSpace(username) ||
+            //    string.IsNullOrWhiteSpace(password) ||
+            //    string.IsNullOrWhiteSpace(serial))
+            //{
+            //    MessageBox.Show("Vui lòng cấu hình thông tin Chữ ký số!");
+            //    return;
+            //}
+            //var report = (XtraReport)documentViewer1.DocumentSource;
+            //var pdfData = GetPDFByte(report);
 
-            if (pdfData != null)
-            {
-                var fileContent = Convert.ToBase64String(pdfData);
-                if (string.IsNullOrWhiteSpace(fileContent))
-                {
-                    WriteLog.LogService.RecordLogFile("KySo", "Not HaveContent");
-                    MessageBox.Show("Nội dung file cần ký không hợp lệ!");
-                    return;
-                }
-                // Kiếm các xn đã ký trước và so với xn hiện tại xem thiếu gì không
-                // Nếu thiếu thì cho chọn Y/N và show ra các xn thiếu, chỉ lấy xn con.
-                //Nếu tồn tại tenfileHIS thì check
-                WriteLog.LogService.RecordLogFile("KySo", " Kiếm các xn đã ký trước và so với xn hiện tại xem thiếu gì không? - Nếu thiếu thì cho chọn Y/N và show ra các xn thiếu, chỉ lấy xn con.");
-                if (IsCheckLackingTests(MaTiepNhan, TenFileHIS))
-                    return;
-                //sign
-                try
-                {
-                    WriteLog.LogService.RecordLogFile("KySo", "ngayKy");
-                    var ngayKy = C_Ultilities.ServerDate();
-                    logContent += string.Format("=====Sending File To Viettel=====: {0}\n", ngayKy.ToString("dd/MM/yyyy HH:MM:ss:fff"));
+            //if (pdfData != null)
+            //{
+            //    var fileContent = Convert.ToBase64String(pdfData);
+            //    if (string.IsNullOrWhiteSpace(fileContent))
+            //    {
+            //        WriteLog.LogService.RecordLogFile("KySo", "Not HaveContent");
+            //        MessageBox.Show("Nội dung file cần ký không hợp lệ!");
+            //        return;
+            //    }
+            //    // Kiếm các xn đã ký trước và so với xn hiện tại xem thiếu gì không
+            //    // Nếu thiếu thì cho chọn Y/N và show ra các xn thiếu, chỉ lấy xn con.
+            //    //Nếu tồn tại tenfileHIS thì check
+            //    WriteLog.LogService.RecordLogFile("KySo", " Kiếm các xn đã ký trước và so với xn hiện tại xem thiếu gì không? - Nếu thiếu thì cho chọn Y/N và show ra các xn thiếu, chỉ lấy xn con.");
+            //    if (IsCheckLackingTests(MaTiepNhan, TenFileHIS))
+            //        return;
+            //    //sign
+            //    try
+            //    {
+            //        WriteLog.LogService.RecordLogFile("KySo", "ngayKy");
+            //        var ngayKy = C_Ultilities.ServerDate();
+            //        logContent += string.Format("=====Sending File To Viettel=====: {0}\n", ngayKy.ToString("dd/MM/yyyy HH:MM:ss:fff"));
 
-                    var result = _signCertificate.SignPdfBase64RectangleText(new SignPdfBase64RectangleTextRequest
-                    {
-                        ApiUrl = url,
-                        AppCode = username,
-                        Password = password,
-                        SerialNumber = serial,
-                        DigestAlgorithm = digest,
-                        FileContent = fileContent,
-                        DisplayRectangle = new BaseSignFilePositionRequest
-                        {
-                            HeightRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuDoCaoRec,
-                            WidthRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuDoRongRec,
-                            MarginTopOfRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLeTren,
-                            MarginBottomOfRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLeDuoi,
-                            MarginLeftOfRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLeTrai,
-                            MarginRightOfRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLePhai,
-                            LocateSign = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuViTri,
-                            FontSize = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuCoChu,
-                            FormatRectangleText = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuDinhDang,
-                            DateFormat = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuDinhDangNgayGio,
-                            NumberPageSign = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuTrangKy,
-                            Contact = string.Empty,
-                            Reason = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLyDo,
-                            Location = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuNoiKy
-                        }
-                    });
+            //        var result = _signCertificate.SignPdfBase64RectangleText(new SignPdfBase64RectangleTextRequest
+            //        {
+            //            ApiUrl = url,
+            //            AppCode = username,
+            //            Password = password,
+            //            SerialNumber = serial,
+            //            DigestAlgorithm = digest,
+            //            FileContent = fileContent,
+            //            DisplayRectangle = new BaseSignFilePositionRequest
+            //            {
+            //                HeightRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuDoCaoRec,
+            //                WidthRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuDoRongRec,
+            //                MarginTopOfRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLeTren,
+            //                MarginBottomOfRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLeDuoi,
+            //                MarginLeftOfRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLeTrai,
+            //                MarginRightOfRectangle = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLePhai,
+            //                LocateSign = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuViTri,
+            //                FontSize = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuCoChu,
+            //                FormatRectangleText = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuDinhDang,
+            //                DateFormat = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuDinhDangNgayGio,
+            //                NumberPageSign = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuTrangKy,
+            //                Contact = string.Empty,
+            //                Reason = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLyDo,
+            //                Location = CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuNoiKy
+            //            }
+            //        });
 
-                    if (result.Code == 0)
-                    {
-                        SignDigitalSuccess = true;
-                        DateSignDigital = ngayKy;
+            //        if (result.Code == 0)
+            //        {
+            //            SignDigitalSuccess = true;
+            //            DateSignDigital = ngayKy;
 
-                        var sPdfDecoded = Convert.FromBase64String(result.FileContent);
+            //            var sPdfDecoded = Convert.FromBase64String(result.FileContent);
 
-                        if (print)
-                            PrintPDF(sPdfDecoded);
-                        //xác nhận sau in
-                        WriteLog.LogService.RecordLogFile("KySo", "xác nhận sau in:ReportType");
-                        EndWithPrinted = true;
-                        switch (ReportType)
-                        {
-                            case (int)ServiceType.ClsXetNghiem:
-                                _testMethodService.UpdatePrintedInfoOfTestResult(_maTiepNhan, CommonAppVarsAndFunctions.UserID);
-                                break;
-                                //case (int)ServiceType.ClsSieuAm:
-                                //    _testMethodService.UpdatePrintedInfoOfSupersonicResult(_maTiepNhan, CommonAppVarsAndFunctions.UserID,
-                                //        _maSoMau);
-                                //    break;
-                                //case (int)ServiceType.ClsXQuang:
-                                //    _testMethodService.UpdatePrintedInfoOfXRayResult(_maTiepNhan, CommonAppVarsAndFunctions.UserID);
-                                //    break;
-                        }
-                        WriteLog.LogService.RecordLogFile("KySo", "signedFilePath");
-                        InsertVaUpdateThongTinKySo(sPdfDecoded);
-                        ShowPhieuDaKy();
-                        this.Close();
-                        haveAction = true;
-                    }
-                    else
-                    {
-                        if (result.Message.Contains("timed out"))
-                            MessageBox.Show(string.Format("Lỗi trong quá trình ký: {0}\nVui lòng liên hệ phòng CNTT hỗ trợ.", result.Message));
-                        else
-                            MessageBox.Show(string.Format("Lỗi trong quá trình ký: {0}", result.Message));
-                    }
-                }
-                catch (Exception ex)
-                {
-                    ErrorService.GetFrameworkErrorMessage(ex, "btnInChuKySo_Click", CommonAppVarsAndFunctions.UserID);
-                    CustomMessageBox.MSG_Information_OK(ex.ToString());
-                }
-                finally
-                {
-                    WriteLog.LogService.RecordLogFile("DigitalSigned", logContent, "DigitalSignedBy()");
-                    if (!print)
-                    {
-                        CustomMessageBox.ShowAlert("File kết quả được xuất thành công!");
-                        System.Threading.Thread.Sleep(1200);
-                        CustomMessageBox.CloseAlert();
-                    }
-                }
-            }
+            //            if (print)
+            //                PrintPDF(sPdfDecoded);
+            //            //xác nhận sau in
+            //            WriteLog.LogService.RecordLogFile("KySo", "xác nhận sau in:ReportType");
+            //            EndWithPrinted = true;
+            //            switch (ReportType)
+            //            {
+            //                case (int)ServiceType.ClsXetNghiem:
+            //                    _testMethodService.UpdatePrintedInfoOfTestResult(_maTiepNhan, CommonAppVarsAndFunctions.UserID);
+            //                    break;
+            //                    //case (int)ServiceType.ClsSieuAm:
+            //                    //    _testMethodService.UpdatePrintedInfoOfSupersonicResult(_maTiepNhan, CommonAppVarsAndFunctions.UserID,
+            //                    //        _maSoMau);
+            //                    //    break;
+            //                    //case (int)ServiceType.ClsXQuang:
+            //                    //    _testMethodService.UpdatePrintedInfoOfXRayResult(_maTiepNhan, CommonAppVarsAndFunctions.UserID);
+            //                    //    break;
+            //            }
+            //            WriteLog.LogService.RecordLogFile("KySo", "signedFilePath");
+            //            InsertVaUpdateThongTinKySo(sPdfDecoded);
+            //            ShowPhieuDaKy();
+            //            this.Close();
+            //            haveAction = true;
+            //        }
+            //        else
+            //        {
+            //            if (result.Message.Contains("timed out"))
+            //                MessageBox.Show(string.Format("Lỗi trong quá trình ký: {0}\nVui lòng liên hệ phòng CNTT hỗ trợ.", result.Message));
+            //            else
+            //                MessageBox.Show(string.Format("Lỗi trong quá trình ký: {0}", result.Message));
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        ErrorService.GetFrameworkErrorMessage(ex, "btnInChuKySo_Click", CommonAppVarsAndFunctions.UserID);
+            //        CustomMessageBox.MSG_Information_OK(ex.ToString());
+            //    }
+            //    finally
+            //    {
+            //        WriteLog.LogService.RecordLogFile("DigitalSigned", logContent, "DigitalSignedBy()");
+            //        if (!print)
+            //        {
+            //            CustomMessageBox.ShowAlert("File kết quả được xuất thành công!");
+            //            System.Threading.Thread.Sleep(1200);
+            //            CustomMessageBox.CloseAlert();
+            //        }
+            //    }
+            //}
         }
         private bool IsCheckLackingTests(string maTiepNhan, string tenFileHIS)
         {

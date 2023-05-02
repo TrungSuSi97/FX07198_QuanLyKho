@@ -82,7 +82,7 @@ namespace TPH.LIS.App.QuanLyChamCong
 
             foreach (DataRow item in data.Rows)
             {
-                if (TPH.Common.Converter.DateTimeConverter.ToDateTime(item["ThoiGianVaoLam"]) != DateTime.MinValue
+                if (DateTimeConverter.ToDateTime(item["ThoiGianVaoLam"]) != DateTime.MinValue
                     && DateTimeConverter.ToDateTime(item["ThoiGianRaVe"]) != DateTime.MinValue)
                 {
                     TimeSpan variable = DateTimeConverter.ToDateTime(item["ThoiGianRaVe"]) -

@@ -714,8 +714,24 @@ namespace TPH.LIS.User.Repositories.UserManagement
             return NumberConverter.ToInt(ds.Tables[0].Columns["songaytangca"]) >= 5;
         }
 
+        #endregion
+
+        #region Lương
+        public DataTable DuLieuLuong(UserLuongModel model)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@MaNhanVien", model.MaNhanVien),
+                        WorkingServices.GetParaFromOject("@MaBoPhan", model.MaBoPhan),
+                        WorkingServices.GetParaFromOject("@MaChucVu", model.MaChucVu),
+                        WorkingServices.GetParaFromOject("@Year", model.Year),
+                        WorkingServices.GetParaFromOject("@Month", model.Month)
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_DuLieuLuong", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
 
 
+        }
 
 
         #endregion

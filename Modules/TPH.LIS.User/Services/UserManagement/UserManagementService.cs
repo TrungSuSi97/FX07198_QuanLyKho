@@ -326,12 +326,13 @@ namespace TPH.LIS.User.Services.UserManagement
             return _userManagement.CheckTangCa5Ngay(maNhanVien);
         }
 
+        #endregion
 
-
-
-
-
-
+        #region Lương
+        public DataTable DuLieuLuong(UserLuongModel model)
+        {
+            return _userManagement.DuLieuLuong(model);
+        }
 
         #endregion
     }

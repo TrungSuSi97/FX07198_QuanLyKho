@@ -54,6 +54,7 @@
             this.lukMaPhong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lukTenPhong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLuong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnInfoBacSi = new DevExpress.XtraEditors.PanelControl();
             this.cboNhomNhanVien = new TPH.LIS.Common.Controls.CustomComboBox();
             this.btnRefreshBacSi = new TPH.Controls.TPHNormalButton();
@@ -64,7 +65,6 @@
             this.btnAddBacSi = new TPH.Controls.TPHNormalButton();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtBacSi = new System.Windows.Forms.TextBox();
-            this.colLuong = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pnContaint)).BeginInit();
             this.pnContaint.SuspendLayout();
             this.pnLabel.SuspendLayout();
@@ -442,6 +442,13 @@
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 12;
             // 
+            // colLuong
+            // 
+            this.colLuong.Caption = "Lương";
+            this.colLuong.FieldName = "Luong";
+            this.colLuong.Name = "colLuong";
+            this.colLuong.Width = 115;
+            // 
             // pnInfoBacSi
             // 
             this.pnInfoBacSi.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
@@ -600,15 +607,6 @@
             this.txtBacSi.Size = new System.Drawing.Size(208, 20);
             this.txtBacSi.TabIndex = 1;
             this.txtBacSi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBacSi_KeyPress);
-            // 
-            // colLuong
-            // 
-            this.colLuong.Caption = "Lương";
-            this.colLuong.FieldName = "Luong";
-            this.colLuong.Name = "colLuong";
-            this.colLuong.Visible = true;
-            this.colLuong.VisibleIndex = 12;
-            this.colLuong.Width = 115;
             // 
             // frmNhanVien_ChanDoan
             // 

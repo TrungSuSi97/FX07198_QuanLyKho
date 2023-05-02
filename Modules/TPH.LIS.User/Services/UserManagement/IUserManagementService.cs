@@ -93,8 +93,10 @@ namespace TPH.LIS.User.Services.UserManagement
         bool Udp_TangCa(string maNhanVien);
         bool CheckTangCa5Ngay(string maNhanVien);
 
+        #endregion
 
-
+        #region Lương
+        DataTable DuLieuLuong(UserLuongModel model);
 
         #endregion
     }

@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="Models\Params\LoginParams.cs" />
     <Compile Include="Models\UserLogInPermission.cs" />
+    <Compile Include="Models\UserLuongModel.cs" />
     <Compile Include="Models\UserPremission.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

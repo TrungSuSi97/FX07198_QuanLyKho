@@ -34,9 +34,6 @@ using TPH.LIS.Common.Controls;
 using TPH.LIS.Common.Extensions;
 using TPH.LIS.Configuration.Services.SystemConfig;
 using TPH.LIS.User.Constants;
-using TPH.UpdaterManagement.Contants;
-using TPH.UpdaterManagement.Services;
-using TPH.UpdaterManagement.Services.Impl;
 
 namespace TPH.LIS.App
 {
@@ -446,7 +443,7 @@ namespace TPH.LIS.App
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            StartServiceUpdate();
+            //StartServiceUpdate();
             lblTPHCopyright.Text = MessageConstant.Copyright;
             fileVersion = FileVersionInfo.GetVersionInfo(Application.ExecutablePath).FileVersion;
             appName = new FileInfo(Application.ExecutablePath).Name.Replace(new FileInfo(Application.ExecutablePath).Extension, "");
@@ -684,8 +681,8 @@ namespace TPH.LIS.App
                 }
             }
 
-            if (!e.Cancel)
-                CommonAppVarsAndFunctions.updateService.CloseConnect();
+            //if (!e.Cancel)
+            //    CommonAppVarsAndFunctions.updateService.CloseConnect();
         }
 
         private void btnTrangChinh_Click(object sender, EventArgs e)
@@ -1144,96 +1141,96 @@ namespace TPH.LIS.App
 
         private async void StartServiceUpdate()
         {
-            if (!_isCallingServiceUpdate)
-            {
-                _isCallingServiceUpdate = true;
-                //Tách hàm join group và tạo connect ra để tránh trường hợp bị lỗi không kết nối được do các lệnh quá nhanh chưa kịp mở connect.
-                if (_isCallSignalR && !_isCreatedGroup)
-                {
-                    _isCreatedGroup = true;
-                    try
-                    {
-                        await CommonAppVarsAndFunctions.updateService.JoinGroup(UpdaterManagementCommon.UpdaterGroupName);
-                        //await CommonAppVarsAndFunctions.updateService.JoinGroup(UpdaterManagementCommon.TestResultNormalGroupName);
-                        //await CommonAppVarsAndFunctions.updateService.JoinGroup(UpdaterManagementCommon.TestResultNormalResponeGroupName);
-                    }
-                    catch (Exception ex)
-                    {
-                        if (ex.Message.Equals("The connection has not been established."))
-                        {
-                            _isCreatedGroup = false;
-                        }
-                    }
-                }
-                else
-                {
-                    if (!CommonAppVarsAndFunctions.updateService.IsReady() && CommonAppVarsAndFunctions.sysConfig != null)
-                    {
-                        if (!string.IsNullOrEmpty(CommonAppVarsAndFunctions.sysConfig.SignalR_HostName))
-                        {
-                            CommonAppVarsAndFunctions.updateService.CreateServiceConnect(new UpdaterManagement.Models.UpdateServiceHostInfo
-                            {
-                                HostName = CommonAppVarsAndFunctions.sysConfig.SignalR_HostName,
-                                Port = CommonAppVarsAndFunctions.sysConfig.SignalR_Port,
-                                UserName = Environment.MachineName,
-                                HubName = UpdaterManagementCommon.HubIMS
-                            });
-                            if (CommonAppVarsAndFunctions.updateService.IsReady())
-                            {
-                                _isCallSignalR = true;
-                                var hubProxy = CommonAppVarsAndFunctions.updateService.GetHubProxy();
-                                hubProxy.On<string, string>("addMessage", (name, message) =>
-                                    this.Invoke((Action)(() =>
-                                    {
-                                        if (name.Equals(UpdaterManagementCommon.UpdaterGroupName))
-                                        {
-                                            if (UpdaterManagementCommon.CheckIsMessageUpdate(message, UpdaterManagementCommon.LabIMS, Environment.MachineName, CommonAppVarsAndFunctions.sysConfig.CustomerID))
-                                            {
-                                                iCountingUpdate = iCountToCheckUpdate;
-                                            }
-                                            else if (UpdaterManagementCommon.CheckIsMessageCancelUpdate(message, UpdaterManagementCommon.LabIMS, Environment.MachineName, CommonAppVarsAndFunctions.sysConfig.CustomerID))
-                                            {
-                                                isNeedUpdate = false;
-                                                iCountingUpdate = 0;
-                                                iCountingforceUpdate = 0;
-                                                CommonAppVarsAndFunctions.forceUpdateRequest = false;
-                                                iCountingforceUpdate = 60;
+            //if (!_isCallingServiceUpdate)
+            //{
+            //    _isCallingServiceUpdate = true;
+            //    //Tách hàm join group và tạo connect ra để tránh trường hợp bị lỗi không kết nối được do các lệnh quá nhanh chưa kịp mở connect.
+            //    if (_isCallSignalR && !_isCreatedGroup)
+            //    {
+            //        _isCreatedGroup = true;
+            //        try
+            //        {
+            //            await CommonAppVarsAndFunctions.updateService.JoinGroup(UpdaterManagementCommon.UpdaterGroupName);
+            //            //await CommonAppVarsAndFunctions.updateService.JoinGroup(UpdaterManagementCommon.TestResultNormalGroupName);
+            //            //await CommonAppVarsAndFunctions.updateService.JoinGroup(UpdaterManagementCommon.TestResultNormalResponeGroupName);
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            if (ex.Message.Equals("The connection has not been established."))
+            //            {
+            //                _isCreatedGroup = false;
+            //            }
+            //        }
+            //    }
+            //    else
+            //    {
+            //        if (!CommonAppVarsAndFunctions.updateService.IsReady() && CommonAppVarsAndFunctions.sysConfig != null)
+            //        {
+            //            if (!string.IsNullOrEmpty(CommonAppVarsAndFunctions.sysConfig.SignalR_HostName))
+            //            {
+            //                CommonAppVarsAndFunctions.updateService.CreateServiceConnect(new UpdaterManagement.Models.UpdateServiceHostInfo
+            //                {
+            //                    HostName = CommonAppVarsAndFunctions.sysConfig.SignalR_HostName,
+            //                    Port = CommonAppVarsAndFunctions.sysConfig.SignalR_Port,
+            //                    UserName = Environment.MachineName,
+            //                    HubName = UpdaterManagementCommon.HubIMS
+            //                });
+            //                if (CommonAppVarsAndFunctions.updateService.IsReady())
+            //                {
+            //                    _isCallSignalR = true;
+            //                    var hubProxy = CommonAppVarsAndFunctions.updateService.GetHubProxy();
+            //                    hubProxy.On<string, string>("addMessage", (name, message) =>
+            //                        this.Invoke((Action)(() =>
+            //                        {
+            //                            if (name.Equals(UpdaterManagementCommon.UpdaterGroupName))
+            //                            {
+            //                                if (UpdaterManagementCommon.CheckIsMessageUpdate(message, UpdaterManagementCommon.LabIMS, Environment.MachineName, CommonAppVarsAndFunctions.sysConfig.CustomerID))
+            //                                {
+            //                                    iCountingUpdate = iCountToCheckUpdate;
+            //                                }
+            //                                else if (UpdaterManagementCommon.CheckIsMessageCancelUpdate(message, UpdaterManagementCommon.LabIMS, Environment.MachineName, CommonAppVarsAndFunctions.sysConfig.CustomerID))
+            //                                {
+            //                                    isNeedUpdate = false;
+            //                                    iCountingUpdate = 0;
+            //                                    iCountingforceUpdate = 0;
+            //                                    CommonAppVarsAndFunctions.forceUpdateRequest = false;
+            //                                    iCountingforceUpdate = 60;
 
-                                            }
-                                        }
-                                        ////Tạm thời chưa sử dụng chức năng này
-                                        //else if (name.Equals(UpdaterManagementCommon.TestResultNormalGroupName))
-                                        //{
-                                        //    if (CommonAppVarsAndFunctions.dicWorkingTest.Count > 0)
-                                        //    {
-                                        //        var respone = UpdaterManagementCommon.GetResponeWorkingString(message, CommonAppVarsAndFunctions.dicWorkingTest, Environment.MachineName, CommonAppVarsAndFunctions.UserID);
-                                        //        if (!string.IsNullOrEmpty(respone))
-                                        //        {
-                                        //            CommonAppVarsAndFunctions.updateService.SendMessage(respone, UpdaterManagementCommon.TestResultNormalResponeGroupName);
-                                        //        }
-                                        //    }
-                                        //}
-                                        //else if (name.Equals(UpdaterManagementCommon.TestResultNormalResponeGroupName))
-                                        //{
-                                        //    string matiepNhan = string.Empty;
-                                        //    var respone = UpdaterManagementCommon.GetPCWorkingWithCode(message, Environment.MachineName, ref matiepNhan);
-                                        //    if (!string.IsNullOrEmpty(respone))
-                                        //    {
-                                        //        var f = this.MdiChildren.Where(x => x.Name.Equals("FrmCLSKetQuaXetNghiem_ThuongQuy", StringComparison.OrdinalIgnoreCase));
-                                        //        if (f.Any())
-                                        //        {
-                                        //            var ff = (frmCLSKetQuaXN)f.First();
-                                        //            ff.ShowMessageAlarm(respone, matiepNhan);
-                                        //        }
-                                        //    }
-                                        //}
-                                    })));
-                            }
-                        }
-                    }
-                }
-                _isCallingServiceUpdate = false;
-            }
+            //                                }
+            //                            }
+            //                            ////Tạm thời chưa sử dụng chức năng này
+            //                            //else if (name.Equals(UpdaterManagementCommon.TestResultNormalGroupName))
+            //                            //{
+            //                            //    if (CommonAppVarsAndFunctions.dicWorkingTest.Count > 0)
+            //                            //    {
+            //                            //        var respone = UpdaterManagementCommon.GetResponeWorkingString(message, CommonAppVarsAndFunctions.dicWorkingTest, Environment.MachineName, CommonAppVarsAndFunctions.UserID);
+            //                            //        if (!string.IsNullOrEmpty(respone))
+            //                            //        {
+            //                            //            CommonAppVarsAndFunctions.updateService.SendMessage(respone, UpdaterManagementCommon.TestResultNormalResponeGroupName);
+            //                            //        }
+            //                            //    }
+            //                            //}
+            //                            //else if (name.Equals(UpdaterManagementCommon.TestResultNormalResponeGroupName))
+            //                            //{
+            //                            //    string matiepNhan = string.Empty;
+            //                            //    var respone = UpdaterManagementCommon.GetPCWorkingWithCode(message, Environment.MachineName, ref matiepNhan);
+            //                            //    if (!string.IsNullOrEmpty(respone))
+            //                            //    {
+            //                            //        var f = this.MdiChildren.Where(x => x.Name.Equals("FrmCLSKetQuaXetNghiem_ThuongQuy", StringComparison.OrdinalIgnoreCase));
+            //                            //        if (f.Any())
+            //                            //        {
+            //                            //            var ff = (frmCLSKetQuaXN)f.First();
+            //                            //            ff.ShowMessageAlarm(respone, matiepNhan);
+            //                            //        }
+            //                            //    }
+            //                            //}
+            //                        })));
+            //                }
+            //            }
+            //        }
+            //    }
+            //    _isCallingServiceUpdate = false;
+            //}
         }
 
         private void mnuDanhMucTuLuuMau_Click(object sender, EventArgs e)

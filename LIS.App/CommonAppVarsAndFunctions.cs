@@ -14,14 +14,11 @@ using TPH.LIS.Configuration.Models;
 using TPH.LIS.Configuration.Services.SystemConfig;
 using TPH.LIS.User.Constants;
 using TPH.LIS.User.Enum;
-using TPH.UpdaterManagement.Services;
-using TPH.UpdaterManagement.Services.Impl;
 
 namespace TPH.LIS.App
 {
     public class CommonAppVarsAndFunctions
     {
-        public static readonly IUpdaterService updateService = new UpdaterService();
         public static ISystemConfigService _iConfig;
         public static Dictionary<string, List<string>> dicWorkingTest = new Dictionary<string, List<string>>();
         public static string DefaultObject { get; internal set; }
