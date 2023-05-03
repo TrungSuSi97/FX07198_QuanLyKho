@@ -80,6 +80,9 @@ namespace TPH.LIS.App
         [STAThread]
         static void Main(string[] args)
         {
+
+
+
             SetCulture();
             Application.EnableVisualStyles();
             DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new Font("Arial", 9);

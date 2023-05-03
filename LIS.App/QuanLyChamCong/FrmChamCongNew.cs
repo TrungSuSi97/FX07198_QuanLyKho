@@ -153,6 +153,7 @@ namespace TPH.LIS.App.QuanLyChamCong
         private void btnTangCa_Click(object sender, EventArgs e)
         {
             TangCa();
+            LoadLuoiChamCong();
         }
 
         private void TangCa()

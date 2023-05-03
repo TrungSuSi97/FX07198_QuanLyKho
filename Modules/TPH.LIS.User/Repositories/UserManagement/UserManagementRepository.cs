@@ -729,10 +729,38 @@ namespace TPH.LIS.User.Repositories.UserManagement
             var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_DuLieuLuong", para);
             if (ds == null) return null;
             return ds.Tables[0];
-
+        }
+        public DataTable DanhSachNhanVienChamCong(string maNhanVien, DateTime fDate, DateTime tDate)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@MaNhanVien", maNhanVien),
+                        WorkingServices.GetParaFromOject("@FDate", fDate),
+                        WorkingServices.GetParaFromOject("@TDate", tDate)
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_DanhSachNhanVienChamCong", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+        }
+        public bool CapNhatLuongNhanVien(UserLuongModel model)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@MaNhanVien", model.MaNhanVien),
+                        WorkingServices.GetParaFromOject("@Month", model.Month),
+                        WorkingServices.GetParaFromOject("@Year", model.Year),
+                        WorkingServices.GetParaFromOject("@SoNgayLam", model.SoNgayLam),
+                        WorkingServices.GetParaFromOject("@SoNgayTangCa", model.SoNgayTangCa),
+                        WorkingServices.GetParaFromOject("@SoNgayDiMuon", model.SoNgayDiMuon),
+                        WorkingServices.GetParaFromOject("@LuongCoBan", model.LuongCoBan),
+                        WorkingServices.GetParaFromOject("@LuongThang", model.LuongThang),
+                        WorkingServices.GetParaFromOject("@LuongTangCa", model.LuongTangCa),
+                        WorkingServices.GetParaFromOject("@LuongChucVu", model.LuongChucVu),
+                        WorkingServices.GetParaFromOject("@LuongDiTre", model.LuongDiTre),
+                        WorkingServices.GetParaFromOject("@LuongThucNhan", model.LuongThucNhan),
+                        };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure, "FX_ins_CapNhatLuongNhanVien", para) > 0;
+  
 
         }
-
 
         #endregion
     }

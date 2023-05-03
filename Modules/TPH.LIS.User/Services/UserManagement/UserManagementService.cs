@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
@@ -322,7 +323,7 @@ namespace TPH.LIS.User.Services.UserManagement
             return _userManagement.Udp_TangCa(maNhanVien);
         }
         public bool CheckTangCa5Ngay(string maNhanVien)
-        { 
+        {
             return _userManagement.CheckTangCa5Ngay(maNhanVien);
         }
 
@@ -333,6 +334,15 @@ namespace TPH.LIS.User.Services.UserManagement
         {
             return _userManagement.DuLieuLuong(model);
         }
+        public DataTable DanhSachNhanVienChamCong(string maNhanVien, DateTime fDate, DateTime tDate)
+        {
+            return _userManagement.DanhSachNhanVienChamCong(maNhanVien, fDate, tDate);
+        }
+        public bool CapNhatLuongNhanVien(UserLuongModel model)
+        { 
+            return _userManagement.CapNhatLuongNhanVien(model);
+        }
+
 
         #endregion
     }

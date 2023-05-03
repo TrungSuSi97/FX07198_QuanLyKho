@@ -110,6 +110,8 @@ namespace TPH.LIS.Configuration.Models
         public string Tennhanvien { get; set; }
 
         public string Diachi { get; set; }
+        public decimal Luong { get; set; }
+
 
         public string Dienthoai { get; set; }
 

@@ -389,6 +389,7 @@ namespace TPH.LIS.App.AppCode
 
             dtColumn.DataType = Type.GetType("System.Int32");
             dtColumn.ColumnName = "MaThang";
+            table.Columns.Add(dtColumn);
 
             dtRow = table.NewRow();
             dtRow["MaThang"] = 1;
@@ -436,7 +437,6 @@ namespace TPH.LIS.App.AppCode
                 lueNhanVien.EditValueChanged -= EditValueChanged;
             var data = sysConfig.Data_ql_nhanvien(string.Empty, "CTV,BSCT");
             gcLueMaBS.Caption = "Mã CTV";
-            gcLueTebBS.Caption = "Tên CTV";
             lueNhanVien.Properties.DataSource = data;
             lueNhanVien.Properties.ValueMember = "MaNhanVien";
             lueNhanVien.Properties.DisplayMember = "TenNhanVien";

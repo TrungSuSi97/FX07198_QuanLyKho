@@ -403,6 +403,8 @@ namespace TPH.LIS.App.AppCode
 
             dtColumn.DataType = Type.GetType("System.Int32");
             dtColumn.ColumnName = "MaThang";
+            table.Columns.Add(dtColumn);
+
 
             dtRow = table.NewRow();
             dtRow["MaThang"] = 1;
@@ -452,14 +454,15 @@ namespace TPH.LIS.App.AppCode
 
             dtColumn.DataType = Type.GetType("System.Int32");
             dtColumn.ColumnName = "MaNam";
+            table.Columns.Add(dtColumn);
 
             int year = CommonAppVarsAndFunctions.ServerTime.Year;
 
             dtRow = table.NewRow();
-            dtRow["MaNam"] = year;
+            dtRow["MaNam"] = year - 1;
             table.Rows.Add(dtRow);
             dtRow = table.NewRow();
-            dtRow["MaNam"] = year + 1;
+            dtRow["MaNam"] = year;
             table.Rows.Add(dtRow);
 
             return table;
@@ -471,7 +474,6 @@ namespace TPH.LIS.App.AppCode
                 lueNhanVien.EditValueChanged -= EditValueChanged;
             var data = sysConfig.Data_ql_nhanvien(string.Empty, "CTV,BSCT");
             gcLueMaBS.Caption = "Mã CTV";
-            gcLueTebBS.Caption = "Tên CTV";
             lueNhanVien.Properties.DataSource = data;
             lueNhanVien.Properties.ValueMember = "MaNhanVien";
             lueNhanVien.Properties.DisplayMember = "TenNhanVien";

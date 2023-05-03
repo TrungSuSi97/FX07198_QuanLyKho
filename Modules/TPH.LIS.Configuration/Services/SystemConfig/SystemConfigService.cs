@@ -510,6 +510,11 @@ namespace TPH.LIS.Configuration.Services.SystemConfig
 
             return _systemConfigRepository.Update_ql_nhanvien(objInfo);
         }
+        public bool Update_ql_luong_nhanvien(QL_NHANVIEN objInfo)
+        {
+
+            return _systemConfigRepository.Update_ql_luong_nhanvien(objInfo);
+        }
 
         public bool Delete_ql_nhanvien(QL_NHANVIEN objInfo)
         {

@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
@@ -100,8 +101,9 @@ namespace TPH.LIS.User.Repositories.UserManagement
         #endregion
         #region Lương
         DataTable DuLieuLuong(UserLuongModel model);
+        DataTable DanhSachNhanVienChamCong(string maNhanVien, DateTime fDate, DateTime tDate);
 
-
+        bool CapNhatLuongNhanVien(UserLuongModel model);
 
         #endregion
 

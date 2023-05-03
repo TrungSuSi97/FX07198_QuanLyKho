@@ -131,6 +131,7 @@ namespace TPH.LIS.Configuration.Repositories.SystemConfig
         DataTable Data_dm_nhomnhanvien();
         BaseModel Insert_ql_nhanvien(QL_NHANVIEN objInfo);
         bool Update_ql_nhanvien(QL_NHANVIEN objInfo);
+        bool Update_ql_luong_nhanvien(QL_NHANVIEN objInfo);
         bool Delete_ql_nhanvien(QL_NHANVIEN objInfo);
         DataTable Data_ql_nhanvien(string manhanvien, string manhomNhanvien);
         QL_NHANVIEN Get_Info_ql_nhanvien(string manhanvien, string manhomNhanvien);

@@ -36,7 +36,6 @@
             this.lueNhanVien = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gvBS = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcLueMaBS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcLueTebBS = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.lueNhanVien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBS)).BeginInit();
             this.SuspendLayout();
@@ -124,8 +123,7 @@
             this.gvBS.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 9.25F);
             this.gvBS.Appearance.ViewCaption.Options.UseFont = true;
             this.gvBS.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gcLueMaBS,
-            this.gcLueTebBS});
+            this.gcLueMaBS});
             this.gvBS.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gvBS.Name = "gvBS";
             this.gvBS.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -134,21 +132,12 @@
             // 
             // gcLueMaBS
             // 
-            this.gcLueMaBS.Caption = "Mã NV";
-            this.gcLueMaBS.FieldName = "MaNhanVien";
+            this.gcLueMaBS.Caption = "Năm";
+            this.gcLueMaBS.FieldName = "MaNam";
             this.gcLueMaBS.Name = "gcLueMaBS";
             this.gcLueMaBS.Visible = true;
             this.gcLueMaBS.VisibleIndex = 0;
             this.gcLueMaBS.Width = 104;
-            // 
-            // gcLueTebBS
-            // 
-            this.gcLueTebBS.Caption = "Tên NV";
-            this.gcLueTebBS.FieldName = "TenNhanVien";
-            this.gcLueTebBS.Name = "gcLueTebBS";
-            this.gcLueTebBS.Visible = true;
-            this.gcLueTebBS.VisibleIndex = 1;
-            this.gcLueTebBS.Width = 275;
             // 
             // ucSearchLookupEditor_Nam
             // 
@@ -170,6 +159,5 @@
         private DevExpress.XtraEditors.SearchLookUpEdit lueNhanVien;
         private DevExpress.XtraGrid.Views.Grid.GridView gvBS;
         private DevExpress.XtraGrid.Columns.GridColumn gcLueMaBS;
-        private DevExpress.XtraGrid.Columns.GridColumn gcLueTebBS;
     }
 }

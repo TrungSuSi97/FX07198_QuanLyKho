@@ -1467,6 +1467,14 @@ namespace TPH.LIS.Configuration.Repositories.SystemConfig
                         };
             return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure, "upd_ql_nhanvien", para) > -1;
         }
+        public bool Update_ql_luong_nhanvien(QL_NHANVIEN objInfo)
+        {
+            string sqlQuery = "Update {{TPH_Standard}}_Dictionary.dbo.ql_nhanvien set";
+            sqlQuery += string.Format("\n Luong = {0}", Utilities.ConvertSqlString(objInfo.Luong.ToString()).ToString());
+            sqlQuery += "\nwhere MaNhanVien =  " + "'" + Utilities.ConvertSqlString(objInfo.Manhanvien.ToString()).ToString() + "'";
+            return DataProvider.ExecuteQuery(sqlQuery);
+
+        }
         public bool Delete_ql_nhanvien(QL_NHANVIEN objInfo)
         {
             var para = new SqlParameter[] {

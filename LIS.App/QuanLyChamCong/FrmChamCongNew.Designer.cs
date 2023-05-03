@@ -32,6 +32,7 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.btnLamMoi = new TPH.Controls.TPHNormalButton();
             this.btnTangCa = new TPH.Controls.TPHNormalButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtBP = new System.Windows.Forms.TextBox();
@@ -79,7 +80,6 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.btnLamMoi = new TPH.Controls.TPHNormalButton();
             this.pnContaint.SuspendLayout();
             this.pnLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -181,6 +181,34 @@
             this.splitContainerControl1.Size = new System.Drawing.Size(887, 498);
             this.splitContainerControl1.SplitterPosition = 288;
             this.splitContainerControl1.TabIndex = 0;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnLamMoi.BackColorHover = System.Drawing.Color.Empty;
+            this.btnLamMoi.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.btnLamMoi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(217)))), ((int)(((byte)(214)))));
+            this.btnLamMoi.BorderRadius = 5;
+            this.btnLamMoi.BorderSize = 1;
+            this.btnLamMoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamMoi.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.ForceColorHover = System.Drawing.Color.Empty;
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
+            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamMoi.Location = new System.Drawing.Point(238, 243);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(109, 38);
+            this.btnLamMoi.TabIndex = 111;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLamMoi.TextColor = System.Drawing.Color.White;
+            this.btnLamMoi.UseHightLight = true;
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnTangCa
             // 
@@ -562,7 +590,7 @@
             this.xtraTabPage2.Controls.Add(this.ucGroupHeader3);
             this.xtraTabPage2.Controls.Add(this.panel1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(887, 498);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1283, 603);
             this.xtraTabPage2.Text = "XUẤT DỮ LIỆU CHẤM CÔNG";
             // 
             // gcDuLieuCC
@@ -581,7 +609,7 @@
             this.gcDuLieuCC.MainView = this.gvDuLieuCC;
             this.gcDuLieuCC.Margin = new System.Windows.Forms.Padding(0);
             this.gcDuLieuCC.Name = "gcDuLieuCC";
-            this.gcDuLieuCC.Size = new System.Drawing.Size(887, 286);
+            this.gcDuLieuCC.Size = new System.Drawing.Size(1283, 391);
             this.gcDuLieuCC.TabIndex = 102;
             this.gcDuLieuCC.UseEmbeddedNavigator = true;
             this.gcDuLieuCC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -716,7 +744,7 @@
             this.ucGroupHeader3.MaximumSize = new System.Drawing.Size(0, 23);
             this.ucGroupHeader3.MinimumSize = new System.Drawing.Size(0, 23);
             this.ucGroupHeader3.Name = "ucGroupHeader3";
-            this.ucGroupHeader3.Size = new System.Drawing.Size(887, 23);
+            this.ucGroupHeader3.Size = new System.Drawing.Size(1283, 23);
             this.ucGroupHeader3.TabIndex = 101;
             // 
             // panel1
@@ -732,7 +760,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(887, 189);
+            this.panel1.Size = new System.Drawing.Size(1283, 189);
             this.panel1.TabIndex = 0;
             // 
             // btnExcel
@@ -860,32 +888,6 @@
             this.labelControl5.Size = new System.Drawing.Size(72, 15);
             this.labelControl5.TabIndex = 110;
             this.labelControl5.Text = "Mã nhân viên";
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnLamMoi.BackColorHover = System.Drawing.Color.Empty;
-            this.btnLamMoi.BackgroundColor = System.Drawing.Color.DarkCyan;
-            this.btnLamMoi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(217)))), ((int)(((byte)(214)))));
-            this.btnLamMoi.BorderRadius = 5;
-            this.btnLamMoi.BorderSize = 1;
-            this.btnLamMoi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLamMoi.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamMoi.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.ForceColorHover = System.Drawing.Color.Empty;
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLamMoi.Location = new System.Drawing.Point(238, 243);
-            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(107, 38);
-            this.btnLamMoi.TabIndex = 111;
-            this.btnLamMoi.Text = "Làm mới lưới";
-            this.btnLamMoi.TextColor = System.Drawing.Color.White;
-            this.btnLamMoi.UseHightLight = true;
-            this.btnLamMoi.UseVisualStyleBackColor = false;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // FrmChamCongNew
             // 
