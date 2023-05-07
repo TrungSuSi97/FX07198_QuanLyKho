@@ -140,6 +140,11 @@
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnQuanLyHangHoa = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTonKho = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDonHang = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBaoCaoTonKho = new DevExpress.XtraBars.BarButtonItem();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnCoCanhBao.SuspendLayout();
@@ -290,7 +295,7 @@
             this.btnCloseAlarm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseAlarm.Image = global::TPH.LIS.App.Properties.Resources.Prohibit_icon_16x16;
             this.btnCloseAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCloseAlarm.Location = new System.Drawing.Point(-404, -3);
+            this.btnCloseAlarm.Location = new System.Drawing.Point(-406, -3);
             this.btnCloseAlarm.Name = "btnCloseAlarm";
             this.btnCloseAlarm.Size = new System.Drawing.Size(106, 25);
             this.btnCloseAlarm.TabIndex = 0;
@@ -440,6 +445,8 @@
             // 
             this.ribbonPage1.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.ribbonPage1.Appearance.Options.UseFont = true;
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Quản lý kho";
             // 
@@ -688,9 +695,13 @@
             this.rbMaPPingMaMyXnViSinh,
             this.rbCapSoThuTu,
             this.rbChamCong,
-            this.btnLuong});
+            this.btnLuong,
+            this.btnQuanLyHangHoa,
+            this.btnTonKho,
+            this.btnDonHang,
+            this.btnBaoCaoTonKho});
             this.rbMainMenu.Location = new System.Drawing.Point(0, 0);
-            this.rbMainMenu.MaxItemId = 32;
+            this.rbMainMenu.MaxItemId = 37;
             this.rbMainMenu.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Never;
             this.rbMainMenu.Name = "rbMainMenu";
             this.rbMainMenu.OptionsCustomizationForm.FormIcon = ((System.Drawing.Icon)(resources.GetObject("resource.FormIcon")));
@@ -955,7 +966,7 @@
             this.ribbonPage2.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.ribbonPage2.Appearance.Options.UseFont = true;
             this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Kế toán";
+            this.ribbonPage2.Text = "Quản lý tài chính";
             // 
             // ribbonPage4
             // 
@@ -1172,6 +1183,43 @@
             this.barButtonItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem7.ImageOptions.SvgImage")));
             this.barButtonItem7.Name = "barButtonItem7";
             // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnQuanLyHangHoa);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnTonKho);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnDonHang);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnBaoCaoTonKho);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Quản lý hàng hóa";
+            // 
+            // btnQuanLyHangHoa
+            // 
+            this.btnQuanLyHangHoa.Caption = "Hàng hóa";
+            this.btnQuanLyHangHoa.Id = 32;
+            this.btnQuanLyHangHoa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnQuanLyHangHoa.ImageOptions.SvgImage")));
+            this.btnQuanLyHangHoa.Name = "btnQuanLyHangHoa";
+            // 
+            // btnTonKho
+            // 
+            this.btnTonKho.Caption = "Tồn kho";
+            this.btnTonKho.Id = 33;
+            this.btnTonKho.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem8.ImageOptions.SvgImage")));
+            this.btnTonKho.Name = "btnTonKho";
+            // 
+            // btnDonHang
+            // 
+            this.btnDonHang.Caption = "Đơn hàng";
+            this.btnDonHang.Id = 34;
+            this.btnDonHang.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem9.ImageOptions.SvgImage")));
+            this.btnDonHang.Name = "btnDonHang";
+            // 
+            // btnBaoCaoTonKho
+            // 
+            this.btnBaoCaoTonKho.Caption = "Báo cáo tồn kho";
+            this.btnBaoCaoTonKho.Id = 35;
+            this.btnBaoCaoTonKho.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBaoCaoTonKho.ImageOptions.SvgImage")));
+            this.btnBaoCaoTonKho.Name = "btnBaoCaoTonKho";
+            // 
             // frmMDIParent
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.Control;
@@ -1331,6 +1379,11 @@
         private DevExpress.XtraBars.BarButtonItem btnLuong;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem btnQuanLyHangHoa;
+        private DevExpress.XtraBars.BarButtonItem btnTonKho;
+        private DevExpress.XtraBars.BarButtonItem btnDonHang;
+        private DevExpress.XtraBars.BarButtonItem btnBaoCaoTonKho;
     }
 }
 

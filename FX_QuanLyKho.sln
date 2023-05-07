@@ -70,6 +70,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPH.Language", "Modules\TPH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPH.Controls", "Modules\TPH.Controls\TPH.Controls.csproj", "{670302F2-82DD-4F60-949F-711FFF3B8F04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPH.Product", "TPH.Product\TPH.Product.csproj", "{5726FE7E-6802-4580-9863-3C43CDC64DE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -416,6 +418,18 @@ Global
 		{670302F2-82DD-4F60-949F-711FFF3B8F04}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{670302F2-82DD-4F60-949F-711FFF3B8F04}.Release|x86.ActiveCfg = Release|Any CPU
 		{670302F2-82DD-4F60-949F-711FFF3B8F04}.Release|x86.Build.0 = Release|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Debug|x86.Build.0 = Debug|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Release|x86.ActiveCfg = Release|Any CPU
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -449,6 +463,7 @@ Global
 		{8E1E4CA1-1959-4945-A997-7C67CA964E71} = {CB96D449-E39F-4455-863C-505400B7719C}
 		{BFAC421E-E92D-4336-9FC7-4A4F59AA47F0} = {CB96D449-E39F-4455-863C-505400B7719C}
 		{670302F2-82DD-4F60-949F-711FFF3B8F04} = {CB96D449-E39F-4455-863C-505400B7719C}
+		{5726FE7E-6802-4580-9863-3C43CDC64DE3} = {CB96D449-E39F-4455-863C-505400B7719C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C45CAAAE-3E4E-4A85-9BA1-108D5F84900F}
