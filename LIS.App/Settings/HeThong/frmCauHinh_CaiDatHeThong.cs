@@ -862,24 +862,24 @@ namespace TPH.LIS.App.CauHinh.HeThong
                             });
                     }
                 }
-                else if (loaiHienThi.Equals(HienthiConstants.DanhSachBNLayMau))
-                {
-                    var uc = new DailyUse.BenhNhan.FrmLayMau();
-                    foreach (GridColumn item in uc.gvDanhSach.Columns)
-                    {
-                        _sysConfig.InsertThongTinHienThi(
-                            new HienThiModel
-                            {
-                                Idloaihienthi = loaiHienThi,
-                                Idhienthi = item.Name,
-                                Dorong = item.Width,
-                                Hienthi = item.Visible,
-                                Mota = item.Caption,
-                                Sapxep = item.VisibleIndex,
-                                ChiThem = chkChiThemCauHinh.Checked
-                            });
-                    }
-                }
+                //else if (loaiHienThi.Equals(HienthiConstants.DanhSachBNLayMau))
+                //{
+                //    var uc = new DailyUse.BenhNhan.FrmLayMau();
+                //    foreach (GridColumn item in uc.gvDanhSach.Columns)
+                //    {
+                //        _sysConfig.InsertThongTinHienThi(
+                //            new HienThiModel
+                //            {
+                //                Idloaihienthi = loaiHienThi,
+                //                Idhienthi = item.Name,
+                //                Dorong = item.Width,
+                //                Hienthi = item.Visible,
+                //                Mota = item.Caption,
+                //                Sapxep = item.VisibleIndex,
+                //                ChiThem = chkChiThemCauHinh.Checked
+                //            });
+                //    }
+                //}
                 else if (loaiHienThi.Equals(HienthiConstants.DanhSachBNNhanMau))
                 {
                     var uc = new DailyUse.CanLamSang.FrmCLSXetNghiem_DuyetNhanMau();

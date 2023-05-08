@@ -390,8 +390,8 @@ namespace TPH.LIS.App
         }
         private void btnTiepNhanHis_Click(object sender, EventArgs e)
         {
-            var frm = new FrmTiepNhanHIS();
-            ShowForm(frm);
+            //var frm = new FrmTiepNhanHIS();
+            //ShowForm(frm);
         }
 
         private void mnuInput_Click(object sender, EventArgs e)
@@ -440,14 +440,14 @@ namespace TPH.LIS.App
 
         private void mnuTiepNhanHIS_Click(object sender, EventArgs e)
         {
-            var frm = new ThucThi.BenhNhan.FrmTiepNhanHIS();
-            ShowForm(frm);
+            //var frm = new ThucThi.BenhNhan.FrmTiepNhanHIS();
+            //ShowForm(frm);
         }
 
         private void tsbLayMau_Click(object sender, EventArgs e)
         {
-            var frm = new FrmLayMau();
-            ShowForm(frm);
+            //var frm = new FrmLayMau();
+            //ShowForm(frm);
         }
 
         private void mnuLicenseKey_Click(object sender, EventArgs e)
@@ -494,8 +494,8 @@ namespace TPH.LIS.App
 
         private void mnuCaiDatCauHinhHis_Click(object sender, EventArgs e)
         {
-            var f = new Settings.HeThong.FrmCauHinh_His();
-            f.ShowDialog();
+            //var f = new Settings.HeThong.FrmCauHinh_His();
+            //f.ShowDialog();
         }
 
         private void mnuMoKetNoiMay_Click(object sender, EventArgs e)
@@ -936,8 +936,8 @@ namespace TPH.LIS.App
 
         private void rbTiepNhanHIS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new ThucThi.BenhNhan.FrmTiepNhanHIS();
-            ShowForm(frm);
+            //var frm = new ThucThi.BenhNhan.FrmTiepNhanHIS();
+            //ShowForm(frm);
         }
 
         private void rbTimKiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -947,8 +947,8 @@ namespace TPH.LIS.App
 
         private void rbLayMau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new FrmLayMau();
-            ShowForm(frm);
+            //var frm = new FrmLayMau();
+            //ShowForm(frm);
         }
 
         private void rbChuyenMau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1176,8 +1176,8 @@ namespace TPH.LIS.App
 
         private void rbCaiDatKetNoiHis_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new Settings.HeThong.FrmCauHinh_His();
-            f.ShowDialog();
+            //var f = new Settings.HeThong.FrmCauHinh_His();
+            //f.ShowDialog();
         }
         private void rbUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -1603,14 +1603,14 @@ namespace TPH.LIS.App
 
         private void nbiGridCardView_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            var frm = new FrmTiepNhanHIS();
-            ShowForm(frm);
+            //var frm = new FrmTiepNhanHIS();
+            //ShowForm(frm);
         }
 
         private void nbiSpreadsheet_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            var frm = new FrmLayMau();
-            ShowForm(frm);
+            //var frm = new FrmLayMau();
+            //ShowForm(frm);
         }
 
         private void nbiWord_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -1646,17 +1646,17 @@ namespace TPH.LIS.App
         }
         private void frmMDIParent_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F1 && rbTiepNhanHIS.Enabled)
-            {
-                var frm = new FrmTiepNhanHIS();
-                ShowForm(frm);
-            }
-            else if (e.KeyCode == Keys.F2 && rbLayMau.Enabled)
-            {
-                var frm = new FrmLayMau();
-                this.ShowForm(frm);
-            }
-            else if (e.KeyCode == Keys.F3 && rbChuyenMau.Enabled)
+        //    if (e.KeyCode == Keys.F1 && rbTiepNhanHIS.Enabled)
+        //    {
+        //        var frm = new FrmTiepNhanHIS();
+        //        ShowForm(frm);
+        //    }
+        //    else if (e.KeyCode == Keys.F2 && rbLayMau.Enabled)
+        //    {
+        //        var frm = new FrmLayMau();
+        //        this.ShowForm(frm);
+        //    }
+            if (e.KeyCode == Keys.F3 && rbChuyenMau.Enabled)
             {
                 var frm = new FrmXacNhanChuyenMau();
                 this.ShowForm(frm);

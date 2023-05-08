@@ -291,9 +291,9 @@ namespace TPH.LIS.App
         }
         private void lblTiepNhanHis_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var f = new FrmTiepNhanHIS();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //var f = new FrmTiepNhanHIS();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
         private void lblKetQuaSHPT_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -303,9 +303,9 @@ namespace TPH.LIS.App
         }
         private void lblLayMau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var f = new DailyUse.BenhNhan.FrmLayMau();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //var f = new DailyUse.BenhNhan.FrmLayMau();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
         private void lbltraKetQua_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

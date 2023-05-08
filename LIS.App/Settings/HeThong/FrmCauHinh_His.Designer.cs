@@ -892,7 +892,7 @@
             this.tabDanhMuc.Location = new System.Drawing.Point(4, 24);
             this.tabDanhMuc.Name = "tabDanhMuc";
             this.tabDanhMuc.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDanhMuc.Size = new System.Drawing.Size(1162, 552);
+            this.tabDanhMuc.Size = new System.Drawing.Size(1168, 553);
             this.tabDanhMuc.TabIndex = 0;
             this.tabDanhMuc.Text = "Danh mục";
             this.tabDanhMuc.UseVisualStyleBackColor = true;
@@ -902,9 +902,9 @@
             this.groupBox18.BackColor = System.Drawing.Color.LightGray;
             this.groupBox18.Controls.Add(this.btnLuuCauHinhDanhMuc);
             this.groupBox18.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox18.Location = new System.Drawing.Point(3, 511);
+            this.groupBox18.Location = new System.Drawing.Point(3, 512);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(1156, 38);
+            this.groupBox18.Size = new System.Drawing.Size(1162, 38);
             this.groupBox18.TabIndex = 7;
             this.groupBox18.TabStop = false;
             // 
@@ -924,7 +924,7 @@
             this.btnLuuCauHinhDanhMuc.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnLuuCauHinhDanhMuc.Image = global::TPH.LIS.App.Properties.Resources.Save;
             this.btnLuuCauHinhDanhMuc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuuCauHinhDanhMuc.Location = new System.Drawing.Point(517, 9);
+            this.btnLuuCauHinhDanhMuc.Location = new System.Drawing.Point(520, 9);
             this.btnLuuCauHinhDanhMuc.Name = "btnLuuCauHinhDanhMuc";
             this.btnLuuCauHinhDanhMuc.Size = new System.Drawing.Size(128, 27);
             this.btnLuuCauHinhDanhMuc.TabIndex = 5;
@@ -942,7 +942,7 @@
             this.tabDanhSachChiDinh.Location = new System.Drawing.Point(4, 24);
             this.tabDanhSachChiDinh.Name = "tabDanhSachChiDinh";
             this.tabDanhSachChiDinh.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDanhSachChiDinh.Size = new System.Drawing.Size(1162, 552);
+            this.tabDanhSachChiDinh.Size = new System.Drawing.Size(1168, 553);
             this.tabDanhSachChiDinh.TabIndex = 7;
             this.tabDanhSachChiDinh.Text = "Thông tin chỉ định";
             this.tabDanhSachChiDinh.UseVisualStyleBackColor = true;
@@ -953,9 +953,9 @@
             this.panel4.Appearance.Options.UseBackColor = true;
             this.panel4.Controls.Add(this.btnLuuCauHinh_ThongTinChiDinh);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(3, 511);
+            this.panel4.Location = new System.Drawing.Point(3, 512);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1156, 38);
+            this.panel4.Size = new System.Drawing.Size(1162, 38);
             this.panel4.TabIndex = 10;
             // 
             // btnLuuCauHinh_ThongTinChiDinh
@@ -974,7 +974,7 @@
             this.btnLuuCauHinh_ThongTinChiDinh.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnLuuCauHinh_ThongTinChiDinh.Image = global::TPH.LIS.App.Properties.Resources.Save;
             this.btnLuuCauHinh_ThongTinChiDinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuuCauHinh_ThongTinChiDinh.Location = new System.Drawing.Point(520, 4);
+            this.btnLuuCauHinh_ThongTinChiDinh.Location = new System.Drawing.Point(523, 4);
             this.btnLuuCauHinh_ThongTinChiDinh.Name = "btnLuuCauHinh_ThongTinChiDinh";
             this.btnLuuCauHinh_ThongTinChiDinh.Size = new System.Drawing.Size(122, 33);
             this.btnLuuCauHinh_ThongTinChiDinh.TabIndex = 6;
@@ -992,7 +992,7 @@
             this.tabUploadKetQua.Location = new System.Drawing.Point(4, 24);
             this.tabUploadKetQua.Name = "tabUploadKetQua";
             this.tabUploadKetQua.Padding = new System.Windows.Forms.Padding(3);
-            this.tabUploadKetQua.Size = new System.Drawing.Size(1162, 552);
+            this.tabUploadKetQua.Size = new System.Drawing.Size(1168, 553);
             this.tabUploadKetQua.TabIndex = 1;
             this.tabUploadKetQua.Text = "Upload kết quả";
             this.tabUploadKetQua.UseVisualStyleBackColor = true;
@@ -1003,9 +1003,9 @@
             this.panel1.Appearance.Options.UseBackColor = true;
             this.panel1.Controls.Add(this.btnLuCauHinhChiDinhKetQua);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 514);
+            this.panel1.Location = new System.Drawing.Point(3, 515);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1156, 35);
+            this.panel1.Size = new System.Drawing.Size(1162, 35);
             this.panel1.TabIndex = 9;
             // 
             // btnLuCauHinhChiDinhKetQua
@@ -1024,7 +1024,7 @@
             this.btnLuCauHinhChiDinhKetQua.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnLuCauHinhChiDinhKetQua.Image = global::TPH.LIS.App.Properties.Resources.Save;
             this.btnLuCauHinhChiDinhKetQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuCauHinhChiDinhKetQua.Location = new System.Drawing.Point(520, 2);
+            this.btnLuCauHinhChiDinhKetQua.Location = new System.Drawing.Point(523, 2);
             this.btnLuCauHinhChiDinhKetQua.Name = "btnLuCauHinhChiDinhKetQua";
             this.btnLuCauHinhChiDinhKetQua.Size = new System.Drawing.Size(122, 33);
             this.btnLuCauHinhChiDinhKetQua.TabIndex = 6;
@@ -1041,7 +1041,7 @@
             this.tabThongTinMau.Location = new System.Drawing.Point(4, 24);
             this.tabThongTinMau.Name = "tabThongTinMau";
             this.tabThongTinMau.Padding = new System.Windows.Forms.Padding(3);
-            this.tabThongTinMau.Size = new System.Drawing.Size(1162, 552);
+            this.tabThongTinMau.Size = new System.Drawing.Size(1168, 553);
             this.tabThongTinMau.TabIndex = 6;
             this.tabThongTinMau.Text = "Thông tin mẫu";
             this.tabThongTinMau.UseVisualStyleBackColor = true;
@@ -1051,9 +1051,9 @@
             this.groupBox28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.groupBox28.Controls.Add(this.btnLuuCauHinhThongTinMau);
             this.groupBox28.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox28.Location = new System.Drawing.Point(3, 502);
+            this.groupBox28.Location = new System.Drawing.Point(3, 503);
             this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Size = new System.Drawing.Size(1156, 47);
+            this.groupBox28.Size = new System.Drawing.Size(1162, 47);
             this.groupBox28.TabIndex = 15;
             this.groupBox28.TabStop = false;
             // 

@@ -728,7 +728,7 @@ namespace TPH.LIS.App
 
         private void rbTiepNhanHIS_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnBenhNhan, new FrmTiepNhanHIS());
+            //ShowFormFromMenu(btnBenhNhan, new FrmTiepNhanHIS());
         }
 
         private void mnuNhapThuCong_Click(object sender, EventArgs e)
@@ -930,7 +930,7 @@ namespace TPH.LIS.App
 
         private void rbCaiDatKetNoiHis_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnCaiDat, new FrmCauHinh_His());
+            //ShowFormFromMenu(btnCaiDat, new FrmCauHinh_His());
         }
 
         private void rbCauHinhHeThong_Click(object sender, EventArgs e)
@@ -1047,7 +1047,7 @@ namespace TPH.LIS.App
 
         private void rbLayMau_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnOngMau, new FrmLayMau());
+            //ShowFormFromMenu(btnOngMau, new FrmLayMau());
         }
 
         private void rbCapNhatPhanMem_Click(object sender, EventArgs e)

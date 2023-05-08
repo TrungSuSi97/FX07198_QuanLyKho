@@ -429,9 +429,9 @@ namespace TPH.LIS.App
 
         private void lblTiepNhanHis_Click(object sender, EventArgs e)
         {
-            var f = new FrmTiepNhanHIS();
-            var fParent = (frmParent_old)TopLevelControl;
-            fParent?.ShowForm(f);
+            //var f = new FrmTiepNhanHIS();
+            //var fParent = (frmParent_old)TopLevelControl;
+            //fParent?.ShowForm(f);
         }
 
         private void lblThongTinMauSangLocTruocSinh_Click(object sender, EventArgs e)
@@ -471,9 +471,9 @@ namespace TPH.LIS.App
 
         private void lblLayMau_Click(object sender, EventArgs e)
         {
-            var f = new FrmLayMau();
-            var fParent = (frmParent_old)TopLevelControl;
-            fParent?.ShowForm(f);
+            //var f = new FrmLayMau();
+            //var fParent = (frmParent_old)TopLevelControl;
+            //fParent?.ShowForm(f);
         }
 
         private void lblChuyenMau_Click(object sender, EventArgs e)

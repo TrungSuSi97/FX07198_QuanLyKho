@@ -1051,12 +1051,6 @@
     <Compile Include="Settings\HeThong\FrmEmailList.designer.cs">
       <DependentUpon>FrmEmailList.cs</DependentUpon>
     </Compile>
-    <Compile Include="DailyUse\BenhNhan\FrmLayMau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DailyUse\BenhNhan\FrmLayMau.designer.cs">
-      <DependentUpon>FrmLayMau.cs</DependentUpon>
-    </Compile>
     <Compile Include="DailyUse\BenhNhan\FrmNhatkyTuChoi_Huy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1074,12 +1068,6 @@
     </Compile>
     <Compile Include="DailyUse\BenhNhan\FrmTiepNhanBenhNhan.Designer.cs">
       <DependentUpon>FrmTiepNhanBenhNhan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DailyUse\BenhNhan\FrmTiepNhanHIS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DailyUse\BenhNhan\FrmTiepNhanHIS.designer.cs">
-      <DependentUpon>FrmTiepNhanHIS.cs</DependentUpon>
     </Compile>
     <Compile Include="DailyUse\BenhNhan\FrmTraKetQua.cs">
       <SubType>Form</SubType>
@@ -1247,12 +1235,6 @@
     </Compile>
     <Compile Include="Settings\HeThong\FrmCauHinh_DMKhoaPhong.designer.cs">
       <DependentUpon>FrmCauHinh_DMKhoaPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Settings\HeThong\FrmCauHinh_His.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings\HeThong\FrmCauHinh_His.Designer.cs">
-      <DependentUpon>FrmCauHinh_His.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\HeThong\FrmCauHinh_KhuVuc.cs">
       <SubType>Form</SubType>
@@ -2025,9 +2007,6 @@
     <EmbeddedResource Include="Settings\HeThong\FrmEmailList.resx">
       <DependentUpon>FrmEmailList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DailyUse\BenhNhan\FrmLayMau.resx">
-      <DependentUpon>FrmLayMau.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DailyUse\BenhNhan\FrmNhatkyTuChoi_Huy.resx">
       <DependentUpon>FrmNhatkyTuChoi_Huy.cs</DependentUpon>
     </EmbeddedResource>
@@ -2036,9 +2015,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DailyUse\BenhNhan\FrmTiepNhanBenhNhan.resx">
       <DependentUpon>FrmTiepNhanBenhNhan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DailyUse\BenhNhan\FrmTiepNhanHIS.resx">
-      <DependentUpon>FrmTiepNhanHIS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DailyUse\BenhNhan\FrmTraKetQua.resx">
       <DependentUpon>FrmTraKetQua.cs</DependentUpon>
@@ -2124,9 +2100,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\HeThong\FrmCauHinh_DMKhoaPhong.resx">
       <DependentUpon>FrmCauHinh_DMKhoaPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings\HeThong\FrmCauHinh_His.resx">
-      <DependentUpon>FrmCauHinh_His.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\HeThong\FrmCauHinh_KhuVuc.resx">
       <DependentUpon>FrmCauHinh_KhuVuc.cs</DependentUpon>
@@ -2661,10 +2634,6 @@
       <Project>{54e5d0a9-fc0d-4b82-93fc-1227cca9a062}</Project>
       <Name>TPH.Data.HIS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Modules\TPH.HIS.API\TPH.HIS.API.csproj">
-      <Project>{14eb32ef-0539-4da0-818a-1cdd3cd6e127}</Project>
-      <Name>TPH.HIS.API</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Modules\TPH.HIS\TPH.HIS.csproj">
       <Project>{b51ab14e-71b9-4c92-85f6-a318b51aa382}</Project>
       <Name>TPH.HIS</Name>
@@ -2744,6 +2713,10 @@
     <ProjectReference Include="..\Modules\TPH.Report\TPH.Report.csproj">
       <Project>{cf79eb8f-0d24-4845-8ef8-67a3c8f8972b}</Project>
       <Name>TPH.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPH.Product\TPH.Product.csproj">
+      <Project>{5726fe7e-6802-4580-9863-3c43cdc64de3}</Project>
+      <Name>TPH.Product</Name>
     </ProjectReference>
     <ProjectReference Include="..\TPH.WriteLog\TPH.WriteLog.csproj">
       <Project>{37482CAD-D9AF-4741-9CB6-16A6BA6A412E}</Project>
