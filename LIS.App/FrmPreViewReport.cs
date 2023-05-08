@@ -20,7 +20,6 @@ using TPH.Data.HIS.Models;
 using TPH.Lab.Middleware.LISConnect.Services;
 using TPH.Language;
 using TPH.LIS.App.AppCode;
-using TPH.LIS.App.DailyUse.CanLamSang;
 using TPH.LIS.Common;
 using TPH.LIS.Common.Controls;
 using TPH.LIS.Common.Extensions;
@@ -885,13 +884,13 @@ namespace TPH.LIS.App
         }
         private void ShowPhieuDaKy()
         {
-            if (ViewPdfAfterPrint)
-            {
-                var f = new FrmViewPDFSigned();
-                f.Barcode = Seq;
-                f.NgayLuu = _objSign.Ngayky;
-                f.ShowDialog();
-            }
+            //if (ViewPdfAfterPrint)
+            //{
+            //    var f = new FrmViewPDFSigned();
+            //    f.Barcode = Seq;
+            //    f.NgayLuu = _objSign.Ngayky;
+            //    f.ShowDialog();
+            //}
         }
         private void InsertVaUpdateThongTinKySo(byte[] sPdfDecoded)
         {

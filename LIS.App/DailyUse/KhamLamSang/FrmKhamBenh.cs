@@ -7,7 +7,6 @@ using TPH.Common.Extensions;
 using TPH.LIS.App.AppCode;
 using TPH.LIS.App.AppCode.Config;
 using TPH.LIS.App.AppCode.Patient;
-using TPH.LIS.App.ThucThi.BenhNhan;
 using TPH.LIS.BarcodePrinting.Barcode;
 using TPH.LIS.Common;
 using TPH.LIS.Common.Controls;
@@ -56,12 +55,12 @@ namespace TPH.LIS.App.ThucThi.KhamLamSang
 
         private void Load_ChiDinh_CLS()
         {
-            if (txtSID.Text != "")
-            {
-                FrmChiDinhCLS fChiDinhCL = new FrmChiDinhCLS();
-                fChiDinhCL.Set_info(txtSID.Text, _MaKhoa, txtServiceID.Text);
-                fChiDinhCL.ShowDialog();
-            }
+            //if (txtSID.Text != "")
+            //{
+            //    FrmChiDinhCLS fChiDinhCL = new FrmChiDinhCLS();
+            //    fChiDinhCL.Set_info(txtSID.Text, _MaKhoa, txtServiceID.Text);
+            //    fChiDinhCL.ShowDialog();
+            //}
         }
         private void Load_KhamBenh_KetQua_DonThuoc()
         {
@@ -199,21 +198,21 @@ namespace TPH.LIS.App.ThucThi.KhamLamSang
 
         private void btnTimBN_Click(object sender, EventArgs e)
         {
-            FrmTimBenhNhan frm = new FrmTimBenhNhan();
-            frm.LoadWithUser = (CommonAppVarsAndFunctions.CheckUserPermissionToAccessFunctions(CommonAppVarsAndFunctions.PhanQuyenKhamBenh, UserConstant.PermissionOfExamPatientFromOtherDoctors) ? string.Empty : CommonAppVarsAndFunctions.UserID);
-            frm.DtDateFromG = dtpDateIn.Value;
-            frm.OpenFrom = 3;
-            frm.List = true;
-            frm.ShowDialog();
-            if (!string.IsNullOrWhiteSpace(frm.ReturnSEQ))
-            {
-                //txtSearch.Text = frm.ReturnSEQ;
-                dtpDateIn.Value = frm.ReturnDateIn;
-                Load_DanhSach_ChiDinh();
-                //Get_ThongTin_BenhNhan(ConfigurationDetail.Get_MaTiepNhan(frm.ReturnSEQ, frm.ReturnDateIn));
-                bvPatient.BindingSource.Position = bvPatient.BindingSource.Find("Seq", frm.ReturnSEQ);
-            }
-            frm.Dispose();
+            //FrmTimBenhNhan frm = new FrmTimBenhNhan();
+            //frm.LoadWithUser = (CommonAppVarsAndFunctions.CheckUserPermissionToAccessFunctions(CommonAppVarsAndFunctions.PhanQuyenKhamBenh, UserConstant.PermissionOfExamPatientFromOtherDoctors) ? string.Empty : CommonAppVarsAndFunctions.UserID);
+            //frm.DtDateFromG = dtpDateIn.Value;
+            //frm.OpenFrom = 3;
+            //frm.List = true;
+            //frm.ShowDialog();
+            //if (!string.IsNullOrWhiteSpace(frm.ReturnSEQ))
+            //{
+            //    //txtSearch.Text = frm.ReturnSEQ;
+            //    dtpDateIn.Value = frm.ReturnDateIn;
+            //    Load_DanhSach_ChiDinh();
+            //    //Get_ThongTin_BenhNhan(ConfigurationDetail.Get_MaTiepNhan(frm.ReturnSEQ, frm.ReturnDateIn));
+            //    bvPatient.BindingSource.Position = bvPatient.BindingSource.Find("Seq", frm.ReturnSEQ);
+            //}
+            //frm.Dispose();
         }
         private void FrmKhamBenh_Load(object sender, EventArgs e)
         {

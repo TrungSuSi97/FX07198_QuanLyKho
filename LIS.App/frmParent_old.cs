@@ -18,7 +18,6 @@ using TPH.LIS.App.CauHinh.DanhMucKhamBenh;
 using TPH.LIS.App.CauHinh.HeThong;
 using TPH.LIS.App.CauHinh.NhanVien;
 using TPH.LIS.App.DailyUse.BenhNhan;
-using TPH.LIS.App.DailyUse.CanLamSang;
 using TPH.LIS.App.DailyUse.NhatKy;
 using TPH.LIS.App.Settings.DanhMucCLS;
 using TPH.LIS.App.Settings.DanhMucCLS.ViSinh;
@@ -26,8 +25,6 @@ using TPH.LIS.App.Settings.HeThong;
 using TPH.LIS.App.Settings.NhanVien;
 using TPH.LIS.App.Statistics;
 using TPH.LIS.App.ThongKe;
-using TPH.LIS.App.ThucThi.BenhNhan;
-using TPH.LIS.App.ThucThi.CanLamSang;
 using TPH.LIS.BarcodePrinting.Barcode;
 using TPH.LIS.Common;
 using TPH.LIS.Common.Controls;
@@ -733,21 +730,21 @@ namespace TPH.LIS.App
 
         private void mnuNhapThuCong_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnBenhNhan, new FrmTiepNhanBenhNhan());
+            //ShowFormFromMenu(btnBenhNhan, new FrmTiepNhanBenhNhan());
         }
 
         private void mnuNhapThongTinSangLoc_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnBenhNhan, new FrmThongTinSangLocSoSinh());
+            //ShowFormFromMenu(btnBenhNhan, new FrmThongTinSangLocSoSinh());
         }
 
         private void rbTimKiem_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnBenhNhan, new FrmTimBenhNhan());
+            //ShowFormFromMenu(btnBenhNhan, new FrmTimBenhNhan());
         }
         private void rbKetQuaThuongQuy_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnCaiDat, new frmCLSKetQuaXN());
+            //ShowFormFromMenu(btnCaiDat, new frmCLSKetQuaXN());
         }
 
         private void btnThuPhi_Click(object sender, EventArgs e)
@@ -757,90 +754,90 @@ namespace TPH.LIS.App
 
         private void rbThongTinSangLocTruocSinh_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnBenhNhan, new FrmThongTinSangLocTruocSinh());
+            //ShowFormFromMenu(btnBenhNhan, new FrmThongTinSangLocTruocSinh());
         }
 
         private void rabCapNhatThongTinTuHis_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnBenhNhan, new FrmCapNhatThongTin());
+            //ShowFormFromMenu(btnBenhNhan, new FrmCapNhatThongTin());
         }
 
         private void rbInbaracodeKSK_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnBenhNhan, new FrmInbarcode());
+            //ShowFormFromMenu(btnBenhNhan, new FrmInbarcode());
         }
 
         private void rbNhapTheoDanhSach_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnBenhNhan, new FrmNhapKSK());
+            //ShowFormFromMenu(btnBenhNhan, new FrmNhapKSK());
         }
 
         private void rbXacNhanTraKetQua_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnBenhNhan, new FrmTraKetQua());
+            //ShowFormFromMenu(btnBenhNhan, new FrmTraKetQua());
         }
 
         private void rbLichSuXetNghiem_Click(object sender, EventArgs e)
         {
-            var f = new FrmHoSoBenhAn();
-            f.lblTitle.Text = "LỊCH SỬ XÉT NGHIỆM";
-            f.Text = "LỊCH SỬ XÉT NGHIỆM";
-            ShowFormFromMenu(btnBenhNhan, f);
+            //var f = new FrmHoSoBenhAn();
+            //f.lblTitle.Text = "LỊCH SỬ XÉT NGHIỆM";
+            //f.Text = "LỊCH SỬ XÉT NGHIỆM";
+            //ShowFormFromMenu(btnBenhNhan, f);
         }
 
         private void rbTheoDoiMau_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnBenhNhan, new FrmTheoDoiMau());
+            //ShowFormFromMenu(btnBenhNhan, new FrmTheoDoiMau());
         }
 
         private void rbKQSinhHocPhanTu_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnKetQua, new FrmSinhHocPhanTu());
+            //ShowFormFromMenu(btnKetQua, new FrmSinhHocPhanTu());
         }
 
         private void rbKQViSinhNuoiCay_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnKetQua, new FrmCLSKetQuaViSinh());
+            //ShowFormFromMenu(btnKetQua, new FrmCLSKetQuaViSinh());
         }
 
         private void rbKQUploadHIS_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnKetQua, new FrmCheckUploadHIS());
+            //ShowFormFromMenu(btnKetQua, new FrmCheckUploadHIS());
         }
 
         private void rbInTheoDanhSach_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnKetQua, new FrmInTheoDanhSach());
+            //ShowFormFromMenu(btnKetQua, new FrmInTheoDanhSach());
         }
 
         private void rbPhieuTienTrinhViSinh_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnKetQua, new FrmCLSViSinh_PhieuTienTrinh());
+            //ShowFormFromMenu(btnKetQua, new FrmCLSViSinh_PhieuTienTrinh());
         }
 
         private void rbGuiEMailKetQua_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnKetQua, new frmEmail());
+            //ShowFormFromMenu(btnKetQua, new frmEmail());
         }
 
         private void rbXemPDF_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnKetQua, new FrmViewPDFSigned());
+            //ShowFormFromMenu(btnKetQua, new FrmViewPDFSigned());
         }
 
         private void rbChuyenKetQua_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnKetQua, new FrmChuyenKetQua());
+            //ShowFormFromMenu(btnKetQua, new FrmChuyenKetQua());
         }
 
         private void rbNhanPhieuKetQua_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnKetQua, new FrmNhanKetQua());
+            //ShowFormFromMenu(btnKetQua, new FrmNhanKetQua());
         }
 
         private void rbKetQuaTuMayXN_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnKetQua, new FrmKetQuaMayXN());
+            //ShowFormFromMenu(btnKetQua, new FrmKetQuaMayXN());
         }
 
         private void rbXuatKetQua_Click(object sender, EventArgs e)
@@ -860,13 +857,13 @@ namespace TPH.LIS.App
 
         private void rbDashboard_Click(object sender, EventArgs e)
         {
-            var f = new FrmDashBoardTAT();
-            f.Show();
+            //var f = new FrmDashBoardTAT();
+            //f.Show();
         }
         private void rbDashboardBieuDoTron_Click(object sender, EventArgs e)
         {
-            var f = new FrmDashBoardTAT_Chart();
-            f.Show();
+            //var f = new FrmDashBoardTAT_Chart();
+            //f.Show();
         }
         private void mnuXuatKetQuaViSinh_Click(object sender, EventArgs e)
         {
@@ -1007,37 +1004,37 @@ namespace TPH.LIS.App
 
         private void rbDangNhapLayMau_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnOngMau, new FrmDangNhapLayMau());
+            //ShowFormFromMenu(btnOngMau, new FrmDangNhapLayMau());
         }
 
         private void rbBanLayMau_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnOngMau, new FrmBanLayMau());
+            //ShowFormFromMenu(btnOngMau, new FrmBanLayMau());
         }
 
         private void rbChuyenMau_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnOngMau, new FrmXacNhanChuyenMau());
+            //ShowFormFromMenu(btnOngMau, new FrmXacNhanChuyenMau());
         }
 
         private void rbNhanMau_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnOngMau, new FrmCLSXetNghiem_DuyetNhanMau());
+            //ShowFormFromMenu(btnOngMau, new FrmCLSXetNghiem_DuyetNhanMau());
         }
 
         private void mnuTheoDoiMau_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnOngMau, new FrmTheoDoiMau());
+            //ShowFormFromMenu(btnOngMau, new FrmTheoDoiMau());
         }
 
         private void rbLuuMau_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnOngMau, new FrmLuuMau());
+            //ShowFormFromMenu(btnOngMau, new FrmLuuMau());
         }
 
         private void rbHuyMauLuu_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnOngMau, new FrmLuuMau_HuyMauLuu());
+            //ShowFormFromMenu(btnOngMau, new FrmLuuMau_HuyMauLuu());
         }
 
         private void bntDanhMucHanhChinh_Click(object sender, EventArgs e)
@@ -1122,13 +1119,13 @@ namespace TPH.LIS.App
 
         private void mnuCapNhatData_Click(object sender, EventArgs e)
         {
-            var f = new FrmTechUpdate();
-            f.ShowDialog();
+            //var f = new FrmTechUpdate();
+            //f.ShowDialog();
         }
 
         private void rbThuPhiDichVu_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnThuPhi, new FrmThuPhiDichVu());
+            //ShowFormFromMenu(btnThuPhi, new FrmThuPhiDichVu());
         }
 
         private void rbBaoCaoDoanhThu_Click(object sender, EventArgs e)
@@ -1250,12 +1247,12 @@ namespace TPH.LIS.App
 
         private void mnuGuimau_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnDanhMuc, new FrmGuiMauDonVi());
+            //ShowFormFromMenu(btnDanhMuc, new FrmGuiMauDonVi());
         }
 
         private void mnuChamCong_Click(object sender, EventArgs e)
         {
-            ShowFormFromMenu(btnCaiDat, new frmCLSKetQuaXN());
+            //ShowFormFromMenu(btnCaiDat, new frmCLSKetQuaXN());
         }
     }
 }

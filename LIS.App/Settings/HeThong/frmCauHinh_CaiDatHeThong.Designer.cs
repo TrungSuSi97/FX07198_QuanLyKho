@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCauHinh_CaiDatHeThong));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabConfig = new TPH.Controls.TPHTabControl();
             this.tabTiepNhan = new System.Windows.Forms.TabPage();
             this.txtMayDuocMoToolUploadHIS = new System.Windows.Forms.TextBox();
@@ -99,6 +99,9 @@
             this.txtBarcodeChar = new System.Windows.Forms.TextBox();
             this.label14 = new DevExpress.XtraEditors.LabelControl();
             this.tabXetNghiem = new System.Windows.Forms.TabPage();
+            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.radTinhHenGioTheoNhom = new System.Windows.Forms.RadioButton();
+            this.radTinhHenGioTheoXn = new System.Windows.Forms.RadioButton();
             this.chkLayNhanMauTheoBarcode = new System.Windows.Forms.CheckBox();
             this.chkChoPhepDuyetKetQuaQCFail = new System.Windows.Forms.CheckBox();
             this.chkKhongInKetQuaQCFail = new System.Windows.Forms.CheckBox();
@@ -408,9 +411,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnKySo = new TPH.Controls.TPHNormalButton();
-            this.groupBox44 = new System.Windows.Forms.GroupBox();
-            this.radTinhHenGioTheoNhom = new System.Windows.Forms.RadioButton();
-            this.radTinhHenGioTheoXn = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pnContaint)).BeginInit();
             this.pnContaint.SuspendLayout();
             this.pnLabel.SuspendLayout();
@@ -429,6 +429,7 @@
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numBarcodeLapLai)).BeginInit();
             this.tabXetNghiem.SuspendLayout();
+            this.groupBox44.SuspendLayout();
             this.gbModule.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDenKhoangBD)).BeginInit();
@@ -490,7 +491,6 @@
             this.groupBox43.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panel1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBox44.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -1342,6 +1342,43 @@
             this.tabXetNghiem.TabIndex = 1;
             this.tabXetNghiem.Text = "Xét nghiệm 1";
             this.tabXetNghiem.UseVisualStyleBackColor = true;
+            // 
+            // groupBox44
+            // 
+            this.groupBox44.Controls.Add(this.radTinhHenGioTheoNhom);
+            this.groupBox44.Controls.Add(this.radTinhHenGioTheoXn);
+            this.groupBox44.Location = new System.Drawing.Point(821, 231);
+            this.groupBox44.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox44.Name = "groupBox44";
+            this.groupBox44.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox44.Size = new System.Drawing.Size(342, 45);
+            this.groupBox44.TabIndex = 164;
+            this.groupBox44.TabStop = false;
+            this.groupBox44.Text = "Tính giờ hẹn";
+            // 
+            // radTinhHenGioTheoNhom
+            // 
+            this.radTinhHenGioTheoNhom.AutoSize = true;
+            this.radTinhHenGioTheoNhom.Checked = true;
+            this.radTinhHenGioTheoNhom.Location = new System.Drawing.Point(195, 16);
+            this.radTinhHenGioTheoNhom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.radTinhHenGioTheoNhom.Name = "radTinhHenGioTheoNhom";
+            this.radTinhHenGioTheoNhom.Size = new System.Drawing.Size(111, 19);
+            this.radTinhHenGioTheoNhom.TabIndex = 1;
+            this.radTinhHenGioTheoNhom.TabStop = true;
+            this.radTinhHenGioTheoNhom.Text = "Tính theo nhóm";
+            this.radTinhHenGioTheoNhom.UseVisualStyleBackColor = true;
+            // 
+            // radTinhHenGioTheoXn
+            // 
+            this.radTinhHenGioTheoXn.AutoSize = true;
+            this.radTinhHenGioTheoXn.Location = new System.Drawing.Point(8, 17);
+            this.radTinhHenGioTheoXn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.radTinhHenGioTheoXn.Name = "radTinhHenGioTheoXn";
+            this.radTinhHenGioTheoXn.Size = new System.Drawing.Size(139, 19);
+            this.radTinhHenGioTheoXn.TabIndex = 0;
+            this.radTinhHenGioTheoXn.Text = "Tính theo xét nghiệm";
+            this.radTinhHenGioTheoXn.UseVisualStyleBackColor = true;
             // 
             // chkLayNhanMauTheoBarcode
             // 
@@ -2984,8 +3021,8 @@
             // coltenHienThi
             // 
             this.coltenHienThi.DataPropertyName = "MoTa";
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.coltenHienThi.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.coltenHienThi.DefaultCellStyle = dataGridViewCellStyle1;
             this.coltenHienThi.HeaderText = "Tên hiển thị";
             this.coltenHienThi.MinimumWidth = 6;
             this.coltenHienThi.Name = "coltenHienThi";
@@ -3018,8 +3055,8 @@
             // colIdLoai
             // 
             this.colIdLoai.DataPropertyName = "idLoaiHienThi";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver;
-            this.colIdLoai.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            this.colIdLoai.DefaultCellStyle = dataGridViewCellStyle2;
             this.colIdLoai.HeaderText = "Loại hiển thị";
             this.colIdLoai.MinimumWidth = 6;
             this.colIdLoai.Name = "colIdLoai";
@@ -3029,8 +3066,8 @@
             // colIdhienthi
             // 
             this.colIdhienthi.DataPropertyName = "idHienThi";
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Silver;
-            this.colIdhienthi.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            this.colIdhienthi.DefaultCellStyle = dataGridViewCellStyle3;
             this.colIdhienthi.HeaderText = "Id hiển thị";
             this.colIdhienthi.MinimumWidth = 6;
             this.colIdhienthi.Name = "colIdhienthi";
@@ -4897,8 +4934,8 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "MoTa";
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn1.HeaderText = "Tên hiển thị";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -4923,8 +4960,8 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "idLoaiHienThi";
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Silver;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn4.HeaderText = "Loại hiển thị";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
@@ -4934,8 +4971,8 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "idHienThi";
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Silver;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn5.HeaderText = "Id hiển thị";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -4964,43 +5001,6 @@
             this.btnKySo.UseHightLight = false;
             this.btnKySo.UseVisualStyleBackColor = false;
             this.btnKySo.Click += new System.EventHandler(this.btnKySo_Click);
-            // 
-            // groupBox44
-            // 
-            this.groupBox44.Controls.Add(this.radTinhHenGioTheoNhom);
-            this.groupBox44.Controls.Add(this.radTinhHenGioTheoXn);
-            this.groupBox44.Location = new System.Drawing.Point(821, 231);
-            this.groupBox44.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox44.Size = new System.Drawing.Size(342, 45);
-            this.groupBox44.TabIndex = 164;
-            this.groupBox44.TabStop = false;
-            this.groupBox44.Text = "Tính giờ hẹn";
-            // 
-            // radTinhHenGioTheoNhom
-            // 
-            this.radTinhHenGioTheoNhom.AutoSize = true;
-            this.radTinhHenGioTheoNhom.Checked = true;
-            this.radTinhHenGioTheoNhom.Location = new System.Drawing.Point(195, 16);
-            this.radTinhHenGioTheoNhom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.radTinhHenGioTheoNhom.Name = "radTinhHenGioTheoNhom";
-            this.radTinhHenGioTheoNhom.Size = new System.Drawing.Size(111, 19);
-            this.radTinhHenGioTheoNhom.TabIndex = 1;
-            this.radTinhHenGioTheoNhom.TabStop = true;
-            this.radTinhHenGioTheoNhom.Text = "Tính theo nhóm";
-            this.radTinhHenGioTheoNhom.UseVisualStyleBackColor = true;
-            // 
-            // radTinhHenGioTheoXn
-            // 
-            this.radTinhHenGioTheoXn.AutoSize = true;
-            this.radTinhHenGioTheoXn.Location = new System.Drawing.Point(8, 17);
-            this.radTinhHenGioTheoXn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.radTinhHenGioTheoXn.Name = "radTinhHenGioTheoXn";
-            this.radTinhHenGioTheoXn.Size = new System.Drawing.Size(139, 19);
-            this.radTinhHenGioTheoXn.TabIndex = 0;
-            this.radTinhHenGioTheoXn.Text = "Tính theo xét nghiệm";
-            this.radTinhHenGioTheoXn.UseVisualStyleBackColor = true;
             // 
             // frmCauHinh_CaiDatHeThong
             // 
@@ -5042,6 +5042,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numBarcodeLapLai)).EndInit();
             this.tabXetNghiem.ResumeLayout(false);
             this.tabXetNghiem.PerformLayout();
+            this.groupBox44.ResumeLayout(false);
+            this.groupBox44.PerformLayout();
             this.gbModule.ResumeLayout(false);
             this.gbModule.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -5149,8 +5151,6 @@
             this.groupBox43.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panel1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.groupBox44.ResumeLayout(false);
-            this.groupBox44.PerformLayout();
             this.ResumeLayout(false);
 
         }

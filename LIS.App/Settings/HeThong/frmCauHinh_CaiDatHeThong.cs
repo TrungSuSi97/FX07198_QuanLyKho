@@ -768,138 +768,138 @@ namespace TPH.LIS.App.CauHinh.HeThong
 
         private void btnLayCauHinhMacDinh_Click(object sender, EventArgs e)
         {
-            if (cboCaiDatHienThi.SelectedIndex > -1)
-            {
-                var loaiHienThi = cboCaiDatHienThi.SelectedValue.ToString();
-                if (loaiHienThi.Equals(HienthiConstants.LuoiKQThuongQui))
-                {
-                    var uc = new AppCode.ucKetQuaThuongQuy();
-                    foreach (GridColumn item in uc.gvKetQua.Columns)
-                    {
-                        _sysConfig.InsertThongTinHienThi(
-                            new HienThiModel
-                            {
-                                Idloaihienthi = loaiHienThi,
-                                Idhienthi = item.Name,
-                                Dorong = item.Width,
-                                Hienthi = item.Visible,
-                                Mota = item.Caption,
-                                Sapxep = item.VisibleIndex,
-                                ChiThem = chkChiThemCauHinh.Checked
-                            });
-                    }
-                }
-                else if (loaiHienThi.Equals(HienthiConstants.LuoiThongTinNhom))
-                {
-                    var uc = new AppCode.ucKetQuaThuongQuy();
-                    foreach (GridColumn item in uc.gvNhomCLS.Columns)
-                    {
-                        _sysConfig.InsertThongTinHienThi(
-                            new HienThiModel
-                            {
-                                Idloaihienthi = loaiHienThi,
-                                Idhienthi = item.Name,
-                                Dorong = item.Width,
-                                Hienthi = item.Visible,
-                                Mota = item.Caption,
-                                Sapxep = item.VisibleIndex,
-                                ChiThem = chkChiThemCauHinh.Checked
-                            });
-                    }
-                }
-                else if (loaiHienThi.Equals(HienthiConstants.LuoiThongTinBoPhan))
-                {
-                    var uc = new AppCode.ucKetQuaThuongQuy();
-                    foreach (GridColumn item in uc.gvBoPhan.Columns)
-                    {
-                        _sysConfig.InsertThongTinHienThi(
-                            new HienThiModel
-                            {
-                                Idloaihienthi = loaiHienThi,
-                                Idhienthi = item.Name,
-                                Dorong = item.Width,
-                                Hienthi = item.Visible,
-                                Mota = item.Caption,
-                                Sapxep = item.VisibleIndex,
-                                ChiThem = chkChiThemCauHinh.Checked
-                            });
-                    }
-                }
-                else if (loaiHienThi.Equals(HienthiConstants.ThongTinBenhNhan))
-                {
-                    var uc = new AppCode.ucPatientInformation();
-                    var dataConfig = uc.DataShowConfig();
-                    foreach (DataRow drInfo in dataConfig.Rows)
-                    {
-                        _sysConfig.InsertThongTinHienThi(
-                            new HienThiModel
-                            {
-                                Idloaihienthi = loaiHienThi,
-                                Idhienthi = drInfo["Idhienthi"].ToString(),
-                                Dorong = int.Parse(drInfo["Dorong"].ToString()),
-                                Hienthi = bool.Parse(drInfo["Hienthi"].ToString()),
-                                Mota = drInfo["Mota"].ToString(),
-                                Sapxep = int.Parse(drInfo["Sapxep"].ToString()),
-                                ChiThem = chkChiThemCauHinh.Checked
-                            });
-                    }
-                }
-                else if (loaiHienThi.Equals(HienthiConstants.DanhSachBNKQXetNghiem))
-                {
-                    var uc = new AppCode.ucDanhSachBenhNhanXN();
-                    foreach (GridColumn item in uc.gvDanhSach.Columns)
-                    {
-                        _sysConfig.InsertThongTinHienThi(
-                            new HienThiModel
-                            {
-                                Idloaihienthi = loaiHienThi,
-                                Idhienthi = item.Name,
-                                Dorong = item.Width,
-                                Hienthi = item.Visible,
-                                Mota = item.Caption,
-                                Sapxep = item.VisibleIndex,
-                                ChiThem = chkChiThemCauHinh.Checked
-                            });
-                    }
-                }
-                //else if (loaiHienThi.Equals(HienthiConstants.DanhSachBNLayMau))
-                //{
-                //    var uc = new DailyUse.BenhNhan.FrmLayMau();
-                //    foreach (GridColumn item in uc.gvDanhSach.Columns)
-                //    {
-                //        _sysConfig.InsertThongTinHienThi(
-                //            new HienThiModel
-                //            {
-                //                Idloaihienthi = loaiHienThi,
-                //                Idhienthi = item.Name,
-                //                Dorong = item.Width,
-                //                Hienthi = item.Visible,
-                //                Mota = item.Caption,
-                //                Sapxep = item.VisibleIndex,
-                //                ChiThem = chkChiThemCauHinh.Checked
-                //            });
-                //    }
-                //}
-                else if (loaiHienThi.Equals(HienthiConstants.DanhSachBNNhanMau))
-                {
-                    var uc = new DailyUse.CanLamSang.FrmCLSXetNghiem_DuyetNhanMau();
-                    foreach (GridColumn item in uc.gvDanhSach.Columns)
-                    {
-                        _sysConfig.InsertThongTinHienThi(
-                            new HienThiModel
-                            {
-                                Idloaihienthi = loaiHienThi,
-                                Idhienthi = item.Name,
-                                Dorong = item.Width,
-                                Hienthi = item.Visible,
-                                Mota = item.Caption,
-                                Sapxep = item.VisibleIndex,
-                                ChiThem = chkChiThemCauHinh.Checked
-                            });
-                    }
-                }
-                DanhSachCauHinh();
-            }
+            //if (cboCaiDatHienThi.SelectedIndex > -1)
+            //{
+            //    var loaiHienThi = cboCaiDatHienThi.SelectedValue.ToString();
+            //    if (loaiHienThi.Equals(HienthiConstants.LuoiKQThuongQui))
+            //    {
+            //        var uc = new AppCode.ucKetQuaThuongQuy();
+            //        foreach (GridColumn item in uc.gvKetQua.Columns)
+            //        {
+            //            _sysConfig.InsertThongTinHienThi(
+            //                new HienThiModel
+            //                {
+            //                    Idloaihienthi = loaiHienThi,
+            //                    Idhienthi = item.Name,
+            //                    Dorong = item.Width,
+            //                    Hienthi = item.Visible,
+            //                    Mota = item.Caption,
+            //                    Sapxep = item.VisibleIndex,
+            //                    ChiThem = chkChiThemCauHinh.Checked
+            //                });
+            //        }
+            //    }
+            //    else if (loaiHienThi.Equals(HienthiConstants.LuoiThongTinNhom))
+            //    {
+            //        var uc = new AppCode.ucKetQuaThuongQuy();
+            //        foreach (GridColumn item in uc.gvNhomCLS.Columns)
+            //        {
+            //            _sysConfig.InsertThongTinHienThi(
+            //                new HienThiModel
+            //                {
+            //                    Idloaihienthi = loaiHienThi,
+            //                    Idhienthi = item.Name,
+            //                    Dorong = item.Width,
+            //                    Hienthi = item.Visible,
+            //                    Mota = item.Caption,
+            //                    Sapxep = item.VisibleIndex,
+            //                    ChiThem = chkChiThemCauHinh.Checked
+            //                });
+            //        }
+            //    }
+            //    else if (loaiHienThi.Equals(HienthiConstants.LuoiThongTinBoPhan))
+            //    {
+            //        var uc = new AppCode.ucKetQuaThuongQuy();
+            //        foreach (GridColumn item in uc.gvBoPhan.Columns)
+            //        {
+            //            _sysConfig.InsertThongTinHienThi(
+            //                new HienThiModel
+            //                {
+            //                    Idloaihienthi = loaiHienThi,
+            //                    Idhienthi = item.Name,
+            //                    Dorong = item.Width,
+            //                    Hienthi = item.Visible,
+            //                    Mota = item.Caption,
+            //                    Sapxep = item.VisibleIndex,
+            //                    ChiThem = chkChiThemCauHinh.Checked
+            //                });
+            //        }
+            //    }
+            //    else if (loaiHienThi.Equals(HienthiConstants.ThongTinBenhNhan))
+            //    {
+            //        var uc = new AppCode.ucPatientInformation();
+            //        var dataConfig = uc.DataShowConfig();
+            //        foreach (DataRow drInfo in dataConfig.Rows)
+            //        {
+            //            _sysConfig.InsertThongTinHienThi(
+            //                new HienThiModel
+            //                {
+            //                    Idloaihienthi = loaiHienThi,
+            //                    Idhienthi = drInfo["Idhienthi"].ToString(),
+            //                    Dorong = int.Parse(drInfo["Dorong"].ToString()),
+            //                    Hienthi = bool.Parse(drInfo["Hienthi"].ToString()),
+            //                    Mota = drInfo["Mota"].ToString(),
+            //                    Sapxep = int.Parse(drInfo["Sapxep"].ToString()),
+            //                    ChiThem = chkChiThemCauHinh.Checked
+            //                });
+            //        }
+            //    }
+            //    else if (loaiHienThi.Equals(HienthiConstants.DanhSachBNKQXetNghiem))
+            //    {
+            //        var uc = new AppCode.ucDanhSachBenhNhanXN();
+            //        foreach (GridColumn item in uc.gvDanhSach.Columns)
+            //        {
+            //            _sysConfig.InsertThongTinHienThi(
+            //                new HienThiModel
+            //                {
+            //                    Idloaihienthi = loaiHienThi,
+            //                    Idhienthi = item.Name,
+            //                    Dorong = item.Width,
+            //                    Hienthi = item.Visible,
+            //                    Mota = item.Caption,
+            //                    Sapxep = item.VisibleIndex,
+            //                    ChiThem = chkChiThemCauHinh.Checked
+            //                });
+            //        }
+            //    }
+            //    //else if (loaiHienThi.Equals(HienthiConstants.DanhSachBNLayMau))
+            //    //{
+            //    //    var uc = new DailyUse.BenhNhan.FrmLayMau();
+            //    //    foreach (GridColumn item in uc.gvDanhSach.Columns)
+            //    //    {
+            //    //        _sysConfig.InsertThongTinHienThi(
+            //    //            new HienThiModel
+            //    //            {
+            //    //                Idloaihienthi = loaiHienThi,
+            //    //                Idhienthi = item.Name,
+            //    //                Dorong = item.Width,
+            //    //                Hienthi = item.Visible,
+            //    //                Mota = item.Caption,
+            //    //                Sapxep = item.VisibleIndex,
+            //    //                ChiThem = chkChiThemCauHinh.Checked
+            //    //            });
+            //    //    }
+            //    //}
+            //    else if (loaiHienThi.Equals(HienthiConstants.DanhSachBNNhanMau))
+            //    {
+            //        var uc = new DailyUse.CanLamSang.FrmCLSXetNghiem_DuyetNhanMau();
+            //        foreach (GridColumn item in uc.gvDanhSach.Columns)
+            //        {
+            //            _sysConfig.InsertThongTinHienThi(
+            //                new HienThiModel
+            //                {
+            //                    Idloaihienthi = loaiHienThi,
+            //                    Idhienthi = item.Name,
+            //                    Dorong = item.Width,
+            //                    Hienthi = item.Visible,
+            //                    Mota = item.Caption,
+            //                    Sapxep = item.VisibleIndex,
+            //                    ChiThem = chkChiThemCauHinh.Checked
+            //                });
+            //        }
+            //    }
+            //    DanhSachCauHinh();
+            //}
         }
         private void LoaDanhSachLoaiHienThi()
         {

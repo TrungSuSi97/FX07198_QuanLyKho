@@ -18,10 +18,8 @@ using TPH.LIS.Analyzer.Services;
 using TPH.LIS.App.ActionLog;
 using TPH.LIS.App.AppCode;
 using TPH.LIS.App.DailyUse.BenhNhan;
-using TPH.LIS.App.DailyUse.CanLamSang;
 using TPH.LIS.App.Settings.DanhMucCLS;
 using TPH.LIS.App.Settings.HeThong;
-using TPH.LIS.App.ThucThi.BenhNhan;
 using TPH.LIS.BarcodePrinting.Barcode;
 using TPH.LIS.Common;
 using TPH.LIS.Common.Controls;
@@ -367,14 +365,14 @@ namespace TPH.LIS.App
 
         private void mnuNhapDanhSach_Click(object sender, EventArgs e)
         {
-            var frm = new ThucThi.BenhNhan.FrmNhapKSK();
-            ShowForm(frm);
+            //var frm = new ThucThi.BenhNhan.FrmNhapKSK();
+            //ShowForm(frm);
         }
 
         private void tsbKetQuaXN_Click(object sender, EventArgs e)
         {
-            var frm = new ThucThi.CanLamSang.frmCLSKetQuaXN();
-            ShowForm(frm);
+            //var frm = new ThucThi.CanLamSang.frmCLSKetQuaXN();
+            //ShowForm(frm);
         }
 
         private void mnuNhatKy_Click(object sender, EventArgs e)
@@ -458,8 +456,8 @@ namespace TPH.LIS.App
 
         private void mnuUploadHIS_Click(object sender, EventArgs e)
         {
-            var frm = new ThucThi.BenhNhan.FrmCheckUploadHIS();
-            ShowForm(frm);
+            //var frm = new ThucThi.BenhNhan.FrmCheckUploadHIS();
+            //ShowForm(frm);
         }
 
         private void mnuLoaiMau_Click(object sender, EventArgs e)
@@ -505,8 +503,8 @@ namespace TPH.LIS.App
 
         private void mnuSinhHocPhanTu_Click(object sender, EventArgs e)
         {
-            var f = new FrmSinhHocPhanTu();
-            ShowForm(f);
+            //var f = new FrmSinhHocPhanTu();
+            //ShowForm(f);
         }
 
         private void mnuCapNhatPhanMem_Click(object sender, EventArgs e)
@@ -588,9 +586,9 @@ namespace TPH.LIS.App
 
         private void mnuLichSuXetNghiem_Click(object sender, EventArgs e)
         {
-            var f = new FrmHoSoBenhAn();
-            f.lblTitle.Text = "LỊCH SỬ XÉT NGHIỆM";
-            ShowForm(f);
+            //var f = new FrmHoSoBenhAn();
+            //f.lblTitle.Text = "LỊCH SỬ XÉT NGHIỆM";
+            //ShowForm(f);
         }
 
         private void frmMDIParent_Shown(object sender, EventArgs e)
@@ -607,8 +605,8 @@ namespace TPH.LIS.App
 
         private void mnuBarcodeKSK_Click(object sender, EventArgs e)
         {
-            var f = new FrmInbarcode();
-            f.ShowDialog();
+            //var f = new FrmInbarcode();
+            //f.ShowDialog();
         }
 
         public static bool formLoading = false;
@@ -620,12 +618,12 @@ namespace TPH.LIS.App
             {
                 if (f.Name.Equals(frm.Name))
                 {
-                    if (f is ThucThi.CanLamSang.frmCLSKetQuaXN)
-                        formLoading = false;
-                    f.Activate();
-                    //   f.BringToFront();
-                    frm.Dispose();
-                    return;
+                    //if (f is ThucThi.CanLamSang.frmCLSKetQuaXN)
+                    //    formLoading = false;
+                    //f.Activate();
+                    ////   f.BringToFront();
+                    //frm.Dispose();
+                    //return;
                 }
             }
             // SetStartUpBackground(true);
@@ -740,14 +738,14 @@ namespace TPH.LIS.App
 
         private void TimBN()
         {
-            var frm = new ThucThi.BenhNhan.FrmTimBenhNhan();
-            if (CloseChild(frm))
-            {
-                frm = new ThucThi.BenhNhan.FrmTimBenhNhan();
-            }
-            frm.List = false;
-            frm.DtDateFromG = CommonAppVarsAndFunctions.ServerTime;
-            ShowForm(frm);
+            //var frm = new ThucThi.BenhNhan.FrmTimBenhNhan();
+            //if (CloseChild(frm))
+            //{
+            //    frm = new ThucThi.BenhNhan.FrmTimBenhNhan();
+            //}
+            //frm.List = false;
+            //frm.DtDateFromG = CommonAppVarsAndFunctions.ServerTime;
+            //ShowForm(frm);
         }
 
         private void LoadPrinterList()
@@ -815,14 +813,14 @@ namespace TPH.LIS.App
 
         private void tsbChuyenMau_Click(object sender, EventArgs e)
         {
-            var f = new FrmXacNhanChuyenMau();
-            ShowForm(f);
+            //var f = new FrmXacNhanChuyenMau();
+            //ShowForm(f);
         }
 
         private void tsbNhanMau_Click(object sender, EventArgs e)
         {
-            var f = new FrmCLSXetNghiem_DuyetNhanMau();
-            ShowForm(f);
+            //var f = new FrmCLSXetNghiem_DuyetNhanMau();
+            //ShowForm(f);
         }
 
         private void mnuLayMau_Click(object sender, EventArgs e)
@@ -912,26 +910,26 @@ namespace TPH.LIS.App
 
         private void mnuTheoDoiMau_Click(object sender, EventArgs e)
         {
-            var f = new FrmTheoDoiMau();
-            f.ShowDialog();
+            //var f = new FrmTheoDoiMau();
+            //f.ShowDialog();
         }
 
         private void mnuDanhSachBanLayMau_Click(object sender, EventArgs e)
         {
-            var f = new FrmBanLayMau();
-            f.ShowDialog();
+            //var f = new FrmBanLayMau();
+            //f.ShowDialog();
         }
 
         private void mnuIntheoDanhSach_Click(object sender, EventArgs e)
         {
-            var f = new FrmInTheoDanhSach();
-            ShowForm(f);
+            //var f = new FrmInTheoDanhSach();
+            //ShowForm(f);
         }
 
         private void rbTiepNhanBenhNhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new DailyUse.BenhNhan.FrmTiepNhanBenhNhan();
-            ShowForm(frm);
+            //var frm = new DailyUse.BenhNhan.FrmTiepNhanBenhNhan();
+            //ShowForm(frm);
         }
 
         private void rbTiepNhanHIS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -953,49 +951,49 @@ namespace TPH.LIS.App
 
         private void rbChuyenMau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmXacNhanChuyenMau();
-            ShowForm(f);
+            //var f = new FrmXacNhanChuyenMau();
+            //ShowForm(f);
         }
 
         private void rbNhanMau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmCLSXetNghiem_DuyetNhanMau();
-            ShowForm(f);
+            //var f = new FrmCLSXetNghiem_DuyetNhanMau();
+            //ShowForm(f);
         }
 
         private void rbBanLayMau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmBanLayMau();
-            ShowForm(f);
+            //var f = new FrmBanLayMau();
+            //ShowForm(f);
         }
 
         private void rbTheoDoiMau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmTheoDoiMau();
-            f.ShowDialog();
+        //    var f = new FrmTheoDoiMau();
+        //    f.ShowDialog();
         }
 
         private void rbInbaracodeKSK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmInbarcode();
-            f.ShowDialog();
+            //var f = new FrmInbarcode();
+            //f.ShowDialog();
         }
 
         private void rbThuPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new ThucThi.BenhNhan.FrmThuPhiDichVu();
-            ShowForm(f);
+            //var f = new ThucThi.BenhNhan.FrmThuPhiDichVu();
+            //ShowForm(f);
         }
         private void rbKetQuaThuongQuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new ThucThi.CanLamSang.frmCLSKetQuaXN();
-            ShowForm(frm);
+            //var frm = new ThucThi.CanLamSang.frmCLSKetQuaXN();
+            //ShowForm(frm);
         }
 
         private void rbKQSinhHocPhanTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmSinhHocPhanTu();
-            ShowForm(f);
+            //var f = new FrmSinhHocPhanTu();
+            //ShowForm(f);
         }
 
         private void rbKQViSinhNuoiCay_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1015,21 +1013,21 @@ namespace TPH.LIS.App
 
         private void rbInTheoDanhSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmInTheoDanhSach();
-            ShowForm(f);
+            //var f = new FrmInTheoDanhSach();
+            //ShowForm(f);
         }
 
         private void rbLichSuXetNghiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmHoSoBenhAn();
-            f.lblTitle.Text = "LỊCH SỬ XÉT NGHIỆM";
-            ShowForm(f);
+            //var f = new FrmHoSoBenhAn();
+            //f.lblTitle.Text = "LỊCH SỬ XÉT NGHIỆM";
+            //ShowForm(f);
         }
 
         private void rbKQUploadHIS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new ThucThi.BenhNhan.FrmCheckUploadHIS();
-            ShowForm(frm);
+            //var frm = new ThucThi.BenhNhan.FrmCheckUploadHIS();
+            //ShowForm(frm);
         }
 
         private void rbDanhMucXetNghiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1185,8 +1183,8 @@ namespace TPH.LIS.App
         }
         private void rbGuiEMailKetQua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new ThucThi.CanLamSang.frmEmail();
-            ShowForm(frm);
+            //var frm = new ThucThi.CanLamSang.frmEmail();
+            //ShowForm(frm);
         }
         private void rbNhatKy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -1615,20 +1613,20 @@ namespace TPH.LIS.App
 
         private void nbiWord_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            var f = new FrmXacNhanChuyenMau();
-            ShowForm(f);
+            //var f = new FrmXacNhanChuyenMau();
+            //ShowForm(f);
         }
 
         private void nbiSnap_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            var f = new FrmCLSXetNghiem_DuyetNhanMau();
-            ShowForm(f);
+            //var f = new FrmCLSXetNghiem_DuyetNhanMau();
+            //ShowForm(f);
         }
 
         private void nbiReports_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            var frm = new ThucThi.CanLamSang.frmCLSKetQuaXN();
-            ShowForm(frm);
+            //var frm = new ThucThi.CanLamSang.frmCLSKetQuaXN();
+            //ShowForm(frm);
         }
 
         private void nbiPivot_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -1656,21 +1654,21 @@ namespace TPH.LIS.App
         //        var frm = new FrmLayMau();
         //        this.ShowForm(frm);
         //    }
-            if (e.KeyCode == Keys.F3 && rbChuyenMau.Enabled)
-            {
-                var frm = new FrmXacNhanChuyenMau();
-                this.ShowForm(frm);
-            }
-            else if (e.KeyCode == Keys.F4 && rbNhanMau.Enabled)
-            {
-                var frm = new FrmCLSXetNghiem_DuyetNhanMau();
-                this.ShowForm(frm);
-            }
-            else if (e.KeyCode == Keys.F5 && rbKetQuaThuongQuy.Enabled)
-            {
-                var frm = new ThucThi.CanLamSang.frmCLSKetQuaXN();
-                this.ShowForm(frm);
-            }
+            //if (e.KeyCode == Keys.F3 && rbChuyenMau.Enabled)
+            //{
+            //    var frm = new FrmXacNhanChuyenMau();
+            //    this.ShowForm(frm);
+            //}
+            //else if (e.KeyCode == Keys.F4 && rbNhanMau.Enabled)
+            //{
+            //    var frm = new FrmCLSXetNghiem_DuyetNhanMau();
+            //    this.ShowForm(frm);
+            //}
+            //else if (e.KeyCode == Keys.F5 && rbKetQuaThuongQuy.Enabled)
+            //{
+            //    var frm = new ThucThi.CanLamSang.frmCLSKetQuaXN();
+            //    this.ShowForm(frm);
+            //}
         }
 
         private void rbTembarcode_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1688,44 +1686,44 @@ namespace TPH.LIS.App
 
         private void rbDangNhapLayMau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmDangNhapLayMau();
-            ShowForm(f);
+            //var f = new FrmDangNhapLayMau();
+            //ShowForm(f);
         }
 
         private void rbChuyenKetQua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmChuyenKetQua();
-            ShowForm(f);
+            //var f = new FrmChuyenKetQua();
+            //ShowForm(f);
         }
 
         private void rbXacNhanTraKetQua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmTraKetQua();
-            ShowForm(f);
+            //var f = new FrmTraKetQua();
+            //ShowForm(f);
         }
 
         private void rbNhanPhieuKetQua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmNhanKetQua();
-            ShowForm(f);
+            //var f = new FrmNhanKetQua();
+            //ShowForm(f);
         }
 
         private void rbLuuMau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmLuuMau();
-            ShowForm(f);
+            //var f = new FrmLuuMau();
+            //ShowForm(f);
         }
 
         private void rbHuyMauLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmLuuMau_HuyMauLuu();
-            ShowForm(f);
+            //var f = new FrmLuuMau_HuyMauLuu();
+            //ShowForm(f);
         }
 
         private void rabCapNhatThongTinTuHis_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmCapNhatThongTin();
-            ShowForm(f);
+            //var f = new FrmCapNhatThongTin();
+            //ShowForm(f);
         }
 
         private void rbQLXNG_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1736,8 +1734,8 @@ namespace TPH.LIS.App
 
         private void rbNhapDanhSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var f = new FrmNhapKSK();
-            ShowForm(f);
+            //var f = new FrmNhapKSK();
+            //ShowForm(f);
         }
 
         private void rdGopBarcode_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

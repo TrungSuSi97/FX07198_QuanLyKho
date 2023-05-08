@@ -4,11 +4,8 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using TPH.LIS.App.DailyUse.BenhNhan;
-using TPH.LIS.App.DailyUse.CanLamSang;
 using TPH.LIS.App.QuanLyChamCong;
 using TPH.LIS.App.ThongKe;
-using TPH.LIS.App.ThucThi.BenhNhan;
-using TPH.LIS.App.ThucThi.CanLamSang;
 using TPH.LIS.App.ThucThi.KhamLamSang;
 using TPH.LIS.Common;
 using TPH.LIS.Configuration.Constants;
@@ -169,51 +166,51 @@ namespace TPH.LIS.App
 
         private void lblPatientFile_Click(object sender, EventArgs e)
         {
-            FrmHoSoBenhAn f = new FrmHoSoBenhAn();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //FrmHoSoBenhAn f = new FrmHoSoBenhAn();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
 
         private void lblSearPatient_Click(object sender, EventArgs e)
         {
-            FrmTimBenhNhan f = new FrmTimBenhNhan();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //FrmTimBenhNhan f = new FrmTimBenhNhan();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
 
         private void lblUltraSound_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmCLSKQSieuAm f = new frmCLSKQSieuAm();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //frmCLSKQSieuAm f = new frmCLSKQSieuAm();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
 
         private void lblEndoscopic_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmCLSKQNoiSoi f = new frmCLSKQNoiSoi();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //frmCLSKQNoiSoi f = new frmCLSKQNoiSoi();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
 
         private void lblXRay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmCLSKetQuaXQuang f = new frmCLSKetQuaXQuang();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //frmCLSKetQuaXQuang f = new frmCLSKetQuaXQuang();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
 
         private void lblElectrocardiogram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmDienTim f = new FrmDienTim();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //FrmDienTim f = new FrmDienTim();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
 
         private void lblLaboratory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmCLSKetQuaXN f = new frmCLSKetQuaXN();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //frmCLSKetQuaXN f = new frmCLSKetQuaXN();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
 
         private void lblKhamBenh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -225,23 +222,23 @@ namespace TPH.LIS.App
 
         private void lblPatientInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var f = new FrmTiepNhanBenhNhan();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //var f = new FrmTiepNhanBenhNhan();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
 
         private void lblInvoice_Click(object sender, EventArgs e)
         {
-            FrmThuPhiDichVu f = new FrmThuPhiDichVu();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //FrmThuPhiDichVu f = new FrmThuPhiDichVu();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
         private void lblSearPatient_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmTimBenhNhan f = new FrmTimBenhNhan();
-            f.DtDateFromG = DateTime.Now.AddMonths(-1);
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //FrmTimBenhNhan f = new FrmTimBenhNhan();
+            //f.DtDateFromG = DateTime.Now.AddMonths(-1);
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
         private void lblReception_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -251,9 +248,9 @@ namespace TPH.LIS.App
         }
         private void lblOrder_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmChiDinhCLS f = new FrmChiDinhCLS();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //FrmChiDinhCLS f = new FrmChiDinhCLS();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
         private void lblTieuDe_Click(object sender, EventArgs e)
         {
@@ -297,9 +294,9 @@ namespace TPH.LIS.App
         }
         private void lblKetQuaSHPT_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var f = new DailyUse.CanLamSang.FrmSinhHocPhanTu();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //var f = new DailyUse.CanLamSang.FrmSinhHocPhanTu();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
         private void lblLayMau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -309,9 +306,9 @@ namespace TPH.LIS.App
         }
         private void lbltraKetQua_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var f = new DailyUse.BenhNhan.FrmTraKetQua();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //var f = new DailyUse.BenhNhan.FrmTraKetQua();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
         private void lblKetqQuaViSinh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -322,9 +319,9 @@ namespace TPH.LIS.App
 
         private void lblNhanMau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var f = new FrmCLSXetNghiem_DuyetNhanMau();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //var f = new FrmCLSXetNghiem_DuyetNhanMau();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
 
         private void lblThongKeTongHop_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -341,9 +338,9 @@ namespace TPH.LIS.App
 
         private void lblChuyenMau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var f = new FrmXacNhanChuyenMau();
-            frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            fParent.ShowForm(f);
+            //var f = new FrmXacNhanChuyenMau();
+            //frmMDIParent fParent = (frmMDIParent)this.MdiParent;
+            //fParent.ShowForm(f);
         }
 
         private void lblXuatKetQuaViSinh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

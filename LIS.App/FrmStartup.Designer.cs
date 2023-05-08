@@ -44,21 +44,19 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnKhamBenh = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblThongKeTongHop = new System.Windows.Forms.LinkLabel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblLuong = new System.Windows.Forms.LinkLabel();
             this.lblReception = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblLuong = new System.Windows.Forms.LinkLabel();
             this.gradientPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnMenuMain.SuspendLayout();
             this.pnCanLamSang.SuspendLayout();
             this.pnCALXetNghiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -239,28 +237,10 @@
             // panel3
             // 
             this.panel3.AutoSize = true;
-            this.panel3.Controls.Add(this.lblThongKeTongHop);
             this.panel3.Location = new System.Drawing.Point(474, 345);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 150);
             this.panel3.TabIndex = 37;
-            // 
-            // lblThongKeTongHop
-            // 
-            this.lblThongKeTongHop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblThongKeTongHop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblThongKeTongHop.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongKeTongHop.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblThongKeTongHop.LinkColor = System.Drawing.Color.White;
-            this.lblThongKeTongHop.Location = new System.Drawing.Point(0, 0);
-            this.lblThongKeTongHop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblThongKeTongHop.Name = "lblThongKeTongHop";
-            this.lblThongKeTongHop.Size = new System.Drawing.Size(250, 48);
-            this.lblThongKeTongHop.TabIndex = 33;
-            this.lblThongKeTongHop.TabStop = true;
-            this.lblThongKeTongHop.Text = "Ngân sách";
-            this.lblThongKeTongHop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblThongKeTongHop.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblThongKeTongHop_LinkClicked);
             // 
             // panel6
             // 
@@ -270,6 +250,23 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(250, 264);
             this.panel6.TabIndex = 35;
+            // 
+            // lblLuong
+            // 
+            this.lblLuong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLuong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblLuong.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLuong.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblLuong.LinkColor = System.Drawing.Color.White;
+            this.lblLuong.Location = new System.Drawing.Point(0, 48);
+            this.lblLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLuong.Name = "lblLuong";
+            this.lblLuong.Size = new System.Drawing.Size(250, 48);
+            this.lblLuong.TabIndex = 23;
+            this.lblLuong.TabStop = true;
+            this.lblLuong.Text = "Lương";
+            this.lblLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLuong.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLuong_LinkClicked);
             // 
             // lblReception
             // 
@@ -334,23 +331,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // lblLuong
-            // 
-            this.lblLuong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLuong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblLuong.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLuong.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblLuong.LinkColor = System.Drawing.Color.White;
-            this.lblLuong.Location = new System.Drawing.Point(0, 48);
-            this.lblLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLuong.Name = "lblLuong";
-            this.lblLuong.Size = new System.Drawing.Size(250, 48);
-            this.lblLuong.TabIndex = 23;
-            this.lblLuong.TabStop = true;
-            this.lblLuong.Text = "Lương";
-            this.lblLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblLuong.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLuong_LinkClicked);
-            // 
             // FrmStartUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -380,7 +360,6 @@
             this.pnCanLamSang.PerformLayout();
             this.pnCALXetNghiem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -410,7 +389,6 @@
         private System.Windows.Forms.Panel gradientPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.LinkLabel lblThongKeTongHop;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel lblLuong;
     }

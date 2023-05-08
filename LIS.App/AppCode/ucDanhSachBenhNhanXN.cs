@@ -13,7 +13,6 @@ using TPH.LIS.User.Constants;
 using TPH.LIS.Common.Controls;
 using TPH.Lab.Middleware.LISConnect.Services;
 using TPH.LIS.Patient.Services;
-using TPH.LIS.App.ThucThi.BenhNhan;
 using TPH.LIS.User.Enum;
 using TPH.LIS.Configuration.Services.SystemConfig;
 using TPH.LIS.Configuration.Models;
@@ -661,20 +660,20 @@ namespace TPH.LIS.App.AppCode
         }
         private void ChonNhomXN()
         {
-            var f = new DailyUse.CanLamSang.FrmChonNhomNhanMau();
-            f.ShowDialog();
-            bool isAll = false;
-            if (f.lstNhomNhanMau.Count > 0)
-                lstDanhSachNhom = f.lstNhomNhanMau;
-            else
-            {
-                isAll = true;
-                lstDanhSachNhom = lstDanhSachNhomPhanQuyen;
-            }
+            //var f = new DailyUse.CanLamSang.FrmChonNhomNhanMau();
+            //f.ShowDialog();
+            //bool isAll = false;
+            //if (f.lstNhomNhanMau.Count > 0)
+            //    lstDanhSachNhom = f.lstNhomNhanMau;
+            //else
+            //{
+            //    isAll = true;
+            //    lstDanhSachNhom = lstDanhSachNhomPhanQuyen;
+            //}
 
-            Set_DSNhomVaoTitle(isAll);
-            DoiNhomXN?.Invoke(btnChonNhom, new EventArgs());
-            btnDSBenhNhan_Click(btnChonNhom, new EventArgs());
+            //Set_DSNhomVaoTitle(isAll);
+            //DoiNhomXN?.Invoke(btnChonNhom, new EventArgs());
+            //btnDSBenhNhan_Click(btnChonNhom, new EventArgs());
         }
         private void Set_DSNhomVaoTitle(bool isAll)
         {
@@ -712,34 +711,34 @@ namespace TPH.LIS.App.AppCode
 
         private void btnSearchSEQ_Click(object sender, EventArgs e)
         {
-            var frm = new FrmTimBenhNhan
-            {
-                DtDateFromG = dtpDateIn.Value,
-                ServiceTypeID = ServiceType.ClsXetNghiem.ToString(),
-                _arrLoaiXetNghiem = ArrLoaiXetNghiem,
-                List = true,
-                OpenFrom = 2,
-                BorderSize = 1,
-                pnMenu = {Visible = true}
-            };
-            frm.AdjustForm();
-            frm.ShowDialog();
+            //var frm = new FrmTimBenhNhan
+            //{
+            //    DtDateFromG = dtpDateIn.Value,
+            //    ServiceTypeID = ServiceType.ClsXetNghiem.ToString(),
+            //    _arrLoaiXetNghiem = ArrLoaiXetNghiem,
+            //    List = true,
+            //    OpenFrom = 2,
+            //    BorderSize = 1,
+            //    pnMenu = {Visible = true}
+            //};
+            //frm.AdjustForm();
+            //frm.ShowDialog();
             
-            if (!string.IsNullOrWhiteSpace(frm.ReturnSEQ))
-            {
-                txtSEQ.Text = frm.ReturnSEQ;
-                dtpDateIn.Value = frm.ReturnDateIn;
-                if (!radDSXemTheoBarcode.Checked)
-                {
-                    radDSXemTheoBarcode.Checked = true;
-                }
-                FindPatient();
-                if (gvDanhSach.FocusedRowHandle > -1)
-                {
-                    GvDanhSach_FocusedRowChanged(gvDanhSach, new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs(-1, gvDanhSach.FocusedRowHandle));
-                }
-            }
-            frm.Dispose();
+            //if (!string.IsNullOrWhiteSpace(frm.ReturnSEQ))
+            //{
+            //    txtSEQ.Text = frm.ReturnSEQ;
+            //    dtpDateIn.Value = frm.ReturnDateIn;
+            //    if (!radDSXemTheoBarcode.Checked)
+            //    {
+            //        radDSXemTheoBarcode.Checked = true;
+            //    }
+            //    FindPatient();
+            //    if (gvDanhSach.FocusedRowHandle > -1)
+            //    {
+            //        GvDanhSach_FocusedRowChanged(gvDanhSach, new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs(-1, gvDanhSach.FocusedRowHandle));
+            //    }
+            //}
+            //frm.Dispose();
         }
         public void SetMenuContext(ContextMenuStrip menu)
         {
