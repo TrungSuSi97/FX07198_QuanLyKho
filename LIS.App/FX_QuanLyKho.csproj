@@ -1946,7 +1946,7 @@
       <Name>TPH.HIS</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modules\TPH.Lab.BusinessService\TPH.Lab.BusinessService.csproj">
-      <Project>{40337536-DFE9-4AFC-BDBE-958C1DB8B862}</Project>
+      <Project>{40337536-dfe9-4afc-bdbe-958c1db8b862}</Project>
       <Name>TPH.Lab.BusinessService</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modules\TPH.Lab.Middleware.Helper\TPH.Lab.Middleware.Helper.csproj">
@@ -1984,10 +1984,6 @@
     <ProjectReference Include="..\Modules\TPH.LIS.Data\TPH.LIS.Data.csproj">
       <Project>{493d7bfe-24bf-4612-86eb-623e23656f5d}</Project>
       <Name>TPH.LIS.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Modules\TPH.LIS.DigitalSignature\TPH.LIS.DigitalSignature.csproj">
-      <Project>{8E1E4CA1-1959-4945-A997-7C67CA964E71}</Project>
-      <Name>TPH.LIS.DigitalSignature</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modules\TPH.LIS.ExportResult\TPH.LIS.ExportResult.csproj">
       <Project>{36c5d57d-4bec-42cf-80af-46e10e431dcc}</Project>

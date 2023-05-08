@@ -99,8 +99,6 @@ namespace TPH.LIS.App
         {
 
             frmMDIParent fParent = (frmMDIParent)this.MdiParent;
-            lblThongKeTongHop.Enabled = fParent.rbThongKeTongHopXn.Enabled;
-
 
             lblLayMau.Enabled = CommonAppVarsAndFunctions.CheckUserPermissionToAccessFunctions(CommonAppVarsAndFunctions.PhanQuyenXetNghiem, UserConstant.PermissionTestCollectSample);
             Check_VisibleRule();

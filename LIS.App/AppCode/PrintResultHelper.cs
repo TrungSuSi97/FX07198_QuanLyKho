@@ -19,8 +19,6 @@ using TPH.Report.Models;
 using TPH.LIS.Configuration.Constants;
 using TPH.LIS.Configuration.Services.SystemConfig;
 using TPH.Common.Converter;
-using TPH.LIS.DigitalSignature.Service.Impl;
-using TPH.LIS.DigitalSignature.Service;
 using TPH.LIS.User.Enum;
 using System.Text;
 
@@ -37,7 +35,7 @@ namespace TPH.LIS.App.AppCode
         private static DM_XETNGHIEM_MAUPHIEUIN ThongTinPhieuIn;
         private static List< DM_XETNGHIEM_MAUPHIEUIN> lstThongTinPhieuIn;
         private static List<ReportModel> lstResultReportInfo = new List<ReportModel>();
-        private readonly IDigitalSignature _digSign = new DigitalSignatureService();
+        //private readonly IDigitalSignature _digSign = new DigitalSignatureService();
         private ReportModel GetReportFromConfig(string reportemplateId, DM_XETNGHIEM_MAUPHIEUIN_TUYCHON objMauChonIn)
         {
             if (CommonAppVarsAndFunctions.RefreshReport)
@@ -915,58 +913,58 @@ namespace TPH.LIS.App.AppCode
         /// <returns></returns>
         private void GetTenFileHIS(string sampleId, string conditSomeTestPrint, DataTable dtPrint, ref DataTable dtXnKySo, string tenFileHIS)
         {
-            //var newGuidHIS = Guid.NewGuid().ToString();
-            //Lấy tên file HIS có sẵn, ko có thì new GUID, lấy các xn được Tick
-            dtXnKySo = _digSign.GetDataKySo(sampleId, conditSomeTestPrint, false);
-            if (dtXnKySo.Rows.Count > 0)
-            {
-                var dt1 = WorkingServices.SearchResult_OnDatatable(dtXnKySo, string.Format("MaXN in ({0})", conditSomeTestPrint));
-                var dtNotTenFileHIS = WorkingServices.SearchResult_OnDatatable(dt1, "TenFileHIS IS NOT NULL ");
-                if (dtNotTenFileHIS.Rows.Count <= 0)
-                {
-                    dtXnKySo = dt1;
-                    dtXnKySo = SetTenFileHisToDT(dtXnKySo, tenFileHIS);
-                    return;
-                }
+            ////var newGuidHIS = Guid.NewGuid().ToString();
+            ////Lấy tên file HIS có sẵn, ko có thì new GUID, lấy các xn được Tick
+            //dtXnKySo = _digSign.GetDataKySo(sampleId, conditSomeTestPrint, false);
+            //if (dtXnKySo.Rows.Count > 0)
+            //{
+            //    var dt1 = WorkingServices.SearchResult_OnDatatable(dtXnKySo, string.Format("MaXN in ({0})", conditSomeTestPrint));
+            //    var dtNotTenFileHIS = WorkingServices.SearchResult_OnDatatable(dt1, "TenFileHIS IS NOT NULL ");
+            //    if (dtNotTenFileHIS.Rows.Count <= 0)
+            //    {
+            //        dtXnKySo = dt1;
+            //        dtXnKySo = SetTenFileHisToDT(dtXnKySo, tenFileHIS);
+            //        return;
+            //    }
 
-                //Chỗ này sẽ có TenFileHIS và Không có
-                var dtTenFileHIS = WorkingServices.SearchResult_OnDatatable(dtXnKySo, string.Format("TenFileHIS IS NOT NULL OR MaXN IN ({0})", conditSomeTestPrint));
-                if (dtTenFileHIS.Rows.Count <= 0)
-                {
-                    dtXnKySo = dt1;
-                    dtXnKySo = SetTenFileHisToDT(dtXnKySo, tenFileHIS);
-                    return;
-                }
+            //    //Chỗ này sẽ có TenFileHIS và Không có
+            //    var dtTenFileHIS = WorkingServices.SearchResult_OnDatatable(dtXnKySo, string.Format("TenFileHIS IS NOT NULL OR MaXN IN ({0})", conditSomeTestPrint));
+            //    if (dtTenFileHIS.Rows.Count <= 0)
+            //    {
+            //        dtXnKySo = dt1;
+            //        dtXnKySo = SetTenFileHisToDT(dtXnKySo, tenFileHIS);
+            //        return;
+            //    }
 
-                var listTenFileHIS = new List<string>();
-                var arrTenFileHIS = string.Empty;
-                var dtTenFileHIS1 = WorkingServices.DataTable_DistinctValue(dt1, new string[] { "TenFileHIS" });
-                foreach (DataRow dr in dtTenFileHIS1.Rows)
-                    listTenFileHIS.Add(StringConverter.ToString(dr["TenFileHIS"]));
-                //Convert thành VD 'SH','MD'
-                arrTenFileHIS = Utilities.ConvertStrinArryToInClauseSQL(listTenFileHIS, true);
-                if (string.IsNullOrEmpty(arrTenFileHIS))
-                {
-                    arrTenFileHIS = string.Empty;
-                }
-                else if (arrTenFileHIS.Contains(','))
-                {
-                    arrTenFileHIS = string.Format("TenFileHIS = {0}", arrTenFileHIS);
-                    arrTenFileHIS = arrTenFileHIS.Replace(",", " OR TenFileHIS = ");
-                    arrTenFileHIS += " OR ";
-                }
-                else
-                {
-                    arrTenFileHIS = string.Format("TenFileHIS = {0}", arrTenFileHIS);
-                    arrTenFileHIS += " OR ";
-                }
+            //    var listTenFileHIS = new List<string>();
+            //    var arrTenFileHIS = string.Empty;
+            //    var dtTenFileHIS1 = WorkingServices.DataTable_DistinctValue(dt1, new string[] { "TenFileHIS" });
+            //    foreach (DataRow dr in dtTenFileHIS1.Rows)
+            //        listTenFileHIS.Add(StringConverter.ToString(dr["TenFileHIS"]));
+            //    //Convert thành VD 'SH','MD'
+            //    arrTenFileHIS = Utilities.ConvertStrinArryToInClauseSQL(listTenFileHIS, true);
+            //    if (string.IsNullOrEmpty(arrTenFileHIS))
+            //    {
+            //        arrTenFileHIS = string.Empty;
+            //    }
+            //    else if (arrTenFileHIS.Contains(','))
+            //    {
+            //        arrTenFileHIS = string.Format("TenFileHIS = {0}", arrTenFileHIS);
+            //        arrTenFileHIS = arrTenFileHIS.Replace(",", " OR TenFileHIS = ");
+            //        arrTenFileHIS += " OR ";
+            //    }
+            //    else
+            //    {
+            //        arrTenFileHIS = string.Format("TenFileHIS = {0}", arrTenFileHIS);
+            //        arrTenFileHIS += " OR ";
+            //    }
 
-                //So sánh với các mã xn đang in và lấy ra TenFileHIS
-                dtXnKySo = WorkingServices.SearchResult_OnDatatable(dtXnKySo, string.Format("{0} MaXN IN ({1})", arrTenFileHIS, conditSomeTestPrint));
+            //    //So sánh với các mã xn đang in và lấy ra TenFileHIS
+            //    dtXnKySo = WorkingServices.SearchResult_OnDatatable(dtXnKySo, string.Format("{0} MaXN IN ({1})", arrTenFileHIS, conditSomeTestPrint));
 
-                if (dtXnKySo.Rows.Count > 0)
-                    dtXnKySo = SetTenFileHisToDT(dtXnKySo, tenFileHIS);
-            }
+            //    if (dtXnKySo.Rows.Count > 0)
+            //        dtXnKySo = SetTenFileHisToDT(dtXnKySo, tenFileHIS);
+            //}
         }
 
         private DataTable SetTenFileHisToDT(DataTable dtXnKySo, string tenFileHIS)

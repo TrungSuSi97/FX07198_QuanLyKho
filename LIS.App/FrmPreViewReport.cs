@@ -25,9 +25,6 @@ using TPH.LIS.Common.Controls;
 using TPH.LIS.Common.Extensions;
 using TPH.LIS.Configuration.Services.PrintedForm;
 using TPH.LIS.Configuration.Services.SystemConfig;
-using TPH.LIS.DigitalSignature.Models;
-using TPH.LIS.DigitalSignature.Service;
-using TPH.LIS.DigitalSignature.Service.Impl;
 using TPH.LIS.Patient.Services.TestMethod;
 using TPH.LIS.User.Constants;
 using TPH.LIS.User.Enum;
@@ -45,10 +42,10 @@ namespace TPH.LIS.App
         private readonly IPrintedFormService _printedFromService = new PrintedFormService();
         private readonly ISystemConfigService _systemConfigService = new SystemConfigService();
         private readonly ITestMethodService _testMethodService = new TestMethodService();
-        private readonly IDigitalSignature _digSign = new DigitalSignatureService();
+        //private readonly IDigitalSignature _digSign = new DigitalSignatureService();
         //private readonly ISignCertificate _signCertificate = new SignCertificateImpl();
         private readonly IConnectHISService _iHISService = new ConnectHISService();
-        public THONGTINFILEKY _objSign = new THONGTINFILEKY();
+        //public THONGTINFILEKY _objSign = new THONGTINFILEKY();
         private HisConnection labIMSWebConfigInfo;
 
         public FrmPreViewReport()
@@ -707,63 +704,63 @@ namespace TPH.LIS.App
         public List<string> lstIDChiDinhHis = null;
         private void GetThongTinFileKySo(DataTable dataSource, string reportTemplateID, byte[] file)
         {
-            var MaTiepNhan = TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["MaTiepNhan"]);
-            var Seq = TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["Seq"]);
-            var ThoiGianInKQ = TPH.Common.Converter.DateTimeConverter.ToDateTime(dataSource.Rows[0]["NgayInKQ"]);
-            var LanInBP = TPH.Common.Converter.NumberConverter.ToInt(dataSource.Rows[0]["LanInBP"]);
-            var SoPhieuYeuCau = TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["SoPhieuYeuCau"]);
-            var SoHoSo = TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["BN_ID"]);
-            var mabn = TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["mabn"]);
-            var soPhieuChiDinh = (dataSource.Columns.Contains("RSoPhieuYeuCau") ? TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["RSoPhieuYeuCau"]) : TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["SoPhieuYeuCau"]));
+            //var MaTiepNhan = TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["MaTiepNhan"]);
+            //var Seq = TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["Seq"]);
+            //var ThoiGianInKQ = TPH.Common.Converter.DateTimeConverter.ToDateTime(dataSource.Rows[0]["NgayInKQ"]);
+            //var LanInBP = TPH.Common.Converter.NumberConverter.ToInt(dataSource.Rows[0]["LanInBP"]);
+            //var SoPhieuYeuCau = TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["SoPhieuYeuCau"]);
+            //var SoHoSo = TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["BN_ID"]);
+            //var mabn = TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["mabn"]);
+            //var soPhieuChiDinh = (dataSource.Columns.Contains("RSoPhieuYeuCau") ? TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["RSoPhieuYeuCau"]) : TPH.Common.Converter.StringConverter.ToString(dataSource.Rows[0]["SoPhieuYeuCau"]));
           
-            if (lstIDChiDinhHis == null)
-            {
-                lstIDChiDinhHis = new List<string>();
-                foreach (DataRow dr in dataSource.Rows)
-                {
-                    if (!lstIDChiDinhHis.Where(x => x.Equals(dr["IdChiDinhHis"].ToString(), StringComparison.OrdinalIgnoreCase)).Any())
-                        lstIDChiDinhHis.Add(dr["IdChiDinhHis"].ToString());
-                }
-            }
-            //create pdf file
-            _objSign.LoaiPhieu = reportTemplateID;
-            _objSign.Ngayky = ThoiGianInKQ == DateTime.MinValue ? DateTime.Now : ThoiGianInKQ;
-            _objSign.Lanky = 1;
-            _objSign.Pdffileid = _digSign.GetFileIDFromPdfFile(file);
-            _objSign.Pdfcontent = file;
-            _objSign.Pdffileid = SampleID;
-            _objSign.Mahoso = SoHoSo;
-            _objSign.Matiepnhan = MaTiepNhan;
-            _objSign.Sophieu = Seq;
-            _objSign.SoPhieuChiDinh = soPhieuChiDinh;
-            _objSign.Mabn = mabn;
-            _objSign.Loaiky = (int)LoaiKy;
-            _objSign.Trangthai = true;
-            _objSign.Ngaytaophieu = CommonAppVarsAndFunctions.ServerTime;
-            _objSign.Userky = UserSign;
-            _objSign.MoTa = string.Join("^", lstIDChiDinhHis);
-            _objSign.LanInKQ = LanInBP;
-            _objSign.PCName = Environment.MachineName;
-            _objSign.UserAction = CommonAppVarsAndFunctions.UserID;
-            _objSign.SoPhieuChiDinh = soPhieuChiDinh;
-            _objSign.Daupload = DaUpload;
-            _objSign.LoaiXetNghiem = LoaiXetNghiem;
-            _objSign.TenFileHIS = TenFileHIS;
-            _objSign.DigitialTests = conditSomeTestPrint.Replace("'", "");
-            _objSign.TenFileLIS = Guid.NewGuid().ToString();
+            //if (lstIDChiDinhHis == null)
+            //{
+            //    lstIDChiDinhHis = new List<string>();
+            //    foreach (DataRow dr in dataSource.Rows)
+            //    {
+            //        if (!lstIDChiDinhHis.Where(x => x.Equals(dr["IdChiDinhHis"].ToString(), StringComparison.OrdinalIgnoreCase)).Any())
+            //            lstIDChiDinhHis.Add(dr["IdChiDinhHis"].ToString());
+            //    }
+            //}
+            ////create pdf file
+            //_objSign.LoaiPhieu = reportTemplateID;
+            //_objSign.Ngayky = ThoiGianInKQ == DateTime.MinValue ? DateTime.Now : ThoiGianInKQ;
+            //_objSign.Lanky = 1;
+            //_objSign.Pdffileid = _digSign.GetFileIDFromPdfFile(file);
+            //_objSign.Pdfcontent = file;
+            //_objSign.Pdffileid = SampleID;
+            //_objSign.Mahoso = SoHoSo;
+            //_objSign.Matiepnhan = MaTiepNhan;
+            //_objSign.Sophieu = Seq;
+            //_objSign.SoPhieuChiDinh = soPhieuChiDinh;
+            //_objSign.Mabn = mabn;
+            //_objSign.Loaiky = (int)LoaiKy;
+            //_objSign.Trangthai = true;
+            //_objSign.Ngaytaophieu = CommonAppVarsAndFunctions.ServerTime;
+            //_objSign.Userky = UserSign;
+            //_objSign.MoTa = string.Join("^", lstIDChiDinhHis);
+            //_objSign.LanInKQ = LanInBP;
+            //_objSign.PCName = Environment.MachineName;
+            //_objSign.UserAction = CommonAppVarsAndFunctions.UserID;
+            //_objSign.SoPhieuChiDinh = soPhieuChiDinh;
+            //_objSign.Daupload = DaUpload;
+            //_objSign.LoaiXetNghiem = LoaiXetNghiem;
+            //_objSign.TenFileHIS = TenFileHIS;
+            //_objSign.DigitialTests = conditSomeTestPrint.Replace("'", "");
+            //_objSign.TenFileLIS = Guid.NewGuid().ToString();
         }
         public string MaPhieuIn { get; set; }
         private void insertFileToDB(XtraReport report = null, DataTable dataSource = null, string reportTemplateID = "")
         {
-            byte[] file = GetPDFByte(report);
+            //byte[] file = GetPDFByte(report);
 
-            GetThongTinFileKySo(dataSource, reportTemplateID, file);
-            _digSign.InsertSignature(_objSign);
-            if (CommonAppVarsAndFunctions.sysConfig.TPHLabIMSWeb_TuDongGuiChiDinh)
-            {
-                //Không dùng task vì hàm cha đã được gọi task rồi
-                UploadFileLenLabIMSWeb(_objSign.Matiepnhan, file, reportTemplateID, reportTemplateID);
-            }
+            //GetThongTinFileKySo(dataSource, reportTemplateID, file);
+            //_digSign.InsertSignature(_objSign);
+            //if (CommonAppVarsAndFunctions.sysConfig.TPHLabIMSWeb_TuDongGuiChiDinh)
+            //{
+            //    //Không dùng task vì hàm cha đã được gọi task rồi
+            //    UploadFileLenLabIMSWeb(_objSign.Matiepnhan, file, reportTemplateID, reportTemplateID);
+            //}
         }
         #endregion
 
@@ -833,35 +830,35 @@ namespace TPH.LIS.App
 
         private void btnKyTen_Click(object sender, EventArgs e)
         {
-            if (lstCert.SelectedIndex > -1)
-            {
-                if (IsCheckLackingTests(MaTiepNhan, TenFileHIS))
-                    return;
-                var cert = dicCert[lstCert.SelectedValue.ToString()];
+            //if (lstCert.SelectedIndex > -1)
+            //{
+            //    if (IsCheckLackingTests(MaTiepNhan, TenFileHIS))
+            //        return;
+            //    var cert = dicCert[lstCert.SelectedValue.ToString()];
 
-                var report = (XtraReport)documentViewer1.DocumentSource;
-                byte[] file = GetPDFByte(report);
-                var Seq = TPH.Common.Converter.StringConverter.ToString(reportShowingdataSource.Rows[0]["Seq"]);
-                //var fileNametempexportPdf = string.Format("TemExportPdf_{0}.pdf", Seq);
-                var fileNametempexportPdfSigned = string.Empty;//string.Format("TemExportPdf_{0}_Signed.pdf", Seq);
-                System.Drawing.Image imgSignature = null;
-                if (!string.IsNullOrEmpty(reportShowingdataSource.Rows[0]["signpicture"].ToString()))
-                {
-                    imgSignature = System.Drawing.Image.FromStream(new MemoryStream((byte[])reportShowingdataSource.Rows[0]["signpicture"]));
-                }
-                //  var stream = SetReportDegitalSignInfo(report, cert, imgSignature);
-                var stream = DigitalSignature.CertificateHelper.SignPDF(cert, new MemoryStream(file), lstCert.SelectedValue.ToString()
-                   , imgSignature, fileNametempexportPdfSigned,
-                   left: CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLeTrai, bottom: CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLeDuoi
-                   , right: CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLePhai, height: CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuDoCaoRec);
-                if (stream != null)
-                {
-                    InsertVaUpdateThongTinKySo(stream.ToArray());
-                    ShowPhieuDaKy();
-                    haveAction = true;
-                    this.Close();
-                }
-            }
+            //    var report = (XtraReport)documentViewer1.DocumentSource;
+            //    byte[] file = GetPDFByte(report);
+            //    var Seq = TPH.Common.Converter.StringConverter.ToString(reportShowingdataSource.Rows[0]["Seq"]);
+            //    //var fileNametempexportPdf = string.Format("TemExportPdf_{0}.pdf", Seq);
+            //    var fileNametempexportPdfSigned = string.Empty;//string.Format("TemExportPdf_{0}_Signed.pdf", Seq);
+            //    System.Drawing.Image imgSignature = null;
+            //    if (!string.IsNullOrEmpty(reportShowingdataSource.Rows[0]["signpicture"].ToString()))
+            //    {
+            //        imgSignature = System.Drawing.Image.FromStream(new MemoryStream((byte[])reportShowingdataSource.Rows[0]["signpicture"]));
+            //    }
+            //    //  var stream = SetReportDegitalSignInfo(report, cert, imgSignature);
+            //    var stream = DigitalSignature.CertificateHelper.SignPDF(cert, new MemoryStream(file), lstCert.SelectedValue.ToString()
+            //       , imgSignature, fileNametempexportPdfSigned,
+            //       left: CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLeTrai, bottom: CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLeDuoi
+            //       , right: CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuLePhai, height: CommonAppVarsAndFunctions.sysConfig.ChuKyDienTuDoCaoRec);
+            //    if (stream != null)
+            //    {
+            //        InsertVaUpdateThongTinKySo(stream.ToArray());
+            //        ShowPhieuDaKy();
+            //        haveAction = true;
+            //        this.Close();
+            //    }
+            //}
         }
         private MemoryStream SetReportDegitalSignInfo(XtraReport report, X509Certificate2 cert, System.Drawing.Image imgSignature)
         {
@@ -894,12 +891,12 @@ namespace TPH.LIS.App
         }
         private void InsertVaUpdateThongTinKySo(byte[] sPdfDecoded)
         {
-            GetThongTinFileKySo(reportShowingdataSource, reportShowingTemplateID, sPdfDecoded);
-            _digSign.InsertSignature(_objSign);
-            //Ghi file xong update lại trong xetnghiem_kyso;
-            //Chỗ nay phải tách sp ra để ko nhầm cái cũ
-            //Update xong phải ghi logs lại lần cũ
-            _digSign.UpdateXetNghiemKySo(_objSign);
+            //GetThongTinFileKySo(reportShowingdataSource, reportShowingTemplateID, sPdfDecoded);
+            //_digSign.InsertSignature(_objSign);
+            ////Ghi file xong update lại trong xetnghiem_kyso;
+            ////Chỗ nay phải tách sp ra để ko nhầm cái cũ
+            ////Update xong phải ghi logs lại lần cũ
+            //_digSign.UpdateXetNghiemKySo(_objSign);
         }
         #region Ký số HSM
         private void DigitalSignedByHSM(bool print = false)
@@ -1037,31 +1034,31 @@ namespace TPH.LIS.App
         }
         private bool IsCheckLackingTests(string maTiepNhan, string tenFileHIS)
         {
-            var dtKySo = _digSign.GetDataKySoByTenFileHIS(maTiepNhan, tenFileHIS);
-            if (dtKySo.Rows.Count > 0)
-            {
-                //số code truyền đang ký
-                var tempConditSomeTestPrint = conditSomeTestPrint.Replace("'", "");
-                List<string> lstTestsDangKy = tempConditSomeTestPrint.Split(',').ToList();
+            //var dtKySo = _digSign.GetDataKySoByTenFileHIS(maTiepNhan, tenFileHIS);
+            //if (dtKySo.Rows.Count > 0)
+            //{
+            //    //số code truyền đang ký
+            //    var tempConditSomeTestPrint = conditSomeTestPrint.Replace("'", "");
+            //    List<string> lstTestsDangKy = tempConditSomeTestPrint.Split(',').ToList();
 
-                //số code đã ký
-                var lstTestsDaKy = new List<string>();
-                foreach (DataRow dr in dtKySo.Rows)
-                    lstTestsDaKy.Add(StringConverter.ToString(dr["MaXN"]));
+            //    //số code đã ký
+            //    var lstTestsDaKy = new List<string>();
+            //    foreach (DataRow dr in dtKySo.Rows)
+            //        lstTestsDaKy.Add(StringConverter.ToString(dr["MaXN"]));
 
-                List<string> lstLackingTests = lstTestsDaKy.Except(lstTestsDangKy).ToList();
-                if (lstLackingTests.Count > 0)
-                {
-                    string message = string.Empty;
-                    string lackingTests = string.Join(",", lstLackingTests);
-                    message += "Các xét nghiệm ký số đang thiếu:\n";
-                    message += string.Format("\"{0}\"\n", lackingTests);
-                    message += "Bạn có muốn tiếp tục ký số không?";
+            //    List<string> lstLackingTests = lstTestsDaKy.Except(lstTestsDangKy).ToList();
+            //    if (lstLackingTests.Count > 0)
+            //    {
+            //        string message = string.Empty;
+            //        string lackingTests = string.Join(",", lstLackingTests);
+            //        message += "Các xét nghiệm ký số đang thiếu:\n";
+            //        message += string.Format("\"{0}\"\n", lackingTests);
+            //        message += "Bạn có muốn tiếp tục ký số không?";
 
-                    //Yes la tiep tuc ký, No là Không ký
-                    return CustomMessageBox.MSG_Question_YesNo_GetNo(message);
-                }
-            }
+            //        //Yes la tiep tuc ký, No là Không ký
+            //        return CustomMessageBox.MSG_Question_YesNo_GetNo(message);
+            //    }
+            //}
             return false;
         }
         private byte[] GetPDFByte(XtraReport report = null)
