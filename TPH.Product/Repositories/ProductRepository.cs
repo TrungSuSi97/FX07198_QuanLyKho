@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TPH.LIS.Common.Extensions;
 using TPH.LIS.Data;
+using TPH.Product.Model;
 
 namespace TPH.Product.Repositories
 {
@@ -47,6 +48,17 @@ namespace TPH.Product.Repositories
              , sqlPara) > 0;
         }
 
+        public DataTable GetDMHH(string madm)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@madm", madm)
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_GetDMHH", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+        }
+
+
         #endregion
 
         #region dm đơn vị
@@ -82,6 +94,40 @@ namespace TPH.Product.Repositories
              , "FX_upd_DanhMucDonVi"
              , sqlPara) > 0;
         }
+        public DataTable GetDMDV(string madmdv)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@madmdv", madmdv)
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_GetDMDV", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+        }
+
+
+        #endregion
+
+
+        #region hàng hóa
+        public bool ThemItem(ItemModel model)
+        {
+            return _iProduct.ThemItem(model);
+
+        }
+        public bool XoaItem(ItemModel model)
+        {
+            return _iProduct.XoaItem(model);
+
+        }
+        public bool SuaItem(ItemModel model)
+        {
+            return _iProduct.SuaItem(model);
+        }
+        public DataTable GetItems(ItemModel model)
+        {
+            return _iProduct.GetItems(model);
+        }
+
         #endregion
     }
 }

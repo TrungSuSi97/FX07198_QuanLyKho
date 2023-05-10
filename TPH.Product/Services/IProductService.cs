@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TPH.Product.Model;
 
 namespace TPH.Product.Services
 {
@@ -12,6 +14,8 @@ namespace TPH.Product.Services
         bool ThemDM(string madm, string tendm);
         bool XoaDM(string madm);
         bool SuaDM(string madm, string tendm);
+        DataTable GetDMHH(string madm);
+
 
         #endregion
 
@@ -19,6 +23,16 @@ namespace TPH.Product.Services
         bool ThemDonVi(string madv, string tendm);
         bool XoaDonVi(string madv);
         bool SuaDonVi(string madv, string tendv);
+        DataTable GetDMDV(string madmdv);
+
+        #endregion
+
+        #region hàng hóa
+        bool ThemItem(ItemModel model);
+        bool XoaItem(ItemModel model);
+        bool SuaItem(ItemModel model);
+        DataTable GetItems(ItemModel model);
+
         #endregion
     }
 }

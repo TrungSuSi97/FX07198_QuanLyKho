@@ -31,6 +31,7 @@ using TPH.LIS.User.Enum;
 using System.Net.Sockets;
 using System.Net;
 using TPH.LIS.App.QuanLyChamCong;
+using TPH.LIS.App.QuanLyHangHoa;
 
 namespace TPH.LIS.App
 {
@@ -969,8 +970,8 @@ namespace TPH.LIS.App
 
         private void rbTheoDoiMau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-        //    var f = new FrmTheoDoiMau();
-        //    f.ShowDialog();
+            //    var f = new FrmTheoDoiMau();
+            //    f.ShowDialog();
         }
 
         private void rbInbaracodeKSK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1252,6 +1253,7 @@ namespace TPH.LIS.App
         private void Check_Enable_BangLuong()
         {
             rbChamCong.Enabled = btnLuong.Enabled = true;
+            btnQuanLyHangHoa.Enabled = btnBaoCaoTonKho.Enabled = btnDonHang.Enabled = btnTonKho.Enabled = true;
 
         }
 
@@ -1644,16 +1646,16 @@ namespace TPH.LIS.App
         }
         private void frmMDIParent_KeyDown(object sender, KeyEventArgs e)
         {
-        //    if (e.KeyCode == Keys.F1 && rbTiepNhanHIS.Enabled)
-        //    {
-        //        var frm = new FrmTiepNhanHIS();
-        //        ShowForm(frm);
-        //    }
-        //    else if (e.KeyCode == Keys.F2 && rbLayMau.Enabled)
-        //    {
-        //        var frm = new FrmLayMau();
-        //        this.ShowForm(frm);
-        //    }
+            //    if (e.KeyCode == Keys.F1 && rbTiepNhanHIS.Enabled)
+            //    {
+            //        var frm = new FrmTiepNhanHIS();
+            //        ShowForm(frm);
+            //    }
+            //    else if (e.KeyCode == Keys.F2 && rbLayMau.Enabled)
+            //    {
+            //        var frm = new FrmLayMau();
+            //        this.ShowForm(frm);
+            //    }
             //if (e.KeyCode == Keys.F3 && rbChuyenMau.Enabled)
             //{
             //    var frm = new FrmXacNhanChuyenMau();
@@ -1778,6 +1780,12 @@ namespace TPH.LIS.App
         private void btnLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var f = new FrmLuong();
+            ShowForm(f);
+        }
+
+        private void btnQuanLyHangHoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var f = new FrmHangHoa();
             ShowForm(f);
         }
     }

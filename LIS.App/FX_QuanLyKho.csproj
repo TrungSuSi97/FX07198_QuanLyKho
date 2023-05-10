@@ -351,11 +351,23 @@
     <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_ChucVu.Designer.cs">
       <DependentUpon>ucSearchLookupEditor_ChucVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_DanhMucDonVi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_DanhMucDonVi.Designer.cs">
+      <DependentUpon>ucSearchLookupEditor_DanhMucDonVi.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Nam.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Nam.Designer.cs">
       <DependentUpon>ucSearchLookupEditor_Nam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_DanhMucHangHoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_DanhMucHangHoa.Designer.cs">
+      <DependentUpon>ucSearchLookupEditor_DanhMucHangHoa.cs</DependentUpon>
     </Compile>
     <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Thang.cs">
       <SubType>UserControl</SubType>
@@ -1051,12 +1063,6 @@
     <Compile Include="Statistics\FrmBaoCaoDoanhThu.designer.cs">
       <DependentUpon>FrmBaoCaoDoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Statistics\FrmBaoCaoDoanhThu_bk.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Statistics\FrmBaoCaoDoanhThu_bk.designer.cs">
-      <DependentUpon>FrmBaoCaoDoanhThu_bk.cs</DependentUpon>
-    </Compile>
     <Compile Include="Statistics\FrmThongKeTongHopNoiSoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1196,8 +1202,14 @@
     <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_ChucVu.resx">
       <DependentUpon>ucSearchLookupEditor_ChucVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_DanhMucDonVi.resx">
+      <DependentUpon>ucSearchLookupEditor_DanhMucDonVi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Nam.resx">
       <DependentUpon>ucSearchLookupEditor_Nam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_DanhMucHangHoa.resx">
+      <DependentUpon>ucSearchLookupEditor_DanhMucHangHoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Thang.resx">
       <DependentUpon>ucSearchLookupEditor_Thang.cs</DependentUpon>
@@ -1552,9 +1564,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Statistics\FrmBaoCaoDoanhThu.resx">
       <DependentUpon>FrmBaoCaoDoanhThu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Statistics\FrmBaoCaoDoanhThu_bk.resx">
-      <DependentUpon>FrmBaoCaoDoanhThu_bk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Statistics\FrmThongKeTongHopNoiSoi.resx">
       <DependentUpon>FrmThongKeTongHopNoiSoi.cs</DependentUpon>

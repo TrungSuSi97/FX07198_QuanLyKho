@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TPH.Product.Model;
 using TPH.Product.Repositories;
 
 namespace TPH.Product.Services
@@ -24,6 +26,11 @@ namespace TPH.Product.Services
         { 
             return _iProduct.SuaDM(madm,tendm);
         }
+        public DataTable GetDMHH(string madm)
+        { 
+            return _iProduct.GetDMHH(madm);
+        }
+
 
         #endregion
 
@@ -40,6 +47,32 @@ namespace TPH.Product.Services
         { 
             return _iProduct.SuaDonVi(madv, tendv);
         }
+        public DataTable GetDMDV(string madm)
+        {
+            return _iProduct.GetDMDV(madm);
+        }
+        #endregion
+
+        #region hàng hóa
+        public bool ThemItem(ItemModel model)
+        {
+            return _iProduct.ThemItem(model);
+
+        }
+        public bool XoaItem(ItemModel model)
+        { 
+            return _iProduct.XoaItem(model);
+
+        }
+        public bool SuaItem(ItemModel model)
+        {
+            return _iProduct.SuaItem(model);
+        }
+        public DataTable GetItems(ItemModel model)
+        { 
+            return _iProduct.GetItems(model);
+        }
+
         #endregion
     }
 }
