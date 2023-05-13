@@ -1253,7 +1253,7 @@ namespace TPH.LIS.App
         private void Check_Enable_BangLuong()
         {
             rbChamCong.Enabled = btnLuong.Enabled = true;
-            btnQuanLyHangHoa.Enabled = btnBaoCaoTonKho.Enabled = btnDonHang.Enabled = btnTonKho.Enabled = true;
+            btnQuanLyHangHoa.Enabled = btnDonH.Enabled = btnDonHang.Enabled = btnBaoCaoTonKho.Enabled = btnDonHang.Enabled = btnTonKho.Enabled = true;
 
         }
 
@@ -1788,13 +1788,13 @@ namespace TPH.LIS.App
             var f = new FrmHangHoa();
             ShowForm(f);
         }
+
+        private void btnDonH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var f = new FrmDonHang();
+            ShowForm(f);
+        }
     }
 }
-
-
-
-
-
-
 
 

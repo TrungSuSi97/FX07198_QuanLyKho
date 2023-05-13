@@ -357,6 +357,12 @@
     <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_DanhMucDonVi.Designer.cs">
       <DependentUpon>ucSearchLookupEditor_DanhMucDonVi.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_HangHoaSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_HangHoaSanPham.Designer.cs">
+      <DependentUpon>ucSearchLookupEditor_HangHoaSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Nam.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -642,6 +648,15 @@
     </Compile>
     <Compile Include="QuanLyChamCong\FrmLuong.Designer.cs">
       <DependentUpon>FrmLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyHangHoa\FrmDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyHangHoa\FrmDonHang.Designer.cs">
+      <DependentUpon>FrmDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyHangHoa\FrmDonHangOld.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuanLyHangHoa\FrmHangHoa.cs">
       <SubType>Form</SubType>
@@ -1205,6 +1220,9 @@
     <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_DanhMucDonVi.resx">
       <DependentUpon>ucSearchLookupEditor_DanhMucDonVi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_HangHoaSanPham.resx">
+      <DependentUpon>ucSearchLookupEditor_HangHoaSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppCode\ucSearchLookupEditor\ucSearchLookupEditor_Nam.resx">
       <DependentUpon>ucSearchLookupEditor_Nam.cs</DependentUpon>
     </EmbeddedResource>
@@ -1346,6 +1364,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyChamCong\FrmLuong.resx">
       <DependentUpon>FrmLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyHangHoa\FrmDonHang.resx">
+      <DependentUpon>FrmDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyHangHoa\FrmDonHangOld.resx">
+      <DependentUpon>FrmDonHangOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyHangHoa\FrmHangHoa.resx">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>

@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TPH.LIS.Common.Extensions;
+using TPH.LIS.Data;
 using TPH.Product.Model;
 using TPH.Product.Repositories;
 
@@ -74,5 +77,55 @@ namespace TPH.Product.Services
         }
 
         #endregion
+
+        #region đơn hàng
+        public bool ThemDonHang(OrderModel model)
+        {
+            return _iProduct.ThemDonHang(model);
+
+
+        }
+        public bool XoaDonHang(OrderModel model)
+        {
+            return _iProduct.XoaDonHang(model);
+
+
+        }
+        public bool SuaDonHang(OrderModel model)
+        {
+            return _iProduct.SuaDonHang(model);
+
+        }
+        public DataTable GetDonHang(OrderModel model)
+        {
+            return _iProduct.GetDonHang(model);
+
+        }
+
+        #endregion
+
+        #region chi tiết đơn hàng
+        public bool ThemDonHang_CT(OrderDetailModel model)
+        {
+            return _iProduct.ThemDonHang_CT(model);
+        }
+        public bool XoaDonHang_CT(OrderDetailModel model)
+        {
+            return _iProduct.XoaDonHang_CT(model);
+        }
+        public bool SuaDonHang_CT(OrderDetailModel model)
+        {
+            return _iProduct.SuaDonHang_CT(model);
+        }
+        public DataTable GetDonHang_CT(OrderDetailModel model)
+        {
+            return _iProduct.GetDonHang_CT(model);
+        }
+
+        #endregion
+        public string GetInputCode(DateTime dateInput, string maNhapKho, string tableName, string column)
+        {
+            return _iProduct.GetInputCode(dateInput, maNhapKho,  tableName,  column);
+        }
     }
 }

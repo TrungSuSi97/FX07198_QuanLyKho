@@ -34,5 +34,30 @@ namespace TPH.Product.Services
         DataTable GetItems(ItemModel model);
 
         #endregion
+        #region đơn hàng
+        bool ThemDonHang(OrderModel model);
+
+        bool XoaDonHang(OrderModel model);
+
+        bool SuaDonHang(OrderModel model);
+
+         DataTable GetDonHang(OrderModel model);
+
+
+        #endregion
+
+        #region chi tiết đơn hàng
+        bool ThemDonHang_CT(OrderDetailModel model);
+
+        bool XoaDonHang_CT(OrderDetailModel model);
+
+        bool SuaDonHang_CT(OrderDetailModel model);
+
+        DataTable GetDonHang_CT(OrderDetailModel model);
+
+
+        #endregion
+        string GetInputCode(DateTime dateInput, string maNhapKho, string tableName, string column);
+
     }
 }
