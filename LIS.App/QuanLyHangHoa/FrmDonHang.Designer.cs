@@ -326,6 +326,7 @@
             // colTotal
             // 
             this.colTotal.Caption = "Tổng tiền";
+            this.colTotal.DisplayFormat.FormatString = "Numeric \"{0:0,0}\"";
             this.colTotal.FieldName = "total";
             this.colTotal.Name = "colTotal";
             this.colTotal.Visible = true;
@@ -979,7 +980,7 @@
             this.xtraTabPage1.Controls.Add(this.splitContainerControl1);
             this.xtraTabPage1.Controls.Add(this.groupBox1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1283, 603);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1111, 558);
             this.xtraTabPage1.Text = "Danh sách đơn hàng";
             // 
             // splitContainerControl2
@@ -998,7 +999,7 @@
             // 
             this.splitContainerControl2.Panel2.Controls.Add(this.groupBox3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1283, 440);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1111, 395);
             this.splitContainerControl2.SplitterPosition = 166;
             this.splitContainerControl2.TabIndex = 2;
             // 
@@ -1008,7 +1009,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1283, 166);
+            this.groupBox2.Size = new System.Drawing.Size(1111, 166);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách đơn hàng";
@@ -1032,7 +1033,7 @@
             this.gcDSDH.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1,
             this.repositoryItemGridLookUpEdit2});
-            this.gcDSDH.Size = new System.Drawing.Size(1277, 147);
+            this.gcDSDH.Size = new System.Drawing.Size(1105, 147);
             this.gcDSDH.TabIndex = 187;
             this.gcDSDH.UseEmbeddedNavigator = true;
             this.gcDSDH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1196,7 +1197,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1283, 264);
+            this.groupBox3.Size = new System.Drawing.Size(1111, 219);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết đơn hàng";
@@ -1220,7 +1221,7 @@
             this.gcDSDH_CT.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit3,
             this.repositoryItemGridLookUpEdit4});
-            this.gcDSDH_CT.Size = new System.Drawing.Size(1277, 245);
+            this.gcDSDH_CT.Size = new System.Drawing.Size(1105, 200);
             this.gcDSDH_CT.TabIndex = 187;
             this.gcDSDH_CT.UseEmbeddedNavigator = true;
             this.gcDSDH_CT.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1364,7 +1365,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1283, 163);
+            this.groupBox1.Size = new System.Drawing.Size(1111, 163);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Điều kiện";

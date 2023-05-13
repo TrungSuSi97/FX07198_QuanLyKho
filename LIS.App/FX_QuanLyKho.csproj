@@ -655,14 +655,17 @@
     <Compile Include="QuanLyHangHoa\FrmDonHang.Designer.cs">
       <DependentUpon>FrmDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyHangHoa\FrmDonHangOld.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="QuanLyHangHoa\FrmHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuanLyHangHoa\FrmHangHoa.Designer.cs">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTaiChinh\FrmTaiSanCoDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTaiChinh\FrmTaiSanCoDinh.Designer.cs">
+      <DependentUpon>FrmTaiSanCoDinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\DanhMucCLS\FrmCheDoCopy_HenTraKQ.cs">
       <SubType>Form</SubType>
@@ -1368,11 +1371,11 @@
     <EmbeddedResource Include="QuanLyHangHoa\FrmDonHang.resx">
       <DependentUpon>FrmDonHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyHangHoa\FrmDonHangOld.resx">
-      <DependentUpon>FrmDonHangOld.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyHangHoa\FrmHangHoa.resx">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTaiChinh\FrmTaiSanCoDinh.resx">
+      <DependentUpon>FrmTaiSanCoDinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\DanhMucCLS\FrmCheDoCopy_HenTraKQ.resx">
       <DependentUpon>FrmCheDoCopy_HenTraKQ.cs</DependentUpon>

@@ -32,6 +32,7 @@ using System.Net.Sockets;
 using System.Net;
 using TPH.LIS.App.QuanLyChamCong;
 using TPH.LIS.App.QuanLyHangHoa;
+using TPH.LIS.App.QuanLyTaiChinh;
 
 namespace TPH.LIS.App
 {
@@ -1254,6 +1255,8 @@ namespace TPH.LIS.App
         {
             rbChamCong.Enabled = btnLuong.Enabled = true;
             btnQuanLyHangHoa.Enabled = btnDonH.Enabled = btnDonHang.Enabled = btnBaoCaoTonKho.Enabled = btnDonHang.Enabled = btnTonKho.Enabled = true;
+            btnNhapKho.Enabled = btnXuatKho.Enabled = true;
+            btnNganSach.Enabled = btnTaiSanCoDinh.Enabled = btnCongNo.Enabled = btnHopDong.Enabled = true;
 
         }
 
@@ -1792,6 +1795,12 @@ namespace TPH.LIS.App
         private void btnDonH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var f = new FrmDonHang();
+            ShowForm(f);
+        }
+
+        private void btnTaiSanCoDinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var f = new FrmTaiSanCoDinh();
             ShowForm(f);
         }
     }

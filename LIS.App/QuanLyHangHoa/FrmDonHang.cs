@@ -140,6 +140,8 @@ namespace TPH.LIS.App.QuanLyHangHoa
             OrderDetailModel model = new OrderDetailModel();
             model.OrderID = NumberConverter.ToInt(txtOrderID.Text);
             model.OrderCode = StringConverter.ToString(txtOrderCode.Text);
+            if (model.OrderID<=0 &&string.IsNullOrEmpty(model.OrderCode))
+                return;
 
             gcDH.DataSource = WorkingServices.ConvertColumnNameToLower_Upper(_iProduct.GetDonHang_CT(model), true);
 

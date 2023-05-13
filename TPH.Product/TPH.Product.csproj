@@ -47,9 +47,14 @@
   <ItemGroup>
     <Compile Include="Model\ItemModel.cs" />
     <Compile Include="Model\OrderModel.cs" />
+    <Compile Include="Model\TaiSanCdModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\FinanceRepository.cs" />
+    <Compile Include="Repositories\IFinanceRepository.cs" />
     <Compile Include="Repositories\IProductRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Services\IFinanceService.cs" />
+    <Compile Include="Services\FinanceService.cs" />
     <Compile Include="Services\IProductService.cs" />
     <Compile Include="Services\ProductService.cs" />
   </ItemGroup>
