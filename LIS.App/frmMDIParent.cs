@@ -1246,7 +1246,6 @@ namespace TPH.LIS.App
             Check_Enable_VatTu();
             Check_Enable_TCKT();
             Check_Enable_QuanLy();
-
             Check_Enable_BangLuong();
 
         }
@@ -1254,7 +1253,7 @@ namespace TPH.LIS.App
         private void Check_Enable_BangLuong()
         {
             rbChamCong.Enabled = btnLuong.Enabled = true;
-            btnQuanLyHangHoa.Enabled = btnDonH.Enabled = btnDonHang.Enabled   = btnDonHang.Enabled = btnTonKho.Enabled = true;
+            btnQuanLyHangHoa.Enabled = btnDonH.Enabled = btnDonHang.Enabled  = btnDonHang.Enabled = btnTonKho.Enabled = true;
             btnNhapKho.Enabled = btnXuatKho.Enabled = true;
             btnTaiSanCoDinh.Enabled  = true;
         }

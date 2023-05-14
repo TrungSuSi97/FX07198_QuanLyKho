@@ -60,10 +60,13 @@ namespace TPH.LIS.App.QuanLyHangHoa
         private void TimKiem()
         {
             gcDSDH.DataSource = null;
-            InputModel model = new InputModel();
+            TonkhoModel model = new TonkhoModel();
             model.FromDate = dtpFromDate.Value;
             model.ToDate = dtpToDate.Value;
-            gcDSDH.DataSource = WorkingServices.ConvertColumnNameToLower_Upper(_iProduct.GetNhapKho(model), true);
+            model.ItemCode = StringConverter.ToString(ucSearchLookupEditor_HangHoaSanPham1.SelectedValue);
+            model.MaDanhMuc = StringConverter.ToString(ucSearchLookupEditor_DanhMucHangHoa1.SelectedValue);
+
+            gcDSDH.DataSource = WorkingServices.ConvertColumnNameToLower_Upper(_iProduct.GetTonKho(model), true);
         }
         private void Load_NhanVien()
         {
@@ -72,11 +75,15 @@ namespace TPH.LIS.App.QuanLyHangHoa
         }
         private void Load_DanhMuc()
         {
- 
+            ucSearchLookupEditor_DanhMucHangHoa1.Load_DanhMucHH();
+            ucSearchLookupEditor_DanhMucHangHoa1.CatchEnterKey = true;
+            ucSearchLookupEditor_DanhMucHangHoa1.CatchTabKey = true;
         }
         private void Load_SP(string itemcode, string madanhmuc)
         {
-
+            ucSearchLookupEditor_HangHoaSanPham1.Load_SanPham(string.Empty, string.Empty);
+            ucSearchLookupEditor_HangHoaSanPham1.CatchEnterKey = true;
+            ucSearchLookupEditor_HangHoaSanPham1.CatchTabKey = true;
         }
         private void XoaDH()
         {

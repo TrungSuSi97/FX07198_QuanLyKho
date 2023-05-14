@@ -220,5 +220,14 @@ namespace TPH.Product.Services
         }
 
         #endregion
+
+
+        #region Tồn kho
+        public DataTable GetTonKho(TonkhoModel model)
+        { 
+            return _iProduct.GetTonKho(model);
+        }
+
+        #endregion
     }
 }

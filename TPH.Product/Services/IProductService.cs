@@ -103,5 +103,10 @@ namespace TPH.Product.Services
 
         #endregion
 
+        #region Tồn kho
+        DataTable GetTonKho(TonkhoModel model);
+
+        #endregion
+
     }
 }

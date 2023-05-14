@@ -16,10 +16,14 @@ namespace TPH.Product.Model
         public string MaDanhMuc { get; set; }
         public decimal Cost { get; set; }
 
+    }
+    public class TonkhoModel
+    {
+        public DateTime FromDate { get; set; }
+        public DateTime ToDate { get; set; }
+        public string ItemCode { get; set; }
 
-
-
-
+        public string MaDanhMuc { get; set; }
 
     }
 }

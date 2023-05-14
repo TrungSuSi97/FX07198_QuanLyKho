@@ -42,8 +42,6 @@
             this.gvDSDH = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colInID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -53,6 +51,11 @@
             this.ucSearchLookupEditor_DanhMucHangHoa1 = new TPH.LIS.App.AppCode.ucSearchLookupEditor_DanhMucHangHoa();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnContaint.SuspendLayout();
             this.pnLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -246,9 +249,12 @@
             this.gvDSDH.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
-            this.gridColumn5,
+            this.colInID,
             this.gridColumn3,
-            this.colInID});
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7});
             this.gvDSDH.DetailHeight = 284;
             this.gvDSDH.GridControl = this.gcDSDH;
             this.gvDSDH.GroupFormat = "{0}: [#image]{1}  -  {2}";
@@ -265,49 +271,35 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "Mã nhập hàng";
-            this.gridColumn1.FieldName = "incode";
+            this.gridColumn1.Caption = "Mã sản phẩm";
+            this.gridColumn1.FieldName = "itemcode";
             this.gridColumn1.MinWidth = 17;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.VisibleIndex = 2;
             this.gridColumn1.Width = 90;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Ngày tạo";
+            this.gridColumn2.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn2.FieldName = "datein";
             this.gridColumn2.MinWidth = 17;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.VisibleIndex = 1;
             this.gridColumn2.Width = 163;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Giá";
-            this.gridColumn5.DisplayFormat.FormatString = "{0:0,0}";
-            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn5.FieldName = "cost";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Width = 96;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Người tạo";
-            this.gridColumn3.FieldName = "useri";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
             // 
             // colInID
             // 
-            this.colInID.Caption = "In id";
-            this.colInID.FieldName = "inid";
+            this.colInID.Caption = "Tên danh mục";
+            this.colInID.FieldName = "tendanhmuc";
             this.colInID.Name = "colInID";
             this.colInID.Visible = true;
-            this.colInID.VisibleIndex = 4;
+            this.colInID.VisibleIndex = 5;
+            this.colInID.Width = 79;
             // 
             // repositoryItemGridLookUpEdit1
             // 
@@ -394,6 +386,50 @@
             this.labelControl11.TabIndex = 203;
             this.labelControl11.Text = "Danh mục";
             // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Tên đơn vị";
+            this.gridColumn3.FieldName = "tendonvi";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 4;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Tổng số lượng hàng";
+            this.gridColumn4.FieldName = "tongsoluonghang";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 6;
+            this.gridColumn4.Width = 105;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Số lượng hàng đã xuất";
+            this.gridColumn5.FieldName = "tongsoluonghangdaxuat";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 7;
+            this.gridColumn5.Width = 118;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Số lượng hàng còn lại";
+            this.gridColumn6.FieldName = "tongsoluonghangconlai";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 8;
+            this.gridColumn6.Width = 113;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Tên sản phẩm";
+            this.gridColumn7.FieldName = "itemname";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 3;
+            this.gridColumn7.Width = 78;
+            // 
             // FrmTonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -435,8 +471,6 @@
         public DevExpress.XtraGrid.Views.Grid.GridView gvDSDH;
         public DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         public DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn colInID;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
@@ -446,5 +480,10 @@
         private AppCode.ucSearchLookupEditor_DanhMucHangHoa ucSearchLookupEditor_DanhMucHangHoa1;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
     }
 }

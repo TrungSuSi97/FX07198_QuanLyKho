@@ -526,5 +526,23 @@ namespace TPH.Product.Repositories
         }
 
         #endregion
+
+        #region Tồn kho
+        public DataTable GetTonKho(TonkhoModel model)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@FromDate", model.FromDate)
+                       , WorkingServices.GetParaFromOject("@ToDate", model.ToDate)
+                       , WorkingServices.GetParaFromOject("@ItemCode", model.ItemCode)
+                       , WorkingServices.GetParaFromOject("@MaDanhMuc", model.MaDanhMuc)
+
+
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_TonKho", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+        }
+
+        #endregion
     }
 }
