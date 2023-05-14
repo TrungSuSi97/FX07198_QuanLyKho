@@ -41,7 +41,7 @@ namespace TPH.Product.Repositories
         bool XoaDonHang(OrderModel model);
 
         bool SuaDonHang(OrderModel model);
-
+        bool CapNhatDhDaXuat(OrderModel model);
         DataTable GetDonHang(OrderModel model);
 
 
@@ -58,11 +58,44 @@ namespace TPH.Product.Repositories
 
 
         #endregion
-
+        #region xuất hàng
+        bool ThemXuatKho(OutputModel model);
+        DataTable GetXuatHang(OutputModel model);
+        DataTable CheckDuHangTrongKho(string code);
+        #endregion
+        #region xuất hàng chi tiết
+        bool ThemXuatKho_CT(OutputDetailModel model);
+        DataTable GetXuatHang_CT(OutputDetailModel model);
+        DataTable GetXuatKho_CT_TheoDonHang(string orderCode, string outCode);
+        #endregion
         string GetInputCode(DateTime dateInput, string maNhapKho, string tableName, string column);
 
 
+        #region nhap kho
+        bool ThemNhapKho(InputModel model);
 
+        bool XoaNhapKho(InputModel model);
+
+        bool SuaNhapKho(InputModel model);
+
+        DataTable GetNhapKho(InputModel model);
+
+
+        #endregion
+
+        #region chi tiết nhap kho
+        bool ThemNhapKho_CT(InputDetailModel model);
+
+        bool XoaNhapKho_CT(InputDetailModel model);
+
+        bool SuaNhapKho_CT(InputDetailModel model);
+        bool SuaNhapKho_CT_XuatHang(InputDetailModel model);
+
+
+        DataTable GetNhapKho_CT(InputDetailModel model);
+
+
+        #endregion
 
     }
 }

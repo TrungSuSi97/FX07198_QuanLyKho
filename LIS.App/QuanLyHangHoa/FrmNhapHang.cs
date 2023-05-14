@@ -7,9 +7,9 @@ using TPH.Product.Services;
 
 namespace TPH.LIS.App.QuanLyHangHoa
 {
-    public partial class FrmDonHang : FrmTemplateCommon
+    public partial class FrmNhapHang : FrmTemplateCommon
     {
-        public FrmDonHang()
+        public FrmNhapHang()
         {
             InitializeComponent();
         }
@@ -17,7 +17,10 @@ namespace TPH.LIS.App.QuanLyHangHoa
 
         private void btnTaoDH_Click(object sender, EventArgs e)
         {
-            txtOrderCode.Text = _iProduct.GetInputCode(dtpNgayTao.Value, "DH.", "TBL_Order", "OrderCode");
+            ClearInput();
+            ClearInputDetail();
+            txtOrderCode.Text = _iProduct.GetInputCode(dtpNgayTao.Value, "NH.", "TBL_Input", "InCode");
+
         }
 
         private void btnSuaDH_Click(object sender, EventArgs e)
@@ -27,21 +30,16 @@ namespace TPH.LIS.App.QuanLyHangHoa
         }
         private void SuaDH()
         {
-            var model = new OrderModel();
-            model.OrderCode = txtOrderCode.Text.Trim();
-            model.DateOrder = dtpNgayTao.Value;
+            var model = new InputModel();
+            model.InCode = txtOrderCode.Text.Trim();
+            model.DateIn = dtpNgayTao.Value;
             model.UserI = StringConverter.ToString(ucSearchLookupEditor_NhanVien1.SelectedValue);
-            model.HinhThucThanhToan = txtHTTT.Text;
-            model.GhiChu = txtGhiChu.Text;
-            model.DiaChi = txtDiaChi.Text;
-            model.TenKhachHang = txtTenKH.Text;
-            model.DienThoai = txtPhone.Text;
-            if (string.IsNullOrEmpty(model.OrderCode))
+            if (string.IsNullOrEmpty(model.InCode))
             {
                 return;
             }
-            if (_iProduct.SuaDonHang(model))
-                CustomMessageBox.MSG_Information_OK("Sửa đơn hàng thành công!");
+            if (_iProduct.SuaNhapKho(model))
+                CustomMessageBox.MSG_Information_OK("Sửa nhập hàng thành công!");
 
 
         }
@@ -73,12 +71,12 @@ namespace TPH.LIS.App.QuanLyHangHoa
         {
             gcDSDH.DataSource = null;
             gcDSDH_CT.DataSource = null;
-            OrderModel model = new OrderModel();
-            model.OrderCode = txtMaDHTK.Text.Trim();
+            InputModel model = new InputModel();
+            model.InCode = txtMaDHTK.Text.Trim();
             model.FromDate = dtpFromDate.Value;
             model.ToDate = dtpToDate.Value;
             model.UserI = StringConverter.ToString(ucSearchLookupEditor_NhanVien2.SelectedValue);
-            gcDSDH.DataSource = WorkingServices.ConvertColumnNameToLower_Upper(_iProduct.GetDonHang(model), true);
+            gcDSDH.DataSource = WorkingServices.ConvertColumnNameToLower_Upper(_iProduct.GetNhapKho(model), true);
         }
         private void Load_NhanVien()
         {
@@ -104,37 +102,27 @@ namespace TPH.LIS.App.QuanLyHangHoa
         }
         private void XoaDH()
         {
-            if (CustomMessageBox.MSG_Question_YesNo_GetYes("Bạn muốn xóa đơn hàng?"))
+            if (CustomMessageBox.MSG_Question_YesNo_GetYes("Bạn muốn xóa nhập hàng?"))
             {
-                if (chkDaXH.Checked)
-                {
-                    CustomMessageBox.MSG_Information_OK("Không thể xóa đơn hàng đã xuất");
-                    return;
-                }
-                OrderModel model = new OrderModel();
-                model.OrderCode = txtOrderCode.Text.Trim();
-                _iProduct.XoaDonHang(model);
+                InputModel model = new InputModel();
+                model.InCode = txtOrderCode.Text.Trim();
+                _iProduct.XoaNhapKho(model);
             }
         }
 
         private void LuuThongTin()
         {
-            OrderModel model = new OrderModel();
-            model.OrderCode = txtOrderCode.Text.Trim();
-            model.DateOrder = dtpNgayTao.Value;
+            InputModel model = new InputModel();
+            model.InCode = txtOrderCode.Text.Trim();
+            model.DateIn = dtpNgayTao.Value;
             model.UserI = StringConverter.ToString(ucSearchLookupEditor_NhanVien1.SelectedValue);
-            model.HinhThucThanhToan = txtHTTT.Text;
-            model.GhiChu = txtGhiChu.Text;
-            model.DiaChi = txtDiaChi.Text;
-            model.TenKhachHang = txtTenKH.Text;
-            model.DienThoai = txtPhone.Text;
             if (string.IsNullOrEmpty(model.UserI))
             {
                 CustomMessageBox.MSG_Information_OK("Chọn tên người nhập!");
                 return;
             }
-            if (_iProduct.ThemDonHang(model))
-                CustomMessageBox.MSG_Information_OK("Thêm đơn hàng thành công!");
+            if (_iProduct.ThemNhapKho(model))
+                CustomMessageBox.MSG_Information_OK("Thêm nhập hàng thành công!");
 
 
 
@@ -142,13 +130,13 @@ namespace TPH.LIS.App.QuanLyHangHoa
         private void LoadLuoiCTDH()
         {
             gcDH.DataSource = null;
-            OrderDetailModel model = new OrderDetailModel();
-            model.OrderID = NumberConverter.ToInt(txtOrderID.Text);
-            model.OrderCode = StringConverter.ToString(txtOrderCode.Text);
-            if (model.OrderID<=0 &&string.IsNullOrEmpty(model.OrderCode))
+            InputDetailModel model = new InputDetailModel();
+            model.InID = NumberConverter.ToInt(txtOrderID.Text);
+            model.InCode = StringConverter.ToString(txtOrderCode.Text);
+            if (model.InID <= 0 &&string.IsNullOrEmpty(model.InCode))
                 return;
 
-            gcDH.DataSource = WorkingServices.ConvertColumnNameToLower_Upper(_iProduct.GetDonHang_CT(model), true);
+            gcDH.DataSource = WorkingServices.ConvertColumnNameToLower_Upper(_iProduct.GetNhapKho_CT(model), true);
 
 
         }
@@ -161,30 +149,34 @@ namespace TPH.LIS.App.QuanLyHangHoa
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(StringConverter.ToString(ucSearchLookupEditor_HangHoaSanPham1.SelectedValue)))
+                return;
             ThemDH_CT();
             LoadLuoiCTDH();
         }
         private void ThemDH_CT()
         {
-            OrderDetailModel model = new OrderDetailModel();
-            model.OrderCode = StringConverter.ToString(txtOrderCode.Text);
+            InputDetailModel model = new InputDetailModel();
+            model.InCode = StringConverter.ToString(txtOrderCode.Text);
             model.ItemCode = StringConverter.ToString(ucSearchLookupEditor_HangHoaSanPham1.SelectedValue);
             model.Quantity = NumberConverter.ToInt(txtQuantity.Text);
             if (!WorkingServices.IsNumeric(model.Quantity))
                 return;
             if (model.Quantity <= 0)
                 return;
+            if (string.IsNullOrEmpty(model.ItemCode))
+                return;
 
-            _iProduct.ThemDonHang_CT(model);
+            _iProduct.ThemNhapKho_CT(model);
         }
 
         private void gvDSDH_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             if (gvDSDH.RowCount <= 0)
                 return;
-            var orderid = NumberConverter.ToInt(gvDSDH.GetFocusedRowCellValue(colOrderID));
-            var model = new OrderDetailModel { OrderID = orderid };
-            gcDSDH_CT.DataSource = WorkingServices.ConvertColumnNameToLower_Upper(_iProduct.GetDonHang_CT(model), true);
+            var orderid = NumberConverter.ToInt(gvDSDH.GetFocusedRowCellValue(colInID));
+            var model = new InputDetailModel { InID = orderid };
+            gcDSDH_CT.DataSource = WorkingServices.ConvertColumnNameToLower_Upper(_iProduct.GetNhapKho_CT(model), true);
         }
 
         private void txtSearchMaDH_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
@@ -194,37 +186,28 @@ namespace TPH.LIS.App.QuanLyHangHoa
                 // Enter key pressed
                 ClearInput();
                 ClearInputDetail();
-                var dtDH = _iProduct.GetDonHang(new OrderModel() { OrderCode = txtSearchMaDH.Text.Trim() });
+                var dtDH = _iProduct.GetNhapKho(new InputModel() { InCode = txtSearchMaDH.Text.Trim() });
                 if (dtDH == null || dtDH.Rows.Count <= 0)
                     return;
 
-                var orderid = NumberConverter.ToInt(dtDH.Rows[0]["orderid"]);
-                txtOrderID.Text = orderid.ToString();
-                txtOrderCode.Text = StringConverter.ToString(dtDH.Rows[0]["ordercode"]);
-                txtTenKH.Text = StringConverter.ToString(dtDH.Rows[0]["TenKhachHang"]);
-                txtPhone.Text = StringConverter.ToString(dtDH.Rows[0]["DienThoai"]);
-                txtDiaChi.Text = StringConverter.ToString(dtDH.Rows[0]["DiaChi"]);
-                txtHTTT.Text = StringConverter.ToString(dtDH.Rows[0]["HinhThucThanhToan"]);
-                txtGhiChu.Text = StringConverter.ToString(dtDH.Rows[0]["GhiChu"]);
-                txtThoiGianTao.Text = StringConverter.ToString(dtDH.Rows[0]["DateOrder"]);
+                var InID = NumberConverter.ToInt(dtDH.Rows[0]["InID"]);
+                txtOrderID.Text = InID.ToString();
+                txtOrderCode.Text = StringConverter.ToString(dtDH.Rows[0]["InCode"]);
+
+                txtThoiGianTao.Text = StringConverter.ToString(dtDH.Rows[0]["DateIn"]);
                 txtTotal.Text = StringConverter.ToString(dtDH.Rows[0]["Total"]);
-                ucSearchLookupEditor_NhanVien1.SelectedValue = StringConverter.ToString(dtDH.Rows[0]["UserI"]);
-                chkDaXH.Checked = NumberConverter.ToBool(dtDH.Rows[0]["isDaXuatHang"]);
+                ucSearchLookupEditor_NhanVien1.SelectedValue = StringConverter.ToString(dtDH.Rows[0]["UserI"]); ;
 
                 gcDH.DataSource = WorkingServices.ConvertColumnNameToLower_Upper
-                    (_iProduct.GetDonHang_CT(new OrderDetailModel() { OrderID = orderid }), true);
+                    (_iProduct.GetNhapKho_CT(new InputDetailModel() { InID = InID }), true);
             }
         }
         private void ClearInput()
         {
             txtOrderCode.Text = string.Empty;
-            txtTenKH.Text = string.Empty;
-            txtPhone.Text = string.Empty;
-            txtDiaChi.Text = string.Empty;
-            txtHTTT.Text = string.Empty;
-            txtGhiChu.Text = string.Empty;
+
             txtThoiGianTao.Text = string.Empty;
-            txtTenKH.Text = string.Empty;
+
             txtTotal.Text = string.Empty;
             ucSearchLookupEditor_NhanVien1.SelectedValue = null;
 
@@ -246,14 +229,9 @@ namespace TPH.LIS.App.QuanLyHangHoa
         {
             if (gvDH.RowCount <= 0)
                 return;
-            if (chkDaXH.Checked)
-            {
-                CustomMessageBox.MSG_Information_OK("Không thể xóa đơn hàng đã xuất"); 
-                return;
-            }
             var id = NumberConverter.ToInt(gvDH.GetFocusedRowCellValue(colID));
-            var model = new OrderDetailModel { AutoID = id };
-            _iProduct.XoaDonHang_CT(model);
+            var model = new InputDetailModel { AutoID = id };
+            _iProduct.XoaNhapKho_CT(model);
 
         }
 

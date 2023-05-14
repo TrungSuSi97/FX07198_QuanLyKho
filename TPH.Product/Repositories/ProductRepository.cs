@@ -9,6 +9,7 @@ using TPH.LIS.Common.Extensions;
 using TPH.LIS.Data;
 using TPH.Product.Model;
 using TPH.Common.Converter;
+using System.Reflection;
 
 namespace TPH.Product.Repositories
 {
@@ -212,6 +213,19 @@ namespace TPH.Product.Repositories
              , "FX_upd_SuaDonHang"
              , sqlPara) > 0;
         }
+
+        public bool CapNhatDhDaXuat(OrderModel model)
+        {
+            var sqlPara = new SqlParameter[]
+{
+             WorkingServices.GetParaFromOject("@OrderCode", model.OrderCode)
+};
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure
+             , "FX_upd_CapNhatDhDaXuat"
+             , sqlPara) > 0;
+
+        }
+
         public DataTable GetDonHang(OrderModel model)
         {
             var para = new SqlParameter[] {
@@ -227,7 +241,86 @@ namespace TPH.Product.Repositories
         }
 
         #endregion
+        #region xuất hàng
+        public bool ThemXuatKho(OutputModel model) 
+        {
+            var sqlPara = new SqlParameter[]
+{
+            WorkingServices.GetParaFromOject("@OutCode", model.OutCode)
+            , WorkingServices.GetParaFromOject("@UserI", model.UserI)
 
+};
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure
+             , "FX_ins_ThemXuatKho"
+             , sqlPara) > 0;
+
+        }
+        public DataTable GetXuatHang(OutputModel model)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@OutCode", model.OutCode)
+                       , WorkingServices.GetParaFromOject("@FromDate", model.FromDate)
+                       , WorkingServices.GetParaFromOject("@ToDate", model.ToDate)
+                       , WorkingServices.GetParaFromOject("@UserI", model.UserI)
+
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_GetXuatHang", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+
+        }
+        public DataTable CheckDuHangTrongKho(string code)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@code", code)
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_CheckDuHangTrongKho", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+        }
+        #endregion
+        #region xuất hàng chi tiết
+        public bool ThemXuatKho_CT(OutputDetailModel model)
+        {
+            var sqlPara = new SqlParameter[]
+            {
+            WorkingServices.GetParaFromOject("@OutID", model.OutID)
+            , WorkingServices.GetParaFromOject("@InID", model.InID)
+            , WorkingServices.GetParaFromOject("@ItemCode", model.ItemCode)
+            , WorkingServices.GetParaFromOject("@Quantity", model.Quantity)
+            , WorkingServices.GetParaFromOject("@OrderDetailid", model.OrderDetailid)
+
+            };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure
+             , "FX_ins_ThemXuatKho_CT"
+             , sqlPara) > 0;
+
+        }
+
+        public DataTable GetXuatHang_CT(OutputDetailModel model)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@AutoID", model.AutoID)
+                       , WorkingServices.GetParaFromOject("@OutID", model.OutID)
+                       , WorkingServices.GetParaFromOject("@OutCode", model.OutCode)
+
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_GetXuatHang_CT", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+        }
+        public DataTable GetXuatKho_CT_TheoDonHang(string orderCode, string outCode)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@Ordercode", orderCode)
+                       , WorkingServices.GetParaFromOject("@OutCode", outCode)
+
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_XuatKho_CT_TheoDonHang", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+        }
+        #endregion
         #region chi tiết đơn hàng
         public bool ThemDonHang_CT(OrderDetailModel model)
         {
@@ -246,7 +339,7 @@ namespace TPH.Product.Repositories
         public bool XoaDonHang_CT(OrderDetailModel model)
         {
             var sqlPara = new SqlParameter[]
-         {
+              {
             WorkingServices.GetParaFromOject("@AutoID", model.AutoID)
              };
             return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure
@@ -308,5 +401,130 @@ namespace TPH.Product.Repositories
 
             return resultCode + id;
         }
+
+        #region nhap kho
+        public bool ThemNhapKho(InputModel model)
+        {
+            var sqlPara = new SqlParameter[]
+            {
+            WorkingServices.GetParaFromOject("@InCode", model.InCode)
+            , WorkingServices.GetParaFromOject("@DateIn", model.DateIn)
+            , WorkingServices.GetParaFromOject("@UserI", model.UserI)
+            };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure
+             , "FX_ins_ThemNhapKho"
+             , sqlPara) > 0;
+        }
+        public bool XoaNhapKho(InputModel model)
+        {
+            var sqlPara = new SqlParameter[]
+         {
+            WorkingServices.GetParaFromOject("@InCode", model.InCode)
+             };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure
+             , "FX_del_XoaNhapKho"
+             , sqlPara) > 0;
+
+        }
+
+    
+        public bool SuaNhapKho(InputModel model)
+        {
+            var sqlPara = new SqlParameter[]
+            {
+            WorkingServices.GetParaFromOject("@InCode", model.InCode)
+            , WorkingServices.GetParaFromOject("@DateIn", model.DateIn)
+            , WorkingServices.GetParaFromOject("@UserI", model.UserI)
+            };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure
+         , "FX_upd_SuaNhapKho"
+         , sqlPara) > 0;
+
+        }
+        public DataTable GetNhapKho(InputModel model)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@InCode", model.InCode)
+                       , WorkingServices.GetParaFromOject("@FromDate", model.FromDate)
+                       , WorkingServices.GetParaFromOject("@ToDate", model.ToDate)
+                       , WorkingServices.GetParaFromOject("@UserI", model.UserI)
+
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_GetNhapKho", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+
+        }
+
+        #endregion
+
+        #region chi tiết nhap kho
+        public bool ThemNhapKho_CT(InputDetailModel model)
+        {
+            var sqlPara = new SqlParameter[]
+        {
+            WorkingServices.GetParaFromOject("@InCode", model.InCode)
+            , WorkingServices.GetParaFromOject("@ItemCode", model.ItemCode)
+            , WorkingServices.GetParaFromOject("@Quantity", model.Quantity)
+
+        };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure
+             , "FX_ins_ThemNhapKho_CT"
+             , sqlPara) > 0;
+
+        }
+        public bool XoaNhapKho_CT(InputDetailModel model)
+        {
+            var sqlPara = new SqlParameter[]
+              {
+            WorkingServices.GetParaFromOject("@AutoID", model.AutoID)
+             };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure
+             , "FX_del_XoaNhapKho_CT"
+             , sqlPara) > 0;
+
+        }
+        public bool SuaNhapKho_CT(InputDetailModel model)
+        {
+            var sqlPara = new SqlParameter[]
+        {
+             WorkingServices.GetParaFromOject("@AutoID", model.AutoID)
+            , WorkingServices.GetParaFromOject("@Quantity", model.Quantity)
+        };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure
+             , "FX_upd_SuaNhapKho_CT"
+             , sqlPara) > 0;
+        }
+        public bool SuaNhapKho_CT_XuatHang(InputDetailModel model)
+        {
+            var sqlPara = new SqlParameter[]
+   {
+             WorkingServices.GetParaFromOject("@InID", model.InID)
+            , WorkingServices.GetParaFromOject("@ItemCode", model.ItemCode)
+            , WorkingServices.GetParaFromOject("@QuantityOut", model.QuantityOut)
+
+
+   };
+            return (int)DataProvider.ExecuteNonQuery(CommandType.StoredProcedure
+             , "FX_upd_SuaNhapKho_CT_XuatHang"
+             , sqlPara) > 0;
+
+        }
+
+        public DataTable GetNhapKho_CT(InputDetailModel model)
+        {
+            var para = new SqlParameter[] {
+                        WorkingServices.GetParaFromOject("@AutoID", model.AutoID)
+                       , WorkingServices.GetParaFromOject("@InID", model.InID)
+                       , WorkingServices.GetParaFromOject("@InCode", model.InCode)
+
+                        };
+            var ds = DataProvider.ExecuteDataset(CommandType.StoredProcedure, "FX_sel_GetNhapKho_CT", para);
+            if (ds == null) return null;
+            return ds.Tables[0];
+
+        }
+
+        #endregion
     }
 }

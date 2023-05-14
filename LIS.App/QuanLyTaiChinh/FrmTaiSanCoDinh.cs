@@ -36,8 +36,8 @@ namespace TPH.LIS.App.QuanLyTaiChinh
             model.TinhTrang = txtTT.Text;
             model.DonViSuDung = txtDVSD.Text;
 
-            if (_iFinance.ThemTSCD(model))
-                CustomMessageBox.MSG_Information_OK("Thêm TSCD thành công!");
+            _iFinance.ThemTSCD(model);
+                //CustomMessageBox.MSG_Information_OK("Thêm TSCD thành công!");
 
         }
         private void btnXoaItem_Click(object sender, EventArgs e)
@@ -87,6 +87,13 @@ namespace TPH.LIS.App.QuanLyTaiChinh
                 model.DonViSuDung = StringConverter.ToString(gvTSCD1.GetRowCellValue(e.RowHandle, colDonViSD));
                 _iFinance.SuaTSCD(model);
             }
+        }
+
+        private void FrmTaiSanCoDinh_Load(object sender, EventArgs e)
+        {
+            LoadLuoiTSCD();
+            LoadLuoiTSCD2();
+
         }
     }
 }

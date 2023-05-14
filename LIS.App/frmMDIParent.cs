@@ -1254,10 +1254,9 @@ namespace TPH.LIS.App
         private void Check_Enable_BangLuong()
         {
             rbChamCong.Enabled = btnLuong.Enabled = true;
-            btnQuanLyHangHoa.Enabled = btnDonH.Enabled = btnDonHang.Enabled = btnBaoCaoTonKho.Enabled = btnDonHang.Enabled = btnTonKho.Enabled = true;
+            btnQuanLyHangHoa.Enabled = btnDonH.Enabled = btnDonHang.Enabled   = btnDonHang.Enabled = btnTonKho.Enabled = true;
             btnNhapKho.Enabled = btnXuatKho.Enabled = true;
-            btnNganSach.Enabled = btnTaiSanCoDinh.Enabled = btnCongNo.Enabled = btnHopDong.Enabled = true;
-
+            btnTaiSanCoDinh.Enabled  = true;
         }
 
         public static bool CheckUserPermissionToAccessFunctions(
@@ -1801,6 +1800,25 @@ namespace TPH.LIS.App
         private void btnTaiSanCoDinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var f = new FrmTaiSanCoDinh();
+            ShowForm(f);
+        }
+
+        private void btnNhapKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var f = new FrmNhapHang();
+            ShowForm(f);
+        }
+
+        private void btnXuatKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var f = new FrmXuatHang();
+            ShowForm(f);
+            
+        }
+
+        private void btnTonKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var f = new FrmTonKho();
             ShowForm(f);
         }
     }

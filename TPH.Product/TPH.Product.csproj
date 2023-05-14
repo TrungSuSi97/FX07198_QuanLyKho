@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\OutputModel.cs" />
+    <Compile Include="Model\InputModel.cs" />
     <Compile Include="Model\ItemModel.cs" />
     <Compile Include="Model\OrderModel.cs" />
     <Compile Include="Model\TaiSanCdModel.cs" />

@@ -735,6 +735,7 @@
             this.ClientSize = new System.Drawing.Size(1108, 598);
             this.Name = "FrmTaiSanCoDinh";
             this.Text = "QUẢN LÝ TÀI SẢN CỐ ĐỊNH";
+            this.Load += new System.EventHandler(this.FrmTaiSanCoDinh_Load);
             this.pnContaint.ResumeLayout(false);
             this.pnLabel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
