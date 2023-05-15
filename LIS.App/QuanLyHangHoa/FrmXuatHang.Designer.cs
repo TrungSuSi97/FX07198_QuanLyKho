@@ -183,6 +183,7 @@
             this.btnClose.Appearance.Options.UseFont = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
             this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopLeft;
             this.btnClose.Location = new System.Drawing.Point(696, 0);
             // 
             // lblMainESC
@@ -493,7 +494,7 @@
             // 
             this.chkDaXH.AutoSize = true;
             this.chkDaXH.Enabled = false;
-            this.chkDaXH.Location = new System.Drawing.Point(754, 74);
+            this.chkDaXH.Location = new System.Drawing.Point(782, 74);
             this.chkDaXH.Name = "chkDaXH";
             this.chkDaXH.Size = new System.Drawing.Size(90, 17);
             this.chkDaXH.TabIndex = 225;
@@ -508,7 +509,7 @@
             this.ucSearchLookupEditor_NhanVien1.ControlNext = null;
             this.ucSearchLookupEditor_NhanVien1.DisplayMember = "";
             this.ucSearchLookupEditor_NhanVien1.Enabled = false;
-            this.ucSearchLookupEditor_NhanVien1.Location = new System.Drawing.Point(404, 103);
+            this.ucSearchLookupEditor_NhanVien1.Location = new System.Drawing.Point(432, 103);
             this.ucSearchLookupEditor_NhanVien1.Name = "ucSearchLookupEditor_NhanVien1";
             this.ucSearchLookupEditor_NhanVien1.SelectedValue = null;
             this.ucSearchLookupEditor_NhanVien1.Size = new System.Drawing.Size(196, 23);
@@ -519,7 +520,7 @@
             // 
             this.txtOrderID.Enabled = false;
             this.txtOrderID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrderID.Location = new System.Drawing.Point(243, 16);
+            this.txtOrderID.Location = new System.Drawing.Point(256, 16);
             this.txtOrderID.Margin = new System.Windows.Forms.Padding(0);
             this.txtOrderID.MaxLength = 20;
             this.txtOrderID.Name = "txtOrderID";
@@ -532,7 +533,7 @@
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl10.Appearance.Options.UseFont = true;
             this.labelControl10.Enabled = false;
-            this.labelControl10.Location = new System.Drawing.Point(301, 76);
+            this.labelControl10.Location = new System.Drawing.Point(314, 76);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(97, 15);
             this.labelControl10.TabIndex = 222;
@@ -542,7 +543,7 @@
             // 
             this.txtThoiGianTao.Enabled = false;
             this.txtThoiGianTao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThoiGianTao.Location = new System.Drawing.Point(404, 72);
+            this.txtThoiGianTao.Location = new System.Drawing.Point(432, 72);
             this.txtThoiGianTao.Margin = new System.Windows.Forms.Padding(0);
             this.txtThoiGianTao.MaxLength = 20;
             this.txtThoiGianTao.Name = "txtThoiGianTao";
@@ -554,7 +555,7 @@
             this.dtpNgayTao.CustomFormat = "dd/MM/yyyy";
             this.dtpNgayTao.Enabled = false;
             this.dtpNgayTao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayTao.Location = new System.Drawing.Point(106, 45);
+            this.dtpNgayTao.Location = new System.Drawing.Point(119, 45);
             this.dtpNgayTao.Name = "dtpNgayTao";
             this.dtpNgayTao.Size = new System.Drawing.Size(170, 20);
             this.dtpNgayTao.TabIndex = 220;
@@ -584,7 +585,7 @@
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(106, 104);
+            this.txtTotal.Location = new System.Drawing.Point(119, 104);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(0);
             this.txtTotal.MaxLength = 20;
             this.txtTotal.Name = "txtTotal";
@@ -605,7 +606,7 @@
             // 
             this.txtGhiChu.Enabled = false;
             this.txtGhiChu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGhiChu.Location = new System.Drawing.Point(106, 72);
+            this.txtGhiChu.Location = new System.Drawing.Point(119, 72);
             this.txtGhiChu.Margin = new System.Windows.Forms.Padding(0);
             this.txtGhiChu.MaxLength = 20;
             this.txtGhiChu.Name = "txtGhiChu";
@@ -617,7 +618,7 @@
             this.txtPhone.Enabled = false;
             this.txtPhone.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.Black;
-            this.txtPhone.Location = new System.Drawing.Point(754, 12);
+            this.txtPhone.Location = new System.Drawing.Point(782, 12);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(0);
             this.txtPhone.MaxLength = 50;
             this.txtPhone.Name = "txtPhone";
@@ -629,7 +630,7 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Enabled = false;
-            this.labelControl6.Location = new System.Drawing.Point(684, 16);
+            this.labelControl6.Location = new System.Drawing.Point(712, 16);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(56, 15);
             this.labelControl6.TabIndex = 214;
@@ -640,7 +641,7 @@
             this.txtDiaChi.Enabled = false;
             this.txtDiaChi.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.ForeColor = System.Drawing.Color.Black;
-            this.txtDiaChi.Location = new System.Drawing.Point(403, 44);
+            this.txtDiaChi.Location = new System.Drawing.Point(431, 44);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(0);
             this.txtDiaChi.MaxLength = 50;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -652,7 +653,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Enabled = false;
-            this.labelControl1.Location = new System.Drawing.Point(360, 48);
+            this.labelControl1.Location = new System.Drawing.Point(373, 48);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(38, 15);
             this.labelControl1.TabIndex = 212;
@@ -663,7 +664,7 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Enabled = false;
-            this.labelControl5.Location = new System.Drawing.Point(626, 46);
+            this.labelControl5.Location = new System.Drawing.Point(654, 46);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(114, 15);
             this.labelControl5.TabIndex = 210;
@@ -673,7 +674,7 @@
             // 
             this.txtHTTT.Enabled = false;
             this.txtHTTT.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHTTT.Location = new System.Drawing.Point(754, 42);
+            this.txtHTTT.Location = new System.Drawing.Point(782, 42);
             this.txtHTTT.Margin = new System.Windows.Forms.Padding(0);
             this.txtHTTT.MaxLength = 20;
             this.txtHTTT.Name = "txtHTTT";
@@ -685,7 +686,7 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Enabled = false;
-            this.labelControl3.Location = new System.Drawing.Point(318, 104);
+            this.labelControl3.Location = new System.Drawing.Point(331, 104);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(80, 15);
             this.labelControl3.TabIndex = 208;
@@ -705,7 +706,7 @@
             // 
             this.txtOrderCode.Enabled = false;
             this.txtOrderCode.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrderCode.Location = new System.Drawing.Point(106, 16);
+            this.txtOrderCode.Location = new System.Drawing.Point(119, 16);
             this.txtOrderCode.Margin = new System.Windows.Forms.Padding(0);
             this.txtOrderCode.MaxLength = 20;
             this.txtOrderCode.Name = "txtOrderCode";
@@ -717,7 +718,7 @@
             this.txtTenKH.Enabled = false;
             this.txtTenKH.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH.ForeColor = System.Drawing.Color.Black;
-            this.txtTenKH.Location = new System.Drawing.Point(403, 12);
+            this.txtTenKH.Location = new System.Drawing.Point(431, 12);
             this.txtTenKH.Margin = new System.Windows.Forms.Padding(0);
             this.txtTenKH.MaxLength = 50;
             this.txtTenKH.Name = "txtTenKH";
@@ -729,7 +730,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Enabled = false;
-            this.labelControl2.Location = new System.Drawing.Point(310, 16);
+            this.labelControl2.Location = new System.Drawing.Point(323, 16);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(88, 15);
             this.labelControl2.TabIndex = 207;
@@ -896,7 +897,7 @@
             this.xtraTabPage1.Controls.Add(this.splitContainerControl1);
             this.xtraTabPage1.Controls.Add(this.groupBox1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1111, 558);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1283, 603);
             this.xtraTabPage1.Text = "Danh sách xuất hàng";
             // 
             // splitContainerControl2
@@ -915,7 +916,7 @@
             // 
             this.splitContainerControl2.Panel2.Controls.Add(this.groupBox3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1111, 423);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1283, 468);
             this.splitContainerControl2.SplitterPosition = 248;
             this.splitContainerControl2.TabIndex = 2;
             // 
@@ -925,7 +926,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1111, 248);
+            this.groupBox2.Size = new System.Drawing.Size(1283, 248);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách xuất hàng";
@@ -949,7 +950,7 @@
             this.gcDSDH.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1,
             this.repositoryItemGridLookUpEdit2});
-            this.gcDSDH.Size = new System.Drawing.Size(1105, 229);
+            this.gcDSDH.Size = new System.Drawing.Size(1277, 229);
             this.gcDSDH.TabIndex = 187;
             this.gcDSDH.UseEmbeddedNavigator = true;
             this.gcDSDH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1066,7 +1067,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1111, 165);
+            this.groupBox3.Size = new System.Drawing.Size(1283, 210);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết xuất hàng";
@@ -1090,7 +1091,7 @@
             this.gcDSDH_CT.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit3,
             this.repositoryItemGridLookUpEdit4});
-            this.gcDSDH_CT.Size = new System.Drawing.Size(1105, 146);
+            this.gcDSDH_CT.Size = new System.Drawing.Size(1277, 191);
             this.gcDSDH_CT.TabIndex = 187;
             this.gcDSDH_CT.UseEmbeddedNavigator = true;
             this.gcDSDH_CT.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1261,7 +1262,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1111, 135);
+            this.groupBox1.Size = new System.Drawing.Size(1283, 135);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Điều kiện";

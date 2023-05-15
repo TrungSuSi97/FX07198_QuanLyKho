@@ -33,6 +33,7 @@ using System.Net;
 using TPH.LIS.App.QuanLyChamCong;
 using TPH.LIS.App.QuanLyHangHoa;
 using TPH.LIS.App.QuanLyTaiChinh;
+using TPH.Language;
 
 namespace TPH.LIS.App
 {
@@ -595,7 +596,23 @@ namespace TPH.LIS.App
 
         private void frmMDIParent_Shown(object sender, EventArgs e)
         {
+            if (!DesignMode)
+            {
+                LanguageExtension.LocalizeForm(this, string.Empty);
+            }
+            SetLang();
             IsFinishShow = true;
+        }
+        private void SetLang() 
+        {
+            ribbonPageGroup1.Text = LanguageExtension.GetResourceValueFromKey("Quanlyhanghoa", LanguageExtension.AppLanguage);
+            ribbonPageGroup4.Text = LanguageExtension.GetResourceValueFromKey("Xuatnhaphang", LanguageExtension.AppLanguage);
+            ribbonPageGroup2.Text = LanguageExtension.GetResourceValueFromKey("Quanlytaichinh", LanguageExtension.AppLanguage);
+            ribbonPageGroup3.Text = LanguageExtension.GetResourceValueFromKey("Bangluong", LanguageExtension.AppLanguage);
+            ribbonPageGroup12.Text = LanguageExtension.GetResourceValueFromKey("Hanhchinh", LanguageExtension.AppLanguage);
+            ribbonPageGroup13.Text = LanguageExtension.GetResourceValueFromKey("Nguoidung", LanguageExtension.AppLanguage);
+            ribbonPageGroup8.Text = LanguageExtension.GetResourceValueFromKey("Hethong", LanguageExtension.AppLanguage);
+
         }
 
         private void mnuDanhMucbIeuMauNhapNhanh_Click(object sender, EventArgs e)
@@ -1256,6 +1273,7 @@ namespace TPH.LIS.App
             btnQuanLyHangHoa.Enabled = btnDonH.Enabled = btnDonHang.Enabled  = btnDonHang.Enabled = btnTonKho.Enabled = true;
             btnNhapKho.Enabled = btnXuatKho.Enabled = true;
             btnTaiSanCoDinh.Enabled  = true;
+            rbCauHinhNgonNgu.Enabled = true;
         }
 
         public static bool CheckUserPermissionToAccessFunctions(
@@ -1818,6 +1836,12 @@ namespace TPH.LIS.App
         private void btnTonKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var f = new FrmTonKho();
+            ShowForm(f);
+        }
+
+        private void rbCauHinhNgonNgu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var f = new FrmNgonNguPhanMem();
             ShowForm(f);
         }
     }

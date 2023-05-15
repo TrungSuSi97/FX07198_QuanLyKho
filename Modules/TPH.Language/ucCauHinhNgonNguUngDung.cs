@@ -72,12 +72,12 @@ namespace TPH.Language
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            //ThemTuNgu();
+            ThemTuNgu();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            //XoaTuNgu();
+            XoaTuNgu();
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)

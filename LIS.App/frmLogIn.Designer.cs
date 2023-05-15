@@ -32,6 +32,8 @@
             this.gradientPanel1 = new TPH.LIS.Common.Controls.GradientPanel();
             this.gradientPanel2 = new TPH.LIS.Common.Controls.GradientPanel();
             this.pnLogin = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.panel4 = new DevExpress.XtraEditors.PanelControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -42,12 +44,12 @@
             this.chkSave = new System.Windows.Forms.CheckBox();
             this.btnExit = new TPH.Controls.TPHNormalButton();
             this.btnLogIn = new TPH.Controls.TPHNormalButton();
-            this.label1 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.gradientPanel1.SuspendLayout();
             this.gradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnLogin)).BeginInit();
             this.pnLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panel4)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -55,8 +57,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gradientPanel1
@@ -110,6 +110,34 @@
             this.pnLogin.Size = new System.Drawing.Size(447, 462);
             this.pnLogin.TabIndex = 0;
             this.pnLogin.Visible = false;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.White;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.label1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(2, 2);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(443, 53);
+            this.panelControl1.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Appearance.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.label1.Appearance.Options.UseBackColor = true;
+            this.label1.Appearance.Options.UseFont = true;
+            this.label1.Appearance.Options.UseForeColor = true;
+            this.label1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.label1.ImageOptions.Alignment = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Location = new System.Drawing.Point(20, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(393, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ĐĂNG NHẬP CHƯƠNG TRÌNH";
             // 
             // panel4
             // 
@@ -263,34 +291,6 @@
             this.btnLogIn.UseVisualStyleBackColor = false;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
-            // label1
-            // 
-            this.label1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Appearance.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.label1.Appearance.Options.UseBackColor = true;
-            this.label1.Appearance.Options.UseFont = true;
-            this.label1.Appearance.Options.UseForeColor = true;
-            this.label1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.label1.ImageOptions.Alignment = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(20, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ĐĂNG NHẬP CHƯƠNG TRÌNH";
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.White;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Controls.Add(this.label1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(2, 2);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(443, 53);
-            this.panelControl1.TabIndex = 25;
-            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -308,11 +308,15 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogIn_FormClosing);
             this.Load += new System.EventHandler(this.frmLogIn_Load);
             this.Shown += new System.EventHandler(this.frmLogIn_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogIn_KeyDown);
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnLogin)).EndInit();
             this.pnLogin.ResumeLayout(false);
             this.pnLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panel4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -322,9 +326,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
 
         }

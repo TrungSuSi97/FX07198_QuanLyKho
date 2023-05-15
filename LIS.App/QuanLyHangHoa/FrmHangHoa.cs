@@ -18,7 +18,7 @@ using TPH.Product.Services;
 
 namespace TPH.LIS.App.QuanLyHangHoa
 {
-    public partial class FrmHangHoa : FrmTemplateCommon
+    public partial class FrmHangHoa : FrmTemplateCommon 
     {
         public FrmHangHoa()
         {

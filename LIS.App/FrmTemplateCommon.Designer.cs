@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTemplate));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTemplateCommon));
             this.pnContaint = new System.Windows.Forms.Panel();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.pnButtonMenu = new System.Windows.Forms.Panel();
@@ -137,18 +137,25 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Appearance.Options.UseFont = true;
+            this.btnClose.Appearance.Options.UseForeColor = true;
+            this.btnClose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnClose.ImageKey = null;
+            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.ImageSizeSmall = true;
             this.btnClose.Location = new System.Drawing.Point(868, 0);
             this.btnClose.Name = "btnClose";
+            this.btnClose.SetButtonStyle = -1;
             this.btnClose.Size = new System.Drawing.Size(29, 25);
             this.btnClose.TabIndex = 1;
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnClose.UseHightLight = true;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Visible = false;
@@ -182,7 +189,7 @@
             this.lblTitle.Text = "TÊN FORM";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // FrmTemplate
+            // FrmTemplateCommon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,11 +202,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FrmTemplate";
+            this.Name = "FrmTemplateCommon";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTemplate";
             this.Load += new System.EventHandler(this.frmTemplate_Load);
+            this.Shown += new System.EventHandler(this.FrmTemplateCommon_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmTemplateCommon_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmTemplate_KeyUp);
             this.pnMenu.ResumeLayout(false);
             this.pnButtonMenu.ResumeLayout(false);

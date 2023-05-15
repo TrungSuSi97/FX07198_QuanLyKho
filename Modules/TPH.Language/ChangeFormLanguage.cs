@@ -7,12 +7,13 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraNavBar;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using TPH.Common.Converter;
 using TPH.Controls;
 using TPH.Language.Models;
 using TPH.Language.Services;
@@ -25,10 +26,18 @@ namespace TPH.Language
         public const string EnglishLanguageKey = "en-US";
         public const string VietnameseLanguageKey = "vi-VN";
         public const string DefaultLanguageKey = "vi-VN";
-        public static string AppLanguage = "vi-VN";
-        public static bool LocalizedLanguage = false;
+        //public static string AppLanguage = "vi-VN";
+        public static bool LocalizedLanguage = true;
         private static List<HETHONG_NGONNGU> lstCauHinhNgonNgu;
-     
+
+        public static string AppLanguage
+        {
+            get
+            {
+                var languageKey = StringConverter.ToString(ConfigurationSettings.AppSettings["AppConfig:AppLanguage"]);
+                return string.IsNullOrWhiteSpace(languageKey) ? DefaultLanguageKey : languageKey;
+            }
+        }
         private static string ChuyenTvKhongDau(string strVietNamese)
         {
             //string findText =

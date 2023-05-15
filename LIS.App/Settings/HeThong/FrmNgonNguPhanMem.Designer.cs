@@ -48,7 +48,7 @@
             this.lblTitle.Appearance.Options.UseBackColor = true;
             this.lblTitle.Appearance.Options.UseFont = true;
             this.lblTitle.Appearance.Options.UseForeColor = true;
-            this.lblTitle.Size = new System.Drawing.Size(256, 22);
+            this.lblTitle.Size = new System.Drawing.Size(261, 22);
             this.lblTitle.Text = "QUẢN LÝ DANH MỤC NGÔN NGỮ";
             // 
             // pnContaint
@@ -93,11 +93,6 @@
             this.xtraScrollableControlMain.Appearance.Options.UseBackColor = true;
             this.xtraScrollableControlMain.Size = new System.Drawing.Size(1284, 25);
             // 
-            // ucGroupHeaderChonMain
-            // 
-            this.ucGroupHeaderChonMain.Location = new System.Drawing.Point(258, 1);
-            this.ucGroupHeaderChonMain.Size = new System.Drawing.Size(10, 24);
-            // 
             // pnFormControl
             // 
             this.pnFormControl.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -139,6 +134,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1284, 661);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FrmNgonNguPhanMem";
             this.Text = "FrmNgonNguPhanMem";
             this.Load += new System.EventHandler(this.FrmNgonNguPhanMem_Load);

@@ -121,12 +121,12 @@ namespace TPH.LIS.App
                 CommonAppVarsAndFunctions.HelloUserId = string.IsNullOrEmpty(userloginInfo.Username) ?
                     userloginInfo.LoginName : $"{userloginInfo.Username} - ID: {userloginInfo.LoginName}";
                 _registryExtension.WriteRegistry(UserConstant.RegistryLoginLanguage, cboLanguage.SelectedIndex.ToString());
-                if (cboLanguage.SelectedIndex == 1)
-                {
-                    LanguageExtension.AppLanguage = "en-US";
-                }
-                else
-                    LanguageExtension.AppLanguage = "vi-VN";
+                //if (cboLanguage.SelectedIndex == 1)
+                //{
+                //    LanguageExtension.AppLanguage = "en-US";
+                //}
+                //else
+                //    LanguageExtension.AppLanguage = "vi-VN";
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

@@ -595,6 +595,12 @@
     <Compile Include="frmMDIParent.Designer.cs">
       <DependentUpon>frmMDIParent.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNgonNguPhanMem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNgonNguPhanMem.Designer.cs">
+      <DependentUpon>FrmNgonNguPhanMem.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmParent_old.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1357,6 +1363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMDIParent.resx">
       <DependentUpon>frmMDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNgonNguPhanMem.resx">
+      <DependentUpon>FrmNgonNguPhanMem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmParent_old.resx">
       <DependentUpon>frmParent_old.cs</DependentUpon>

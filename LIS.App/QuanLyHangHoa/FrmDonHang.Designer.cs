@@ -58,6 +58,7 @@
             this.ucGroupHeader1 = new TPH.LIS.Common.Controls.ucGroupHeader();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkDaXH = new System.Windows.Forms.CheckBox();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtSearchMaDH = new System.Windows.Forms.TextBox();
             this.ucSearchLookupEditor_NhanVien1 = new TPH.LIS.App.AppCode.ucSearchLookupEditor_NhanVien();
@@ -129,7 +130,6 @@
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.dtpFromDate = new System.Windows.Forms.DateTimePicker();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.chkDaXH = new System.Windows.Forms.CheckBox();
             this.pnContaint.SuspendLayout();
             this.pnLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -193,6 +193,7 @@
             this.btnClose.Appearance.Options.UseFont = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
             this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopLeft;
             this.btnClose.Location = new System.Drawing.Point(696, 0);
             // 
             // lblMainESC
@@ -604,6 +605,17 @@
             this.panel1.Size = new System.Drawing.Size(1111, 192);
             this.panel1.TabIndex = 185;
             // 
+            // chkDaXH
+            // 
+            this.chkDaXH.AutoSize = true;
+            this.chkDaXH.Enabled = false;
+            this.chkDaXH.Location = new System.Drawing.Point(755, 74);
+            this.chkDaXH.Name = "chkDaXH";
+            this.chkDaXH.Size = new System.Drawing.Size(90, 17);
+            this.chkDaXH.TabIndex = 226;
+            this.chkDaXH.Text = "Đã xuất hàng";
+            this.chkDaXH.UseVisualStyleBackColor = true;
+            // 
             // labelControl9
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
@@ -983,7 +995,7 @@
             this.xtraTabPage1.Controls.Add(this.splitContainerControl1);
             this.xtraTabPage1.Controls.Add(this.groupBox1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1283, 603);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1111, 558);
             this.xtraTabPage1.Text = "Danh sách đơn hàng";
             // 
             // splitContainerControl2
@@ -1002,7 +1014,7 @@
             // 
             this.splitContainerControl2.Panel2.Controls.Add(this.groupBox3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1283, 440);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1111, 395);
             this.splitContainerControl2.SplitterPosition = 166;
             this.splitContainerControl2.TabIndex = 2;
             // 
@@ -1012,7 +1024,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1283, 166);
+            this.groupBox2.Size = new System.Drawing.Size(1111, 166);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách đơn hàng";
@@ -1036,7 +1048,7 @@
             this.gcDSDH.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1,
             this.repositoryItemGridLookUpEdit2});
-            this.gcDSDH.Size = new System.Drawing.Size(1277, 147);
+            this.gcDSDH.Size = new System.Drawing.Size(1105, 147);
             this.gcDSDH.TabIndex = 187;
             this.gcDSDH.UseEmbeddedNavigator = true;
             this.gcDSDH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1210,7 +1222,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1283, 264);
+            this.groupBox3.Size = new System.Drawing.Size(1111, 219);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết đơn hàng";
@@ -1234,7 +1246,7 @@
             this.gcDSDH_CT.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit3,
             this.repositoryItemGridLookUpEdit4});
-            this.gcDSDH_CT.Size = new System.Drawing.Size(1277, 245);
+            this.gcDSDH_CT.Size = new System.Drawing.Size(1105, 200);
             this.gcDSDH_CT.TabIndex = 187;
             this.gcDSDH_CT.UseEmbeddedNavigator = true;
             this.gcDSDH_CT.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1378,7 +1390,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1283, 163);
+            this.groupBox1.Size = new System.Drawing.Size(1111, 163);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Điều kiện";
@@ -1494,17 +1506,6 @@
             this.labelControl14.Size = new System.Drawing.Size(44, 15);
             this.labelControl14.TabIndex = 194;
             this.labelControl14.Text = "Từ ngày";
-            // 
-            // chkDaXH
-            // 
-            this.chkDaXH.AutoSize = true;
-            this.chkDaXH.Enabled = false;
-            this.chkDaXH.Location = new System.Drawing.Point(755, 74);
-            this.chkDaXH.Name = "chkDaXH";
-            this.chkDaXH.Size = new System.Drawing.Size(90, 17);
-            this.chkDaXH.TabIndex = 226;
-            this.chkDaXH.Text = "Đã xuất hàng";
-            this.chkDaXH.UseVisualStyleBackColor = true;
             // 
             // FrmDonHang
             // 

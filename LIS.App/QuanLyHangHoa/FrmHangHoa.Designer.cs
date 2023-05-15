@@ -134,6 +134,7 @@
             this.btnClose.Appearance.Options.UseFont = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
             this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopLeft;
             this.btnClose.Location = new System.Drawing.Point(706, 0);
             // 
             // lblMainESC
@@ -236,7 +237,7 @@
             // 
             // colDV
             // 
-            this.colDV.Caption = "Đon vị";
+            this.colDV.Caption = "Đơn vị";
             this.colDV.ColumnEdit = this.repositoryItemGridLookUpEditDonVi;
             this.colDV.FieldName = "madonvi";
             this.colDV.MinWidth = 17;

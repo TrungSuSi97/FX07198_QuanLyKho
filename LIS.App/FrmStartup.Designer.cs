@@ -101,11 +101,11 @@
             this.lblTieuDe.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTieuDe.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTieuDe.ForeColor = System.Drawing.Color.Orange;
-            this.lblTieuDe.Location = new System.Drawing.Point(0, 77);
+            this.lblTieuDe.Location = new System.Drawing.Point(0, 46);
             this.lblTieuDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
-            this.lblTieuDe.Size = new System.Drawing.Size(1316, 53);
+            this.lblTieuDe.Size = new System.Drawing.Size(1316, 71);
             this.lblTieuDe.TabIndex = 1;
             this.lblTieuDe.Text = "TÊN CÔNG TY";
             this.lblTieuDe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -122,9 +122,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(1316, 77);
+            this.label1.Size = new System.Drawing.Size(1316, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "QUẢN LÝ XUẤT NHẬP KHO\r\nDeveloped by FX";
+            this.label1.Text = "QUẢN LÝ XUẤT NHẬP KHO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 

@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Resources;
 using System.Threading;
 using System.Windows.Forms;
+using TPH.Language;
 using TPH.LIS.App.Properties;
+using TPH.LIS.Common.Controls;
 
 namespace TPH.LIS.App
 {
@@ -102,20 +105,56 @@ namespace TPH.LIS.App
         int imagInde = 0;
         private void btnThuNhoMenu_Click(object sender, EventArgs e)
         {
-            //if (imagInde == 0)
-            //{
-            //    imagInde = 1;
-            //    pnMenu.Tag = pnMenu.Width;
-            //    pnMenu.Width = 50;
-            //    btnThuNhoMenu.Image = pnR.BackgroundImage;
+            if (imagInde == 0)
+            {
+                imagInde = 1;
+                pnMenu.Tag = pnMenu.Width;
+                pnMenu.Width = 50;
+                btnThuNhoMenu.Image = pnR.BackgroundImage;
 
-            //}
-            //else
-            //{
-            //    pnMenu.Width = int.Parse(pnMenu.Tag.ToString());
-            //    btnThuNhoMenu.Image = pnL.BackgroundImage;
-            //    imagInde = 0;
-            //}
+            }
+            else
+            {
+                pnMenu.Width = int.Parse(pnMenu.Tag.ToString());
+                btnThuNhoMenu.Image = pnL.BackgroundImage;
+                imagInde = 0;
+            }
+        }
+
+        private void FrmTemplateCommon_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.T)
+            {
+                List<string> lst = null;
+                lst = lstTextlist(this, lst);
+
+                if (lst.Count > 0)
+                {
+                    CustomMessageBox.MSG_Error_OK(string.Join("\r\n", lst));
+                }
+            }
+        }
+        private List<string> lstTextlist(Control ctrl, List<string> lst)
+        {
+            if (lst == null) lst = new List<string>();
+
+            if (!string.IsNullOrEmpty(ctrl.Text))
+            {
+                lst.Add(ctrl.Text);
+            }
+            foreach (Control item in ctrl.Controls)
+            {
+                lst = lstTextlist(item, lst);
+            }
+            return lst;
+        }
+        private void FrmTemplateCommon_Shown(object sender, EventArgs e)
+        {
+            this.Text = lblTitle.Text.ToUpper();
+            if (!DesignMode)
+            {
+                LanguageExtension.LocalizeForm(this, string.Empty);
+            }
         }
     }
 }

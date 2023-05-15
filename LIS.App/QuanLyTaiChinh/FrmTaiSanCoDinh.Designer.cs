@@ -119,6 +119,7 @@
             this.btnClose.Appearance.Options.UseFont = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
             this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopLeft;
             this.btnClose.Location = new System.Drawing.Point(682, 0);
             // 
             // lblMainESC
@@ -523,7 +524,7 @@
             this.xtraTabPage1.Controls.Add(this.groupBox2);
             this.xtraTabPage1.Controls.Add(this.groupBox1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1283, 603);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1097, 540);
             this.xtraTabPage1.Text = "Danh sách tài sản cố định";
             // 
             // groupBox2
@@ -532,7 +533,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 135);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1283, 468);
+            this.groupBox2.Size = new System.Drawing.Size(1097, 405);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách TSCD";
@@ -556,7 +557,7 @@
             this.gcTSCD2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1,
             this.repositoryItemGridLookUpEdit2});
-            this.gcTSCD2.Size = new System.Drawing.Size(1277, 449);
+            this.gcTSCD2.Size = new System.Drawing.Size(1091, 386);
             this.gcTSCD2.TabIndex = 187;
             this.gcTSCD2.UseEmbeddedNavigator = true;
             this.gcTSCD2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -675,7 +676,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1283, 135);
+            this.groupBox1.Size = new System.Drawing.Size(1097, 135);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Điều kiện";

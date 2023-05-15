@@ -11,6 +11,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using TPH.Common.Converter;
 using TPH.Common.Extensions;
+using TPH.Language;
 using TPH.LIS.App.AppCode;
 using TPH.LIS.Common;
 using TPH.LIS.Common.Controls;
@@ -95,13 +96,17 @@ namespace TPH.LIS.App
 
         private void frmLogIn_Shown(object sender, EventArgs e)
         {
+
+            if (!DesignMode)
+            {
+                LanguageExtension.LocalizeForm(this, string.Empty);
+            }
+
             //if (img != null)
             //{
             //    this.BackgroundImageLayout = ImageLayout.Stretch;
             //    this.BackgroundImage = img;
             //}
-
-
             //MessageBox.Show("Login load");
             CheckAutoLogin();
 
@@ -498,6 +503,11 @@ namespace TPH.LIS.App
         private void txtPassword_Click(object sender, EventArgs e)
         {
             txtPassword.SelectAll();
+        }
+
+        private void frmLogIn_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

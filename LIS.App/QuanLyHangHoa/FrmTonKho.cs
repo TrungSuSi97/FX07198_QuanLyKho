@@ -65,7 +65,6 @@ namespace TPH.LIS.App.QuanLyHangHoa
             model.ToDate = dtpToDate.Value;
             model.ItemCode = StringConverter.ToString(ucSearchLookupEditor_HangHoaSanPham1.SelectedValue);
             model.MaDanhMuc = StringConverter.ToString(ucSearchLookupEditor_DanhMucHangHoa1.SelectedValue);
-
             gcDSDH.DataSource = WorkingServices.ConvertColumnNameToLower_Upper(_iProduct.GetTonKho(model), true);
         }
         private void Load_NhanVien()

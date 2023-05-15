@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using TPH.Language;
 using TPH.LIS.App.DailyUse.BenhNhan;
 using TPH.LIS.App.QuanLyChamCong;
 using TPH.LIS.App.ThongKe;
@@ -61,6 +62,10 @@ namespace TPH.LIS.App
         private void FrmStartUp_Shown(object sender, EventArgs e)
         {
 
+            if (!DesignMode)
+            {
+                LanguageExtension.LocalizeForm(this, string.Empty);
+            }
             frmMDIParent fParent = (frmMDIParent)this.MdiParent;
 
             fParent.rbCauHinhHeThong.Enabled = fParent.rbCaiDatKetNoiHis.Enabled = CommonAppVarsAndFunctions.IsAdmin;
