@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using TPH.Common.Converter;
+using TPH.Language;
 using TPH.LIS.Common.Controls;
 using TPH.LIS.Common.Extensions;
 using TPH.LIS.Configuration.Services.SystemConfig;
@@ -92,7 +93,7 @@ namespace TPH.LIS.App.QuanLyChamCong
             if (Month == 0 || Year == 0)
                 return;
             if (CustomMessageBox.MSG_Question_YesNo_GetNo
-                (string.Format("Bạn muốn tính toán lương tháng {0} năm {1} ?", Month, Year)))
+                (string.Format(LanguageExtension.GetResourceValueFromKey("BanmuontinhtoanluongthangMONGOACNHONKHONGDONGNGOACNHONnamMONGOACNHONMOTDONGNGOACNHONHOI", LanguageExtension.AppLanguage), Month, Year)))
                 return;
             var firstDayOfMonth = new DateTime(Year, Month, 1);
             var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);

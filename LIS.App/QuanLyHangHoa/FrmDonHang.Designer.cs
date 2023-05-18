@@ -609,7 +609,7 @@
             // 
             this.chkDaXH.AutoSize = true;
             this.chkDaXH.Enabled = false;
-            this.chkDaXH.Location = new System.Drawing.Point(755, 74);
+            this.chkDaXH.Location = new System.Drawing.Point(808, 74);
             this.chkDaXH.Name = "chkDaXH";
             this.chkDaXH.Size = new System.Drawing.Size(90, 17);
             this.chkDaXH.TabIndex = 226;
@@ -620,7 +620,7 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(539, 158);
+            this.labelControl9.Location = new System.Drawing.Point(549, 158);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(125, 15);
             this.labelControl9.TabIndex = 203;
@@ -630,7 +630,7 @@
             // 
             this.txtSearchMaDH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtSearchMaDH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchMaDH.Location = new System.Drawing.Point(685, 154);
+            this.txtSearchMaDH.Location = new System.Drawing.Point(695, 154);
             this.txtSearchMaDH.Margin = new System.Windows.Forms.Padding(0);
             this.txtSearchMaDH.MaxLength = 20;
             this.txtSearchMaDH.Name = "txtSearchMaDH";
@@ -646,7 +646,7 @@
             this.ucSearchLookupEditor_NhanVien1.ControlBack = null;
             this.ucSearchLookupEditor_NhanVien1.ControlNext = null;
             this.ucSearchLookupEditor_NhanVien1.DisplayMember = "";
-            this.ucSearchLookupEditor_NhanVien1.Location = new System.Drawing.Point(405, 100);
+            this.ucSearchLookupEditor_NhanVien1.Location = new System.Drawing.Point(466, 100);
             this.ucSearchLookupEditor_NhanVien1.Name = "ucSearchLookupEditor_NhanVien1";
             this.ucSearchLookupEditor_NhanVien1.SelectedValue = null;
             this.ucSearchLookupEditor_NhanVien1.Size = new System.Drawing.Size(196, 23);
@@ -657,7 +657,7 @@
             // 
             this.txtOrderID.Enabled = false;
             this.txtOrderID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrderID.Location = new System.Drawing.Point(244, 13);
+            this.txtOrderID.Location = new System.Drawing.Point(281, 13);
             this.txtOrderID.Margin = new System.Windows.Forms.Padding(0);
             this.txtOrderID.MaxLength = 20;
             this.txtOrderID.Name = "txtOrderID";
@@ -681,7 +681,7 @@
             this.btnLuuThongTin.ForeColor = System.Drawing.Color.Black;
             this.btnLuuThongTin.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuThongTin.Image")));
             this.btnLuuThongTin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuuThongTin.Location = new System.Drawing.Point(266, 152);
+            this.btnLuuThongTin.Location = new System.Drawing.Point(276, 152);
             this.btnLuuThongTin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLuuThongTin.Name = "btnLuuThongTin";
             this.btnLuuThongTin.Size = new System.Drawing.Size(118, 26);
@@ -709,7 +709,7 @@
             this.btnSuaDH.ForeColor = System.Drawing.Color.Black;
             this.btnSuaDH.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaDH.Image")));
             this.btnSuaDH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSuaDH.Location = new System.Drawing.Point(138, 152);
+            this.btnSuaDH.Location = new System.Drawing.Point(148, 152);
             this.btnSuaDH.Margin = new System.Windows.Forms.Padding(0);
             this.btnSuaDH.Name = "btnSuaDH";
             this.btnSuaDH.Size = new System.Drawing.Size(118, 26);
@@ -725,7 +725,7 @@
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(302, 73);
+            this.labelControl10.Location = new System.Drawing.Point(339, 73);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(97, 15);
             this.labelControl10.TabIndex = 197;
@@ -735,7 +735,7 @@
             // 
             this.txtThoiGianTao.Enabled = false;
             this.txtThoiGianTao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThoiGianTao.Location = new System.Drawing.Point(405, 69);
+            this.txtThoiGianTao.Location = new System.Drawing.Point(466, 69);
             this.txtThoiGianTao.Margin = new System.Windows.Forms.Padding(0);
             this.txtThoiGianTao.MaxLength = 20;
             this.txtThoiGianTao.Name = "txtThoiGianTao";
@@ -746,7 +746,7 @@
             // 
             this.dtpNgayTao.CustomFormat = "dd/MM/yyyy";
             this.dtpNgayTao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayTao.Location = new System.Drawing.Point(107, 42);
+            this.dtpNgayTao.Location = new System.Drawing.Point(144, 42);
             this.dtpNgayTao.Name = "dtpNgayTao";
             this.dtpNgayTao.Size = new System.Drawing.Size(170, 20);
             this.dtpNgayTao.TabIndex = 193;
@@ -776,7 +776,7 @@
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(107, 101);
+            this.txtTotal.Location = new System.Drawing.Point(144, 101);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(0);
             this.txtTotal.MaxLength = 20;
             this.txtTotal.Name = "txtTotal";
@@ -796,7 +796,7 @@
             // txtGhiChu
             // 
             this.txtGhiChu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGhiChu.Location = new System.Drawing.Point(107, 69);
+            this.txtGhiChu.Location = new System.Drawing.Point(144, 69);
             this.txtGhiChu.Margin = new System.Windows.Forms.Padding(0);
             this.txtGhiChu.MaxLength = 20;
             this.txtGhiChu.Name = "txtGhiChu";
@@ -807,7 +807,7 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.Black;
-            this.txtPhone.Location = new System.Drawing.Point(755, 9);
+            this.txtPhone.Location = new System.Drawing.Point(808, 9);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(0);
             this.txtPhone.MaxLength = 50;
             this.txtPhone.Name = "txtPhone";
@@ -818,7 +818,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(685, 13);
+            this.labelControl6.Location = new System.Drawing.Point(746, 13);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(56, 15);
             this.labelControl6.TabIndex = 186;
@@ -828,7 +828,7 @@
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.ForeColor = System.Drawing.Color.Black;
-            this.txtDiaChi.Location = new System.Drawing.Point(404, 41);
+            this.txtDiaChi.Location = new System.Drawing.Point(465, 41);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(0);
             this.txtDiaChi.MaxLength = 50;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -839,7 +839,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(361, 45);
+            this.labelControl1.Location = new System.Drawing.Point(398, 45);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(38, 15);
             this.labelControl1.TabIndex = 184;
@@ -849,7 +849,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(627, 43);
+            this.labelControl5.Location = new System.Drawing.Point(688, 43);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(114, 15);
             this.labelControl5.TabIndex = 182;
@@ -858,7 +858,7 @@
             // txtHTTT
             // 
             this.txtHTTT.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHTTT.Location = new System.Drawing.Point(755, 39);
+            this.txtHTTT.Location = new System.Drawing.Point(808, 39);
             this.txtHTTT.Margin = new System.Windows.Forms.Padding(0);
             this.txtHTTT.MaxLength = 20;
             this.txtHTTT.Name = "txtHTTT";
@@ -869,7 +869,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(319, 101);
+            this.labelControl3.Location = new System.Drawing.Point(356, 101);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(80, 15);
             this.labelControl3.TabIndex = 177;
@@ -891,7 +891,7 @@
             this.btnXoaDH.ForeColor = System.Drawing.Color.Black;
             this.btnXoaDH.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaDH.Image")));
             this.btnXoaDH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaDH.Location = new System.Drawing.Point(395, 152);
+            this.btnXoaDH.Location = new System.Drawing.Point(405, 152);
             this.btnXoaDH.Margin = new System.Windows.Forms.Padding(0);
             this.btnXoaDH.Name = "btnXoaDH";
             this.btnXoaDH.Size = new System.Drawing.Size(112, 26);
@@ -922,7 +922,7 @@
             this.btnTaoDH.Location = new System.Drawing.Point(17, 152);
             this.btnTaoDH.Margin = new System.Windows.Forms.Padding(0);
             this.btnTaoDH.Name = "btnTaoDH";
-            this.btnTaoDH.Size = new System.Drawing.Size(111, 26);
+            this.btnTaoDH.Size = new System.Drawing.Size(125, 26);
             this.btnTaoDH.TabIndex = 174;
             this.btnTaoDH.Text = "Tạo đơn hàng";
             this.btnTaoDH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -945,7 +945,7 @@
             // 
             this.txtOrderCode.Enabled = false;
             this.txtOrderCode.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrderCode.Location = new System.Drawing.Point(107, 13);
+            this.txtOrderCode.Location = new System.Drawing.Point(144, 13);
             this.txtOrderCode.Margin = new System.Windows.Forms.Padding(0);
             this.txtOrderCode.MaxLength = 20;
             this.txtOrderCode.Name = "txtOrderCode";
@@ -956,7 +956,7 @@
             // 
             this.txtTenKH.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH.ForeColor = System.Drawing.Color.Black;
-            this.txtTenKH.Location = new System.Drawing.Point(404, 9);
+            this.txtTenKH.Location = new System.Drawing.Point(465, 9);
             this.txtTenKH.Margin = new System.Windows.Forms.Padding(0);
             this.txtTenKH.MaxLength = 50;
             this.txtTenKH.Name = "txtTenKH";
@@ -967,7 +967,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(311, 13);
+            this.labelControl2.Location = new System.Drawing.Point(348, 13);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(88, 15);
             this.labelControl2.TabIndex = 173;
@@ -995,7 +995,7 @@
             this.xtraTabPage1.Controls.Add(this.splitContainerControl1);
             this.xtraTabPage1.Controls.Add(this.groupBox1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1111, 558);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1283, 603);
             this.xtraTabPage1.Text = "Danh sách đơn hàng";
             // 
             // splitContainerControl2
@@ -1014,7 +1014,7 @@
             // 
             this.splitContainerControl2.Panel2.Controls.Add(this.groupBox3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1111, 395);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1283, 440);
             this.splitContainerControl2.SplitterPosition = 166;
             this.splitContainerControl2.TabIndex = 2;
             // 
@@ -1024,7 +1024,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1111, 166);
+            this.groupBox2.Size = new System.Drawing.Size(1283, 166);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách đơn hàng";
@@ -1048,7 +1048,7 @@
             this.gcDSDH.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1,
             this.repositoryItemGridLookUpEdit2});
-            this.gcDSDH.Size = new System.Drawing.Size(1105, 147);
+            this.gcDSDH.Size = new System.Drawing.Size(1277, 147);
             this.gcDSDH.TabIndex = 187;
             this.gcDSDH.UseEmbeddedNavigator = true;
             this.gcDSDH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1222,7 +1222,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1111, 219);
+            this.groupBox3.Size = new System.Drawing.Size(1283, 264);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết đơn hàng";
@@ -1246,7 +1246,7 @@
             this.gcDSDH_CT.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit3,
             this.repositoryItemGridLookUpEdit4});
-            this.gcDSDH_CT.Size = new System.Drawing.Size(1105, 200);
+            this.gcDSDH_CT.Size = new System.Drawing.Size(1277, 245);
             this.gcDSDH_CT.TabIndex = 187;
             this.gcDSDH_CT.UseEmbeddedNavigator = true;
             this.gcDSDH_CT.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1390,7 +1390,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1111, 163);
+            this.groupBox1.Size = new System.Drawing.Size(1283, 163);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Điều kiện";
@@ -1402,7 +1402,7 @@
             this.ucSearchLookupEditor_NhanVien2.ControlBack = null;
             this.ucSearchLookupEditor_NhanVien2.ControlNext = null;
             this.ucSearchLookupEditor_NhanVien2.DisplayMember = "";
-            this.ucSearchLookupEditor_NhanVien2.Location = new System.Drawing.Point(318, 45);
+            this.ucSearchLookupEditor_NhanVien2.Location = new System.Drawing.Point(343, 45);
             this.ucSearchLookupEditor_NhanVien2.Name = "ucSearchLookupEditor_NhanVien2";
             this.ucSearchLookupEditor_NhanVien2.SelectedValue = null;
             this.ucSearchLookupEditor_NhanVien2.Size = new System.Drawing.Size(138, 23);
@@ -1471,7 +1471,7 @@
             // 
             this.dtpToDate.CustomFormat = "dd/MM/yyyy";
             this.dtpToDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpToDate.Location = new System.Drawing.Point(318, 14);
+            this.dtpToDate.Location = new System.Drawing.Point(343, 14);
             this.dtpToDate.Name = "dtpToDate";
             this.dtpToDate.Size = new System.Drawing.Size(138, 20);
             this.dtpToDate.TabIndex = 197;

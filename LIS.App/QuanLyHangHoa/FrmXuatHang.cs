@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using TPH.Common.Converter;
+using TPH.Language;
 using TPH.LIS.Common.Controls;
 using TPH.LIS.Common.Extensions;
 using TPH.Product.Model;
@@ -145,17 +146,17 @@ namespace TPH.LIS.App.QuanLyHangHoa
                 return;
             if (chkDaXH.Checked)
             {
-                CustomMessageBox.MSG_Information_OK("Đơn hàng này đã xuất, không thể xuất nữa!");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("DonhangnaydaxuatPHAYkhongthexuatnuaCHAMCAM", LanguageExtension.AppLanguage));
                 return;
             }
             //kiểm tra có đủ hàng không
             var dt = _iProduct.CheckDuHangTrongKho(txtOrderCode.Text.Trim());
             if (dt != null && dt.Rows.Count > 0)
             {
-                string mess = "Không xuất được đơn này:";
+                string mess = "Unable to issue this application:";
                 foreach (DataRow item in dt.Rows)
                 {
-                    mess += $"\nSản phẩm: {item["ItemName"]} còn {item["QuantityInput"]}";
+                    mess += $"\nItem: {item["ItemName"]} have {item["QuantityInput"]}";
                 }
                 CustomMessageBox.MSG_Information_OK(mess);
                 return;
@@ -207,7 +208,7 @@ namespace TPH.LIS.App.QuanLyHangHoa
             }
             //cap nhat don hàng da xuat
             _iProduct.CapNhatDhDaXuat(new OrderModel() { OrderCode = orderCode });
-            CustomMessageBox.MSG_Information_OK("Xuất đơn hàng thành công!");
+            CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("XuatdonhangthanhcongCHAMCAM", LanguageExtension.AppLanguage));
             bindingdata();
         }
         private void ThemDH_CT()

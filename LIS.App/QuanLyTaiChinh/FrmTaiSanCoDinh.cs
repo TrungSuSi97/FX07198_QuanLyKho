@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using TPH.Common.Converter;
+using TPH.Language;
 using TPH.LIS.App.AppCode;
 using TPH.LIS.Common.Controls;
 using TPH.LIS.Common.Extensions;
@@ -26,7 +27,7 @@ namespace TPH.LIS.App.QuanLyTaiChinh
         {
             if (!WorkingServices.IsNumeric(txtQuantity.Text) || NumberConverter.ToInt(txtQuantity.Text) <= 0)
             {
-                CustomMessageBox.MSG_Information_OK("Vui lòng chọn số lượng!");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("VuilongchonsoluongCHAMCAM", LanguageExtension.AppLanguage));
                 return;
             }
             TaiSanCdModel model = new TaiSanCdModel();

@@ -1,5 +1,6 @@
 ﻿using System;
 using TPH.Common.Converter;
+using TPH.Language;
 using TPH.LIS.Common.Controls;
 using TPH.LIS.Common.Extensions;
 using TPH.Product.Model;
@@ -39,7 +40,7 @@ namespace TPH.LIS.App.QuanLyHangHoa
                 return;
             }
             if (_iProduct.SuaNhapKho(model))
-                CustomMessageBox.MSG_Information_OK("Sửa nhập hàng thành công!");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("SuanhaphangthanhcongCHAMCAM", LanguageExtension.AppLanguage));
 
 
         }
@@ -102,7 +103,7 @@ namespace TPH.LIS.App.QuanLyHangHoa
         }
         private void XoaDH()
         {
-            if (CustomMessageBox.MSG_Question_YesNo_GetYes("Bạn muốn xóa nhập hàng?"))
+            if (CustomMessageBox.MSG_Question_YesNo_GetYes(LanguageExtension.GetResourceValueFromKey("BanmuonxoanhaphangHOI", LanguageExtension.AppLanguage)))
             {
                 InputModel model = new InputModel();
                 model.InCode = txtOrderCode.Text.Trim();
@@ -118,11 +119,11 @@ namespace TPH.LIS.App.QuanLyHangHoa
             model.UserI = StringConverter.ToString(ucSearchLookupEditor_NhanVien1.SelectedValue);
             if (string.IsNullOrEmpty(model.UserI))
             {
-                CustomMessageBox.MSG_Information_OK("Chọn tên người nhập!");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("ChontennguoinhapCHAMCAM", LanguageExtension.AppLanguage));
                 return;
             }
             if (_iProduct.ThemNhapKho(model))
-                CustomMessageBox.MSG_Information_OK("Thêm nhập hàng thành công!");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("ThemnhaphangthanhcongCHAMCAM", LanguageExtension.AppLanguage));
 
 
 

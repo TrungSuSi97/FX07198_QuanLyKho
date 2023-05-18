@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TPH.Common.Converter;
+using TPH.Language;
 using TPH.LIS.App.AppCode;
 using TPH.LIS.Common.Controls;
 using TPH.LIS.Common.Extensions;
@@ -145,7 +146,7 @@ namespace TPH.LIS.App.QuanLyHangHoa
         {
             if (!WorkingServices.IsNumeric(txtGia.Text.Trim()))
             {
-                CustomMessageBox.MSG_Information_OK("Vui lòng nhập giá là số!");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("VuilongnhapgialasoCHAMCAM", LanguageExtension.AppLanguage));
                 return;
             }
             var model = new ItemModel();

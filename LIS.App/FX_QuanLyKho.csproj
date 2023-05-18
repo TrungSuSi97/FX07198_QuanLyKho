@@ -685,6 +685,12 @@
     <Compile Include="QuanLyHangHoa\FrmHangHoa.Designer.cs">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyTaiChinh\FrmHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTaiChinh\FrmHopDong.Designer.cs">
+      <DependentUpon>FrmHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyTaiChinh\FrmTaiSanCoDinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1409,6 +1415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyHangHoa\FrmHangHoa.resx">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTaiChinh\FrmHopDong.resx">
+      <DependentUpon>FrmHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTaiChinh\FrmTaiSanCoDinh.resx">
       <DependentUpon>FrmTaiSanCoDinh.cs</DependentUpon>

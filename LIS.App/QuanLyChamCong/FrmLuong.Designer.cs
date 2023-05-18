@@ -137,6 +137,7 @@
             this.btnClose.Appearance.Options.UseFont = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
             this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopLeft;
             this.btnClose.Location = new System.Drawing.Point(492, 0);
             // 
             // lblMainESC
@@ -569,9 +570,9 @@
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Location = new System.Drawing.Point(254, 21);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(27, 15);
+            this.labelControl7.Size = new System.Drawing.Size(26, 15);
             this.labelControl7.TabIndex = 169;
-            this.labelControl7.Text = "Năm";
+            this.labelControl7.Text = "Year";
             // 
             // ucSearchLookupEditor_NhanVien1
             // 
@@ -703,9 +704,9 @@
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(19, 21);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(27, 15);
+            this.labelControl1.Size = new System.Drawing.Size(26, 15);
             this.labelControl1.TabIndex = 168;
-            this.labelControl1.Text = "Năm";
+            this.labelControl1.Text = "Year";
             // 
             // btnCalLuong
             // 
@@ -754,7 +755,7 @@
             this.xtraTabPage1.Controls.Add(this.gcNhanVien);
             this.xtraTabPage1.Controls.Add(this.pnInfoBacSi);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(907, 528);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1283, 603);
             this.xtraTabPage1.Text = "Lương nhân viên";
             // 
             // gcNhanVien
@@ -766,7 +767,7 @@
             this.gcNhanVien.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEditDonVi,
             this.repositoryItemGridLookUpEditPhong});
-            this.gcNhanVien.Size = new System.Drawing.Size(907, 471);
+            this.gcNhanVien.Size = new System.Drawing.Size(1283, 546);
             this.gcNhanVien.TabIndex = 5;
             this.gcNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvNhanVien});
@@ -965,7 +966,7 @@
             this.pnInfoBacSi.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnInfoBacSi.Location = new System.Drawing.Point(0, 0);
             this.pnInfoBacSi.Name = "pnInfoBacSi";
-            this.pnInfoBacSi.Size = new System.Drawing.Size(907, 57);
+            this.pnInfoBacSi.Size = new System.Drawing.Size(1283, 57);
             this.pnInfoBacSi.TabIndex = 1;
             // 
             // btnRefreshBacSi

@@ -103,12 +103,12 @@
             this.pnContaint.Controls.Add(this.tabControl1);
             this.pnContaint.Location = new System.Drawing.Point(0, 26);
             this.pnContaint.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pnContaint.Size = new System.Drawing.Size(1010, 637);
+            this.pnContaint.Size = new System.Drawing.Size(1168, 637);
             // 
             // pnLabel
             // 
             this.pnLabel.Padding = new System.Windows.Forms.Padding(4, 8, 4, 3);
-            this.pnLabel.Size = new System.Drawing.Size(1010, 0);
+            this.pnLabel.Size = new System.Drawing.Size(1168, 0);
             // 
             // btnClose
             // 
@@ -116,7 +116,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Crimson;
-            this.btnClose.Location = new System.Drawing.Point(654, 8);
+            this.btnClose.Location = new System.Drawing.Point(812, 8);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnClose.Size = new System.Drawing.Size(29, 0);
             this.btnClose.TextColor = System.Drawing.Color.Crimson;
@@ -127,14 +127,14 @@
             this.lblMainESC.Appearance.Options.UseFont = true;
             this.lblMainESC.ImageOptions.Alignment = System.Drawing.ContentAlignment.TopRight;
             this.lblMainESC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("lblMainESC.ImageOptions.Image")));
-            this.lblMainESC.Location = new System.Drawing.Point(683, 8);
+            this.lblMainESC.Location = new System.Drawing.Point(841, 8);
             // 
             // pnMenu
             // 
             this.pnMenu.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(57)))), ((int)(((byte)(112)))));
             this.pnMenu.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.pnMenu.Appearance.Options.UseBackColor = true;
-            this.pnMenu.Size = new System.Drawing.Size(1010, 26);
+            this.pnMenu.Size = new System.Drawing.Size(1168, 26);
             // 
             // xtraScrollableControlMain
             // 
@@ -177,7 +177,7 @@
             this.tabControl1.Location = new System.Drawing.Point(4, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1002, 631);
+            this.tabControl1.Size = new System.Drawing.Size(1160, 631);
             this.tabControl1.TabIndex = 0;
             // 
             // tabNhanVien
@@ -187,7 +187,7 @@
             this.tabNhanVien.Location = new System.Drawing.Point(4, 24);
             this.tabNhanVien.Name = "tabNhanVien";
             this.tabNhanVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNhanVien.Size = new System.Drawing.Size(994, 603);
+            this.tabNhanVien.Size = new System.Drawing.Size(1152, 603);
             this.tabNhanVien.TabIndex = 0;
             this.tabNhanVien.Text = "Danh mục nhân viên";
             this.tabNhanVien.UseVisualStyleBackColor = true;
@@ -201,7 +201,7 @@
             this.gcNhanVien.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEditDonVi,
             this.repositoryItemGridLookUpEditPhong});
-            this.gcNhanVien.Size = new System.Drawing.Size(988, 550);
+            this.gcNhanVien.Size = new System.Drawing.Size(1146, 550);
             this.gcNhanVien.TabIndex = 4;
             this.gcNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvNhanVien});
@@ -465,7 +465,7 @@
             this.pnInfoBacSi.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnInfoBacSi.Location = new System.Drawing.Point(3, 3);
             this.pnInfoBacSi.Name = "pnInfoBacSi";
-            this.pnInfoBacSi.Size = new System.Drawing.Size(988, 47);
+            this.pnInfoBacSi.Size = new System.Drawing.Size(1146, 47);
             this.pnInfoBacSi.TabIndex = 0;
             // 
             // cboNhomNhanVien
@@ -485,7 +485,7 @@
             this.cboNhomNhanVien.LinkedTextBox = null;
             this.cboNhomNhanVien.LinkedTextBox1 = null;
             this.cboNhomNhanVien.LinkedTextBox2 = null;
-            this.cboNhomNhanVien.Location = new System.Drawing.Point(510, 11);
+            this.cboNhomNhanVien.Location = new System.Drawing.Point(616, 11);
             this.cboNhomNhanVien.Name = "cboNhomNhanVien";
             this.cboNhomNhanVien.Size = new System.Drawing.Size(112, 21);
             this.cboNhomNhanVien.TabIndex = 2;
@@ -505,7 +505,7 @@
             this.btnRefreshBacSi.ForeColor = System.Drawing.Color.Black;
             this.btnRefreshBacSi.Image = global::TPH.LIS.App.Properties.Resources.Refresh_16x16;
             this.btnRefreshBacSi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshBacSi.Location = new System.Drawing.Point(887, 11);
+            this.btnRefreshBacSi.Location = new System.Drawing.Point(993, 11);
             this.btnRefreshBacSi.Name = "btnRefreshBacSi";
             this.btnRefreshBacSi.Size = new System.Drawing.Size(96, 27);
             this.btnRefreshBacSi.TabIndex = 11;
@@ -531,7 +531,7 @@
             this.btnXoaBacSi.ForeColor = System.Drawing.Color.Black;
             this.btnXoaBacSi.Image = global::TPH.LIS.App.Properties.Resources.DeleteRed_16x16;
             this.btnXoaBacSi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaBacSi.Location = new System.Drawing.Point(746, 11);
+            this.btnXoaBacSi.Location = new System.Drawing.Point(852, 11);
             this.btnXoaBacSi.Name = "btnXoaBacSi";
             this.btnXoaBacSi.Size = new System.Drawing.Size(133, 27);
             this.btnXoaBacSi.TabIndex = 10;
@@ -544,7 +544,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(461, 16);
+            this.label5.Location = new System.Drawing.Point(567, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 13);
             this.label5.TabIndex = 8;
@@ -560,7 +560,7 @@
             // 
             // txtMaBacSi
             // 
-            this.txtMaBacSi.Location = new System.Drawing.Point(71, 12);
+            this.txtMaBacSi.Location = new System.Drawing.Point(96, 12);
             this.txtMaBacSi.Name = "txtMaBacSi";
             this.txtMaBacSi.Size = new System.Drawing.Size(109, 20);
             this.txtMaBacSi.TabIndex = 0;
@@ -581,7 +581,7 @@
             this.btnAddBacSi.ForeColor = System.Drawing.Color.Black;
             this.btnAddBacSi.Image = ((System.Drawing.Image)(resources.GetObject("btnAddBacSi.Image")));
             this.btnAddBacSi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddBacSi.Location = new System.Drawing.Point(628, 11);
+            this.btnAddBacSi.Location = new System.Drawing.Point(734, 11);
             this.btnAddBacSi.Name = "btnAddBacSi";
             this.btnAddBacSi.Size = new System.Drawing.Size(110, 27);
             this.btnAddBacSi.TabIndex = 3;
@@ -594,7 +594,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(186, 15);
+            this.label1.Location = new System.Drawing.Point(211, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 1;
@@ -602,7 +602,7 @@
             // 
             // txtBacSi
             // 
-            this.txtBacSi.Location = new System.Drawing.Point(247, 12);
+            this.txtBacSi.Location = new System.Drawing.Point(353, 12);
             this.txtBacSi.Name = "txtBacSi";
             this.txtBacSi.Size = new System.Drawing.Size(208, 20);
             this.txtBacSi.TabIndex = 1;
@@ -614,7 +614,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1010, 663);
+            this.ClientSize = new System.Drawing.Size(1168, 663);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmNhanVien_ChanDoan";
             this.Text = "Thông tin nhân viên";

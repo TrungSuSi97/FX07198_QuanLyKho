@@ -324,7 +324,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(421, 64);
+            this.labelControl4.Location = new System.Drawing.Point(458, 64);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(84, 15);
             this.labelControl4.TabIndex = 185;
@@ -333,7 +333,7 @@
             // txtDVSD
             // 
             this.txtDVSD.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDVSD.Location = new System.Drawing.Point(522, 60);
+            this.txtDVSD.Location = new System.Drawing.Point(559, 60);
             this.txtDVSD.Margin = new System.Windows.Forms.Padding(0);
             this.txtDVSD.MaxLength = 20;
             this.txtDVSD.Name = "txtDVSD";
@@ -344,7 +344,7 @@
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantity.Location = new System.Drawing.Point(101, 91);
+            this.txtQuantity.Location = new System.Drawing.Point(138, 91);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.txtQuantity.MaxLength = 50;
             this.txtQuantity.Name = "txtQuantity";
@@ -355,7 +355,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(450, 37);
+            this.labelControl5.Location = new System.Drawing.Point(487, 37);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(55, 15);
             this.labelControl5.TabIndex = 182;
@@ -364,7 +364,7 @@
             // txtTT
             // 
             this.txtTT.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTT.Location = new System.Drawing.Point(522, 33);
+            this.txtTT.Location = new System.Drawing.Point(559, 33);
             this.txtTT.Margin = new System.Windows.Forms.Padding(0);
             this.txtTT.MaxLength = 20;
             this.txtTT.Name = "txtTT";
@@ -475,7 +475,7 @@
             // txtMaTS
             // 
             this.txtMaTS.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaTS.Location = new System.Drawing.Point(101, 33);
+            this.txtMaTS.Location = new System.Drawing.Point(138, 33);
             this.txtMaTS.Margin = new System.Windows.Forms.Padding(0);
             this.txtMaTS.MaxLength = 20;
             this.txtMaTS.Name = "txtMaTS";
@@ -486,7 +486,7 @@
             // 
             this.txtTenTS.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenTS.ForeColor = System.Drawing.Color.Black;
-            this.txtTenTS.Location = new System.Drawing.Point(101, 60);
+            this.txtTenTS.Location = new System.Drawing.Point(138, 60);
             this.txtTenTS.Margin = new System.Windows.Forms.Padding(0);
             this.txtTenTS.MaxLength = 50;
             this.txtTenTS.Name = "txtTenTS";
@@ -524,7 +524,7 @@
             this.xtraTabPage1.Controls.Add(this.groupBox2);
             this.xtraTabPage1.Controls.Add(this.groupBox1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1097, 540);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1283, 603);
             this.xtraTabPage1.Text = "Danh sách tài sản cố định";
             // 
             // groupBox2
@@ -533,7 +533,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 135);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1097, 405);
+            this.groupBox2.Size = new System.Drawing.Size(1283, 468);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách TSCD";
@@ -557,7 +557,7 @@
             this.gcTSCD2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1,
             this.repositoryItemGridLookUpEdit2});
-            this.gcTSCD2.Size = new System.Drawing.Size(1091, 386);
+            this.gcTSCD2.Size = new System.Drawing.Size(1277, 449);
             this.gcTSCD2.TabIndex = 187;
             this.gcTSCD2.UseEmbeddedNavigator = true;
             this.gcTSCD2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -676,7 +676,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1097, 135);
+            this.groupBox1.Size = new System.Drawing.Size(1283, 135);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Điều kiện";

@@ -10,6 +10,7 @@ using TPH.LIS.Common.Extensions;
 using TPH.Common.Converter;
 using TPH.LIS.User.Services.UserManagement;
 using TPH.LIS.Common.Controls;
+using TPH.Language;
 
 namespace TPH.LIS.App.QuanLyChamCong
 {
@@ -32,7 +33,7 @@ namespace TPH.LIS.App.QuanLyChamCong
         {
             if (_IUserService.Insert_User_ChamCong(CommonAppVarsAndFunctions.UserID))
             {
-                CustomMessageBox.MSG_Information_OK("Bạn đã chấm công vào làm.");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("BandachamcongvaolamCHAM", LanguageExtension.AppLanguage));
             }
 
 
@@ -41,7 +42,8 @@ namespace TPH.LIS.App.QuanLyChamCong
         {
             if (_IUserService.User_ChamCongRaVe(CommonAppVarsAndFunctions.UserID))
             {
-                CustomMessageBox.MSG_Information_OK("Bạn đã chấm công ra về.");
+                
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("BandachamcongraveCHAM", LanguageExtension.AppLanguage));
             }
         }
 
@@ -158,18 +160,18 @@ namespace TPH.LIS.App.QuanLyChamCong
 
         private void TangCa()
         {
-            if (CustomMessageBox.MSG_Question_YesNo_GetNo("Bạn muốn tăng ca ngày hôm nay?")) return;
+            if (CustomMessageBox.MSG_Question_YesNo_GetNo(LanguageExtension.GetResourceValueFromKey("BanmuontangcangayhomnayHOI", LanguageExtension.AppLanguage))) return;
             var maNV = StringConverter.ToString(CommonAppVarsAndFunctions.UserID);
 
             if (_IUserService.CheckTangCa5Ngay(maNV))
             {
-                CustomMessageBox.MSG_Information_OK("Bạn đã tăng ca 5 ngày?");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("BandatangcaNAMngayCHAM", LanguageExtension.AppLanguage));
                 return;
             }
 
             if (_IUserService.Udp_TangCa(maNV))
             {
-                CustomMessageBox.MSG_Information_OK("Bạn đã tăng ca thành công?");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("BandatangcathanhcongCHAM", LanguageExtension.AppLanguage));
             }
             
         }

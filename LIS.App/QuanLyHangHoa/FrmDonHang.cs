@@ -1,5 +1,6 @@
 ﻿using System;
 using TPH.Common.Converter;
+using TPH.Language;
 using TPH.LIS.Common.Controls;
 using TPH.LIS.Common.Extensions;
 using TPH.Product.Model;
@@ -41,7 +42,7 @@ namespace TPH.LIS.App.QuanLyHangHoa
                 return;
             }
             if (_iProduct.SuaDonHang(model))
-                CustomMessageBox.MSG_Information_OK("Sửa đơn hàng thành công!");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("SuadonhangthanhcongCHAMCAM", LanguageExtension.AppLanguage));
 
 
         }
@@ -104,11 +105,11 @@ namespace TPH.LIS.App.QuanLyHangHoa
         }
         private void XoaDH()
         {
-            if (CustomMessageBox.MSG_Question_YesNo_GetYes("Bạn muốn xóa đơn hàng?"))
+            if (CustomMessageBox.MSG_Question_YesNo_GetYes(LanguageExtension.GetResourceValueFromKey("BanmuonxoadonhangHOI", LanguageExtension.AppLanguage)))
             {
                 if (chkDaXH.Checked)
                 {
-                    CustomMessageBox.MSG_Information_OK("Không thể xóa đơn hàng đã xuất");
+                    CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("BanmuonxoadonhangHOI", LanguageExtension.AppLanguage));
                     return;
                 }
                 OrderModel model = new OrderModel();
@@ -130,11 +131,11 @@ namespace TPH.LIS.App.QuanLyHangHoa
             model.DienThoai = txtPhone.Text;
             if (string.IsNullOrEmpty(model.UserI))
             {
-                CustomMessageBox.MSG_Information_OK("Chọn tên người nhập!");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("ChontennguoinhapCHAMCAM", LanguageExtension.AppLanguage));
                 return;
             }
             if (_iProduct.ThemDonHang(model))
-                CustomMessageBox.MSG_Information_OK("Thêm đơn hàng thành công!");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("ThemdonhangthanhcongCHAMCAM", LanguageExtension.AppLanguage));
 
 
 
@@ -248,7 +249,7 @@ namespace TPH.LIS.App.QuanLyHangHoa
                 return;
             if (chkDaXH.Checked)
             {
-                CustomMessageBox.MSG_Information_OK("Không thể xóa đơn hàng đã xuất");
+                CustomMessageBox.MSG_Information_OK(LanguageExtension.GetResourceValueFromKey("Khongthexoadonhangdaxuat", LanguageExtension.AppLanguage));
                 return;
             }
             var id = NumberConverter.ToInt(gvDH.GetFocusedRowCellValue(colID));

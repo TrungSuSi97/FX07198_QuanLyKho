@@ -171,6 +171,7 @@
             this.btnClose.Appearance.Options.UseFont = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
             this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopLeft;
             this.btnClose.Location = new System.Drawing.Point(696, 0);
             // 
             // lblMainESC
@@ -601,7 +602,7 @@
             this.ucSearchLookupEditor_NhanVien1.ControlBack = null;
             this.ucSearchLookupEditor_NhanVien1.ControlNext = null;
             this.ucSearchLookupEditor_NhanVien1.DisplayMember = "";
-            this.ucSearchLookupEditor_NhanVien1.Location = new System.Drawing.Point(400, 44);
+            this.ucSearchLookupEditor_NhanVien1.Location = new System.Drawing.Point(425, 44);
             this.ucSearchLookupEditor_NhanVien1.Name = "ucSearchLookupEditor_NhanVien1";
             this.ucSearchLookupEditor_NhanVien1.SelectedValue = null;
             this.ucSearchLookupEditor_NhanVien1.Size = new System.Drawing.Size(196, 23);
@@ -690,7 +691,7 @@
             // 
             this.txtThoiGianTao.Enabled = false;
             this.txtThoiGianTao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThoiGianTao.Location = new System.Drawing.Point(400, 13);
+            this.txtThoiGianTao.Location = new System.Drawing.Point(425, 13);
             this.txtThoiGianTao.Margin = new System.Windows.Forms.Padding(0);
             this.txtThoiGianTao.MaxLength = 20;
             this.txtThoiGianTao.Name = "txtThoiGianTao";
@@ -721,7 +722,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(619, 17);
+            this.labelControl8.Location = new System.Drawing.Point(644, 17);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(51, 15);
             this.labelControl8.TabIndex = 190;
@@ -731,7 +732,7 @@
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(675, 13);
+            this.txtTotal.Location = new System.Drawing.Point(717, 13);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(0);
             this.txtTotal.MaxLength = 20;
             this.txtTotal.Name = "txtTotal";
@@ -1181,7 +1182,7 @@
             this.ucSearchLookupEditor_NhanVien2.ControlBack = null;
             this.ucSearchLookupEditor_NhanVien2.ControlNext = null;
             this.ucSearchLookupEditor_NhanVien2.DisplayMember = "";
-            this.ucSearchLookupEditor_NhanVien2.Location = new System.Drawing.Point(318, 45);
+            this.ucSearchLookupEditor_NhanVien2.Location = new System.Drawing.Point(351, 45);
             this.ucSearchLookupEditor_NhanVien2.Name = "ucSearchLookupEditor_NhanVien2";
             this.ucSearchLookupEditor_NhanVien2.SelectedValue = null;
             this.ucSearchLookupEditor_NhanVien2.Size = new System.Drawing.Size(138, 23);
@@ -1250,7 +1251,7 @@
             // 
             this.dtpToDate.CustomFormat = "dd/MM/yyyy";
             this.dtpToDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpToDate.Location = new System.Drawing.Point(318, 14);
+            this.dtpToDate.Location = new System.Drawing.Point(351, 14);
             this.dtpToDate.Name = "dtpToDate";
             this.dtpToDate.Size = new System.Drawing.Size(138, 20);
             this.dtpToDate.TabIndex = 197;
