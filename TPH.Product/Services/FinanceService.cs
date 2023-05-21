@@ -34,5 +34,66 @@ namespace TPH.Product.Services
 
 
         #endregion
+        #region HD
+        public bool ThemHD(HopDongModel model)
+        {
+            return _iFinance.ThemHD(model);
+        }
+        public bool XoaHD(HopDongModel model)
+        {
+            return _iFinance.XoaHD(model);
+        }
+        public bool SuaHD(HopDongModel model)
+        {
+            return _iFinance.SuaHD(model);
+
+        }
+        public DataTable GetDS_HD(HopDongModel model)
+        {
+            return _iFinance.GetDS_HD(model);
+        }
+
+
+        #endregion
+        #region Công nợ
+        public bool ThemCN(CongNoModel model)
+        {
+            return _iFinance.ThemCN(model);
+        }
+        public bool XoaCN(CongNoModel model)
+        {
+            return _iFinance.XoaCN(model);
+        }
+        public bool SuaCN(CongNoModel model)
+        {
+            return _iFinance.SuaCN(model);
+
+        }
+        public DataTable GetDS_CN(CongNoModel model)
+        {
+            return _iFinance.GetDS_CN(model);
+        }
+
+        #endregion
+        #region ngân sách
+        public bool ThemNganSach(NganSachModel model)
+        {
+            return _iFinance.ThemNganSach(model);
+        }
+        public bool XoaNganSach(NganSachModel model)
+        {
+            return _iFinance.XoaNganSach(model);
+        }
+        public bool SuaNganSach(NganSachModel model)
+        {
+            return _iFinance.SuaNganSach(model);
+
+        }
+        public DataTable GetDS_NganSach(NganSachModel model)
+        {
+            return _iFinance.GetDS_NganSach(model);
+        }
+
+        #endregion
     }
 }

@@ -685,11 +685,23 @@
     <Compile Include="QuanLyHangHoa\FrmHangHoa.Designer.cs">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyTaiChinh\FrmCongNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTaiChinh\FrmCongNo.Designer.cs">
+      <DependentUpon>FrmCongNo.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyTaiChinh\FrmHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuanLyTaiChinh\FrmHopDong.Designer.cs">
       <DependentUpon>FrmHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTaiChinh\FrmNganSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTaiChinh\FrmNganSach.Designer.cs">
+      <DependentUpon>FrmNganSach.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyTaiChinh\FrmTaiSanCoDinh.cs">
       <SubType>Form</SubType>
@@ -1416,8 +1428,14 @@
     <EmbeddedResource Include="QuanLyHangHoa\FrmHangHoa.resx">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTaiChinh\FrmCongNo.resx">
+      <DependentUpon>FrmCongNo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTaiChinh\FrmHopDong.resx">
       <DependentUpon>FrmHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTaiChinh\FrmNganSach.resx">
+      <DependentUpon>FrmNganSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTaiChinh\FrmTaiSanCoDinh.resx">
       <DependentUpon>FrmTaiSanCoDinh.cs</DependentUpon>

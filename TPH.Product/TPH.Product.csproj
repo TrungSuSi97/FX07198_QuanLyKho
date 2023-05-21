@@ -45,6 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\CongNoModel.cs" />
+    <Compile Include="Model\HopDongModel.cs" />
+    <Compile Include="Model\NganSachModel.cs" />
     <Compile Include="Model\OutputModel.cs" />
     <Compile Include="Model\InputModel.cs" />
     <Compile Include="Model\ItemModel.cs" />

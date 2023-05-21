@@ -44,6 +44,8 @@
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ucGroupHeader1 = new TPH.LIS.Common.Controls.ucGroupHeader();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSearchMaTS = new System.Windows.Forms.TextBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtDVSD = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
@@ -300,6 +302,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelControl9);
+            this.panel1.Controls.Add(this.txtSearchMaTS);
             this.panel1.Controls.Add(this.labelControl4);
             this.panel1.Controls.Add(this.txtDVSD);
             this.panel1.Controls.Add(this.txtQuantity);
@@ -319,6 +323,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1097, 214);
             this.panel1.TabIndex = 1;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Arial", 8.75F);
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(411, 179);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(109, 15);
+            this.labelControl9.TabIndex = 205;
+            this.labelControl9.Text = "Tìm theo mã tài sản";
+            // 
+            // txtSearchMaTS
+            // 
+            this.txtSearchMaTS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtSearchMaTS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchMaTS.Location = new System.Drawing.Point(557, 175);
+            this.txtSearchMaTS.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSearchMaTS.MaxLength = 20;
+            this.txtSearchMaTS.Name = "txtSearchMaTS";
+            this.txtSearchMaTS.Size = new System.Drawing.Size(174, 22);
+            this.txtSearchMaTS.TabIndex = 204;
+            this.txtSearchMaTS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchMaTS_KeyPress);
             // 
             // labelControl4
             // 
@@ -524,7 +550,7 @@
             this.xtraTabPage1.Controls.Add(this.groupBox2);
             this.xtraTabPage1.Controls.Add(this.groupBox1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1283, 603);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1097, 540);
             this.xtraTabPage1.Text = "Danh sách tài sản cố định";
             // 
             // groupBox2
@@ -533,7 +559,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 135);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1283, 468);
+            this.groupBox2.Size = new System.Drawing.Size(1097, 405);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách TSCD";
@@ -557,7 +583,7 @@
             this.gcTSCD2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1,
             this.repositoryItemGridLookUpEdit2});
-            this.gcTSCD2.Size = new System.Drawing.Size(1277, 449);
+            this.gcTSCD2.Size = new System.Drawing.Size(1091, 386);
             this.gcTSCD2.TabIndex = 187;
             this.gcTSCD2.UseEmbeddedNavigator = true;
             this.gcTSCD2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -676,7 +702,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1283, 135);
+            this.groupBox1.Size = new System.Drawing.Size(1097, 135);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Điều kiện";
@@ -812,5 +838,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit4;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private System.Windows.Forms.TextBox txtSearchMaTS;
     }
 }

@@ -603,7 +603,7 @@ namespace TPH.LIS.App
             SetLang();
             IsFinishShow = true;
         }
-        private void SetLang() 
+        private void SetLang()
         {
             ribbonPageGroup1.Text = LanguageExtension.GetResourceValueFromKey("Quanlyhanghoa", LanguageExtension.AppLanguage);
             ribbonPageGroup4.Text = LanguageExtension.GetResourceValueFromKey("Xuatnhaphang", LanguageExtension.AppLanguage);
@@ -1270,10 +1270,12 @@ namespace TPH.LIS.App
         private void Check_Enable_BangLuong()
         {
             rbChamCong.Enabled = btnLuong.Enabled = true;
-            btnQuanLyHangHoa.Enabled = btnDonH.Enabled = btnDonHang.Enabled  = btnDonHang.Enabled = btnTonKho.Enabled = true;
+            btnQuanLyHangHoa.Enabled = btnDonH.Enabled = btnDonHang.Enabled = btnDonHang.Enabled = btnTonKho.Enabled = true;
             btnNhapKho.Enabled = btnXuatKho.Enabled = true;
-            btnTaiSanCoDinh.Enabled  = true;
+            btnTaiSanCoDinh.Enabled = true;
             rbCauHinhNgonNgu.Enabled = true;
+            btnCongNo.Enabled = btnHopDong.Enabled = btnNganSach.Enabled = true;
+
         }
 
         public static bool CheckUserPermissionToAccessFunctions(
@@ -1830,7 +1832,7 @@ namespace TPH.LIS.App
         {
             var f = new FrmXuatHang();
             ShowForm(f);
-            
+
         }
 
         private void btnTonKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1842,6 +1844,24 @@ namespace TPH.LIS.App
         private void rbCauHinhNgonNgu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var f = new FrmNgonNguPhanMem();
+            ShowForm(f);
+        }
+
+        private void btnHopDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var f = new FrmHopDong();
+            ShowForm(f);
+        }
+
+        private void btnCongNo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var f = new FrmCongNo();
+            ShowForm(f);
+        }
+
+        private void btnNganSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var f = new FrmNganSach();
             ShowForm(f);
         }
     }

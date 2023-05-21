@@ -156,5 +156,11 @@ namespace TPH.LIS.App.QuanLyHangHoa
             var madm = StringConverter.ToString(ucSearchLookupEditor_DanhMucHangHoa1.SelectedValue);
             ucSearchLookupEditor_HangHoaSanPham1.Load_SanPham(string.Empty, madm);
         }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Excel.ExportToExcel.Export(gcDSDH, string.Format("DuLieuTonKho_{0}", DateTime.Now.ToString("ddMMyyyyHHmmss")));
+
+        }
     }
 }

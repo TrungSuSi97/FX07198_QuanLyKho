@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMDIParent));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblHello = new System.Windows.Forms.ToolStripStatusLabel();
@@ -151,6 +151,9 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.btnDonHang = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCongNo = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHopDong = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNganSach = new DevExpress.XtraBars.BarButtonItem();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnCoCanhBao.SuspendLayout();
@@ -301,7 +304,7 @@
             this.btnCloseAlarm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseAlarm.Image = global::TPH.LIS.App.Properties.Resources.Prohibit_icon_16x16;
             this.btnCloseAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCloseAlarm.Location = new System.Drawing.Point(-446, -3);
+            this.btnCloseAlarm.Location = new System.Drawing.Point(-448, -3);
             this.btnCloseAlarm.Name = "btnCloseAlarm";
             this.btnCloseAlarm.Size = new System.Drawing.Size(106, 25);
             this.btnCloseAlarm.TabIndex = 0;
@@ -765,9 +768,12 @@
             this.btnNhapKho,
             this.btnXuatKho,
             this.btnDonH,
-            this.rbCauHinhNgonNgu});
+            this.rbCauHinhNgonNgu,
+            this.btnCongNo,
+            this.btnHopDong,
+            this.btnNganSach});
             this.rbMainMenu.Location = new System.Drawing.Point(0, 0);
-            this.rbMainMenu.MaxItemId = 46;
+            this.rbMainMenu.MaxItemId = 49;
             this.rbMainMenu.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Never;
             this.rbMainMenu.Name = "rbMainMenu";
             this.rbMainMenu.OptionsCustomizationForm.FormIcon = ((System.Drawing.Icon)(resources.GetObject("resource.FormIcon")));
@@ -1058,6 +1064,9 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTaiSanCoDinh);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnCongNo);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnHopDong);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnNganSach);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Quản lý tài chính";
             // 
@@ -1167,9 +1176,9 @@
             this.btnTiepNhanHis.Caption = "F1";
             this.btnTiepNhanHis.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTiepNhanHis.ImageOptions.LargeImage")));
             this.btnTiepNhanHis.Name = "btnTiepNhanHis";
-            toolTipItem1.Text = "Chấm công";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.btnTiepNhanHis.SuperTip = superToolTip1;
+            toolTipItem8.Text = "Chấm công";
+            superToolTip8.Items.Add(toolTipItem8);
+            this.btnTiepNhanHis.SuperTip = superToolTip8;
             this.btnTiepNhanHis.Visible = false;
             this.btnTiepNhanHis.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiGridCardView_LinkClicked);
             // 
@@ -1178,9 +1187,9 @@
             this.btnTimBenhNhan.Caption = "F6";
             this.btnTimBenhNhan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTimBenhNhan.ImageOptions.LargeImage")));
             this.btnTimBenhNhan.Name = "btnTimBenhNhan";
-            toolTipItem2.Text = "Tìm kiếm";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btnTimBenhNhan.SuperTip = superToolTip2;
+            toolTipItem7.Text = "Tìm kiếm";
+            superToolTip7.Items.Add(toolTipItem7);
+            this.btnTimBenhNhan.SuperTip = superToolTip7;
             this.btnTimBenhNhan.Visible = false;
             this.btnTimBenhNhan.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiPivot_LinkClicked);
             // 
@@ -1285,6 +1294,30 @@
             this.btnDonHang.Id = 34;
             this.btnDonHang.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDonHang.ImageOptions.SvgImage")));
             this.btnDonHang.Name = "btnDonHang";
+            // 
+            // btnCongNo
+            // 
+            this.btnCongNo.Caption = "Công nợ";
+            this.btnCongNo.Id = 46;
+            this.btnCongNo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCongNo.ImageOptions.SvgImage")));
+            this.btnCongNo.Name = "btnCongNo";
+            this.btnCongNo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCongNo_ItemClick);
+            // 
+            // btnHopDong
+            // 
+            this.btnHopDong.Caption = "Hợp đồng";
+            this.btnHopDong.Id = 47;
+            this.btnHopDong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHopDong.ImageOptions.SvgImage")));
+            this.btnHopDong.Name = "btnHopDong";
+            this.btnHopDong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHopDong_ItemClick);
+            // 
+            // btnNganSach
+            // 
+            this.btnNganSach.Caption = "Ngân sách";
+            this.btnNganSach.Id = 48;
+            this.btnNganSach.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNganSach.ImageOptions.SvgImage")));
+            this.btnNganSach.Name = "btnNganSach";
+            this.btnNganSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNganSach_ItemClick);
             // 
             // frmMDIParent
             // 
@@ -1456,6 +1489,9 @@
         private DevExpress.XtraBars.BarButtonItem btnDonHang;
         private DevExpress.XtraBars.BarButtonItem btnDonH;
         private DevExpress.XtraBars.BarButtonItem rbCauHinhNgonNgu;
+        private DevExpress.XtraBars.BarButtonItem btnCongNo;
+        private DevExpress.XtraBars.BarButtonItem btnHopDong;
+        private DevExpress.XtraBars.BarButtonItem btnNganSach;
     }
 }
 

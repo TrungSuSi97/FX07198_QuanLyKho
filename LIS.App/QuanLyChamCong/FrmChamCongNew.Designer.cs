@@ -120,6 +120,7 @@
             this.btnClose.Appearance.Options.UseFont = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
             this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopLeft;
             this.btnClose.Location = new System.Drawing.Point(472, 0);
             // 
             // lblMainESC
@@ -590,7 +591,7 @@
             this.xtraTabPage2.Controls.Add(this.ucGroupHeader3);
             this.xtraTabPage2.Controls.Add(this.panel1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1283, 603);
+            this.xtraTabPage2.Size = new System.Drawing.Size(887, 498);
             this.xtraTabPage2.Text = "XUẤT DỮ LIỆU CHẤM CÔNG";
             // 
             // gcDuLieuCC
@@ -609,7 +610,7 @@
             this.gcDuLieuCC.MainView = this.gvDuLieuCC;
             this.gcDuLieuCC.Margin = new System.Windows.Forms.Padding(0);
             this.gcDuLieuCC.Name = "gcDuLieuCC";
-            this.gcDuLieuCC.Size = new System.Drawing.Size(1283, 391);
+            this.gcDuLieuCC.Size = new System.Drawing.Size(887, 286);
             this.gcDuLieuCC.TabIndex = 102;
             this.gcDuLieuCC.UseEmbeddedNavigator = true;
             this.gcDuLieuCC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -744,7 +745,7 @@
             this.ucGroupHeader3.MaximumSize = new System.Drawing.Size(0, 23);
             this.ucGroupHeader3.MinimumSize = new System.Drawing.Size(0, 23);
             this.ucGroupHeader3.Name = "ucGroupHeader3";
-            this.ucGroupHeader3.Size = new System.Drawing.Size(1283, 23);
+            this.ucGroupHeader3.Size = new System.Drawing.Size(887, 23);
             this.ucGroupHeader3.TabIndex = 101;
             // 
             // panel1
@@ -760,7 +761,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1283, 189);
+            this.panel1.Size = new System.Drawing.Size(887, 189);
             this.panel1.TabIndex = 0;
             // 
             // btnExcel
@@ -782,7 +783,7 @@
             this.btnExcel.Location = new System.Drawing.Point(143, 141);
             this.btnExcel.Margin = new System.Windows.Forms.Padding(0);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(124, 38);
+            this.btnExcel.Size = new System.Drawing.Size(143, 38);
             this.btnExcel.TabIndex = 117;
             this.btnExcel.Text = "Xuất excel";
             this.btnExcel.TextColor = System.Drawing.Color.Black;

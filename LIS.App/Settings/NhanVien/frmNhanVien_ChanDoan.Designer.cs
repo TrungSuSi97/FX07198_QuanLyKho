@@ -141,13 +141,13 @@
             this.xtraScrollableControlMain.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(57)))), ((int)(((byte)(112)))));
             this.xtraScrollableControlMain.Appearance.BackColor2 = System.Drawing.Color.Gray;
             this.xtraScrollableControlMain.Appearance.Options.UseBackColor = true;
-            this.xtraScrollableControlMain.Size = new System.Drawing.Size(1010, 25);
+            this.xtraScrollableControlMain.Size = new System.Drawing.Size(1168, 25);
             // 
             // pnFormControl
             // 
             this.pnFormControl.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnFormControl.Appearance.Options.UseBackColor = true;
-            this.pnFormControl.Location = new System.Drawing.Point(902, 1);
+            this.pnFormControl.Location = new System.Drawing.Point(1060, 1);
             this.pnFormControl.Size = new System.Drawing.Size(106, 24);
             // 
             // btnMinimize

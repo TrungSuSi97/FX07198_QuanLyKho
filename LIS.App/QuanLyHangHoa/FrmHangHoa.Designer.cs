@@ -943,7 +943,7 @@
             // txtMaDV
             // 
             this.txtMaDV.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaDV.Location = new System.Drawing.Point(80, 13);
+            this.txtMaDV.Location = new System.Drawing.Point(108, 13);
             this.txtMaDV.Margin = new System.Windows.Forms.Padding(0);
             this.txtMaDV.MaxLength = 20;
             this.txtMaDV.Name = "txtMaDV";
@@ -955,7 +955,7 @@
             this.txtTenDV.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTenDV.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDV.ForeColor = System.Drawing.Color.Crimson;
-            this.txtTenDV.Location = new System.Drawing.Point(80, 40);
+            this.txtTenDV.Location = new System.Drawing.Point(108, 40);
             this.txtTenDV.Margin = new System.Windows.Forms.Padding(0);
             this.txtTenDV.MaxLength = 50;
             this.txtTenDV.Name = "txtTenDV";
@@ -994,7 +994,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 612);
             this.Name = "FrmHangHoa";
-            this.Text = "Quản lý hàng hóa";
+            this.Text = "QUẢN LÝ HÀNG HÓA";
             this.Load += new System.EventHandler(this.FrmHangHoa_Load);
             this.pnContaint.ResumeLayout(false);
             this.pnLabel.ResumeLayout(false);

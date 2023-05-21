@@ -36,7 +36,11 @@ namespace TPH.LIS.Common.Controls
 
         private void ucGroupHeader_Load(object sender, System.EventArgs e)
         {
-            LanguageExtension.LocalizeForm(this, string.Empty);
+            if (!DesignMode)
+            {
+                LanguageExtension.LocalizeForm(this, string.Empty);
+            }
+            //LanguageExtension.LocalizeForm(this, string.Empty);
         }
     }
 }
